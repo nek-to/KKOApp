@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o9c-uw-xvS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NewsTB-->
+        <scene sceneID="deX-UV-Xgr">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="NewsTB" storyboardName="NewsTB" id="Out-2m-hnF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" id="fKa-ut-2Hu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvB-Ge-fDw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="-362"/>
+        </scene>
+        <!--ProfileTB-->
+        <scene sceneID="BE8-97-nJp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ProfileTB" storyboardName="ProfileTB" id="yN9-iV-Dxi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="1oC-s1-Teh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G4c-di-NoL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="-256"/>
+        </scene>
+        <!--ShopTB-->
+        <scene sceneID="L7R-AN-VTL">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ShopTB" storyboardName="ShopTB" id="bUc-N8-XYl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shop" image="heart" catalog="system" id="3hf-iF-lKV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4a-7Q-aCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="-165"/>
+        </scene>
+        <!--Main Tab BarVC-->
+        <scene sceneID="slU-Xl-UaE">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarVC" modalPresentationStyle="fullScreen" id="o9c-uw-xvS" customClass="MainTabBarVC" customModule="KKOApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6nt-4O-Xcr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Out-2m-hnF" kind="relationship" relationship="viewControllers" id="xXr-3N-MsH"/>
+                        <segue destination="bUc-N8-XYl" kind="relationship" relationship="viewControllers" id="yV7-ei-JCH"/>
+                        <segue destination="yN9-iV-Dxi" kind="relationship" relationship="viewControllers" id="Q4s-zE-sAi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgJ-Ba-dvq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="-256"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
+</document>

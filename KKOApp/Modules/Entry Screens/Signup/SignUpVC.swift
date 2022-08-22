@@ -4,20 +4,19 @@
 //
 //  Created by VironIT on 19.08.22.
 //
-
-import UIKit
 import Simple_KeychainSwift
+import UIKit
 
 class SignUpVC: UIViewController {
-    @IBOutlet weak var backgroundUmageView: UIImageView!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var repeatePasswordTextField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var warningLabel: UILabel!
-    @IBOutlet weak var singupFormButtonConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var backgroundUmageView: UIImageView!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var phoneTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var repeatePasswordTextField: UITextField!
+    @IBOutlet private weak var signUpButton: UIButton!
+    @IBOutlet private weak var warningLabel: UILabel!
+    @IBOutlet private weak var singupFormButtonConstraint: NSLayoutConstraint!
     
     private var passwordsIsCorrect = false
     private var fieldsAreFill = false
@@ -113,7 +112,7 @@ class SignUpVC: UIViewController {
         }
     }
     
-    @IBAction func signUp(_ sender: Any) {
+    @IBAction private func signUp(_ sender: Any) {
         checkIfAllFieldsAreFill()
         checkIfDoublePasswordCorrect()
         hideWarningLabel()

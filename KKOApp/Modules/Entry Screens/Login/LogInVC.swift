@@ -4,20 +4,19 @@
 //
 //  Created by VironIT on 19.08.22.
 //
-
-import UIKit
 import Simple_KeychainSwift
+import UIKit
 
 class LogInVC: UIViewController {
     
     //MARK: IBOutlets
-    @IBOutlet weak var backgroundUmageView: UIImageView!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordRestoreLabel: UILabel!
-    @IBOutlet weak var logInButton: UIButton!
-    @IBOutlet weak var loginFieldsBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var warningLabel: UILabel!
+    @IBOutlet private weak var backgroundUmageView: UIImageView!
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var passwordRestoreLabel: UILabel!
+    @IBOutlet private weak var logInButton: UIButton!
+    @IBOutlet private weak var loginFieldsBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var warningLabel: UILabel!
     
     private var checkerIfFieldEmpty = false
     private var isSuccess = false
@@ -73,6 +72,12 @@ class LogInVC: UIViewController {
         }
     }
     
+    private func toMainTabBar() {
+        let storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+        let tabBarScreen = storyboard.instantiateViewController(withIdentifier: Screens.mainTabBar.rawValue)
+        self.present(tabBarScreen, animated: true)
+    }
+    
     @objc private func hideKeyboard() {
         self.view.endEditing(true)
     }
@@ -90,17 +95,18 @@ class LogInVC: UIViewController {
         }
     }
     
-    @IBAction func logIn(_ sender: UIButton) {
+    @IBAction private func logIn(_ sender: UIButton) {
         checkIfFieldEmpty()
         hideWarningLabel()
         print(checkerIfFieldEmpty)
         if !checkerIfFieldEmpty {
             validateUser()
-            isSuccess = true
+//            isSuccess = true
+            toMainTabBar()
         }
     }
     
-    @IBAction func moveToSignUpScreen(_ sender: UIButton) {
+    @IBAction private func moveToSignUpScreen(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Signup", bundle: nil)
         let signUpScreen = storyboard.instantiateViewController(withIdentifier: Screens.signup.rawValue)
         self.present(signUpScreen, animated: true)
