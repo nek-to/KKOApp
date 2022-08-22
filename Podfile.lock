@@ -1,16 +1,20 @@
 PODS:
+  - lottie-ios (3.4.2)
   - Simple-KeychainSwift (4.1.0)
 
 DEPENDENCIES:
+  - lottie-ios
   - Simple-KeychainSwift
 
 SPEC REPOS:
   trunk:
+    - lottie-ios
     - Simple-KeychainSwift
 
 SPEC CHECKSUMS:
+  lottie-ios: 6bbc53eef6957e4744a50321507015fba72d8ca6
   Simple-KeychainSwift: 6f5d5009c2a8d1c2c326dfdd4890d32e8804b293
 
-PODFILE CHECKSUM: 469c1020db7a161e56860394a35ee008dc1af12c
+PODFILE CHECKSUM: f638a887c0ec1b8e69b5b6e003b159f8c1d68542
 
 COCOAPODS: 1.11.3

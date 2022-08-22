@@ -1,37 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2JT-bf-nYb">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--News-->
-        <scene sceneID="s0d-6b-0kx">
+        <scene sceneID="Q2b-WU-0zA">
             <objects>
-                <viewController storyboardIdentifier="NewsVC" id="Y6W-OH-hqX" customClass="NewsVC" customModule="KKOApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <tableViewController id="2JT-bf-nYb" customClass="NewsTableVC" customModule="KKOApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="oTF-on-KnP" customClass="NewsTableView" customModule="KKOApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="ly2-yH-CND">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news-fone" translatesAutoresizingMaskIntoConstraints="NO" id="QKL-Ey-b5d">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="250" identifier="height" id="DBF-6e-Q06"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="QKL-Ey-b5d" secondAttribute="trailing" id="3SE-IN-t3o"/>
+                                <constraint firstItem="QKL-Ey-b5d" firstAttribute="leading" secondItem="ly2-yH-CND" secondAttribute="leading" id="P1T-Id-4xQ"/>
+                                <constraint firstAttribute="bottom" secondItem="QKL-Ey-b5d" secondAttribute="bottom" identifier="bottom" id="Wmx-wO-Av1"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="2JT-bf-nYb" id="0ig-mE-hAh"/>
+                            <outlet property="delegate" destination="2JT-bf-nYb" id="w0G-mv-3T9"/>
+                        </connections>
+                    </tableView>
                     <tabBarItem key="tabBarItem" title="News" id="T3e-YG-VSp">
                         <imageReference key="image" image="newspaper" catalog="system" symbolScale="medium"/>
                         <imageReference key="selectedImage" image="newspaper.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="foneImageView" destination="QKL-Ey-b5d" id="Ey9-iN-YNT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRU-pi-fz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="106"/>
+            <point key="canvasLocation" x="380" y="29"/>
         </scene>
     </scenes>
     <resources>
+        <image name="news-fone" width="1368" height="912"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

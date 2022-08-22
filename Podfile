@@ -6,5 +6,6 @@ target 'KKOApp' do
   use_frameworks!
 
   pod "Simple-KeychainSwift"
+  pod 'lottie-ios'
 
 end
