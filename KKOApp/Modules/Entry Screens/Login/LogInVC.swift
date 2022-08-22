@@ -4,7 +4,7 @@
 //
 //  Created by VironIT on 19.08.22.
 //
-
+import Locksmith
 import UIKit
 
 class LogInVC: UIViewController {
@@ -18,6 +18,9 @@ class LogInVC: UIViewController {
     @IBOutlet weak var loginFieldsBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var warningLabel: UILabel!
     
+    private var checkerIfFieldEmpty = true
+    private var isSuccess = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,7 @@ class LogInVC: UIViewController {
     }
 
     private func blureFone() {
-        let blure = UIBlurEffect(style: .systemUltraThinMaterialDark)
+        let blure = UIBlurEffect(style: .dark)
         let effect = UIVisualEffectView(effect: blure)
         effect.frame = backgroundUmageView.bounds
         backgroundUmageView.addSubview(effect)
@@ -37,15 +40,35 @@ class LogInVC: UIViewController {
     
     private func launchSetup() {
         usernameTextField.layer.borderColor = UIColor.lightGray.cgColor
-//        usernameTextField.layer.borderWidth = 0.5
         usernameTextField.layer.cornerRadius = 7
         passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-//        passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.cornerRadius = 7
         
         logInButton.layer.cornerRadius = logInButton.frame.height/2
         logInButton.alpha = 0.7
         blureFone()
+    }
+    
+    private func checkIfFildEmpty() {
+        if !usernameTextField.hasText || !passwordTextField.hasText {
+            warningLabel.isHidden = false
+            checkerIfFieldEmpty = true
+        }
+    }
+    
+    private func validateUser() {
+        let validator = Locksmith.loadDataForUserAccount(userAccount: "KKOApp")
+        guard validator!.isEmpty else { return }
+        print(validator)
+            isSuccess = true
+        }
+    
+    private func hideWarningLabel() {
+        if !warningLabel.isHidden {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.warningLabel.isHidden = true
+            }
+        }
     }
     
     @objc private func hideKeyboard() {
@@ -66,6 +89,13 @@ class LogInVC: UIViewController {
     }
     
     @IBAction func logIn(_ sender: UIButton) {
+        checkIfFildEmpty()
+        hideWarningLabel()
+        if !checkerIfFieldEmpty {
+            validateUser()
+            print(isSuccess)
+        }
+        print(isSuccess)
     }
     
     @IBAction func moveToSignUpScreen(_ sender: UIButton) {

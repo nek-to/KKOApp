@@ -4,7 +4,7 @@
 //
 //  Created by VironIT on 19.08.22.
 //
-
+import Locksmith
 import UIKit
 
 class SignUpVC: UIViewController {
@@ -17,6 +17,9 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var singupFormButtonConstraint: NSLayoutConstraint!
+    
+    private var passwordsIsCorrect = false
+    private var fieldsAreFill = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,24 +39,57 @@ class SignUpVC: UIViewController {
     
     private func launchSetup() {
         nameTextField.layer.borderColor = UIColor.lightGray.cgColor
-        nameTextField.layer.borderWidth = 1
-        nameTextField.layer.cornerRadius = nameTextField.frame.height/2
+        nameTextField.layer.cornerRadius = 7
         phoneTextField.layer.borderColor = UIColor.lightGray.cgColor
-        phoneTextField.layer.borderWidth = 1
-        phoneTextField.layer.cornerRadius = phoneTextField.frame.height/2
+        phoneTextField.layer.cornerRadius = 7
         emailTextField.layer.borderColor = UIColor.lightGray.cgColor
-        emailTextField.layer.borderWidth = 1
-        emailTextField.layer.cornerRadius = emailTextField.frame.height/2
+        emailTextField.layer.cornerRadius = 7
         passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        passwordTextField.layer.borderWidth = 1
-        passwordTextField.layer.cornerRadius = passwordTextField.frame.height/2
+        passwordTextField.layer.cornerRadius = 7
         repeatePasswordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        repeatePasswordTextField.layer.borderWidth = 1
-        repeatePasswordTextField.layer.cornerRadius = repeatePasswordTextField.frame.height/2
+        repeatePasswordTextField.layer.cornerRadius = 7
         
         signUpButton.layer.cornerRadius = signUpButton.frame.height/2
         signUpButton.alpha = 0.7
         blureFone()
+    }
+    
+    private func checkIfDoublePasswordCorrect() {
+        guard passwordTextField.hasText && repeatePasswordTextField.hasText else { return }
+        if passwordTextField.text == repeatePasswordTextField.text {
+            passwordsIsCorrect = true
+        }
+    }
+    
+    private func checkIfAllFieldsAreFill() {
+        if !nameTextField.hasText ||
+            !phoneTextField.hasText ||
+            !emailTextField.hasText ||
+            !passwordTextField.hasText ||
+            !repeatePasswordTextField.hasText {
+            warningLabel.isHidden = false
+        }
+    }
+    
+    private func hideWarningLabel() {
+        if warningLabel.isHidden == false {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.warningLabel.isHidden = true
+            }
+        }
+    }
+    
+    private func saveUserInDatabase() {
+        if let username = nameTextField.text,
+           let phone = phoneTextField.text,
+           let email = emailTextField.text,
+           let password = passwordTextField.text {
+            do {
+                try Locksmith.saveData(data: ["username" : username, "phone": phone, "email": email, "password": password], forUserAccount: "KKOApp")
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     @objc private func hideKeyboard() {
@@ -70,6 +106,14 @@ class SignUpVC: UIViewController {
             self.singupFormButtonConstraint.constant = 150
         } else {
             self.singupFormButtonConstraint.constant = ((endFrame?.size.height)!)
+        }
+    }
+    
+    @IBAction func signUp(_ sender: Any) {
+        checkIfAllFieldsAreFill()
+        hideWarningLabel()
+        if fieldsAreFill && passwordsIsCorrect {
+            saveUserInDatabase()
         }
     }
 }
