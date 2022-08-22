@@ -1,16 +1,16 @@
 PODS:
-  - Locksmith (4.0.0)
+  - Simple-KeychainSwift (4.1.0)
 
 DEPENDENCIES:
-  - Locksmith
+  - Simple-KeychainSwift
 
 SPEC REPOS:
   trunk:
-    - Locksmith
+    - Simple-KeychainSwift
 
 SPEC CHECKSUMS:
-  Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
+  Simple-KeychainSwift: 6f5d5009c2a8d1c2c326dfdd4890d32e8804b293
 
-PODFILE CHECKSUM: 72c5851821e44dc4601a6a40f08ba34a06046b71
+PODFILE CHECKSUM: 469c1020db7a161e56860394a35ee008dc1af12c
 
 COCOAPODS: 1.11.3

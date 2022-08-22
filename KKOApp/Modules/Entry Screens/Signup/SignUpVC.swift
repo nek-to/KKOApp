@@ -4,8 +4,9 @@
 //
 //  Created by VironIT on 19.08.22.
 //
-import Locksmith
+
 import UIKit
+import Simple_KeychainSwift
 
 class SignUpVC: UIViewController {
     @IBOutlet weak var backgroundUmageView: UIImageView!
@@ -68,6 +69,8 @@ class SignUpVC: UIViewController {
             !passwordTextField.hasText ||
             !repeatePasswordTextField.hasText {
             warningLabel.isHidden = false
+        } else {
+            fieldsAreFill = true
         }
     }
     
@@ -80,15 +83,16 @@ class SignUpVC: UIViewController {
     }
     
     private func saveUserInDatabase() {
-        if let username = nameTextField.text,
-           let phone = phoneTextField.text,
-           let email = emailTextField.text,
-           let password = passwordTextField.text {
-            do {
-                try Locksmith.saveData(data: ["username" : username, "phone": phone, "email": email, "password": password], forUserAccount: "KKOApp")
-            } catch {
-                print(error.localizedDescription)
-            }
+        print("password correct = \(passwordsIsCorrect)")
+        print("warning label is hide = \(warningLabel.isHidden)")
+        if warningLabel.isHidden && passwordsIsCorrect {
+            Keychain.set(nameTextField.text, forKey: "username")
+            Keychain.set(phoneTextField.text, forKey: "phone")
+            Keychain.set(emailTextField.text, forKey: "email")
+            Keychain.set(passwordTextField.text, forKey: "password")
+        } else {
+            warningLabel.isHidden = false
+            print("registration error")
         }
     }
     
@@ -111,7 +115,10 @@ class SignUpVC: UIViewController {
     
     @IBAction func signUp(_ sender: Any) {
         checkIfAllFieldsAreFill()
+        checkIfDoublePasswordCorrect()
         hideWarningLabel()
+        print(fieldsAreFill)
+        print(passwordsIsCorrect)
         if fieldsAreFill && passwordsIsCorrect {
             saveUserInDatabase()
         }

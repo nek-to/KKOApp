@@ -4,8 +4,9 @@
 //
 //  Created by VironIT on 19.08.22.
 //
-import Locksmith
+
 import UIKit
+import Simple_KeychainSwift
 
 class LogInVC: UIViewController {
     
@@ -18,7 +19,7 @@ class LogInVC: UIViewController {
     @IBOutlet weak var loginFieldsBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var warningLabel: UILabel!
     
-    private var checkerIfFieldEmpty = true
+    private var checkerIfFieldEmpty = false
     private var isSuccess = false
     
     
@@ -49,7 +50,7 @@ class LogInVC: UIViewController {
         blureFone()
     }
     
-    private func checkIfFildEmpty() {
+    private func checkIfFieldEmpty() {
         if !usernameTextField.hasText || !passwordTextField.hasText {
             warningLabel.isHidden = false
             checkerIfFieldEmpty = true
@@ -57,11 +58,12 @@ class LogInVC: UIViewController {
     }
     
     private func validateUser() {
-        let validator = Locksmith.loadDataForUserAccount(userAccount: "KKOApp")
-        guard validator!.isEmpty else { return }
-        print(validator)
-            isSuccess = true
+        if usernameTextField.text == Keychain.value(forKey: "username") &&
+            passwordTextField.text == Keychain.value(forKey: "password") {
+            warningLabel.isHidden = false
+            warningLabel.textColor = .green
         }
+    }
     
     private func hideWarningLabel() {
         if !warningLabel.isHidden {
@@ -89,13 +91,13 @@ class LogInVC: UIViewController {
     }
     
     @IBAction func logIn(_ sender: UIButton) {
-        checkIfFildEmpty()
+        checkIfFieldEmpty()
         hideWarningLabel()
+        print(checkerIfFieldEmpty)
         if !checkerIfFieldEmpty {
             validateUser()
-            print(isSuccess)
+            isSuccess = true
         }
-        print(isSuccess)
     }
     
     @IBAction func moveToSignUpScreen(_ sender: UIButton) {
