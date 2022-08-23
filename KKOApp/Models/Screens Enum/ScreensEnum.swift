@@ -13,6 +13,6 @@ enum Screens: String {
     case mainTabBar = "MainTabBarVC"
     case news = "NewsTableVC"
     case profile = "ProfileVC"
-    case shop = "ShopVC"
+    case shop = "ShopTableVC"
     case followUs = "FollowUsVC"
 }

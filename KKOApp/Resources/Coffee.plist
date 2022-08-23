@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee1</string>
+		<key>price</key>
+		<integer>2</integer>
+		<key>description</key>
+		<string>A single shot of espresso</string>
+		<key>title</key>
+		<string>Espresso</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee2</string>
+		<key>price</key>
+		<integer>5</integer>
+		<key>description</key>
+		<string>Latte topped with sweetened flavoured syrup (flavours include Hazelnut, Caramel, Vanilla &amp; Irish Cream)</string>
+		<key>title</key>
+		<string>Flavoured Latte</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee3</string>
+		<key>price</key>
+		<integer>4</integer>
+		<key>description</key>
+		<string>A double shot of espresso with flat steamed milk</string>
+		<key>title</key>
+		<string>Flat White</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee4</string>
+		<key>price</key>
+		<integer>6</integer>
+		<key>description</key>
+		<string>A double shot of espresso with steamed milk a small layer of foam and a special sweetened coffee flavoured syrup</string>
+		<key>title</key>
+		<string>Bean Bar Latte</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee5</string>
+		<key>price</key>
+		<integer>4</integer>
+		<key>description</key>
+		<string>A single shot of espresso with a small layer of foam</string>
+		<key>title</key>
+		<string>Piccolo Latte</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee6</string>
+		<key>price</key>
+		<integer>2</integer>
+		<key>description</key>
+		<string>A double shot of espresso with equal parts steamed milk and foam</string>
+		<key>title</key>
+		<string>Cappuccino</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee7</string>
+		<key>price</key>
+		<integer>3</integer>
+		<key>description</key>
+		<string>A long black, topped with whipped cream</string>
+		<key>title</key>
+		<string>Vienna</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee8</string>
+		<key>price</key>
+		<integer>4</integer>
+		<key>description</key>
+		<string>Rich white chocolate with steamed milk and a small layer of foam</string>
+		<key>title</key>
+		<string>Snow Hot Chocolate</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee9</string>
+		<key>price</key>
+		<integer>5</integer>
+		<key>description</key>
+		<string>Made with ice, coffee, and flavored syrups, the beverage&apos;s flavor and texture is somewhere between a milkshake and an iced coffee</string>
+		<key>title</key>
+		<string>Starbucks Caramel Frappuccino</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee10</string>
+		<key>price</key>
+		<integer>4</integer>
+		<key>description</key>
+		<string>This is a sweet coffee drink, for all you coffee lovers who want an extra kick in your java</string>
+		<key>title</key>
+		<string>Chocolate Coffee Kiss</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee1</string>
+		<key>price</key>
+		<integer>3</integer>
+		<key>description</key>
+		<string>This is a blended-coffee treat much like an iced cappuccino you might buy at a expensive restaurant</string>
+		<key>title</key>
+		<string>Coffee Shake</string>
+	</dict>
+	<dict>
+		<key>like</key>
+		<false/>
+		<key>image</key>
+		<string>coffee1</string>
+		<key>price</key>
+		<integer>2</integer>
+		<key>description</key>
+		<string>This espresso martini with Original Irish Cream tastes as good as it looks</string>
+		<key>title</key>
+		<string>Flat White Martini</string>
+	</dict>
+</array>
+</plist>

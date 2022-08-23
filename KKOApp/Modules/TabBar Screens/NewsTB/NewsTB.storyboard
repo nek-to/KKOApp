@@ -21,17 +21,25 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news-fone" translatesAutoresizingMaskIntoConstraints="NO" id="QKL-Ey-b5d">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                    <rect key="frame" x="0.0" y="-50" width="414" height="300"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="250" identifier="height" id="DBF-6e-Q06"/>
+                                        <constraint firstAttribute="height" constant="300" identifier="height" id="gct-Zf-1Y1"/>
                                     </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our news" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Th5-25-7qG">
+                                    <rect key="frame" x="84.5" y="80" width="245.5" height="66"/>
+                                    <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="QKL-Ey-b5d" secondAttribute="trailing" id="3SE-IN-t3o"/>
-                                <constraint firstItem="QKL-Ey-b5d" firstAttribute="leading" secondItem="ly2-yH-CND" secondAttribute="leading" id="P1T-Id-4xQ"/>
-                                <constraint firstAttribute="bottom" secondItem="QKL-Ey-b5d" secondAttribute="bottom" identifier="bottom" id="Wmx-wO-Av1"/>
+                                <constraint firstItem="Th5-25-7qG" firstAttribute="centerX" secondItem="ly2-yH-CND" secondAttribute="centerX" id="0Ku-fQ-n2a"/>
+                                <constraint firstItem="Th5-25-7qG" firstAttribute="top" secondItem="ly2-yH-CND" secondAttribute="top" constant="80" id="CyV-e8-Uoc"/>
+                                <constraint firstItem="QKL-Ey-b5d" firstAttribute="leading" secondItem="ly2-yH-CND" secondAttribute="leading" id="GYz-7M-nOI"/>
+                                <constraint firstAttribute="trailing" secondItem="QKL-Ey-b5d" secondAttribute="trailing" id="c7E-Su-fnU"/>
+                                <constraint firstAttribute="bottom" secondItem="QKL-Ey-b5d" secondAttribute="bottom" identifier="bottom" id="uI0-Zr-CZ6"/>
                             </constraints>
                         </view>
                         <connections>
@@ -50,7 +58,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRU-pi-fz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="29"/>
+            <point key="canvasLocation" x="379.71014492753625" y="28.794642857142854"/>
         </scene>
     </scenes>
     <resources>

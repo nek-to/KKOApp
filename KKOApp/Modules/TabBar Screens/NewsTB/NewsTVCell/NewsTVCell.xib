@@ -20,20 +20,20 @@
                         <rect key="frame" x="0.0" y="15" width="420" height="185"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcw-d6-bDs">
-                        <rect key="frame" x="30" y="30" width="360" height="38"/>
-                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                        <rect key="frame" x="30" y="30" width="360" height="40"/>
+                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9o-iI-kSH">
-                        <rect key="frame" x="30" y="78" width="340" height="22"/>
-                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                        <rect key="frame" x="30" y="80" width="340" height="22"/>
+                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-9R-wVT">
-                        <rect key="frame" x="30" y="130" width="340" height="17.5"/>
-                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="14"/>
+                        <rect key="frame" x="30" y="132" width="340" height="18.5"/>
+                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -62,7 +62,7 @@
                 <outlet property="imageImageView" destination="1Nr-t1-2pg" id="TSM-ag-Lzx"/>
                 <outlet property="titleLabel" destination="Pcw-d6-bDs" id="Ku4-1b-Og4"/>
             </connections>
-            <point key="canvasLocation" x="176.81159420289856" y="86.71875"/>
+            <point key="canvasLocation" x="-317" y="90"/>
         </tableViewCell>
     </objects>
 </document>

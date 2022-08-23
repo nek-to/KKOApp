@@ -16,13 +16,14 @@
 		534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534DA9B628AFEF5700626AA4 /* Signup.storyboard */; };
 		534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */; };
 		534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */; };
+		539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539BDBEB28B523100057BCA9 /* CoffeeItem.swift */; };
+		539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539BDBED28B524E30057BCA9 /* Coffee.plist */; };
 		53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17228B3D6520011D63F /* MainTabBar.storyboard */; };
 		53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F17428B3D6940011D63F /* MainTabBarVC.swift */; };
 		53E8F17A28B3D8440011D63F /* NewsTB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17928B3D8440011D63F /* NewsTB.storyboard */; };
 		53E8F17E28B3D8F00011D63F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F17D28B3D8F00011D63F /* ProfileVC.swift */; };
 		53E8F18028B3D8FF0011D63F /* ProfileTB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17F28B3D8FF0011D63F /* ProfileTB.storyboard */; };
 		53E8F18228B3D90F0011D63F /* ShopTB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F18128B3D90F0011D63F /* ShopTB.storyboard */; };
-		53E8F18428B3D92C0011D63F /* ShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F18328B3D92C0011D63F /* ShopVC.swift */; };
 		53E8F18A28B3E86A0011D63F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F18928B3E86A0011D63F /* UIImage.swift */; };
 		53E8F18E28B3E8F70011D63F /* NewsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F18D28B3E8F70011D63F /* NewsStorage.swift */; };
 		53E8F19228B3EC550011D63F /* NewsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F19028B3EC550011D63F /* NewsTVCell.swift */; };
@@ -34,6 +35,20 @@
 		53E8F1A028B3F87E0011D63F /* FollowUsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F19F28B3F87E0011D63F /* FollowUsCVCell.swift */; };
 		53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1A528B40AD20011D63F /* NewsTableVC.swift */; };
 		53E8F1A828B40E200011D63F /* NewsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1A728B40E200011D63F /* NewsTableView.swift */; };
+		53E8F1AA28B41CF90011D63F /* ShopTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1A928B41CF90011D63F /* ShopTableVC.swift */; };
+		53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1AB28B423340011D63F /* ShopTableView.swift */; };
+		53E8F1AE28B426E20011D63F /* CouponStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1AD28B426E20011D63F /* CouponStorage.swift */; };
+		53E8F1B228B427A20011D63F /* CouponCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1B028B427A20011D63F /* CouponCVCell.swift */; };
+		53E8F1B328B427A20011D63F /* CouponCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1B128B427A20011D63F /* CouponCVCell.xib */; };
+		53E8F1BB28B4294B0011D63F /* ok.json in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1B528B4294A0011D63F /* ok.json */; };
+		53E8F1BC28B4294B0011D63F /* buysomecoffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1B628B4294A0011D63F /* buysomecoffee.json */; };
+		53E8F1BD28B4294B0011D63F /* buycoffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1B728B4294A0011D63F /* buycoffee.json */; };
+		53E8F1BE28B4294B0011D63F /* bean.json in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1B828B4294A0011D63F /* bean.json */; };
+		53E8F1BF28B4294B0011D63F /* coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1B928B4294A0011D63F /* coffee.json */; };
+		53E8F1C028B4294B0011D63F /* buying.json in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1BA28B4294B0011D63F /* buying.json */; };
+		53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */; };
+		53E8F1C628B444150011D63F /* CoffeeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1C428B444150011D63F /* CoffeeTVCell.swift */; };
+		53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1C528B444150011D63F /* CoffeeTVCell.xib */; };
 		8445CBE393B3D0D68537A8DB /* Pods_KKOApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EFC33B70C8060F4CD3A4FD /* Pods_KKOApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,13 +64,14 @@
 		534DA9B628AFEF5700626AA4 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensEnum.swift; sourceTree = "<group>"; };
+		539BDBEB28B523100057BCA9 /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
+		539BDBED28B524E30057BCA9 /* Coffee.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffee.plist; sourceTree = "<group>"; };
 		53E8F17228B3D6520011D63F /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		53E8F17428B3D6940011D63F /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		53E8F17928B3D8440011D63F /* NewsTB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsTB.storyboard; sourceTree = "<group>"; };
 		53E8F17D28B3D8F00011D63F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		53E8F17F28B3D8FF0011D63F /* ProfileTB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTB.storyboard; sourceTree = "<group>"; };
 		53E8F18128B3D90F0011D63F /* ShopTB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopTB.storyboard; sourceTree = "<group>"; };
-		53E8F18328B3D92C0011D63F /* ShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVC.swift; sourceTree = "<group>"; };
 		53E8F18928B3E86A0011D63F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		53E8F18D28B3E8F70011D63F /* NewsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStorage.swift; sourceTree = "<group>"; };
 		53E8F19028B3EC550011D63F /* NewsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTVCell.swift; sourceTree = "<group>"; };
@@ -67,6 +83,20 @@
 		53E8F19F28B3F87E0011D63F /* FollowUsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUsCVCell.swift; sourceTree = "<group>"; };
 		53E8F1A528B40AD20011D63F /* NewsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableVC.swift; sourceTree = "<group>"; };
 		53E8F1A728B40E200011D63F /* NewsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableView.swift; sourceTree = "<group>"; };
+		53E8F1A928B41CF90011D63F /* ShopTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableVC.swift; sourceTree = "<group>"; };
+		53E8F1AB28B423340011D63F /* ShopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableView.swift; sourceTree = "<group>"; };
+		53E8F1AD28B426E20011D63F /* CouponStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponStorage.swift; sourceTree = "<group>"; };
+		53E8F1B028B427A20011D63F /* CouponCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCVCell.swift; sourceTree = "<group>"; };
+		53E8F1B128B427A20011D63F /* CouponCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponCVCell.xib; sourceTree = "<group>"; };
+		53E8F1B528B4294A0011D63F /* ok.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ok.json; sourceTree = "<group>"; };
+		53E8F1B628B4294A0011D63F /* buysomecoffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buysomecoffee.json; sourceTree = "<group>"; };
+		53E8F1B728B4294A0011D63F /* buycoffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buycoffee.json; sourceTree = "<group>"; };
+		53E8F1B828B4294A0011D63F /* bean.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bean.json; sourceTree = "<group>"; };
+		53E8F1B928B4294A0011D63F /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
+		53E8F1BA28B4294B0011D63F /* buying.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buying.json; sourceTree = "<group>"; };
+		53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeStorage.swift; sourceTree = "<group>"; };
+		53E8F1C428B444150011D63F /* CoffeeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTVCell.swift; sourceTree = "<group>"; };
+		53E8F1C528B444150011D63F /* CoffeeTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeTVCell.xib; sourceTree = "<group>"; };
 		A445D65BBCB058EACA51C3C7 /* Pods-KKOApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKOApp.release.xcconfig"; path = "Target Support Files/Pods-KKOApp/Pods-KKOApp.release.xcconfig"; sourceTree = "<group>"; };
 		A88C508323B269DAC12903FB /* Pods-KKOApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKOApp.debug.xcconfig"; path = "Target Support Files/Pods-KKOApp/Pods-KKOApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0EFC33B70C8060F4CD3A4FD /* Pods_KKOApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKOApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +135,7 @@
 		534DA99528AFD68400626AA4 /* KKOApp */ = {
 			isa = PBXGroup;
 			children = (
+				53E8F1B428B429200011D63F /* Lottie */,
 				53E8F19C28B3F7520011D63F /* Layout */,
 				534DA9A428AFD68600626AA4 /* Info.plist */,
 				534DA9AF28AFDE7300626AA4 /* Application */,
@@ -146,6 +177,7 @@
 		534DA9AE28AFDCA200626AA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				539BDBED28B524E30057BCA9 /* Coffee.plist */,
 				534DA99F28AFD68600626AA4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -202,7 +234,7 @@
 		53E8F17628B3D7F70011D63F /* NewsTB */ = {
 			isa = PBXGroup;
 			children = (
-				53E8F19428B3F4380011D63F /* FollowUs VC */,
+				53E8F19428B3F4380011D63F /* FollowUsVC */,
 				53E8F18F28B3EC150011D63F /* NewsTVCell */,
 				53E8F17928B3D8440011D63F /* NewsTB.storyboard */,
 				53E8F1A528B40AD20011D63F /* NewsTableVC.swift */,
@@ -214,8 +246,11 @@
 		53E8F17728B3D80B0011D63F /* ShopTB */ = {
 			isa = PBXGroup;
 			children = (
+				53E8F1C328B443EF0011D63F /* CoffeeTBCell */,
+				53E8F1AF28B427640011D63F /* CouponsCVCell */,
 				53E8F18128B3D90F0011D63F /* ShopTB.storyboard */,
-				53E8F18328B3D92C0011D63F /* ShopVC.swift */,
+				53E8F1A928B41CF90011D63F /* ShopTableVC.swift */,
+				53E8F1AB28B423340011D63F /* ShopTableView.swift */,
 			);
 			path = ShopTB;
 			sourceTree = "<group>";
@@ -257,6 +292,9 @@
 			isa = PBXGroup;
 			children = (
 				53E8F18C28B3E8E40011D63F /* News */,
+				53E8F1AD28B426E20011D63F /* CouponStorage.swift */,
+				53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */,
+				539BDBEB28B523100057BCA9 /* CoffeeItem.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -279,14 +317,14 @@
 			path = NewsTVCell;
 			sourceTree = "<group>";
 		};
-		53E8F19428B3F4380011D63F /* FollowUs VC */ = {
+		53E8F19428B3F4380011D63F /* FollowUsVC */ = {
 			isa = PBXGroup;
 			children = (
 				53E8F19828B3F4C40011D63F /* FollowUs.storyboard */,
 				53E8F19A28B3F4E60011D63F /* FollowUsVC.swift */,
 				53E8F19F28B3F87E0011D63F /* FollowUsCVCell.swift */,
 			);
-			path = "FollowUs VC";
+			path = FollowUsVC;
 			sourceTree = "<group>";
 		};
 		53E8F19C28B3F7520011D63F /* Layout */ = {
@@ -295,6 +333,37 @@
 				53E8F19D28B3F76C0011D63F /* CustomLayout.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		53E8F1AF28B427640011D63F /* CouponsCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F1B028B427A20011D63F /* CouponCVCell.swift */,
+				53E8F1B128B427A20011D63F /* CouponCVCell.xib */,
+			);
+			path = CouponsCVCell;
+			sourceTree = "<group>";
+		};
+		53E8F1B428B429200011D63F /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F1B828B4294A0011D63F /* bean.json */,
+				53E8F1B728B4294A0011D63F /* buycoffee.json */,
+				53E8F1BA28B4294B0011D63F /* buying.json */,
+				53E8F1B628B4294A0011D63F /* buysomecoffee.json */,
+				53E8F1B928B4294A0011D63F /* coffee.json */,
+				53E8F1B528B4294A0011D63F /* ok.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		53E8F1C328B443EF0011D63F /* CoffeeTBCell */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F1C428B444150011D63F /* CoffeeTVCell.swift */,
+				53E8F1C528B444150011D63F /* CoffeeTVCell.xib */,
+			);
+			path = CoffeeTBCell;
 			sourceTree = "<group>";
 		};
 		9B9AE91E4CC75CCA0A9FEBD2 /* Pods */ = {
@@ -374,14 +443,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E8F1BE28B4294B0011D63F /* bean.json in Resources */,
+				53E8F1BD28B4294B0011D63F /* buycoffee.json in Resources */,
 				53E8F19328B3EC550011D63F /* NewsTVCell.xib in Resources */,
 				53E8F18228B3D90F0011D63F /* ShopTB.storyboard in Resources */,
 				534DA9A328AFD68600626AA4 /* LaunchScreen.storyboard in Resources */,
+				53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */,
+				53E8F1C028B4294B0011D63F /* buying.json in Resources */,
 				53E8F18028B3D8FF0011D63F /* ProfileTB.storyboard in Resources */,
 				53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */,
 				53E8F19928B3F4C40011D63F /* FollowUs.storyboard in Resources */,
+				53E8F1B328B427A20011D63F /* CouponCVCell.xib in Resources */,
 				534DA9A028AFD68600626AA4 /* Assets.xcassets in Resources */,
 				53E8F17A28B3D8440011D63F /* NewsTB.storyboard in Resources */,
+				53E8F1BF28B4294B0011D63F /* coffee.json in Resources */,
+				53E8F1BB28B4294B0011D63F /* ok.json in Resources */,
+				539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */,
+				53E8F1BC28B4294B0011D63F /* buysomecoffee.json in Resources */,
 				534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */,
 				534DA99E28AFD68400626AA4 /* Main.storyboard in Resources */,
 			);
@@ -438,20 +516,26 @@
 			files = (
 				534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */,
 				53E8F18A28B3E86A0011D63F /* UIImage.swift in Sources */,
+				53E8F1B228B427A20011D63F /* CouponCVCell.swift in Sources */,
 				53E8F1A828B40E200011D63F /* NewsTableView.swift in Sources */,
 				53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */,
 				53E8F1A028B3F87E0011D63F /* FollowUsCVCell.swift in Sources */,
 				53E8F19B28B3F4E60011D63F /* FollowUsVC.swift in Sources */,
+				53E8F1C628B444150011D63F /* CoffeeTVCell.swift in Sources */,
 				534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */,
+				53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */,
+				53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
 				53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */,
-				53E8F18428B3D92C0011D63F /* ShopVC.swift in Sources */,
 				53E8F19228B3EC550011D63F /* NewsTVCell.swift in Sources */,
 				53E8F17E28B3D8F00011D63F /* ProfileVC.swift in Sources */,
+				53E8F1AE28B426E20011D63F /* CouponStorage.swift in Sources */,
 				53E8F19728B3F4830011D63F /* FollowUsStorage.swift in Sources */,
 				53E8F18E28B3E8F70011D63F /* NewsStorage.swift in Sources */,
 				534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */,
+				53E8F1AA28B41CF90011D63F /* ShopTableVC.swift in Sources */,
 				534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */,
+				539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */,
 				534DA99928AFD68400626AA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

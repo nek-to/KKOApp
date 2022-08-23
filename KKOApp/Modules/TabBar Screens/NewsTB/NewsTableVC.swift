@@ -9,7 +9,6 @@ import UIKit
 
 class NewsTableVC: UITableViewController {
     @IBOutlet weak var foneImageView: UIImageView!
-//    @IBOutlet weak var newsTableView: UITableView!
     
     private var singleton = NewsStorage.shared
     private var height: CGFloat = 230
