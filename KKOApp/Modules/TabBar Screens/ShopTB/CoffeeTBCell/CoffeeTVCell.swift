@@ -26,6 +26,14 @@ class CoffeeTVCell: UITableViewCell {
     
     func configure(_ coffee: CoffeeItem) {
         item = coffee
+        titleLabel.text = item?.name
+        descritionLabel.text = item?.description
+        if let price = item?.price {
+        priceLabel.text = String("\(price)$")
+        }
+        coffeeImage.image = UIImage().resizeImage(image: .init(named: item!.imageName)!,
+                                                  targetSize: .init(width: 300, height: 300))
+        likeButton.isSelected = item!.like
     }
     
     @IBAction func likeCoffee(_ sender: UIButton) {

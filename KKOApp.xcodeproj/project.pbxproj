@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B07FFE828B5A318001701BB /* BuyCoffee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B07FFE728B5A318001701BB /* BuyCoffee.storyboard */; };
+		0B07FFEA28B5A400001701BB /* BuyCoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B07FFE928B5A400001701BB /* BuyCoffeeVC.swift */; };
+		0B0F784E28B58A84005D6638 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0F784D28B58A84005D6638 /* NewsItem.swift */; };
+		0B0F785028B58B6D005D6638 /* News.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B0F784F28B58B6D005D6638 /* News.plist */; };
 		534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA99628AFD68400626AA4 /* AppDelegate.swift */; };
 		534DA99928AFD68400626AA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA99828AFD68400626AA4 /* SceneDelegate.swift */; };
 		534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA99A28AFD68400626AA4 /* LogInVC.swift */; };
@@ -53,6 +57,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B07FFE728B5A318001701BB /* BuyCoffee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuyCoffee.storyboard; sourceTree = "<group>"; };
+		0B07FFE928B5A400001701BB /* BuyCoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoffeeVC.swift; sourceTree = "<group>"; };
+		0B0F784D28B58A84005D6638 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		0B0F784F28B58B6D005D6638 /* News.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = News.plist; sourceTree = "<group>"; };
 		534DA99328AFD68400626AA4 /* KKOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		534DA99628AFD68400626AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534DA99828AFD68400626AA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +122,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B07FFE628B5A2C1001701BB /* BuyCoffee */ = {
+			isa = PBXGroup;
+			children = (
+				0B07FFE728B5A318001701BB /* BuyCoffee.storyboard */,
+				0B07FFE928B5A400001701BB /* BuyCoffeeVC.swift */,
+			);
+			path = BuyCoffee;
+			sourceTree = "<group>";
+		};
+		0B0F784C28B58488005D6638 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F1AD28B426E20011D63F /* CouponStorage.swift */,
+				53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */,
+				539BDBEB28B523100057BCA9 /* CoffeeItem.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
 		534DA98A28AFD68400626AA4 = {
 			isa = PBXGroup;
 			children = (
@@ -135,12 +162,12 @@
 		534DA99528AFD68400626AA4 /* KKOApp */ = {
 			isa = PBXGroup;
 			children = (
-				53E8F1B428B429200011D63F /* Lottie */,
-				53E8F19C28B3F7520011D63F /* Layout */,
 				534DA9A428AFD68600626AA4 /* Info.plist */,
 				534DA9AF28AFDE7300626AA4 /* Application */,
 				53E8F18728B3E8360011D63F /* Extencions */,
 				534DA9A128AFD68600626AA4 /* LaunchScreen.storyboard */,
+				53E8F19C28B3F7520011D63F /* Layout */,
+				53E8F1B428B429200011D63F /* Lottie */,
 				534DA9AA28AFDC3500626AA4 /* Models */,
 				534DA9AB28AFDC3D00626AA4 /* Modules */,
 				534DA9AC28AFDC8500626AA4 /* Network */,
@@ -177,6 +204,7 @@
 		534DA9AE28AFDCA200626AA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0B0F784F28B58B6D005D6638 /* News.plist */,
 				539BDBED28B524E30057BCA9 /* Coffee.plist */,
 				534DA99F28AFD68600626AA4 /* Assets.xcassets */,
 			);
@@ -224,6 +252,7 @@
 			children = (
 				53E8F17228B3D6520011D63F /* MainTabBar.storyboard */,
 				53E8F17428B3D6940011D63F /* MainTabBarVC.swift */,
+				0B07FFE628B5A2C1001701BB /* BuyCoffee */,
 				53E8F17628B3D7F70011D63F /* NewsTB */,
 				53E8F17828B3D8130011D63F /* ProfileTB */,
 				53E8F17728B3D80B0011D63F /* ShopTB */,
@@ -291,10 +320,8 @@
 		53E8F18B28B3E8D30011D63F /* Storages */ = {
 			isa = PBXGroup;
 			children = (
+				0B0F784C28B58488005D6638 /* Shop */,
 				53E8F18C28B3E8E40011D63F /* News */,
-				53E8F1AD28B426E20011D63F /* CouponStorage.swift */,
-				53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */,
-				539BDBEB28B523100057BCA9 /* CoffeeItem.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -304,6 +331,7 @@
 			children = (
 				53E8F18D28B3E8F70011D63F /* NewsStorage.swift */,
 				53E8F19628B3F4830011D63F /* FollowUsStorage.swift */,
+				0B0F784D28B58A84005D6638 /* NewsItem.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -444,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E8F1BE28B4294B0011D63F /* bean.json in Resources */,
+				0B07FFE828B5A318001701BB /* BuyCoffee.storyboard in Resources */,
 				53E8F1BD28B4294B0011D63F /* buycoffee.json in Resources */,
 				53E8F19328B3EC550011D63F /* NewsTVCell.xib in Resources */,
 				53E8F18228B3D90F0011D63F /* ShopTB.storyboard in Resources */,
@@ -456,6 +485,7 @@
 				53E8F1B328B427A20011D63F /* CouponCVCell.xib in Resources */,
 				534DA9A028AFD68600626AA4 /* Assets.xcassets in Resources */,
 				53E8F17A28B3D8440011D63F /* NewsTB.storyboard in Resources */,
+				0B0F785028B58B6D005D6638 /* News.plist in Resources */,
 				53E8F1BF28B4294B0011D63F /* coffee.json in Resources */,
 				53E8F1BB28B4294B0011D63F /* ok.json in Resources */,
 				539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */,
@@ -527,6 +557,7 @@
 				53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
 				53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */,
+				0B0F784E28B58A84005D6638 /* NewsItem.swift in Sources */,
 				53E8F19228B3EC550011D63F /* NewsTVCell.swift in Sources */,
 				53E8F17E28B3D8F00011D63F /* ProfileVC.swift in Sources */,
 				53E8F1AE28B426E20011D63F /* CouponStorage.swift in Sources */,
@@ -534,6 +565,7 @@
 				53E8F18E28B3E8F70011D63F /* NewsStorage.swift in Sources */,
 				534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */,
 				53E8F1AA28B41CF90011D63F /* ShopTableVC.swift in Sources */,
+				0B07FFEA28B5A400001701BB /* BuyCoffeeVC.swift in Sources */,
 				534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */,
 				539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */,
 				534DA99928AFD68400626AA4 /* SceneDelegate.swift in Sources */,

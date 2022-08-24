@@ -126,7 +126,7 @@
 		<key>like</key>
 		<false/>
 		<key>image</key>
-		<string>coffee1</string>
+		<string>coffee11</string>
 		<key>price</key>
 		<integer>3</integer>
 		<key>description</key>
@@ -138,7 +138,7 @@
 		<key>like</key>
 		<false/>
 		<key>image</key>
-		<string>coffee1</string>
+		<string>coffee12</string>
 		<key>price</key>
 		<integer>2</integer>
 		<key>description</key>

@@ -10,7 +10,7 @@ import UIKit
 class NewsTableVC: UITableViewController {
     @IBOutlet weak var foneImageView: UIImageView!
     
-    private var singleton = NewsStorage.shared
+    private var news = NewsStorage.shared
     private var height: CGFloat = 230
 
     override func viewDidLoad() {
@@ -35,15 +35,12 @@ class NewsTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return singleton.title!.count
+        return news.elements.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let newsCell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTVCell
-        newsCell.titleLabel.text = singleton.title![indexPath.row]
-        newsCell.dateLabel.text = singleton.date![indexPath.row]
-        newsCell.descriptionLabel.text = singleton.description![indexPath.row]
-        newsCell.imageImageView.image = singleton.images![indexPath.row]
+        newsCell.configure(news.elements[indexPath.row])
         newsCell.selectionStyle = .none
         return newsCell
     }
@@ -54,8 +51,8 @@ class NewsTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = singleton.title?[indexPath.row]
-        switch cell?.lowercased() {
+        let cell = news.elements[indexPath.row].title
+        switch cell.lowercased() {
         case "follow us":
             toFollowUsScreen()
         default:

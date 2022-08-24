@@ -7,5 +7,6 @@ target 'KKOApp' do
 
   pod "Simple-KeychainSwift"
   pod 'lottie-ios'
+  pod 'RealmSwift', '~>10'
 
 end

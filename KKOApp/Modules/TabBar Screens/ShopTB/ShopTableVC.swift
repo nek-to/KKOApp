@@ -38,31 +38,33 @@ class ShopTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coffee.name.count
+        return coffee.elements.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return returnConfigCell(for: indexPath)
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "BuyCoffee", bundle: nil)
+        var toBuyCoffee = storyboard.instantiateViewController(withIdentifier: Screens.buyCoffee.rawValue) as! CoffeeProtocol
+        toBuyCoffee.name = coffee.elements[indexPath.row].name
+        toBuyCoffee.descript = coffee.elements[indexPath.row].description
+        toBuyCoffee.name = coffee.elements[indexPath.row].name
+        toBuyCoffee.price = coffee.elements[indexPath.row].price
+        toBuyCoffee.imageName = coffee.elements[indexPath.row].imageName
+        navigationController?.pushViewController(toBuyCoffee as! UIViewController, animated: true)
+    }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
     
     private func returnConfigCell(for indexPath: IndexPath) -> UITableViewCell {
-        let cellCoffee = tableView.dequeueReusableCell(withIdentifier: "coffeeCell") as! CoffeeTVCell
-        // cellCoffee.configure(<#T##coffee: Coffee##Coffee#>)
-        cellCoffee.titleLabel.text = coffee.name[indexPath.row]
-        cellCoffee.descritionLabel.text = coffee.description[indexPath.row]
-        cellCoffee.selectionStyle = .none
-        cellCoffee.priceLabel.text = coffee.price[indexPath.row]
-        cellCoffee.coffeeImage.image = coffee.imageName[indexPath.row]
-        if cellCoffee.likeIndicator {
-            coffee.like[indexPath.row] = true
-        }
-        cellCoffee.likeButton.isSelected = coffee.like[indexPath.row]
-        return cellCoffee
+        let coffeeCell = tableView.dequeueReusableCell(withIdentifier: "coffeeCell") as! CoffeeTVCell
+        coffeeCell.configure(coffee.elements[indexPath.row])
+        coffeeCell.selectionStyle = .none
+        return coffeeCell
     }
 }
 
