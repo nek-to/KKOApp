@@ -23,6 +23,10 @@
 		5398E68628B689B400DEB5BC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398E68528B689B400DEB5BC /* UIView.swift */; };
 		539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539BDBEB28B523100057BCA9 /* CoffeeItem.swift */; };
 		539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539BDBED28B524E30057BCA9 /* Coffee.plist */; };
+		53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678028B721E9000A758C /* PreferenceItem.swift */; };
+		53C8678328B72249000A758C /* Preference.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53C8678228B72249000A758C /* Preference.plist */; };
+		53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678428B7230F000A758C /* PreferenceStorage.swift */; };
+		53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678B28B7263F000A758C /* PreferenceTVCell.swift */; };
 		53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17228B3D6520011D63F /* MainTabBar.storyboard */; };
 		53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F17428B3D6940011D63F /* MainTabBarVC.swift */; };
 		53E8F17A28B3D8440011D63F /* NewsTB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17928B3D8440011D63F /* NewsTB.storyboard */; };
@@ -76,6 +80,10 @@
 		5398E68528B689B400DEB5BC /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		539BDBEB28B523100057BCA9 /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		539BDBED28B524E30057BCA9 /* Coffee.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffee.plist; sourceTree = "<group>"; };
+		53C8678028B721E9000A758C /* PreferenceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceItem.swift; sourceTree = "<group>"; };
+		53C8678228B72249000A758C /* Preference.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preference.plist; sourceTree = "<group>"; };
+		53C8678428B7230F000A758C /* PreferenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceStorage.swift; sourceTree = "<group>"; };
+		53C8678B28B7263F000A758C /* PreferenceTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceTVCell.swift; sourceTree = "<group>"; };
 		53E8F17228B3D6520011D63F /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		53E8F17428B3D6940011D63F /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		53E8F17928B3D8440011D63F /* NewsTB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsTB.storyboard; sourceTree = "<group>"; };
@@ -191,6 +199,7 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0B07FFE628B5A2C1001701BB /* BuyCoffee */,
 				53E8F17128B3D61C0011D63F /* TabBar Screens */,
 				534DA9B128AFDF2100626AA4 /* Entry Screens */,
 			);
@@ -207,8 +216,9 @@
 		534DA9AE28AFDCA200626AA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0B0F784F28B58B6D005D6638 /* News.plist */,
 				539BDBED28B524E30057BCA9 /* Coffee.plist */,
+				0B0F784F28B58B6D005D6638 /* News.plist */,
+				53C8678228B72249000A758C /* Preference.plist */,
 				534DA99F28AFD68600626AA4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -265,12 +275,20 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		53C8677F28B721BF000A758C /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				53C8678028B721E9000A758C /* PreferenceItem.swift */,
+				53C8678428B7230F000A758C /* PreferenceStorage.swift */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
 		53E8F17128B3D61C0011D63F /* TabBar Screens */ = {
 			isa = PBXGroup;
 			children = (
 				53E8F17228B3D6520011D63F /* MainTabBar.storyboard */,
 				53E8F17428B3D6940011D63F /* MainTabBarVC.swift */,
-				0B07FFE628B5A2C1001701BB /* BuyCoffee */,
 				53E8F17628B3D7F70011D63F /* NewsTB */,
 				53E8F17828B3D8130011D63F /* ProfileTB */,
 				53E8F17728B3D80B0011D63F /* ShopTB */,
@@ -305,8 +323,9 @@
 		53E8F17828B3D8130011D63F /* ProfileTB */ = {
 			isa = PBXGroup;
 			children = (
-				53E8F17D28B3D8F00011D63F /* ProfileVC.swift */,
 				53E8F17F28B3D8FF0011D63F /* ProfileTB.storyboard */,
+				53C8678B28B7263F000A758C /* PreferenceTVCell.swift */,
+				53E8F17D28B3D8F00011D63F /* ProfileVC.swift */,
 			);
 			path = ProfileTB;
 			sourceTree = "<group>";
@@ -339,6 +358,7 @@
 		53E8F18B28B3E8D30011D63F /* Storages */ = {
 			isa = PBXGroup;
 			children = (
+				53C8677F28B721BF000A758C /* Preference */,
 				0B0F784C28B58488005D6638 /* Shop */,
 				53E8F18C28B3E8E40011D63F /* News */,
 			);
@@ -495,6 +515,7 @@
 				53E8F1BD28B4294B0011D63F /* buycoffee.json in Resources */,
 				53E8F19328B3EC550011D63F /* NewsTVCell.xib in Resources */,
 				53E8F18228B3D90F0011D63F /* ShopTB.storyboard in Resources */,
+				53C8678328B72249000A758C /* Preference.plist in Resources */,
 				534DA9A328AFD68600626AA4 /* LaunchScreen.storyboard in Resources */,
 				53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */,
 				53E8F1C028B4294B0011D63F /* buying.json in Resources */,
@@ -576,11 +597,13 @@
 				53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */,
 				53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
+				53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */,
 				53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */,
 				0B0F784E28B58A84005D6638 /* NewsItem.swift in Sources */,
 				53E8F19228B3EC550011D63F /* NewsTVCell.swift in Sources */,
 				53E8F17E28B3D8F00011D63F /* ProfileVC.swift in Sources */,
 				53E8F1AE28B426E20011D63F /* CouponStorage.swift in Sources */,
+				53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */,
 				53E8F19728B3F4830011D63F /* FollowUsStorage.swift in Sources */,
 				53E8F18E28B3E8F70011D63F /* NewsStorage.swift in Sources */,
 				534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */,
@@ -588,6 +611,7 @@
 				0B07FFEA28B5A400001701BB /* BuyCoffeeVC.swift in Sources */,
 				534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */,
 				539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */,
+				53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */,
 				534DA99928AFD68400626AA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

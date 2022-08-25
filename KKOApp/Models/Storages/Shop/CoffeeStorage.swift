@@ -5,7 +5,7 @@
 //  Created by VironIT on 23.08.22.
 //
 
-import UIKit
+import Foundation
 
 class CoffeeStorage {
     var elements: [CoffeeItem] = []
