@@ -51,7 +51,7 @@ class ShopTableVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,10 +62,14 @@ class ShopTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return returnConfigCell(for: indexPath)
+        returnConfigCell(for: indexPath)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        transferDataToBuyScreen(indexPath: indexPath)
+    }
+    
+    private func transferDataToBuyScreen(indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "BuyCoffee", bundle: nil)
         var toBuyCoffee = storyboard.instantiateViewController(withIdentifier: Screens.buyCoffee.rawValue) as! CoffeeProtocol
         toBuyCoffee.name = coffee.elements[indexPath.row].name

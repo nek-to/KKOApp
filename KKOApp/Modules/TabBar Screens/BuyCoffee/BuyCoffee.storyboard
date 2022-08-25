@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zwd-Ko-WZ6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buy-back" translatesAutoresizingMaskIntoConstraints="NO" id="zwd-Ko-WZ6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnM-e1-PJS">
                                 <rect key="frame" x="55.5" y="802" width="75.5" height="40"/>
@@ -37,10 +37,10 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NST-7B-KOw">
-                                <rect key="frame" x="20.5" y="724" width="373" height="38"/>
+                                <rect key="frame" x="20.5" y="712.5" width="373" height="49.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px5-yE-Roa">
-                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="49.5"/>
                                         <color key="backgroundColor" red="0.1239658702503551" green="0.1239658702503551" blue="0.1239658702503551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="S">
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd6-GH-0wn">
-                                        <rect key="frame" x="127.5" y="0.0" width="118" height="38"/>
+                                        <rect key="frame" x="127.5" y="0.0" width="118" height="49.5"/>
                                         <color key="backgroundColor" white="0.089999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="M">
@@ -64,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5P-qD-MkR">
-                                        <rect key="frame" x="255.5" y="0.0" width="117.5" height="38"/>
+                                        <rect key="frame" x="255.5" y="0.0" width="117.5" height="49.5"/>
                                         <color key="backgroundColor" red="0.1239658703" green="0.1239658703" blue="0.1239658703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="L">
@@ -79,7 +79,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw3-VP-bcE">
-                                <rect key="frame" x="30" y="700.5" width="26.5" height="18.5"/>
+                                <rect key="frame" x="30" y="689" width="26.5" height="18.5"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ni-SK-9XE">
-                                <rect key="frame" x="177" y="792.5" width="207" height="44.5"/>
+                                <rect key="frame" x="177" y="779" width="207" height="58"/>
                                 <color key="backgroundColor" red="0.82055312400000002" green="0.47253471609999997" blue="0.2592552602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Buy Now">
@@ -139,9 +139,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NST-7B-KOw" secondAttribute="bottom" constant="100" id="XYF-aJ-8M5"/>
                             <constraint firstItem="muz-eI-Xik" firstAttribute="top" secondItem="NST-7B-KOw" secondAttribute="bottom" constant="10" id="bQK-eh-vx5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hYQ-m4-W0A" secondAttribute="trailing" constant="35" id="bjn-1E-PJn"/>
-                            <constraint firstItem="8Ni-SK-9XE" firstAttribute="height" secondItem="zwd-Ko-WZ6" secondAttribute="height" multiplier="0.055" id="d4n-rK-kfr"/>
+                            <constraint firstItem="8Ni-SK-9XE" firstAttribute="height" secondItem="zwd-Ko-WZ6" secondAttribute="height" multiplier="0.07" constant="-4.7800000000000011" id="d4n-rK-kfr"/>
                             <constraint firstItem="NST-7B-KOw" firstAttribute="top" secondItem="Lw3-VP-bcE" secondAttribute="bottom" constant="5" id="dku-Mk-o3I"/>
-                            <constraint firstItem="nzb-ej-AkV" firstAttribute="height" secondItem="zwd-Ko-WZ6" secondAttribute="height" multiplier="0.569754" id="fMD-ai-3fQ"/>
+                            <constraint firstItem="nzb-ej-AkV" firstAttribute="height" secondItem="zwd-Ko-WZ6" secondAttribute="height" multiplier="0.569754" constant="-49.99958399999997" id="fMD-ai-3fQ"/>
                             <constraint firstItem="muz-eI-Xik" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="fxo-Ey-Isv"/>
                             <constraint firstItem="vnM-e1-PJS" firstAttribute="leading" secondItem="G8p-re-Lyc" secondAttribute="trailing" constant="7" id="gWl-Yh-zj4"/>
                             <constraint firstItem="hYQ-m4-W0A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="hUO-Ud-6vO"/>
@@ -154,8 +154,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8Ni-SK-9XE" secondAttribute="bottom" constant="25" id="ot1-yP-ASn"/>
                             <constraint firstItem="nzb-ej-AkV" firstAttribute="width" secondItem="zwd-Ko-WZ6" secondAttribute="width" multiplier="0.900966" id="qpS-Lm-OZL"/>
                             <constraint firstItem="zwd-Ko-WZ6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rIN-Ha-LCJ"/>
-                            <constraint firstItem="zwd-Ko-WZ6" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="-44" id="tKZ-Wv-Dt8"/>
-                            <constraint firstItem="NST-7B-KOw" firstAttribute="height" secondItem="zwd-Ko-WZ6" secondAttribute="height" multiplier="0.047" id="tOV-4V-LMS"/>
+                            <constraint firstItem="zwd-Ko-WZ6" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="-88" id="tKZ-Wv-Dt8"/>
+                            <constraint firstItem="NST-7B-KOw" firstAttribute="height" secondItem="zwd-Ko-WZ6" secondAttribute="height" multiplier="0.06" constant="-4.1120000000000019" id="tOV-4V-LMS"/>
                             <constraint firstItem="l2C-aI-GGi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="vg8-BO-90g"/>
                             <constraint firstItem="QFq-5I-tRb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xjo-BZ-xOt"/>
                             <constraint firstItem="l2C-aI-GGi" firstAttribute="top" secondItem="nzb-ej-AkV" secondAttribute="bottom" constant="-88" id="y1w-xc-Fwl"/>
@@ -167,13 +167,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backCardImageView" destination="zwd-Ko-WZ6" id="Hxk-gZ-8m4"/>
                         <outlet property="buttonsStack" destination="NST-7B-KOw" id="tm9-hp-zzY"/>
                         <outlet property="buyButton" destination="8Ni-SK-9XE" id="TA2-Va-5gm"/>
                         <outlet property="cardView" destination="QFq-5I-tRb" id="QTD-Nb-kxy"/>
                         <outlet property="coffeeImageView" destination="nzb-ej-AkV" id="HQn-VR-3bY"/>
                         <outlet property="containerView" destination="dlX-bm-P52" id="jmx-lN-kNn"/>
                         <outlet property="descriptionLabel" destination="hYQ-m4-W0A" id="G4t-rX-IlC"/>
-                        <outlet property="foneImageView" destination="zwd-Ko-WZ6" id="kcA-bv-alT"/>
                         <outlet property="priceLabel" destination="vnM-e1-PJS" id="Psz-3T-CYj"/>
                         <outlet property="sizeLButton" destination="R5P-qD-MkR" id="XkI-oi-W9g"/>
                         <outlet property="sizeMButton" destination="cd6-GH-0wn" id="Nvv-cL-40Y"/>
@@ -209,6 +209,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buy-back" width="844" height="1500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
