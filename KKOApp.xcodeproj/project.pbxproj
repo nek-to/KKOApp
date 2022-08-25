@@ -20,11 +20,17 @@
 		534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534DA9B628AFEF5700626AA4 /* Signup.storyboard */; };
 		534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */; };
 		534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */; };
+		5395340228B7F78A00B76054 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395340128B7F78A00B76054 /* Map.storyboard */; };
+		5395340428B7F7A000B76054 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340328B7F7A000B76054 /* MapVC.swift */; };
+		5395340628B801B900B76054 /* PreferenceEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340528B801B900B76054 /* PreferenceEnum.swift */; };
+		5395340928B8036200B76054 /* CoffeeshopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340828B8036200B76054 /* CoffeeshopItem.swift */; };
+		5395340B28B8037700B76054 /* CoffeeshopStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340A28B8037700B76054 /* CoffeeshopStorage.swift */; };
+		5395340D28B8038C00B76054 /* Coffeeshops.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5395340C28B8038C00B76054 /* Coffeeshops.plist */; };
 		5398E68628B689B400DEB5BC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398E68528B689B400DEB5BC /* UIView.swift */; };
 		539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539BDBEB28B523100057BCA9 /* CoffeeItem.swift */; };
 		539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539BDBED28B524E30057BCA9 /* Coffee.plist */; };
 		53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678028B721E9000A758C /* PreferenceItem.swift */; };
-		53C8678328B72249000A758C /* Preference.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53C8678228B72249000A758C /* Preference.plist */; };
+		53C8678328B72249000A758C /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53C8678228B72249000A758C /* Preferences.plist */; };
 		53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678428B7230F000A758C /* PreferenceStorage.swift */; };
 		53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678B28B7263F000A758C /* PreferenceTVCell.swift */; };
 		53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17228B3D6520011D63F /* MainTabBar.storyboard */; };
@@ -77,11 +83,17 @@
 		534DA9B628AFEF5700626AA4 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensEnum.swift; sourceTree = "<group>"; };
+		5395340128B7F78A00B76054 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		5395340328B7F7A000B76054 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		5395340528B801B900B76054 /* PreferenceEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceEnum.swift; sourceTree = "<group>"; };
+		5395340828B8036200B76054 /* CoffeeshopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopItem.swift; sourceTree = "<group>"; };
+		5395340A28B8037700B76054 /* CoffeeshopStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopStorage.swift; sourceTree = "<group>"; };
+		5395340C28B8038C00B76054 /* Coffeeshops.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffeeshops.plist; sourceTree = "<group>"; };
 		5398E68528B689B400DEB5BC /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		539BDBEB28B523100057BCA9 /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		539BDBED28B524E30057BCA9 /* Coffee.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffee.plist; sourceTree = "<group>"; };
 		53C8678028B721E9000A758C /* PreferenceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceItem.swift; sourceTree = "<group>"; };
-		53C8678228B72249000A758C /* Preference.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preference.plist; sourceTree = "<group>"; };
+		53C8678228B72249000A758C /* Preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
 		53C8678428B7230F000A758C /* PreferenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceStorage.swift; sourceTree = "<group>"; };
 		53C8678B28B7263F000A758C /* PreferenceTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceTVCell.swift; sourceTree = "<group>"; };
 		53E8F17228B3D6520011D63F /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
@@ -147,6 +159,8 @@
 				53E8F1AD28B426E20011D63F /* CouponStorage.swift */,
 				53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */,
 				539BDBEB28B523100057BCA9 /* CoffeeItem.swift */,
+				5395340828B8036200B76054 /* CoffeeshopItem.swift */,
+				5395340A28B8037700B76054 /* CoffeeshopStorage.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -191,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				53E8F18B28B3E8D30011D63F /* Storages */,
-				53E8F18528B3E80D0011D63F /* Screens Enum */,
+				53E8F18528B3E80D0011D63F /* Enums */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +213,7 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5395340028B7F71D00B76054 /* MapLocation */,
 				0B07FFE628B5A2C1001701BB /* BuyCoffee */,
 				53E8F17128B3D61C0011D63F /* TabBar Screens */,
 				534DA9B128AFDF2100626AA4 /* Entry Screens */,
@@ -217,8 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				539BDBED28B524E30057BCA9 /* Coffee.plist */,
+				5395340C28B8038C00B76054 /* Coffeeshops.plist */,
 				0B0F784F28B58B6D005D6638 /* News.plist */,
-				53C8678228B72249000A758C /* Preference.plist */,
+				53C8678228B72249000A758C /* Preferences.plist */,
 				534DA99F28AFD68600626AA4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -258,6 +274,15 @@
 				534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		5395340028B7F71D00B76054 /* MapLocation */ = {
+			isa = PBXGroup;
+			children = (
+				5395340128B7F78A00B76054 /* Map.storyboard */,
+				5395340328B7F7A000B76054 /* MapVC.swift */,
+			);
+			path = MapLocation;
 			sourceTree = "<group>";
 		};
 		5398E68328B6899B00DEB5BC /* UIView */ = {
@@ -330,12 +355,13 @@
 			path = ProfileTB;
 			sourceTree = "<group>";
 		};
-		53E8F18528B3E80D0011D63F /* Screens Enum */ = {
+		53E8F18528B3E80D0011D63F /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */,
+				5395340528B801B900B76054 /* PreferenceEnum.swift */,
 			);
-			path = "Screens Enum";
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		53E8F18728B3E8360011D63F /* Extencions */ = {
@@ -513,10 +539,12 @@
 				53E8F1BE28B4294B0011D63F /* bean.json in Resources */,
 				0B07FFE828B5A318001701BB /* BuyCoffee.storyboard in Resources */,
 				53E8F1BD28B4294B0011D63F /* buycoffee.json in Resources */,
+				5395340228B7F78A00B76054 /* Map.storyboard in Resources */,
 				53E8F19328B3EC550011D63F /* NewsTVCell.xib in Resources */,
 				53E8F18228B3D90F0011D63F /* ShopTB.storyboard in Resources */,
-				53C8678328B72249000A758C /* Preference.plist in Resources */,
+				53C8678328B72249000A758C /* Preferences.plist in Resources */,
 				534DA9A328AFD68600626AA4 /* LaunchScreen.storyboard in Resources */,
+				5395340D28B8038C00B76054 /* Coffeeshops.plist in Resources */,
 				53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */,
 				53E8F1C028B4294B0011D63F /* buying.json in Resources */,
 				53E8F18028B3D8FF0011D63F /* ProfileTB.storyboard in Resources */,
@@ -584,8 +612,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5395340928B8036200B76054 /* CoffeeshopItem.swift in Sources */,
 				5398E68628B689B400DEB5BC /* UIView.swift in Sources */,
 				534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */,
+				5395340B28B8037700B76054 /* CoffeeshopStorage.swift in Sources */,
 				53E8F18A28B3E86A0011D63F /* UIImage.swift in Sources */,
 				53E8F1B228B427A20011D63F /* CouponCVCell.swift in Sources */,
 				53E8F1A828B40E200011D63F /* NewsTableView.swift in Sources */,
@@ -595,6 +625,7 @@
 				53E8F1C628B444150011D63F /* CoffeeTVCell.swift in Sources */,
 				534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */,
 				53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */,
+				5395340628B801B900B76054 /* PreferenceEnum.swift in Sources */,
 				53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
 				53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */,
@@ -609,6 +640,7 @@
 				534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */,
 				53E8F1AA28B41CF90011D63F /* ShopTableVC.swift in Sources */,
 				0B07FFEA28B5A400001701BB /* BuyCoffeeVC.swift in Sources */,
+				5395340428B7F7A000B76054 /* MapVC.swift in Sources */,
 				534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */,
 				539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */,
 				53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */,

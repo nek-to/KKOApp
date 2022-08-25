@@ -6,23 +6,29 @@
 		<key>icon</key>
 		<string>icon1</string>
 		<key>title</key>
-		<string>Payment</string>
+		<string>Location</string>
 	</dict>
 	<dict>
 		<key>icon</key>
 		<string>icon2</string>
 		<key>title</key>
-		<string>Purcase</string>
+		<string>Payment</string>
 	</dict>
 	<dict>
 		<key>icon</key>
 		<string>icon3</string>
 		<key>title</key>
-		<string>General</string>
+		<string>Purcase</string>
 	</dict>
 	<dict>
 		<key>icon</key>
 		<string>icon4</string>
+		<key>title</key>
+		<string>General</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icon5</string>
 		<key>title</key>
 		<string>Logout</string>
 	</dict>

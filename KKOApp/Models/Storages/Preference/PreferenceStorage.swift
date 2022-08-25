@@ -14,7 +14,7 @@ class PreferenceStorage {
     
     private init() {
                 var arrayRoot: NSArray?
-                if let path = Bundle.main.path(forResource: "Preference", ofType: "plist") {
+                if let path = Bundle.main.path(forResource: "Preferences", ofType: "plist") {
                     arrayRoot = NSArray(contentsOfFile: path)
                 }
         

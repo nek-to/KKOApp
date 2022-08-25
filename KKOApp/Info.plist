@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Please authorized for using our app</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Please allow your location for our service</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow your location for our service</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Dark</string>
 	<key>UIApplicationSceneManifest</key>

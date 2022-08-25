@@ -43,9 +43,8 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-            swipeLeft.direction = .left
-            self.view.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        self.view.addGestureRecognizer(swipeRight)
     }
     
     private func configure(title: String, descript: String, price: UInt, image: String) {
@@ -58,7 +57,6 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
         if gesture.direction == .right {
             self.navigationController?.popViewController(animated: true)
-            print("sole")
        }
     }
     

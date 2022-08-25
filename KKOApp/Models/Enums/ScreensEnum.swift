@@ -16,4 +16,5 @@ enum Screens: String {
     case shop = "ShopTableVC"
     case followUs = "FollowUsVC"
     case buyCoffee = "BuyCoffeeVC"
+    case map = "MapVC"
 }
