@@ -13,21 +13,38 @@ class ShopTableVC: UITableViewController {
     @IBOutlet weak var couponsCollectionView: UICollectionView!
     @IBOutlet weak var lottieView: UIView!
     
-    private var filteredCoffee = [CoffeeStorage]()
+    private var filteredCoffee = [CoffeeItem]()
     private var coffee = CoffeeStorage.shared
     private var coupone = CouponeStorage.shared
     private let okey = AnimationView(name: "ok")
     private var animate = true
+    private var searchBarIsEmpty: Bool {
+        guard let text = searchBar.text else { return false }
+        return text.isEmpty
+    }
+    private var isFiltering: Bool {
+        return searchBar.isFirstResponder && !searchBarIsEmpty
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         couponsCollectionView.delegate = self
         couponsCollectionView.dataSource = self
+        config()
+    }
+    
+    private func config() {
+        // lottie view
         lottieView.isHidden = true
+        // fone image
         foneImageView.layer.cornerRadius = 40
-        
+        // search bar
+        searchBar.placeholder = "Search coffee"
+        searchBar.autocapitalizationType = .none
+        // coupons cell registration
         couponsCollectionView.register(UINib(nibName: "CouponCVCell", bundle: nil), forCellWithReuseIdentifier: "couponCell")
+        // table cell registration
         tableView.register(UINib(nibName: "CoffeeTVCell", bundle: nil), forCellReuseIdentifier: "coffeeCell")
     }
     
@@ -38,6 +55,9 @@ class ShopTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering {
+            return filteredCoffee.count
+        }
         return coffee.elements.count
     }
     
@@ -62,6 +82,11 @@ class ShopTableVC: UITableViewController {
     
     private func returnConfigCell(for indexPath: IndexPath) -> UITableViewCell {
         let coffeeCell = tableView.dequeueReusableCell(withIdentifier: "coffeeCell") as! CoffeeTVCell
+        if isFiltering {
+            coffeeCell.configure(filteredCoffee[indexPath.row])
+            coffeeCell.selectionStyle = .none
+            return coffeeCell
+        }
         coffeeCell.configure(coffee.elements[indexPath.row])
         coffeeCell.selectionStyle = .none
         return coffeeCell
@@ -114,5 +139,13 @@ extension ShopTableVC: UICollectionViewDelegateFlowLayout {
 
 extension ShopTableVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterContentForSearchText(searchBar.text!)
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        filteredCoffee = coffee.elements.filter { (coffee: CoffeeItem) -> Bool in
+            return coffee.name.lowercased().contains(searchText.lowercased())
+        }
+        tableView.reloadData()
     }
 }

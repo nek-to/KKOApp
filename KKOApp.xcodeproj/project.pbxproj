@@ -20,6 +20,7 @@
 		534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534DA9B628AFEF5700626AA4 /* Signup.storyboard */; };
 		534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */; };
 		534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */; };
+		5398E68628B689B400DEB5BC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398E68528B689B400DEB5BC /* UIView.swift */; };
 		539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539BDBEB28B523100057BCA9 /* CoffeeItem.swift */; };
 		539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539BDBED28B524E30057BCA9 /* Coffee.plist */; };
 		53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17228B3D6520011D63F /* MainTabBar.storyboard */; };
@@ -72,6 +73,7 @@
 		534DA9B628AFEF5700626AA4 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensEnum.swift; sourceTree = "<group>"; };
+		5398E68528B689B400DEB5BC /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		539BDBEB28B523100057BCA9 /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		539BDBED28B524E30057BCA9 /* Coffee.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffee.plist; sourceTree = "<group>"; };
 		53E8F17228B3D6520011D63F /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		534DA99528AFD68400626AA4 /* KKOApp */ = {
 			isa = PBXGroup;
 			children = (
+				5398E68728B69D6D00DEB5BC /* Utils */,
 				534DA9A428AFD68600626AA4 /* Info.plist */,
 				534DA9AF28AFDE7300626AA4 /* Application */,
 				53E8F18728B3E8360011D63F /* Extencions */,
@@ -247,6 +250,21 @@
 			path = Signup;
 			sourceTree = "<group>";
 		};
+		5398E68328B6899B00DEB5BC /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				5398E68528B689B400DEB5BC /* UIView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		5398E68728B69D6D00DEB5BC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		53E8F17128B3D61C0011D63F /* TabBar Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +322,7 @@
 		53E8F18728B3E8360011D63F /* Extencions */ = {
 			isa = PBXGroup;
 			children = (
+				5398E68328B6899B00DEB5BC /* UIView */,
 				53E8F18828B3E8520011D63F /* UIImage */,
 			);
 			path = Extencions;
@@ -544,6 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5398E68628B689B400DEB5BC /* UIView.swift in Sources */,
 				534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */,
 				53E8F18A28B3E86A0011D63F /* UIImage.swift in Sources */,
 				53E8F1B228B427A20011D63F /* CouponCVCell.swift in Sources */,

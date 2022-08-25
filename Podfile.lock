@@ -9,7 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - lottie-ios
-  - RealmSwift (~> 10)
+  - RealmSwift
   - Simple-KeychainSwift
 
 SPEC REPOS:
@@ -25,6 +25,6 @@ SPEC CHECKSUMS:
   RealmSwift: 5927726fce21005f43b1fb57c832297a22031bfc
   Simple-KeychainSwift: 6f5d5009c2a8d1c2c326dfdd4890d32e8804b293
 
-PODFILE CHECKSUM: a3ca96b348dc40bde2285c677c35ebdc51615427
+PODFILE CHECKSUM: a6fe9d4df793f7a8277182a08b590358e25d0437
 
 COCOAPODS: 1.11.3
