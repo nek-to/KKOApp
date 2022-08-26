@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>time</key>
+		<integer>20</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -15,6 +17,8 @@
 		<string>Espresso</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>15</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -27,6 +31,8 @@
 		<string>Flavoured Latte</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>17</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -39,6 +45,8 @@
 		<string>Flat White</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>26</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -51,6 +59,8 @@
 		<string>Bean Bar Latte</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>11</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -63,6 +73,8 @@
 		<string>Piccolo Latte</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>13</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -75,6 +87,8 @@
 		<string>Cappuccino</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>18</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -87,6 +101,8 @@
 		<string>Vienna</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>22</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -99,6 +115,8 @@
 		<string>Snow Hot Chocolate</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>12</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -111,6 +129,8 @@
 		<string>Starbucks Caramel Frappuccino</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>30</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -123,6 +143,8 @@
 		<string>Chocolate Coffee Kiss</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>40</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>
@@ -135,6 +157,8 @@
 		<string>Coffee Shake</string>
 	</dict>
 	<dict>
+		<key>time</key>
+		<integer>50</integer>
 		<key>like</key>
 		<false/>
 		<key>image</key>

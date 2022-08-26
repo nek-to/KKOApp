@@ -19,4 +19,5 @@ enum Screens: String {
     case map = "MapVC"
     case payment = "PaymentVC"
     case addCard = "AddCardVC"
+    case purcase = "PurcaseVC"
 }

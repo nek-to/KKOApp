@@ -110,8 +110,8 @@ extension ProfileVC: UITableViewDataSource {
             let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.payment.rawValue)
             self.present(mapScreen, animated: true)
         case Preferences.purcase.rawValue:
-            let storyboard = UIStoryboard(name: "Map", bundle: nil)
-            let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.map.rawValue)
+            let storyboard = UIStoryboard(name: "Purcase", bundle: nil)
+            let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.purcase.rawValue)
             self.present(mapScreen, animated: true)
         case Preferences.general.rawValue:
             let storyboard = UIStoryboard(name: "Map", bundle: nil)

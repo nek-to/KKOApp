@@ -23,9 +23,10 @@ class CoffeeStorage {
             arrayList.forEach {
                 let coffee: CoffeeItem = .init(name: $0["title"] as! String,
                                                description: $0["description"] as! String,
-                                               price: $0["price"] as! UInt,
+                                               price: $0["price"] as! Int,
                                                imageName: $0["image"]  as! String,
-                                               like: $0["like"] as! Bool)
+                                               like: $0["like"] as! Bool,
+                                               time: $0["time"] as! Int)
                 elements.append(coffee)
             }
         }

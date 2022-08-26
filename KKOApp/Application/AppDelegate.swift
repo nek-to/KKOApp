@@ -10,8 +10,12 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let config = Realm.Configuration(schemaVersion: 3)
+        let config = Realm.Configuration(schemaVersion: 5)
         Realm.Configuration.defaultConfiguration = config
+        let buyedCoffee = try! Realm()
+        try? buyedCoffee.write {
+            buyedCoffee.delete(buyedCoffee.objects(Purcase.self))
+        }
         return true
     }
 

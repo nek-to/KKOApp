@@ -87,6 +87,7 @@
             <connections>
                 <outlet property="dateLabel" destination="Go8-5h-Kvv" id="XH0-yL-hNj"/>
                 <outlet property="fonImageView" destination="vyR-1I-vAi" id="e4P-2E-PcV"/>
+                <outlet property="mainView" destination="9rI-sF-QVQ" id="ANe-Wy-Dyo"/>
                 <outlet property="nameLabel" destination="ziu-Uy-s8t" id="ZkX-qw-use"/>
                 <outlet property="numberLabel" destination="Us5-ja-k24" id="B1l-om-DW0"/>
             </connections>

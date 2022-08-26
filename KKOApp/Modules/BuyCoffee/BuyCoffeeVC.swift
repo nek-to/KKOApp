@@ -4,13 +4,14 @@
 //
 //  Created by Kolya Gribok on 24.08.22.
 //
-
+import RealmSwift
 import UIKit
+import SwiftUI
 
 protocol CoffeeProtocol {
     var name: String { get set }
     var descript: String { get set }
-    var price: UInt { get set }
+    var price: Int { get set }
     var imageName: String { get set }
 }
 
@@ -30,8 +31,10 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     
     var name: String = ""
     var descript: String = ""
-    var price: UInt = 0
+    var price: Int = 0
     var imageName: String = ""
+    private var buyedCoffee = try! Realm()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +50,7 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         self.view.addGestureRecognizer(swipeRight)
     }
     
-    private func configure(title: String, descript: String, price: UInt, image: String) {
+    private func configure(title: String, descript: String, price: Int, image: String) {
         titleLabel.text = title
         descriptionLabel.text = descript
         priceLabel.text = "\(price).0"
@@ -101,7 +104,27 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         sender.layer.borderWidth = 0
     }
     
-    @IBAction func chooseSize(_ sender: UIButton) {
+    private func saveBuyedCoffee() {
+        let coffee = Purcase()
+        guard !titleLabel.text!.isEmpty,
+        !imageName.isEmpty else { return }
+        coffee.title = titleLabel.text!
+        coffee.image = imageName
+        try? buyedCoffee.write {
+            buyedCoffee.add(coffee)
+        }
+    }
+    
+    private func buttonPressed() {
+        if buyButton.isTouchInside {
+            buyButton.backgroundColor = #colorLiteral(red: 0.5821276091, green: 0.3368276301, blue: 0.185697452, alpha: 1)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.buyButton.backgroundColor = #colorLiteral(red: 0.8207221627, green: 0.4692305923, blue: 0.257660836, alpha: 1)
+            }
+        }
+    }
+    
+    @IBAction private func chooseSize(_ sender: UIButton) {
         if sender.tag == 0 {
             priceLabel.text = String(Double(price))
             selection(sender)
@@ -118,5 +141,10 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
             deselection(sizeSButton)
             deselection(sizeMButton)
         }
+    }
+    
+    @IBAction private func buyCoffee(_ sender: UIButton) {
+        saveBuyedCoffee()
+        buttonPressed()
     }
 }

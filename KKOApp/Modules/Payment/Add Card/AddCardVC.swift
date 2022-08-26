@@ -16,7 +16,7 @@ class AddCardVC: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     private var cardStorage = try! Realm()
-    private var card: CreditCard?
+//    private var card: CreditCard?
     private var imageUrl: String?
     
     override func viewDidLoad() {

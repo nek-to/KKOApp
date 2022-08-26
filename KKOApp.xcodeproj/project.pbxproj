@@ -11,6 +11,11 @@
 		0B07FFEA28B5A400001701BB /* BuyCoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B07FFE928B5A400001701BB /* BuyCoffeeVC.swift */; };
 		0B0F784E28B58A84005D6638 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0F784D28B58A84005D6638 /* NewsItem.swift */; };
 		0B0F785028B58B6D005D6638 /* News.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B0F784F28B58B6D005D6638 /* News.plist */; };
+		533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533E11F328B939F800CF5499 /* Purcase.storyboard */; };
+		533E11F628B93A0B00CF5499 /* PurcaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E11F528B93A0B00CF5499 /* PurcaseVC.swift */; };
+		533E11F828B9442800CF5499 /* brewing-coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 533E11F728B9442800CF5499 /* brewing-coffee.json */; };
+		533E11FC28B9447800CF5499 /* PurcaseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E11FA28B9447800CF5499 /* PurcaseTVCell.swift */; };
+		533E11FD28B9447800CF5499 /* PurcaseTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533E11FB28B9447800CF5499 /* PurcaseTVCell.xib */; };
 		534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA99628AFD68400626AA4 /* AppDelegate.swift */; };
 		534DA99928AFD68400626AA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA99828AFD68400626AA4 /* SceneDelegate.swift */; };
 		534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA99A28AFD68400626AA4 /* LogInVC.swift */; };
@@ -44,6 +49,7 @@
 		53C8678328B72249000A758C /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53C8678228B72249000A758C /* Preferences.plist */; };
 		53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678428B7230F000A758C /* PreferenceStorage.swift */; };
 		53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678B28B7263F000A758C /* PreferenceTVCell.swift */; };
+		53D910D728B9570000C4044C /* Purcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D910D628B9570000C4044C /* Purcase.swift */; };
 		53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17228B3D6520011D63F /* MainTabBar.storyboard */; };
 		53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F17428B3D6940011D63F /* MainTabBarVC.swift */; };
 		53E8F17A28B3D8440011D63F /* NewsTB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17928B3D8440011D63F /* NewsTB.storyboard */; };
@@ -83,6 +89,11 @@
 		0B07FFE928B5A400001701BB /* BuyCoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoffeeVC.swift; sourceTree = "<group>"; };
 		0B0F784D28B58A84005D6638 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		0B0F784F28B58B6D005D6638 /* News.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = News.plist; sourceTree = "<group>"; };
+		533E11F328B939F800CF5499 /* Purcase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Purcase.storyboard; sourceTree = "<group>"; };
+		533E11F528B93A0B00CF5499 /* PurcaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurcaseVC.swift; sourceTree = "<group>"; };
+		533E11F728B9442800CF5499 /* brewing-coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "brewing-coffee.json"; sourceTree = "<group>"; };
+		533E11FA28B9447800CF5499 /* PurcaseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurcaseTVCell.swift; sourceTree = "<group>"; };
+		533E11FB28B9447800CF5499 /* PurcaseTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurcaseTVCell.xib; sourceTree = "<group>"; };
 		534DA99328AFD68400626AA4 /* KKOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		534DA99628AFD68400626AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534DA99828AFD68400626AA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +129,7 @@
 		53C8678228B72249000A758C /* Preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
 		53C8678428B7230F000A758C /* PreferenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceStorage.swift; sourceTree = "<group>"; };
 		53C8678B28B7263F000A758C /* PreferenceTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceTVCell.swift; sourceTree = "<group>"; };
+		53D910D628B9570000C4044C /* Purcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purcase.swift; sourceTree = "<group>"; };
 		53E8F17228B3D6520011D63F /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		53E8F17428B3D6940011D63F /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		53E8F17928B3D8440011D63F /* NewsTB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsTB.storyboard; sourceTree = "<group>"; };
@@ -187,6 +199,25 @@
 			path = Shop;
 			sourceTree = "<group>";
 		};
+		533E11F228B939E600CF5499 /* Purcase */ = {
+			isa = PBXGroup;
+			children = (
+				533E11F928B9444D00CF5499 /* PurcaseTVCell */,
+				533E11F328B939F800CF5499 /* Purcase.storyboard */,
+				533E11F528B93A0B00CF5499 /* PurcaseVC.swift */,
+			);
+			path = Purcase;
+			sourceTree = "<group>";
+		};
+		533E11F928B9444D00CF5499 /* PurcaseTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				533E11FA28B9447800CF5499 /* PurcaseTVCell.swift */,
+				533E11FB28B9447800CF5499 /* PurcaseTVCell.xib */,
+			);
+			path = PurcaseTVCell;
+			sourceTree = "<group>";
+		};
 		534DA98A28AFD68400626AA4 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +268,7 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				533E11F228B939E600CF5499 /* Purcase */,
 				5395341028B82C1F00B76054 /* Payment */,
 				5395340028B7F71D00B76054 /* MapLocation */,
 				0B07FFE628B5A2C1001701BB /* BuyCoffee */,
@@ -396,6 +428,14 @@
 			path = Preference;
 			sourceTree = "<group>";
 		};
+		53D910D528B956EC00C4044C /* Purcase */ = {
+			isa = PBXGroup;
+			children = (
+				53D910D628B9570000C4044C /* Purcase.swift */,
+			);
+			path = Purcase;
+			sourceTree = "<group>";
+		};
 		53E8F17128B3D61C0011D63F /* TabBar Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +513,7 @@
 		53E8F18B28B3E8D30011D63F /* Storages */ = {
 			isa = PBXGroup;
 			children = (
+				53D910D528B956EC00C4044C /* Purcase */,
 				53C8677F28B721BF000A758C /* Preference */,
 				0B0F784C28B58488005D6638 /* Shop */,
 				53E8F18C28B3E8E40011D63F /* News */,
@@ -531,6 +572,7 @@
 			children = (
 				53E8F1B828B4294A0011D63F /* bean.json */,
 				53E8F1B728B4294A0011D63F /* buycoffee.json */,
+				533E11F728B9442800CF5499 /* brewing-coffee.json */,
 				53E8F1BA28B4294B0011D63F /* buying.json */,
 				53E8F1B628B4294A0011D63F /* buysomecoffee.json */,
 				53E8F1B928B4294A0011D63F /* coffee.json */,
@@ -637,6 +679,7 @@
 				5395340D28B8038C00B76054 /* Coffeeshops.plist in Resources */,
 				53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */,
 				53E8F1C028B4294B0011D63F /* buying.json in Resources */,
+				533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */,
 				53E8F18028B3D8FF0011D63F /* ProfileTB.storyboard in Resources */,
 				53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */,
 				53E8F19928B3F4C40011D63F /* FollowUs.storyboard in Resources */,
@@ -649,7 +692,9 @@
 				53E8F1BB28B4294B0011D63F /* ok.json in Resources */,
 				5395341928B838B500B76054 /* CardTVCell.xib in Resources */,
 				539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */,
+				533E11FD28B9447800CF5499 /* PurcaseTVCell.xib in Resources */,
 				53E8F1BC28B4294B0011D63F /* buysomecoffee.json in Resources */,
+				533E11F828B9442800CF5499 /* brewing-coffee.json in Resources */,
 				534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */,
 				534DA99E28AFD68400626AA4 /* Main.storyboard in Resources */,
 			);
@@ -715,7 +760,9 @@
 				53E8F1A028B3F87E0011D63F /* FollowUsCVCell.swift in Sources */,
 				5395342728B8457500B76054 /* CGFloat.swift in Sources */,
 				53E8F19B28B3F4E60011D63F /* FollowUsVC.swift in Sources */,
+				53D910D728B9570000C4044C /* Purcase.swift in Sources */,
 				53E8F1C628B444150011D63F /* CoffeeTVCell.swift in Sources */,
+				533E11FC28B9447800CF5499 /* PurcaseTVCell.swift in Sources */,
 				534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */,
 				5395341C28B83E1700B76054 /* CreditCard.swift in Sources */,
 				53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */,
@@ -726,6 +773,7 @@
 				53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */,
 				5395341428B82C5A00B76054 /* PaymentVC.swift in Sources */,
 				53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */,
+				533E11F628B93A0B00CF5499 /* PurcaseVC.swift in Sources */,
 				0B0F784E28B58A84005D6638 /* NewsItem.swift in Sources */,
 				53E8F19228B3EC550011D63F /* NewsTVCell.swift in Sources */,
 				53E8F17E28B3D8F00011D63F /* ProfileVC.swift in Sources */,

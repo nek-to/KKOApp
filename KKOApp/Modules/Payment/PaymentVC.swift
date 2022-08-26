@@ -32,7 +32,10 @@ class PaymentVC: UIViewController {
         // card cell
         cardTableView.register(UINib(nibName: "CardTVCell", bundle: nil), forCellReuseIdentifier: "cardCell")
         // reloader
-        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadCardView), name: NSNotification.Name(rawValue: "reloader"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadCardView), name: NSNotification.Name(rawValue: "reloader"), object: nil)
+        // view grabber
+        paymentVC.delegate = self
+        paymentVC.prefersGrabberVisible = true
     }
     
     @objc private func reloadCardView() {
@@ -75,9 +78,6 @@ extension PaymentVC: UITableViewDataSource {
         260
     }
     
-//    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-    //    }
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.cards = cardStorage.objects(CreditCard.self)
@@ -87,8 +87,6 @@ extension PaymentVC: UITableViewDataSource {
                 }
             }
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
 }
