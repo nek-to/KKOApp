@@ -4,7 +4,7 @@
 //
 //  Created by VironIT on 22.08.22.
 //
-
+import RealmSwift
 import UIKit
 
 class ProfileVC: UIViewController {
@@ -17,6 +17,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var profilePicNameLabel: UILabel!
     
     private var preferences = PreferenceStorage.shared
+    private var imageUrl = ""
+    private var topImageStorage = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +33,43 @@ class ProfileVC: UIViewController {
         profilePictureImageView.backgroundColor = UIColor.orange
         profilePictureImageView.layer.borderColor = UIColor.white.cgColor
         profilePictureImageView.layer.borderWidth = 3
-//        profilePicNameLabel.text
         // background picture
         topImageView.layer.cornerRadius = 30
+        // top image
+        setupTopImage()
+    }
+    
+    private func setupTopImage() {
+        if topImageStorage.isEmpty {
+            topImageView.image = UIImage(named: "profile-back")
+        } else {
+            let images = topImageStorage.objects(TopImage.self)
+            let image = images.first?.image ?? ""
+            if let data = try? Data(contentsOf: URL(string: image)!) {
+                topImageView.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    @IBAction private func reloadFonImage() {
+        UnsplashNetworkManager.getImageFromStock { url in
+            if let url = url {
+                self.imageUrl = url
+                self.saveTopImage(url: url)
+                if let data = try? Data(contentsOf: URL(string: url )!) {
+                    self.topImageView.image = UIImage(data: data)
+                }
+            }
+        }
+    }
+    
+    private func saveTopImage(url: String) {
+        let topImage = TopImage()
+        topImage.image = self.imageUrl
+        topImageStorage.beginWrite()
+        topImageStorage.delete(topImageStorage.objects(TopImage.self))
+        topImageStorage.add(topImage)
+        try? topImageStorage.commitWrite()
     }
 }
 
@@ -70,8 +106,8 @@ extension ProfileVC: UITableViewDataSource {
             let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.map.rawValue)
             self.present(mapScreen, animated: true)
         case Preferences.payment.rawValue:
-            let storyboard = UIStoryboard(name: "Map", bundle: nil)
-            let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.map.rawValue)
+            let storyboard = UIStoryboard(name: "Payment", bundle: nil)
+            let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.payment.rawValue)
             self.present(mapScreen, animated: true)
         case Preferences.purcase.rawValue:
             let storyboard = UIStoryboard(name: "Map", bundle: nil)

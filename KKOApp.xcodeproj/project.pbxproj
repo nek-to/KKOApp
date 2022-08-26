@@ -26,6 +26,17 @@
 		5395340928B8036200B76054 /* CoffeeshopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340828B8036200B76054 /* CoffeeshopItem.swift */; };
 		5395340B28B8037700B76054 /* CoffeeshopStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340A28B8037700B76054 /* CoffeeshopStorage.swift */; };
 		5395340D28B8038C00B76054 /* Coffeeshops.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5395340C28B8038C00B76054 /* Coffeeshops.plist */; };
+		5395341228B82C3B00B76054 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395341128B82C3B00B76054 /* Payment.storyboard */; };
+		5395341428B82C5A00B76054 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395341328B82C5A00B76054 /* PaymentVC.swift */; };
+		5395341828B838B500B76054 /* CardTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395341628B838B500B76054 /* CardTVCell.swift */; };
+		5395341928B838B500B76054 /* CardTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5395341728B838B500B76054 /* CardTVCell.xib */; };
+		5395341C28B83E1700B76054 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395341B28B83E1700B76054 /* CreditCard.swift */; };
+		5395341F28B8438900B76054 /* AddCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395341E28B8438900B76054 /* AddCard.storyboard */; };
+		5395342128B8439A00B76054 /* AddCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395342028B8439A00B76054 /* AddCardVC.swift */; };
+		5395342428B8453200B76054 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395342328B8453200B76054 /* UIColor.swift */; };
+		5395342728B8457500B76054 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395342628B8457500B76054 /* CGFloat.swift */; };
+		5395342928B8508900B76054 /* UnsplashNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395342828B8508900B76054 /* UnsplashNetworkManager.swift */; };
+		5395343628B8C13300B76054 /* TopImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395343528B8C13300B76054 /* TopImage.swift */; };
 		5398E68628B689B400DEB5BC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398E68528B689B400DEB5BC /* UIView.swift */; };
 		539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539BDBEB28B523100057BCA9 /* CoffeeItem.swift */; };
 		539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539BDBED28B524E30057BCA9 /* Coffee.plist */; };
@@ -89,6 +100,17 @@
 		5395340828B8036200B76054 /* CoffeeshopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopItem.swift; sourceTree = "<group>"; };
 		5395340A28B8037700B76054 /* CoffeeshopStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopStorage.swift; sourceTree = "<group>"; };
 		5395340C28B8038C00B76054 /* Coffeeshops.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffeeshops.plist; sourceTree = "<group>"; };
+		5395341128B82C3B00B76054 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		5395341328B82C5A00B76054 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		5395341628B838B500B76054 /* CardTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTVCell.swift; sourceTree = "<group>"; };
+		5395341728B838B500B76054 /* CardTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTVCell.xib; sourceTree = "<group>"; };
+		5395341B28B83E1700B76054 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		5395341E28B8438900B76054 /* AddCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCard.storyboard; sourceTree = "<group>"; };
+		5395342028B8439A00B76054 /* AddCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardVC.swift; sourceTree = "<group>"; };
+		5395342328B8453200B76054 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		5395342628B8457500B76054 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		5395342828B8508900B76054 /* UnsplashNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashNetworkManager.swift; sourceTree = "<group>"; };
+		5395343528B8C13300B76054 /* TopImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImage.swift; sourceTree = "<group>"; };
 		5398E68528B689B400DEB5BC /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		539BDBEB28B523100057BCA9 /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		539BDBED28B524E30057BCA9 /* Coffee.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffee.plist; sourceTree = "<group>"; };
@@ -204,6 +226,8 @@
 		534DA9AA28AFDC3500626AA4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5395343428B8C10D00B76054 /* Profile Top Image */,
+				5395341A28B83E0100B76054 /* Credit Card */,
 				53E8F18B28B3E8D30011D63F /* Storages */,
 				53E8F18528B3E80D0011D63F /* Enums */,
 			);
@@ -213,6 +237,7 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5395341028B82C1F00B76054 /* Payment */,
 				5395340028B7F71D00B76054 /* MapLocation */,
 				0B07FFE628B5A2C1001701BB /* BuyCoffee */,
 				53E8F17128B3D61C0011D63F /* TabBar Screens */,
@@ -224,6 +249,7 @@
 		534DA9AC28AFDC8500626AA4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5395342828B8508900B76054 /* UnsplashNetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -283,6 +309,67 @@
 				5395340328B7F7A000B76054 /* MapVC.swift */,
 			);
 			path = MapLocation;
+			sourceTree = "<group>";
+		};
+		5395341028B82C1F00B76054 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				5395341D28B8437500B76054 /* Add Card */,
+				5395341528B8389400B76054 /* CardTVCell */,
+				5395341128B82C3B00B76054 /* Payment.storyboard */,
+				5395341328B82C5A00B76054 /* PaymentVC.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		5395341528B8389400B76054 /* CardTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				5395341628B838B500B76054 /* CardTVCell.swift */,
+				5395341728B838B500B76054 /* CardTVCell.xib */,
+			);
+			path = CardTVCell;
+			sourceTree = "<group>";
+		};
+		5395341A28B83E0100B76054 /* Credit Card */ = {
+			isa = PBXGroup;
+			children = (
+				5395341B28B83E1700B76054 /* CreditCard.swift */,
+			);
+			path = "Credit Card";
+			sourceTree = "<group>";
+		};
+		5395341D28B8437500B76054 /* Add Card */ = {
+			isa = PBXGroup;
+			children = (
+				5395341E28B8438900B76054 /* AddCard.storyboard */,
+				5395342028B8439A00B76054 /* AddCardVC.swift */,
+			);
+			path = "Add Card";
+			sourceTree = "<group>";
+		};
+		5395342228B8452000B76054 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				5395342328B8453200B76054 /* UIColor.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		5395342528B8455E00B76054 /* CGFloat */ = {
+			isa = PBXGroup;
+			children = (
+				5395342628B8457500B76054 /* CGFloat.swift */,
+			);
+			path = CGFloat;
+			sourceTree = "<group>";
+		};
+		5395343428B8C10D00B76054 /* Profile Top Image */ = {
+			isa = PBXGroup;
+			children = (
+				5395343528B8C13300B76054 /* TopImage.swift */,
+			);
+			path = "Profile Top Image";
 			sourceTree = "<group>";
 		};
 		5398E68328B6899B00DEB5BC /* UIView */ = {
@@ -367,6 +454,8 @@
 		53E8F18728B3E8360011D63F /* Extencions */ = {
 			isa = PBXGroup;
 			children = (
+				5395342528B8455E00B76054 /* CGFloat */,
+				5395342228B8452000B76054 /* UIColor */,
 				5398E68328B6899B00DEB5BC /* UIView */,
 				53E8F18828B3E8520011D63F /* UIImage */,
 			);
@@ -537,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E8F1BE28B4294B0011D63F /* bean.json in Resources */,
+				5395341F28B8438900B76054 /* AddCard.storyboard in Resources */,
 				0B07FFE828B5A318001701BB /* BuyCoffee.storyboard in Resources */,
 				53E8F1BD28B4294B0011D63F /* buycoffee.json in Resources */,
 				5395340228B7F78A00B76054 /* Map.storyboard in Resources */,
@@ -552,10 +642,12 @@
 				53E8F19928B3F4C40011D63F /* FollowUs.storyboard in Resources */,
 				53E8F1B328B427A20011D63F /* CouponCVCell.xib in Resources */,
 				534DA9A028AFD68600626AA4 /* Assets.xcassets in Resources */,
+				5395341228B82C3B00B76054 /* Payment.storyboard in Resources */,
 				53E8F17A28B3D8440011D63F /* NewsTB.storyboard in Resources */,
 				0B0F785028B58B6D005D6638 /* News.plist in Resources */,
 				53E8F1BF28B4294B0011D63F /* coffee.json in Resources */,
 				53E8F1BB28B4294B0011D63F /* ok.json in Resources */,
+				5395341928B838B500B76054 /* CardTVCell.xib in Resources */,
 				539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */,
 				53E8F1BC28B4294B0011D63F /* buysomecoffee.json in Resources */,
 				534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */,
@@ -621,25 +713,33 @@
 				53E8F1A828B40E200011D63F /* NewsTableView.swift in Sources */,
 				53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */,
 				53E8F1A028B3F87E0011D63F /* FollowUsCVCell.swift in Sources */,
+				5395342728B8457500B76054 /* CGFloat.swift in Sources */,
 				53E8F19B28B3F4E60011D63F /* FollowUsVC.swift in Sources */,
 				53E8F1C628B444150011D63F /* CoffeeTVCell.swift in Sources */,
 				534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */,
+				5395341C28B83E1700B76054 /* CreditCard.swift in Sources */,
 				53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */,
+				5395342128B8439A00B76054 /* AddCardVC.swift in Sources */,
 				5395340628B801B900B76054 /* PreferenceEnum.swift in Sources */,
 				53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
 				53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */,
+				5395341428B82C5A00B76054 /* PaymentVC.swift in Sources */,
 				53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */,
 				0B0F784E28B58A84005D6638 /* NewsItem.swift in Sources */,
 				53E8F19228B3EC550011D63F /* NewsTVCell.swift in Sources */,
 				53E8F17E28B3D8F00011D63F /* ProfileVC.swift in Sources */,
 				53E8F1AE28B426E20011D63F /* CouponStorage.swift in Sources */,
 				53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */,
+				5395342928B8508900B76054 /* UnsplashNetworkManager.swift in Sources */,
 				53E8F19728B3F4830011D63F /* FollowUsStorage.swift in Sources */,
+				5395342428B8453200B76054 /* UIColor.swift in Sources */,
 				53E8F18E28B3E8F70011D63F /* NewsStorage.swift in Sources */,
 				534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */,
+				5395343628B8C13300B76054 /* TopImage.swift in Sources */,
 				53E8F1AA28B41CF90011D63F /* ShopTableVC.swift in Sources */,
 				0B07FFEA28B5A400001701BB /* BuyCoffeeVC.swift in Sources */,
+				5395341828B838B500B76054 /* CardTVCell.swift in Sources */,
 				5395340428B7F7A000B76054 /* MapVC.swift in Sources */,
 				534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */,
 				539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */,

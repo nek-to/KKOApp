@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-back" translatesAutoresizingMaskIntoConstraints="NO" id="RD8-2h-VVT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RD8-2h-VVT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nwh-9p-Lbt">
@@ -92,6 +92,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9t-sO-Ytv">
+                                <rect key="frame" x="354" y="253.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="2do-di-D1r"/>
+                                    <constraint firstAttribute="height" constant="40" id="QYm-Ak-hJi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="goforward" catalog="system" symbolScale="large" renderingMode="template"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="medium"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reloadFonImage" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FNO-Ic-EWq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,6 +115,7 @@
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="top" secondItem="EC2-X6-PzP" secondAttribute="bottom" constant="10" id="3uB-1V-nX0"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Dpq-Qa-znl"/>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Dyp-hf-5lH"/>
+                            <constraint firstItem="ClD-Jk-ZGI" firstAttribute="top" secondItem="z9t-sO-Ytv" secondAttribute="bottom" constant="90" id="Fuc-ID-Oab"/>
                             <constraint firstItem="Ktw-qY-TIp" firstAttribute="centerY" secondItem="Nwh-9p-Lbt" secondAttribute="centerY" id="JCj-8c-CQx"/>
                             <constraint firstItem="Ktw-qY-TIp" firstAttribute="centerX" secondItem="Nwh-9p-Lbt" secondAttribute="centerX" id="JJ8-tT-48T"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ppy-lS-Rhn" secondAttribute="bottom" constant="10" id="OVD-T4-nyR"/>
@@ -109,6 +125,7 @@
                             <constraint firstItem="EC2-X6-PzP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Yo4-1m-z24"/>
                             <constraint firstItem="Ppy-lS-Rhn" firstAttribute="top" secondItem="E5S-yW-7Tt" secondAttribute="bottom" constant="20" id="bX3-FA-qB3"/>
                             <constraint firstItem="Ppy-lS-Rhn" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="eNi-o1-uFg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="z9t-sO-Ytv" secondAttribute="trailing" constant="20" id="eg4-A7-P2Q"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="ehW-oj-rhL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EC2-X6-PzP" secondAttribute="trailing" constant="30" id="erv-tZ-8lA"/>
                             <constraint firstItem="EC2-X6-PzP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="lGv-dc-Epe"/>
@@ -143,9 +160,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="goforward" catalog="system" width="121" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="profile-back" width="640" height="1138"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
