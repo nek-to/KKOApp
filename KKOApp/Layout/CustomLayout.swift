@@ -15,7 +15,7 @@ class CustomLayout: UICollectionViewLayout {
     weak var delegate: CustomLayoutDelegate?
     
     private var numberOfColumns = 2
-    private var cellPadding: CGFloat = 3
+    private var cellPadding: CGFloat = 2
     
     private var cache: [UICollectionViewLayoutAttributes] = []
     
@@ -44,42 +44,42 @@ class CustomLayout: UICollectionViewLayout {
       }
       // 2
       let columnWidth = contentWidth / CGFloat(numberOfColumns)
-      var xOffset: [CGFloat] = []
-      for column in 0..<numberOfColumns {
-        xOffset.append(CGFloat(column) * columnWidth)
-      }
-      var column = 0
-      var yOffset: [CGFloat] = .init(repeating: 0, count: numberOfColumns)
+        var xOffset: [CGFloat] = []
+        for column in 0..<numberOfColumns {
+            xOffset.append(CGFloat(column) * columnWidth)
+        }
+        var column = 0
+        var yOffset: [CGFloat] = .init(repeating: 0, count: numberOfColumns)
         
-      // 3
-      for item in 0..<collectionView.numberOfItems(inSection: 0) {
-          let indexPath = IndexPath(item: item, section: 0)
-          
-          // 4
-          let photoSize = delegate?.collectionView(
-            collectionView,
-            heightForPhotoAtIndexPath: indexPath)
-          let width = columnWidth
-          var height = photoSize!.height * width/photoSize!.width
-          height = cellPadding * 2 + height
-          let frame = CGRect(x: xOffset[column],
-                             y: yOffset[column],
-                             width: width,
-                             height: height)
-          let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
-          
-        // 5
-        let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-        attributes.frame = insetFrame
-        cache.append(attributes)
-          
-        // 6
-        contentHeight = max(contentHeight, frame.maxY)
-        yOffset[column] = yOffset[column] + height
-        
-          if numberOfColumns > 1 {
-              isColumnChanged = false
-              for index in (1..<numberOfColumns).reversed() {
+        // 3
+        for item in 0..<collectionView.numberOfItems(inSection: 0) {
+            let indexPath = IndexPath(item: item, section: 0)
+            
+            // 4
+            let photoSize = delegate?.collectionView(
+                collectionView,
+                heightForPhotoAtIndexPath: indexPath)
+            let width = columnWidth
+            var height = photoSize!.height * width/photoSize!.width
+            height = cellPadding * 2 + height
+            let frame = CGRect(x: xOffset[column],
+                               y: yOffset[column],
+                               width: width,
+                               height: height)
+            let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
+            
+            // 5
+            let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+            attributes.frame = insetFrame
+            cache.append(attributes)
+            
+            // 6
+            contentHeight = max(contentHeight, frame.maxY)
+            yOffset[column] = yOffset[column] + height
+            
+            if numberOfColumns > 1 {
+                isColumnChanged = false
+                for index in (1..<numberOfColumns).reversed() {
                   if yOffset[index] >= yOffset[index - 1] {
                       column = index - 1
                       isColumnChanged = true

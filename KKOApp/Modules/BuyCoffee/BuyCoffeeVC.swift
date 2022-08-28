@@ -28,6 +28,7 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     @IBOutlet weak var buyButton: UIButton!
     @IBOutlet weak var buttonsStack: UIStackView!
     @IBOutlet weak var backCardImageView: UIImageView!
+    @IBOutlet weak var descriptionView: UIView!
     
     var name: String = ""
     var descript: String = ""
@@ -91,6 +92,8 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         sizeLButton.layer.cornerRadius = 20
         // back card image
         backCardImageView.layer.cornerRadius = 40
+        // description view
+        descriptionView.layer.cornerRadius = 20
     }
     
     private func selection(_ sender: UIButton) {
@@ -110,6 +113,7 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         !imageName.isEmpty else { return }
         coffee.title = titleLabel.text!
         coffee.image = imageName
+        coffee.showed = false
         try? buyedCoffee.write {
             buyedCoffee.add(coffee)
         }

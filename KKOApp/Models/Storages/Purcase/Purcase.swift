@@ -11,4 +11,5 @@ class Purcase: Object {
     @objc dynamic var title: String = ""
     @objc dynamic var image: String = ""
     @objc dynamic var time: Int = 0
+    @objc dynamic var showed: Bool = false
 }
