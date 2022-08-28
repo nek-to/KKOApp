@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Follow us</string>
+		<key>description</key>
+		<string>Share photos from our coffee shop on social networks, tag us and get a coupon for free coffee!</string>
+		<key>date</key>
+		<string>07.08</string>
+		<key>image</key>
+		<string>news1</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Add animation to app</string>
+		<key>description</key>
+		<string>We are add some sweet animations in our app</string>
+		<key>date</key>
+		<string>08.08</string>
+		<key>image</key>
+		<string>news2</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Ptotection</string>
+		<key>description</key>
+		<string>Soon we will have a Touch/Face ID function</string>
+		<key>date</key>
+		<string>10.08</string>
+		<key>image</key>
+		<string>news3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>We are on Map!</string>
+		<key>description</key>
+		<string>We&apos;re working on adding a map to our app so you can easily find us anywhere in the city!</string>
+		<key>date</key>
+		<string>13.08</string>
+		<key>image</key>
+		<string>news4</string>
+	</dict>
+</array>
+</plist>

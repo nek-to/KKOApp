@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>movie</string>
+		<key>address</key>
+		<string>улица Богдана Хмельницкого, 2</string>
+		<key>name</key>
+		<string>KKO Movie</string>
+		<key>latitude</key>
+		<real>53.922334</real>
+		<key>longitude</key>
+		<real>27.597283</real>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>series</string>
+		<key>address</key>
+		<string>улица Петра Глебки, 5</string>
+		<key>name</key>
+		<string>KKO Series</string>
+		<key>latitude</key>
+		<real>53.908745</real>
+		<key>longitude</key>
+		<real>27.470157</real>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>main</string>
+		<key>address</key>
+		<string>улица Леонида Левина, 2</string>
+		<key>name</key>
+		<string>KKO Main</string>
+		<key>latitude</key>
+		<real>53.869189</real>
+		<key>longitude</key>
+		<real>27.532869</real>
+	</dict>
+</array>
+</plist>

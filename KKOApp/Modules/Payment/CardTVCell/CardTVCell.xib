@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardCell" rowHeight="260" id="KGk-i7-Jjw" customClass="CardTVCell" customModule="KKOApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="499" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="499" height="260"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rI-sF-QVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="499" height="260"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vyR-1I-vAi">
+                                <rect key="frame" x="12.5" y="13" width="474" height="234"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visa Platinum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jj6-mH-6D3">
+                                <rect key="frame" x="45" y="35" width="189" height="36"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000 0000 0000 0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us5-ja-k24">
+                                <rect key="frame" x="45" y="123" width="414" height="32"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa" translatesAutoresizingMaskIntoConstraints="NO" id="qRu-mQ-g7E">
+                                <rect key="frame" x="355.5" y="162" width="118.5" height="63"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-Uy-s8t">
+                                <rect key="frame" x="45" y="203" width="290.5" height="27"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go8-5h-Kvv">
+                                <rect key="frame" x="45" y="165" width="50" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="fuo-al-7aH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ziu-Uy-s8t" firstAttribute="leading" secondItem="9rI-sF-QVQ" secondAttribute="leading" constant="45" id="2ya-yk-aPO"/>
+                            <constraint firstItem="qRu-mQ-g7E" firstAttribute="height" secondItem="vyR-1I-vAi" secondAttribute="height" multiplier="0.27" id="BZw-NK-m0w"/>
+                            <constraint firstItem="qRu-mQ-g7E" firstAttribute="width" secondItem="vyR-1I-vAi" secondAttribute="width" multiplier="0.25" id="FZC-9H-UTT"/>
+                            <constraint firstItem="qRu-mQ-g7E" firstAttribute="leading" secondItem="ziu-Uy-s8t" secondAttribute="trailing" constant="20" id="GNV-YW-eN1"/>
+                            <constraint firstItem="vyR-1I-vAi" firstAttribute="centerX" secondItem="9rI-sF-QVQ" secondAttribute="centerX" id="JZ3-HW-lYc"/>
+                            <constraint firstItem="jj6-mH-6D3" firstAttribute="leading" secondItem="9rI-sF-QVQ" secondAttribute="leading" constant="45" id="TZb-s1-hMc"/>
+                            <constraint firstItem="jj6-mH-6D3" firstAttribute="top" secondItem="9rI-sF-QVQ" secondAttribute="top" constant="35" id="UXc-Wc-JOi"/>
+                            <constraint firstItem="vyR-1I-vAi" firstAttribute="width" secondItem="9rI-sF-QVQ" secondAttribute="width" multiplier="0.95" id="Wof-IR-F5g"/>
+                            <constraint firstAttribute="bottom" secondItem="Us5-ja-k24" secondAttribute="bottom" constant="105" id="XRs-YE-FDz"/>
+                            <constraint firstAttribute="trailing" secondItem="qRu-mQ-g7E" secondAttribute="trailing" constant="25" id="ZBA-SF-MYa"/>
+                            <constraint firstAttribute="trailing" secondItem="Us5-ja-k24" secondAttribute="trailing" constant="40" id="akX-fX-sPS"/>
+                            <constraint firstItem="Go8-5h-Kvv" firstAttribute="leading" secondItem="9rI-sF-QVQ" secondAttribute="leading" constant="45" id="bQt-U0-2gU"/>
+                            <constraint firstItem="Go8-5h-Kvv" firstAttribute="top" secondItem="Us5-ja-k24" secondAttribute="bottom" constant="10" id="duw-Gn-1jW"/>
+                            <constraint firstAttribute="bottom" secondItem="qRu-mQ-g7E" secondAttribute="bottom" constant="35" id="guB-5w-Jmf"/>
+                            <constraint firstItem="vyR-1I-vAi" firstAttribute="centerY" secondItem="9rI-sF-QVQ" secondAttribute="centerY" id="hby-sq-Km9"/>
+                            <constraint firstItem="Us5-ja-k24" firstAttribute="leading" secondItem="9rI-sF-QVQ" secondAttribute="leading" constant="45" id="sG9-gZ-rYS"/>
+                            <constraint firstItem="ziu-Uy-s8t" firstAttribute="top" secondItem="Go8-5h-Kvv" secondAttribute="bottom" constant="15" id="tge-vz-42S"/>
+                            <constraint firstItem="vyR-1I-vAi" firstAttribute="height" secondItem="9rI-sF-QVQ" secondAttribute="height" multiplier="0.9" id="uB4-v9-r80"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9rI-sF-QVQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Biz-fl-6x6"/>
+                    <constraint firstItem="9rI-sF-QVQ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="FD3-Wh-oZ7"/>
+                    <constraint firstItem="9rI-sF-QVQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VCz-HC-QOd"/>
+                    <constraint firstItem="9rI-sF-QVQ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="ZdZ-b6-pZa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="Go8-5h-Kvv" id="XH0-yL-hNj"/>
+                <outlet property="fonImageView" destination="vyR-1I-vAi" id="e4P-2E-PcV"/>
+                <outlet property="mainView" destination="9rI-sF-QVQ" id="ANe-Wy-Dyo"/>
+                <outlet property="nameLabel" destination="ziu-Uy-s8t" id="ZkX-qw-use"/>
+                <outlet property="numberLabel" destination="Us5-ja-k24" id="B1l-om-DW0"/>
+            </connections>
+            <point key="canvasLocation" x="184.78260869565219" y="82.366071428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="visa" width="1900" height="1900"/>
+    </resources>
+</document>

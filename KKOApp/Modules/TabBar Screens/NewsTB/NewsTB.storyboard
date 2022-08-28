@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2JT-bf-nYb">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="Q2b-WU-0zA">
+            <objects>
+                <tableViewController id="2JT-bf-nYb" customClass="NewsTableVC" customModule="KKOApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="oTF-on-KnP" customClass="NewsTableView" customModule="KKOApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="ly2-yH-CND">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news-fone" translatesAutoresizingMaskIntoConstraints="NO" id="QKL-Ey-b5d">
+                                    <rect key="frame" x="0.0" y="-50" width="414" height="300"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="300" identifier="height" id="gct-Zf-1Y1"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our news" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Th5-25-7qG">
+                                    <rect key="frame" x="84.5" y="80" width="245.5" height="66"/>
+                                    <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Th5-25-7qG" firstAttribute="centerX" secondItem="ly2-yH-CND" secondAttribute="centerX" id="0Ku-fQ-n2a"/>
+                                <constraint firstItem="Th5-25-7qG" firstAttribute="top" secondItem="ly2-yH-CND" secondAttribute="top" constant="80" id="CyV-e8-Uoc"/>
+                                <constraint firstItem="QKL-Ey-b5d" firstAttribute="leading" secondItem="ly2-yH-CND" secondAttribute="leading" id="GYz-7M-nOI"/>
+                                <constraint firstAttribute="trailing" secondItem="QKL-Ey-b5d" secondAttribute="trailing" id="c7E-Su-fnU"/>
+                                <constraint firstAttribute="bottom" secondItem="QKL-Ey-b5d" secondAttribute="bottom" identifier="bottom" id="uI0-Zr-CZ6"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="2JT-bf-nYb" id="0ig-mE-hAh"/>
+                            <outlet property="delegate" destination="2JT-bf-nYb" id="w0G-mv-3T9"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="News" id="T3e-YG-VSp">
+                        <imageReference key="image" image="newspaper" catalog="system" symbolScale="medium"/>
+                        <imageReference key="selectedImage" image="newspaper.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="foneImageView" destination="QKL-Ey-b5d" id="Ey9-iN-YNT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRU-pi-fz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.71014492753625" y="28.794642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="news-fone" width="1368" height="912"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
