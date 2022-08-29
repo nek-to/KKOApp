@@ -33,15 +33,12 @@ class CoffeeTVCell: UITableViewCell {
     }
     
     func configure(_ coffee: CoffeeItem) {
-        item = coffee
-        titleLabel.text = item?.name
-        descritionLabel.text = item?.description
-        if let price = item?.price {
-        priceLabel.text = String("\(price)$")
-        }
-        coffeeImage.image = UIImage().resizeImage(image: .init(named: item!.imageName)!,
+        titleLabel.text = coffee.name
+        descritionLabel.text = coffee.description
+        priceLabel.text = String("\(coffee.price)$")
+        coffeeImage.image = UIImage().resizeImage(image: .init(named: coffee.imageName)!,
                                                   targetSize: .init(width: 300, height: 300))
-        likeButton.isSelected = item!.like
+        likeButton.isSelected = coffee.like
     }
     
     @IBAction func likeCoffee(_ sender: UIButton) {
@@ -56,6 +53,5 @@ class CoffeeTVCell: UITableViewCell {
             likeIndicator = false
             likeButton.isSelected = false
         }
-        print("Like \(likeIndicator)")
     }
 }

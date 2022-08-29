@@ -24,11 +24,17 @@
 		<key>icon</key>
 		<string>icon4</string>
 		<key>title</key>
-		<string>General</string>
+		<string>Icon</string>
 	</dict>
 	<dict>
 		<key>icon</key>
 		<string>icon5</string>
+		<key>title</key>
+		<string>Language</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icon6</string>
 		<key>title</key>
 		<string>Logout</string>
 	</dict>

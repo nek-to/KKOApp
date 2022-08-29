@@ -98,7 +98,6 @@ class LogInVC: UIViewController {
     @IBAction private func logIn(_ sender: UIButton) {
         checkIfFieldEmpty()
         hideWarningLabel()
-        print(checkerIfFieldEmpty)
         if !checkerIfFieldEmpty {
             validateUser()
 //            isSuccess = true

@@ -82,8 +82,6 @@ class SignUpVC: UIViewController {
     }
     
     private func saveUserInDatabase() {
-        print("password correct = \(passwordsIsCorrect)")
-        print("warning label is hide = \(warningLabel.isHidden)")
         if warningLabel.isHidden && passwordsIsCorrect {
             Keychain.set(nameTextField.text, forKey: "username")
             Keychain.set(phoneTextField.text, forKey: "phone")
@@ -91,7 +89,6 @@ class SignUpVC: UIViewController {
             Keychain.set(passwordTextField.text, forKey: "password")
         } else {
             warningLabel.isHidden = false
-            print("registration error")
         }
     }
     
@@ -116,8 +113,6 @@ class SignUpVC: UIViewController {
         checkIfAllFieldsAreFill()
         checkIfDoublePasswordCorrect()
         hideWarningLabel()
-        print(fieldsAreFill)
-        print(passwordsIsCorrect)
         if fieldsAreFill && passwordsIsCorrect {
             saveUserInDatabase()
         }

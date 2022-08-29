@@ -14,4 +14,9 @@ class PreferenceTVCell: UITableViewCell {
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func configureCell(_ preference: PreferenceItem) {
+        iconImageView.image = UIImage(named: preference.icon)
+        preferenceLabel.text = preference.title
+    }
 }

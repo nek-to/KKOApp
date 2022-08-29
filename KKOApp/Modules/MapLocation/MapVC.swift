@@ -21,7 +21,6 @@ class MapVC: UIViewController {
         configureLocationService()
         coffeeshopLocations()
         config()
-        print(self.mapKit.userLocation.coordinate)
     }
     
     private func config() {

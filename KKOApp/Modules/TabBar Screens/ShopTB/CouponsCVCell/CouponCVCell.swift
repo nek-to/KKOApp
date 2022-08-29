@@ -8,7 +8,7 @@
 import UIKit
 
 class CouponCVCell: UICollectionViewCell {
-    @IBOutlet internal weak var couponImageView: UIImageView!
+    @IBOutlet weak var couponImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

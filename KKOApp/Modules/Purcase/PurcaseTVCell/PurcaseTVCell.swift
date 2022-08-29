@@ -10,14 +10,12 @@ import UIKit
 
 class PurcaseTVCell: UITableViewCell {
     @IBOutlet weak var coffeeImageView: UIImageView!
-    @IBOutlet weak var titleBackView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lottieBackView: UIView!
     @IBOutlet weak var lottieRoundView: UIView!
     @IBOutlet weak var lottieView: UIView!
     @IBOutlet weak var greenTickImageView: UIImageView!
     
-    private var item: Purcase?
     private var brewCoffee = AnimationView(name: "brewing-coffee")
     
     override func awakeFromNib() {
@@ -28,8 +26,6 @@ class PurcaseTVCell: UITableViewCell {
     private func config() {
         // image
         coffeeImageView.layer.cornerRadius = 30
-        // title back
-        titleBackView.layer.cornerRadius = 15
         // lottie back
         lottieBackView.layer.cornerRadius = 15
         // lottie round
@@ -44,14 +40,13 @@ class PurcaseTVCell: UITableViewCell {
     }
     
     func configureCell(_ coffee: Purcase) {
-        item = coffee
-        titleLabel.text = item?.title
-        coffeeImageView.image = UIImage().resizeImage(image: .init(named: item?.image ?? "")!,
+        titleLabel.text = coffee.title
+        coffeeImageView.image = UIImage().resizeImage(image: .init(named: coffee.image)!,
                                                       targetSize: .init(width: 300, height: 300))
     }
     
     func animateBrewingCoffee() {
-        brewCoffee.frame = lottieBackView.frame
+        brewCoffee.frame = CGRect(x: 0, y: 0, width: 110, height: 110)
         brewCoffee.center = lottieView.center
         brewCoffee.contentMode = .scaleAspectFit
         brewCoffee.loopMode = .playOnce

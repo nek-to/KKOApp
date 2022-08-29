@@ -16,26 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="abm-WB-os1">
-                                <rect key="frame" x="0.0" y="54" width="414" height="842"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="always" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="50" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="abm-WB-os1">
+                                <rect key="frame" x="0.0" y="54" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="QrU-P1-yiT">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="QrU-P1-yiT">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vV-mm-Bxj">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vV-mm-Bxj">
                                             <rect key="frame" x="20" y="5" width="374" height="27"/>
                                             <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="0vV-mm-Bxj" firstAttribute="leading" secondItem="QrU-P1-yiT" secondAttribute="leading" constant="20" id="7ZH-Bg-tlR"/>
-                                        <constraint firstItem="0vV-mm-Bxj" firstAttribute="centerX" secondItem="QrU-P1-yiT" secondAttribute="centerX" id="aff-NL-nEa"/>
-                                        <constraint firstAttribute="trailing" secondItem="0vV-mm-Bxj" secondAttribute="trailing" constant="20" id="gE1-YY-bYf"/>
-                                        <constraint firstItem="0vV-mm-Bxj" firstAttribute="top" secondItem="QrU-P1-yiT" secondAttribute="top" constant="5" id="wrx-49-rj5"/>
+                                        <constraint firstItem="0vV-mm-Bxj" firstAttribute="top" secondItem="QrU-P1-yiT" secondAttribute="top" constant="5" id="Qql-n3-p3c"/>
+                                        <constraint firstAttribute="trailing" secondItem="0vV-mm-Bxj" secondAttribute="trailing" constant="20" id="bJn-oa-g7d"/>
+                                        <constraint firstItem="0vV-mm-Bxj" firstAttribute="leading" secondItem="QrU-P1-yiT" secondAttribute="leading" constant="20" id="bRM-6k-Hqi"/>
                                     </constraints>
                                 </view>
                             </tableView>
@@ -43,10 +43,10 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="abm-WB-os1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="YsP-Oi-GdU"/>
-                            <constraint firstItem="abm-WB-os1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aH1-wX-iLW"/>
-                            <constraint firstItem="abm-WB-os1" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="jn1-xi-JXM"/>
-                            <constraint firstAttribute="bottom" secondItem="abm-WB-os1" secondAttribute="bottom" id="uew-lD-68R"/>
+                            <constraint firstItem="abm-WB-os1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="8az-GY-eqz"/>
+                            <constraint firstItem="abm-WB-os1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="Du1-fB-R59"/>
+                            <constraint firstItem="abm-WB-os1" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="VLo-yW-HLZ"/>
+                            <constraint firstAttribute="bottom" secondItem="abm-WB-os1" secondAttribute="bottom" constant="34" id="ZwD-XV-rzR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="92"/>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </scene>
     </scenes>
     <resources>

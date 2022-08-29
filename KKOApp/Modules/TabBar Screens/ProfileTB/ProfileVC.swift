@@ -107,21 +107,24 @@ extension ProfileVC: UITableViewDataSource {
             self.present(mapScreen, animated: true)
         case Preferences.payment.rawValue:
             let storyboard = UIStoryboard(name: "Payment", bundle: nil)
-            let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.payment.rawValue)
-            self.present(mapScreen, animated: true)
+            let paymentScreen = storyboard.instantiateViewController(withIdentifier: Screens.payment.rawValue)
+            self.present(paymentScreen, animated: true)
         case Preferences.purcase.rawValue:
             let storyboard = UIStoryboard(name: "Purcase", bundle: nil)
-            let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.purcase.rawValue)
-            self.present(mapScreen, animated: true)
-        case Preferences.general.rawValue:
-            let storyboard = UIStoryboard(name: "Map", bundle: nil)
-            let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.map.rawValue)
-            self.present(mapScreen, animated: true)
-        case Preferences.logout.rawValue:
-            let storyboard = UIStoryboard(name: "Map", bundle: nil)
-            let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.map.rawValue)
-            self.present(mapScreen, animated: true)
-        default: break
+            let purcaseScreen = storyboard.instantiateViewController(withIdentifier: Screens.purcase.rawValue)
+            self.present(purcaseScreen, animated: true)
+        case Preferences.icon.rawValue:
+            let storyboard = UIStoryboard(name: "Icon", bundle: nil)
+            let iconScreen = storyboard.instantiateViewController(withIdentifier: Screens.icon.rawValue)
+            self.present(iconScreen, animated: true)
+        case Preferences.language.rawValue:
+            let storyboard = UIStoryboard(name: "Language", bundle: nil)
+            let languageScreen = storyboard.instantiateViewController(withIdentifier: Screens.language.rawValue)
+            self.present(languageScreen, animated: true)
+        default:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginScreen = storyboard.instantiateViewController(withIdentifier: Screens.login.rawValue)
+            self.present(loginScreen, animated: true)
         }
     }
 }

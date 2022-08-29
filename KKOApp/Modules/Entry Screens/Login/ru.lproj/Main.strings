@@ -1,0 +1,27 @@
+
+/* Class = "UITextField"; placeholder = "   Enter username"; ObjectID = "IWv-bo-ofN"; */
+"IWv-bo-ofN.placeholder" = "   Enter username";
+
+/* Class = "UILabel"; text = "Oops something went wrong please try again"; ObjectID = "PhY-yr-Vcj"; */
+"PhY-yr-Vcj.text" = "Oops something went wrong please try again";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "SSf-1V-raS"; */
+"SSf-1V-raS.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SSf-1V-raS"; */
+"SSf-1V-raS.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "   Enter password"; ObjectID = "fyl-Fd-ei6"; */
+"fyl-Fd-ei6.placeholder" = "   Enter password";
+
+/* Class = "UILabel"; text = "Forgot your password?"; ObjectID = "wRz-gG-KFZ"; */
+"wRz-gG-KFZ.text" = "Forgot your password?";
+
+/* Class = "UILabel"; text = "Log In"; ObjectID = "xbg-KU-rSt"; */
+"xbg-KU-rSt.text" = "Log In";
+
+/* Class = "UIButton"; configuration.title = "Drink some coffee"; ObjectID = "y7Z-EX-jOH"; */
+"y7Z-EX-jOH.configuration.title" = "Drink some coffee";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "y7Z-EX-jOH"; */
+"y7Z-EX-jOH.normalTitle" = "Button";

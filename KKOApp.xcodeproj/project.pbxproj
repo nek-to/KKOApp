@@ -11,11 +11,28 @@
 		0B07FFEA28B5A400001701BB /* BuyCoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B07FFE928B5A400001701BB /* BuyCoffeeVC.swift */; };
 		0B0F784E28B58A84005D6638 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0F784D28B58A84005D6638 /* NewsItem.swift */; };
 		0B0F785028B58B6D005D6638 /* News.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B0F784F28B58B6D005D6638 /* News.plist */; };
+		532EF32228BC310B00229A65 /* PurcaseTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532EF32128BC310B00229A65 /* PurcaseTVCell.xib */; };
+		532EF32728BC415400229A65 /* golden.png in Resources */ = {isa = PBXBuildFile; fileRef = 532EF32528BC415300229A65 /* golden.png */; };
+		532EF32B28BC419500229A65 /* blueberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 532EF32928BC419500229A65 /* blueberry.png */; };
+		532EF33028BC41B900229A65 /* cozy.png in Resources */ = {isa = PBXBuildFile; fileRef = 532EF32E28BC41B900229A65 /* cozy.png */; };
+		532EF33328BC41DE00229A65 /* cacao.png in Resources */ = {isa = PBXBuildFile; fileRef = 532EF33128BC41DE00229A65 /* cacao.png */; };
+		532EF33828BC443E00229A65 /* AppIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF33728BC443E00229A65 /* AppIconManager.swift */; };
+		532EF33B28BC4AC000229A65 /* Icon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532EF33A28BC4AC000229A65 /* Icon.storyboard */; };
+		532EF33D28BC4AD700229A65 /* IconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF33C28BC4AD700229A65 /* IconVC.swift */; };
+		532EF33F28BC4ED500229A65 /* IconTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF33E28BC4ED500229A65 /* IconTVCell.swift */; };
+		532EF34128BC59CD00229A65 /* CustomIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 532EF34028BC59CD00229A65 /* CustomIcons.plist */; };
+		532EF34428BC5AE400229A65 /* CustomIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF34328BC5AE400229A65 /* CustomIcon.swift */; };
+		532EF34628BC5B4E00229A65 /* CustomIconsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF34528BC5B4D00229A65 /* CustomIconsStorage.swift */; };
+		532EF34F28BC706D00229A65 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532EF34E28BC706D00229A65 /* Language.storyboard */; };
+		532EF35128BC707A00229A65 /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35028BC707A00229A65 /* LanguageVC.swift */; };
+		532EF35628BC742800229A65 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 532EF35428BC742800229A65 /* Localizable.strings */; };
+		532EF35A28BC767700229A65 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35928BC767700229A65 /* Bundle.swift */; };
+		532EF35C28BC769B00229A65 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35B28BC769B00229A65 /* Language.swift */; };
+		532EF35E28BC7C7500229A65 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35D28BC7C7500229A65 /* LocalManager.swift */; };
 		533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533E11F328B939F800CF5499 /* Purcase.storyboard */; };
 		533E11F628B93A0B00CF5499 /* PurcaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E11F528B93A0B00CF5499 /* PurcaseVC.swift */; };
 		533E11F828B9442800CF5499 /* brewing-coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 533E11F728B9442800CF5499 /* brewing-coffee.json */; };
 		533E11FC28B9447800CF5499 /* PurcaseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E11FA28B9447800CF5499 /* PurcaseTVCell.swift */; };
-		533E11FD28B9447800CF5499 /* PurcaseTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533E11FB28B9447800CF5499 /* PurcaseTVCell.xib */; };
 		534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA99628AFD68400626AA4 /* AppDelegate.swift */; };
 		534DA99928AFD68400626AA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA99828AFD68400626AA4 /* SceneDelegate.swift */; };
 		534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA99A28AFD68400626AA4 /* LogInVC.swift */; };
@@ -89,11 +106,31 @@
 		0B07FFE928B5A400001701BB /* BuyCoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoffeeVC.swift; sourceTree = "<group>"; };
 		0B0F784D28B58A84005D6638 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		0B0F784F28B58B6D005D6638 /* News.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = News.plist; sourceTree = "<group>"; };
+		532EF32128BC310B00229A65 /* PurcaseTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurcaseTVCell.xib; sourceTree = "<group>"; };
+		532EF32528BC415300229A65 /* golden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golden.png; sourceTree = "<group>"; };
+		532EF32928BC419500229A65 /* blueberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueberry.png; sourceTree = "<group>"; };
+		532EF32E28BC41B900229A65 /* cozy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cozy.png; sourceTree = "<group>"; };
+		532EF33128BC41DE00229A65 /* cacao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cacao.png; sourceTree = "<group>"; };
+		532EF33728BC443E00229A65 /* AppIconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconManager.swift; sourceTree = "<group>"; };
+		532EF33A28BC4AC000229A65 /* Icon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Icon.storyboard; sourceTree = "<group>"; };
+		532EF33C28BC4AD700229A65 /* IconVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconVC.swift; sourceTree = "<group>"; };
+		532EF33E28BC4ED500229A65 /* IconTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTVCell.swift; sourceTree = "<group>"; };
+		532EF34028BC59CD00229A65 /* CustomIcons.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CustomIcons.plist; sourceTree = "<group>"; };
+		532EF34328BC5AE400229A65 /* CustomIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIcon.swift; sourceTree = "<group>"; };
+		532EF34528BC5B4D00229A65 /* CustomIconsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconsStorage.swift; sourceTree = "<group>"; };
+		532EF34E28BC706D00229A65 /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
+		532EF35028BC707A00229A65 /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
+		532EF35228BC73C500229A65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		532EF35328BC73C500229A65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		532EF35528BC742800229A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = KKOApp/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		532EF35728BC744000229A65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = KKOApp/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		532EF35928BC767700229A65 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		532EF35B28BC769B00229A65 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		532EF35D28BC7C7500229A65 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
 		533E11F328B939F800CF5499 /* Purcase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Purcase.storyboard; sourceTree = "<group>"; };
 		533E11F528B93A0B00CF5499 /* PurcaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurcaseVC.swift; sourceTree = "<group>"; };
 		533E11F728B9442800CF5499 /* brewing-coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "brewing-coffee.json"; sourceTree = "<group>"; };
 		533E11FA28B9447800CF5499 /* PurcaseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurcaseTVCell.swift; sourceTree = "<group>"; };
-		533E11FB28B9447800CF5499 /* PurcaseTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurcaseTVCell.xib; sourceTree = "<group>"; };
 		534DA99328AFD68400626AA4 /* KKOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		534DA99628AFD68400626AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534DA99828AFD68400626AA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +236,53 @@
 			path = Shop;
 			sourceTree = "<group>";
 		};
+		532EF32328BC3E3100229A65 /* ApplicationCustomizer */ = {
+			isa = PBXGroup;
+			children = (
+				532EF32428BC3E4000229A65 /* App Icons */,
+			);
+			path = ApplicationCustomizer;
+			sourceTree = "<group>";
+		};
+		532EF32428BC3E4000229A65 /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				532EF33128BC41DE00229A65 /* cacao.png */,
+				532EF32E28BC41B900229A65 /* cozy.png */,
+				532EF32928BC419500229A65 /* blueberry.png */,
+				532EF32528BC415300229A65 /* golden.png */,
+			);
+			path = "App Icons";
+			sourceTree = "<group>";
+		};
+		532EF33928BC4AAF00229A65 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				532EF33A28BC4AC000229A65 /* Icon.storyboard */,
+				532EF33C28BC4AD700229A65 /* IconVC.swift */,
+				532EF33E28BC4ED500229A65 /* IconTVCell.swift */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
+		532EF34228BC5AC700229A65 /* CustomIcon */ = {
+			isa = PBXGroup;
+			children = (
+				532EF34328BC5AE400229A65 /* CustomIcon.swift */,
+				532EF34528BC5B4D00229A65 /* CustomIconsStorage.swift */,
+			);
+			path = CustomIcon;
+			sourceTree = "<group>";
+		};
+		532EF34C28BC705F00229A65 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				532EF34E28BC706D00229A65 /* Language.storyboard */,
+				532EF35028BC707A00229A65 /* LanguageVC.swift */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
 		533E11F228B939E600CF5499 /* Purcase */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,7 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				533E11FA28B9447800CF5499 /* PurcaseTVCell.swift */,
-				533E11FB28B9447800CF5499 /* PurcaseTVCell.xib */,
+				532EF32128BC310B00229A65 /* PurcaseTVCell.xib */,
 			);
 			path = PurcaseTVCell;
 			sourceTree = "<group>";
@@ -221,6 +305,7 @@
 		534DA98A28AFD68400626AA4 = {
 			isa = PBXGroup;
 			children = (
+				532EF35428BC742800229A65 /* Localizable.strings */,
 				534DA99528AFD68400626AA4 /* KKOApp */,
 				534DA99428AFD68400626AA4 /* Products */,
 				9B9AE91E4CC75CCA0A9FEBD2 /* Pods */,
@@ -268,6 +353,8 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				532EF34C28BC705F00229A65 /* Language */,
+				532EF33928BC4AAF00229A65 /* Icon */,
 				53E8F19428B3F4380011D63F /* FollowUs */,
 				533E11F228B939E600CF5499 /* Purcase */,
 				5395341028B82C1F00B76054 /* Payment */,
@@ -292,6 +379,7 @@
 			children = (
 				539BDBED28B524E30057BCA9 /* Coffee.plist */,
 				5395340C28B8038C00B76054 /* Coffeeshops.plist */,
+				532EF34028BC59CD00229A65 /* CustomIcons.plist */,
 				0B0F784F28B58B6D005D6638 /* News.plist */,
 				53C8678228B72249000A758C /* Preferences.plist */,
 				534DA99F28AFD68600626AA4 /* Assets.xcassets */,
@@ -302,6 +390,7 @@
 		534DA9AF28AFDE7300626AA4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				532EF32328BC3E3100229A65 /* ApplicationCustomizer */,
 				534DA99628AFD68400626AA4 /* AppDelegate.swift */,
 				534DA99828AFD68400626AA4 /* SceneDelegate.swift */,
 			);
@@ -416,6 +505,9 @@
 		5398E68728B69D6D00DEB5BC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				532EF33728BC443E00229A65 /* AppIconManager.swift */,
+				532EF35B28BC769B00229A65 /* Language.swift */,
+				532EF35D28BC7C7500229A65 /* LocalManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -498,6 +590,7 @@
 				5395342228B8452000B76054 /* UIColor */,
 				5398E68328B6899B00DEB5BC /* UIView */,
 				53E8F18828B3E8520011D63F /* UIImage */,
+				532EF35928BC767700229A65 /* Bundle.swift */,
 			);
 			path = Extencions;
 			sourceTree = "<group>";
@@ -513,6 +606,7 @@
 		53E8F18B28B3E8D30011D63F /* Storages */ = {
 			isa = PBXGroup;
 			children = (
+				532EF34228BC5AC700229A65 /* CustomIcon */,
 				53D910D528B956EC00C4044C /* Purcase */,
 				53C8677F28B721BF000A758C /* Preference */,
 				0B0F784C28B58488005D6638 /* Shop */,
@@ -651,6 +745,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 534DA98A28AFD68400626AA4;
 			productRefGroup = 534DA99428AFD68400626AA4 /* Products */;
@@ -670,19 +765,25 @@
 				53E8F1BE28B4294B0011D63F /* bean.json in Resources */,
 				5395341F28B8438900B76054 /* AddCard.storyboard in Resources */,
 				0B07FFE828B5A318001701BB /* BuyCoffee.storyboard in Resources */,
+				532EF33028BC41B900229A65 /* cozy.png in Resources */,
 				53E8F1BD28B4294B0011D63F /* buycoffee.json in Resources */,
+				532EF32728BC415400229A65 /* golden.png in Resources */,
 				5395340228B7F78A00B76054 /* Map.storyboard in Resources */,
 				53E8F19328B3EC550011D63F /* NewsTVCell.xib in Resources */,
 				53E8F18228B3D90F0011D63F /* ShopTB.storyboard in Resources */,
 				53C8678328B72249000A758C /* Preferences.plist in Resources */,
+				532EF33328BC41DE00229A65 /* cacao.png in Resources */,
 				534DA9A328AFD68600626AA4 /* LaunchScreen.storyboard in Resources */,
 				5395340D28B8038C00B76054 /* Coffeeshops.plist in Resources */,
 				53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */,
+				532EF34F28BC706D00229A65 /* Language.storyboard in Resources */,
 				53E8F1C028B4294B0011D63F /* buying.json in Resources */,
 				533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */,
 				53E8F18028B3D8FF0011D63F /* ProfileTB.storyboard in Resources */,
 				53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */,
+				532EF32228BC310B00229A65 /* PurcaseTVCell.xib in Resources */,
 				53E8F19928B3F4C40011D63F /* FollowUs.storyboard in Resources */,
+				532EF33B28BC4AC000229A65 /* Icon.storyboard in Resources */,
 				53E8F1B328B427A20011D63F /* CouponCVCell.xib in Resources */,
 				534DA9A028AFD68600626AA4 /* Assets.xcassets in Resources */,
 				5395341228B82C3B00B76054 /* Payment.storyboard in Resources */,
@@ -691,10 +792,12 @@
 				53E8F1BF28B4294B0011D63F /* coffee.json in Resources */,
 				53E8F1BB28B4294B0011D63F /* ok.json in Resources */,
 				5395341928B838B500B76054 /* CardTVCell.xib in Resources */,
+				532EF32B28BC419500229A65 /* blueberry.png in Resources */,
 				539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */,
-				533E11FD28B9447800CF5499 /* PurcaseTVCell.xib in Resources */,
 				53E8F1BC28B4294B0011D63F /* buysomecoffee.json in Resources */,
+				532EF34128BC59CD00229A65 /* CustomIcons.plist in Resources */,
 				533E11F828B9442800CF5499 /* brewing-coffee.json in Resources */,
+				532EF35628BC742800229A65 /* Localizable.strings in Resources */,
 				534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */,
 				534DA99E28AFD68400626AA4 /* Main.storyboard in Resources */,
 			);
@@ -751,25 +854,34 @@
 			files = (
 				5395340928B8036200B76054 /* CoffeeshopItem.swift in Sources */,
 				5398E68628B689B400DEB5BC /* UIView.swift in Sources */,
+				532EF35E28BC7C7500229A65 /* LocalManager.swift in Sources */,
 				534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */,
 				5395340B28B8037700B76054 /* CoffeeshopStorage.swift in Sources */,
 				53E8F18A28B3E86A0011D63F /* UIImage.swift in Sources */,
 				53E8F1B228B427A20011D63F /* CouponCVCell.swift in Sources */,
+				532EF34428BC5AE400229A65 /* CustomIcon.swift in Sources */,
+				532EF35128BC707A00229A65 /* LanguageVC.swift in Sources */,
 				53E8F1A828B40E200011D63F /* NewsTableView.swift in Sources */,
 				53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */,
+				532EF33D28BC4AD700229A65 /* IconVC.swift in Sources */,
 				53E8F1A028B3F87E0011D63F /* FollowUsCVCell.swift in Sources */,
 				5395342728B8457500B76054 /* CGFloat.swift in Sources */,
+				532EF35A28BC767700229A65 /* Bundle.swift in Sources */,
 				53E8F19B28B3F4E60011D63F /* FollowUsVC.swift in Sources */,
 				53D910D728B9570000C4044C /* Purcase.swift in Sources */,
+				532EF33F28BC4ED500229A65 /* IconTVCell.swift in Sources */,
 				53E8F1C628B444150011D63F /* CoffeeTVCell.swift in Sources */,
 				533E11FC28B9447800CF5499 /* PurcaseTVCell.swift in Sources */,
 				534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */,
 				5395341C28B83E1700B76054 /* CreditCard.swift in Sources */,
+				532EF35C28BC769B00229A65 /* Language.swift in Sources */,
 				53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */,
+				532EF34628BC5B4E00229A65 /* CustomIconsStorage.swift in Sources */,
 				5395342128B8439A00B76054 /* AddCardVC.swift in Sources */,
 				5395340628B801B900B76054 /* PreferenceEnum.swift in Sources */,
 				53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
+				532EF33828BC443E00229A65 /* AppIconManager.swift in Sources */,
 				53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */,
 				5395341428B82C5A00B76054 /* PaymentVC.swift in Sources */,
 				53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */,
@@ -799,10 +911,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		532EF35428BC742800229A65 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				532EF35528BC742800229A65 /* Base */,
+				532EF35728BC744000229A65 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		534DA99C28AFD68400626AA4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				534DA99D28AFD68400626AA4 /* Base */,
+				532EF35328BC73C500229A65 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -811,6 +933,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				534DA9A228AFD68600626AA4 /* Base */,
+				532EF35228BC73C500229A65 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -822,6 +945,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -882,6 +1006,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
