@@ -23,7 +23,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnB-ck-wFR">
                                 <rect key="frame" x="20.5" y="557" width="373" height="105"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWv-bo-ofN">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWv-bo-ofN">
                                         <rect key="frame" x="9.5" y="5" width="354" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -46,7 +46,7 @@
                                             <constraint firstAttribute="width" constant="35" id="lt5-O2-9M9"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyl-Fd-ei6">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyl-Fd-ei6">
                                         <rect key="frame" x="9.5" y="65" width="354" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -159,11 +159,11 @@
                     </view>
                     <connections>
                         <outlet property="backgroundUmageView" destination="m9n-U9-tkZ" id="YxO-lL-diW"/>
+                        <outlet property="emailTextField" destination="IWv-bo-ofN" id="rip-0v-fhw"/>
                         <outlet property="logInButton" destination="y7Z-EX-jOH" id="sJ8-UH-SjZ"/>
                         <outlet property="loginFieldsBottomConstraint" destination="BUG-OK-kNx" id="BVn-LP-TmO"/>
                         <outlet property="passwordRestoreLabel" destination="wRz-gG-KFZ" id="plR-zg-A73"/>
-                        <outlet property="passwordTextField" destination="fyl-Fd-ei6" id="WFy-lM-i9a"/>
-                        <outlet property="usernameTextField" destination="IWv-bo-ofN" id="NUW-5f-5y1"/>
+                        <outlet property="passwordTextField" destination="fyl-Fd-ei6" id="dP4-wg-AHk"/>
                         <outlet property="warningLabel" destination="PhY-yr-Vcj" id="xcD-eF-iN4"/>
                     </connections>
                 </viewController>

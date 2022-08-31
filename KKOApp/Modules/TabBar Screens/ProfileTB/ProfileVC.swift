@@ -4,6 +4,7 @@
 //
 //  Created by VironIT on 22.08.22.
 //
+import FirebaseAuth
 import RealmSwift
 import UIKit
 import SwiftUI
@@ -188,7 +189,12 @@ extension ProfileVC: UITableViewDataSource {
         default:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let loginScreen = storyboard.instantiateViewController(withIdentifier: Screens.login.rawValue)
+            do {
+                try FirebaseAuth.Auth.auth().signOut()
+            } catch {
+            }
             self.present(loginScreen, animated: true)
+            
         }
     }
 }

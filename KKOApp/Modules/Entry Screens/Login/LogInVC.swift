@@ -4,6 +4,7 @@
 //
 //  Created by VironIT on 19.08.22.
 //
+import FirebaseAuth
 import Simple_KeychainSwift
 import UIKit
 
@@ -11,14 +12,14 @@ class LogInVC: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet private weak var backgroundUmageView: UIImageView!
-    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var passwordRestoreLabel: UILabel!
     @IBOutlet private weak var logInButton: UIButton!
     @IBOutlet private weak var loginFieldsBottomConstraint: NSLayoutConstraint!
     @IBOutlet private weak var warningLabel: UILabel!
     
-    private var checkerIfFieldEmpty = false
+    private var checkerIfFieldEmpty = true
     private var isSuccess = false
     
     
@@ -39,10 +40,20 @@ class LogInVC: UIViewController {
     }
     
     private func launchSetup() {
-        usernameTextField.layer.borderColor = UIColor.lightGray.cgColor
-        usernameTextField.layer.cornerRadius = 7
+        emailTextField.layer.borderColor = UIColor.lightGray.cgColor
+        emailTextField.layer.borderWidth = 1
+        emailTextField.layer.cornerRadius = emailTextField.frame.height/2
+        emailTextField.leftViewMode = .always
+        emailTextField.rightViewMode = .always
+        emailTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 0))
+        emailTextField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 0))
         passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        passwordTextField.layer.cornerRadius = 7
+        passwordTextField.layer.borderWidth = 1
+        passwordTextField.layer.cornerRadius = passwordTextField.frame.height/2
+        passwordTextField.leftViewMode = .always
+        passwordTextField.rightViewMode = .always
+        passwordTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 0))
+        passwordTextField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 0))
         
         logInButton.layer.cornerRadius = logInButton.frame.height/2
         logInButton.alpha = 0.7
@@ -50,14 +61,14 @@ class LogInVC: UIViewController {
     }
     
     private func checkIfFieldEmpty() {
-        if !usernameTextField.hasText || !passwordTextField.hasText {
-            warningLabel.isHidden = false
-            checkerIfFieldEmpty = true
+        if emailTextField.hasText && passwordTextField.hasText {
+            warningLabel.isHidden = true
+            checkerIfFieldEmpty = false
         }
     }
     
     private func validateUser() {
-        if usernameTextField.text == Keychain.value(forKey: "username") &&
+        if emailTextField.text == Keychain.value(forKey: "username") &&
             passwordTextField.text == Keychain.value(forKey: "password") {
             warningLabel.isHidden = false
             warningLabel.textColor = .green
@@ -66,7 +77,7 @@ class LogInVC: UIViewController {
     
     private func hideWarningLabel() {
         if !warningLabel.isHidden {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.warningLabel.isHidden = true
             }
         }
@@ -76,6 +87,26 @@ class LogInVC: UIViewController {
         let storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
         let tabBarScreen = storyboard.instantiateViewController(withIdentifier: Screens.mainTabBar.rawValue)
         self.present(tabBarScreen, animated: true)
+    }
+    
+    private func toSignUp() {
+        let storyboard = UIStoryboard(name: "Signup", bundle: nil)
+        let signUpScreen = storyboard.instantiateViewController(withIdentifier: Screens.signup.rawValue)
+        self.present(signUpScreen, animated: true)
+    }
+    
+    private func aythantificationInFirebase() {
+        guard let email = emailTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty else {
+            return
+        }
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+            guard let strongSelf = self else { return }
+            guard error == nil else {
+                return strongSelf.toSignUp()
+            }
+            strongSelf.toMainTabBar()
+        }
     }
     
     @objc private func hideKeyboard() {
@@ -98,17 +129,15 @@ class LogInVC: UIViewController {
     @IBAction private func logIn(_ sender: UIButton) {
         checkIfFieldEmpty()
         hideWarningLabel()
-        if !checkerIfFieldEmpty {
-            validateUser()
-//            isSuccess = true
-            toMainTabBar()
+        print(checkerIfFieldEmpty)
+        if checkerIfFieldEmpty == false {
+            aythantificationInFirebase()
+            print("Auth")
         }
     }
     
     @IBAction private func moveToSignUpScreen(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Signup", bundle: nil)
-        let signUpScreen = storyboard.instantiateViewController(withIdentifier: Screens.signup.rawValue)
-        self.present(signUpScreen, animated: true)
+        toSignUp()
     }
     
 }
