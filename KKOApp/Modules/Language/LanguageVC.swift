@@ -39,7 +39,7 @@ extension LanguageVC: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        <#code#>
+        // localization
     }
 }
 

@@ -18,6 +18,7 @@ class IconVC: UIViewController {
         iconsTableView.delegate = self
         iconsTableView.dataSource = self
         iconVC.delegate = self
+        iconVC.prefersGrabberVisible = true
     }
 }
 

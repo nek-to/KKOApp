@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow to use camera</string>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundleAlternateIcons</key>
@@ -68,6 +70,8 @@
 	</dict>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Please authorized for using our app</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please allow access to your library</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Please allow your location for our service</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

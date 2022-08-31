@@ -4,7 +4,6 @@
 //
 //  Created by VironIT on 23.08.22.
 //
-
 import UIKit
 
 class CoffeeTVCell: UITableViewCell {
@@ -14,8 +13,7 @@ class CoffeeTVCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
-    private var item: CoffeeItem?
-    internal var likeIndicator = false
+    private var likeIndicator = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,16 +21,7 @@ class CoffeeTVCell: UITableViewCell {
         self.backgroundColor = .black
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        if likeIndicator {
-            likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        } else {
-            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-        }
-    }
-    
-    func configure(_ coffee: CoffeeItem) {
+    func configure(_ coffee: RealmCoffeeItem) {
         titleLabel.text = coffee.name
         descritionLabel.text = coffee.description
         priceLabel.text = String("\(coffee.price)$")
@@ -42,16 +31,13 @@ class CoffeeTVCell: UITableViewCell {
     }
     
     @IBAction func likeCoffee(_ sender: UIButton) {
-        item?.like = false
-        if !likeButton.isSelected {
+        if !likeIndicator {
             likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            likeIndicator = true
-            likeButton.isSelected = true
+            likeIndicator.toggle()
         }
         else {
             likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-            likeIndicator = false
-            likeButton.isSelected = false
+            likeIndicator.toggle()
         }
     }
 }

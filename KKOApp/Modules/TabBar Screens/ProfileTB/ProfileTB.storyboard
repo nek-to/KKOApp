@@ -20,14 +20,19 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RD8-2h-VVT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nwh-9p-Lbt">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nwh-9p-Lbt">
                                 <rect key="frame" x="147" y="253.5" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.82055312400000002" green="0.47253471609999997" blue="0.2592552602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="EEr-V6-lKF"/>
                                     <constraint firstAttribute="width" constant="120" id="aDK-zN-RXl"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LEE-d2-hGa" appends="YES" id="qNs-2o-jlE"/>
+                                </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClD-Jk-ZGI">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClD-Jk-ZGI">
                                 <rect key="frame" x="30" y="383.5" width="354" height="26.5"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -86,12 +91,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktw-qY-TIp">
-                                <rect key="frame" x="164.5" y="293.5" width="85" height="40"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9t-sO-Ytv">
                                 <rect key="frame" x="354" y="253.5" width="40" height="40"/>
                                 <constraints>
@@ -116,8 +115,6 @@
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Dpq-Qa-znl"/>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Dyp-hf-5lH"/>
                             <constraint firstItem="ClD-Jk-ZGI" firstAttribute="top" secondItem="z9t-sO-Ytv" secondAttribute="bottom" constant="90" id="Fuc-ID-Oab"/>
-                            <constraint firstItem="Ktw-qY-TIp" firstAttribute="centerY" secondItem="Nwh-9p-Lbt" secondAttribute="centerY" id="JCj-8c-CQx"/>
-                            <constraint firstItem="Ktw-qY-TIp" firstAttribute="centerX" secondItem="Nwh-9p-Lbt" secondAttribute="centerX" id="JJ8-tT-48T"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ppy-lS-Rhn" secondAttribute="bottom" constant="10" id="OVD-T4-nyR"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.35" id="T3a-3m-kjf"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UDc-t7-VcG"/>
@@ -149,12 +146,16 @@
                         <outlet property="name" destination="ClD-Jk-ZGI" id="gIG-ak-HrV"/>
                         <outlet property="phone" destination="EC2-X6-PzP" id="n81-Rp-2FB"/>
                         <outlet property="preferenceTableView" destination="Ppy-lS-Rhn" id="EhQ-R9-DcI"/>
-                        <outlet property="profilePicNameLabel" destination="Ktw-qY-TIp" id="4nr-Sv-WaA"/>
                         <outlet property="profilePictureImageView" destination="Nwh-9p-Lbt" id="6DM-rM-dgY"/>
                         <outlet property="topImageView" destination="RD8-2h-VVT" id="5wX-NE-A0I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LEE-d2-hGa">
+                    <connections>
+                        <action selector="changeProfilePic:" destination="Y6W-OH-hqX" id="Pw8-4M-pBQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
         </scene>

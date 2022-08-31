@@ -19,11 +19,11 @@ class CardTVCell: UITableViewCell {
         fonImageView.layer.cornerRadius = 30
         mainView.layer.cornerRadius = 30
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    func configureCell(_ card: CreditCard) {
+        fonImageView.image = UIImage(data: try! Data(contentsOf: URL(string: card.fonImage)!))
+        numberLabel.text = card.number
+        dateLabel.text = card.date
+        nameLabel.text = card.name
+    }
 }

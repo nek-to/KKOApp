@@ -5,6 +5,7 @@
 //  Created by VironIT on 22.08.22.
 //
 import Lottie
+import RealmSwift
 import UIKit
 
 class ShopTableVC: UITableViewController {
@@ -13,6 +14,7 @@ class ShopTableVC: UITableViewController {
     @IBOutlet weak var couponsCollectionView: UICollectionView!
     @IBOutlet weak var lottieView: UIView!
     
+    private var storage = try! Realm()
     private var filteredCoffee = [CoffeeItem]()
     private var coffee = CoffeeStorage.shared
     private var coupone = CouponeStorage.shared
@@ -45,7 +47,7 @@ class ShopTableVC: UITableViewController {
         // coupons cell registration
         couponsCollectionView.register(UINib(nibName: "CouponCVCell", bundle: nil), forCellWithReuseIdentifier: "couponCell")
         // table cell registration
-        tableView.register(UINib(nibName: "CoffeeTVCell", bundle: nil), forCellReuseIdentifier: "coffeeCell")
+        tableView.register(UINib(nibName: "CoffeeTVCell", bundle: nil), forCellReuseIdentifier: "coffeeCell")        
     }
     
     override func viewWillAppear(_ animated: Bool) {

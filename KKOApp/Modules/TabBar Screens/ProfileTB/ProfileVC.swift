@@ -6,6 +6,7 @@
 //
 import RealmSwift
 import UIKit
+import SwiftUI
 
 class ProfileVC: UIViewController {
     @IBOutlet weak var topImageView: UIImageView!
@@ -18,37 +19,101 @@ class ProfileVC: UIViewController {
     
     private var preferences = PreferenceStorage.shared
     private var imageUrl = ""
-    private var topImageStorage = try! Realm()
+    private var storage = try! Realm()
+    private var imagePicker = UIImagePickerController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         preferenceTableView.delegate = self
         preferenceTableView.dataSource = self
+        imagePicker.delegate = self
         config()
     }
+
     
     private func config() {
         // profile picture
         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.height/2
-        profilePictureImageView.backgroundColor = UIColor.orange
         profilePictureImageView.layer.borderColor = UIColor.white.cgColor
         profilePictureImageView.layer.borderWidth = 3
         // background picture
         topImageView.layer.cornerRadius = 30
         // top image
         setupTopImage()
+        // setup profile picture
+        setupProfPic()
     }
     
     private func setupTopImage() {
-        if topImageStorage.isEmpty {
-            topImageView.image = UIImage(named: "profile-back")
-        } else {
-            let images = topImageStorage.objects(TopImage.self)
-            let image = images.first?.image ?? ""
-            if let data = try? Data(contentsOf: URL(string: image)!) {
-                topImageView.image = UIImage(data: data)
-            }
+            let image = storage.objects(TopImage.self).first?.image
+            if let image = image {
+                topImageView.image = UIImage(data: try! Data(contentsOf: URL(string: image) ?? URL(fileURLWithPath: "profile-back")))
         }
+    }
+    
+    private func chooseWayForProfileImageSetup() {
+        let alert = UIAlertController(title: "Setup profile picture", message: "What need to be user", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Use photo library", style: .default) {_ in
+            self.openLibrary()
+        })
+        alert.addAction(UIAlertAction(title: "Use camera", style: .default) { _ in
+            self.openCamera()
+        })
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { _ in
+            self.deleteProfilePicture()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        self.present(alert, animated: true)
+    }
+    
+    private func openCamera() {
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
+        {
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        else {
+            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    private func openLibrary() {
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    private func deleteProfilePicture() {
+        try? storage.write {
+            storage.delete(storage.objects(ProfilePicture.self))
+        }
+        profilePictureImageView.image = UIImage()
+    }
+    
+    private func setupProfPic() {
+        let image = storage.objects(ProfilePicture.self).first?.image
+        print(storage.objects(ProfilePicture.self))
+            if let image = image {
+                profilePictureImageView.image = UIImage(data: image)
+        }
+    }
+    
+    private func saveProfPic(_ image: UIImage) {
+        let data = Data(image.jpegData(compressionQuality: 0.5)!)
+        let profPic = ProfilePicture()
+        profPic.image = data
+        try! storage.write {
+            storage.delete(storage.objects(ProfilePicture.self))
+            storage.add(profPic)
+        }
+    }
+    
+    @IBAction func changeProfilePic(_ sender: UITapGestureRecognizer) {
+        chooseWayForProfileImageSetup()
     }
     
     @IBAction private func reloadFonImage() {
@@ -65,11 +130,11 @@ class ProfileVC: UIViewController {
     
     private func saveTopImage(url: String) {
         let topImage = TopImage()
-        topImage.image = self.imageUrl
-        topImageStorage.beginWrite()
-        topImageStorage.delete(topImageStorage.objects(TopImage.self))
-        topImageStorage.add(topImage)
-        try? topImageStorage.commitWrite()
+        try? storage.write {
+            storage.delete(storage.objects(TopImage.self))
+            topImage.image = imageUrl
+            storage.add(topImage)
+        }
     }
 }
 
@@ -83,9 +148,8 @@ extension ProfileVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let preferenceCell = tableView.dequeueReusableCell(withIdentifier: "preferenceCell") as! PreferenceTVCell
-        preferenceCell.preferenceLabel.text = preferences.elements[indexPath.row].title
-        let icon = preferences.elements[indexPath.row].icon
-        preferenceCell.iconImageView.image = UIImage(named: icon)
+        let preference = preferences.elements[indexPath.row]
+        preferenceCell.configureCell(preference)
         preferenceCell.selectionStyle = .none
         return preferenceCell
     }
@@ -128,3 +192,20 @@ extension ProfileVC: UITableViewDataSource {
         }
     }
 }
+
+extension ProfileVC: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+     //You will get cropped image here..
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+         {
+             self.profilePictureImageView.image = image
+             saveProfPic(image)
+         }
+    }
+}
+
+extension ProfileVC: UINavigationControllerDelegate {
+}
+
+

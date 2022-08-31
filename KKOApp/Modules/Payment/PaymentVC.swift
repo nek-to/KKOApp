@@ -66,10 +66,7 @@ extension PaymentVC: UITableViewDataSource {
         let cards = cardStorage.objects(CreditCard.self)
         let card = cards[indexPath.row]
         let cardCell = cardTableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardTVCell
-        cardCell.numberLabel.text = card.number
-        cardCell.dateLabel.text = card.date
-        cardCell.nameLabel.text = card.name
-        cardCell.fonImageView.image = UIImage(data: try! Data(contentsOf: URL(string: card.fonImage)!))
+        cardCell.configureCell(card)
         cardCell.selectionStyle = .none
         return cardCell
     }

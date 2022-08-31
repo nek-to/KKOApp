@@ -11,12 +11,14 @@ class PreferenceTVCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var preferenceLabel: UILabel!
     
+    private var profPic: ProfilePicture?
+    
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func configureCell(_ preference: PreferenceItem) {
-        iconImageView.image = UIImage(named: preference.icon)
-        preferenceLabel.text = preference.title
+            iconImageView.image = UIImage(named: preference.icon)
+            preferenceLabel.text = preference.title
     }
 }

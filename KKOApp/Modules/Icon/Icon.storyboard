@@ -17,11 +17,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qv6-QI-opO">
-                                <rect key="frame" x="0.0" y="64" width="414" height="832"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="t1b-az-gTT">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A70-AL-fRa">
+                                            <rect key="frame" x="25" y="15" width="364" height="27"/>
+                                            <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="A70-AL-fRa" secondAttribute="trailing" constant="25" id="D1V-bs-hSK"/>
+                                        <constraint firstItem="A70-AL-fRa" firstAttribute="leading" secondItem="t1b-az-gTT" secondAttribute="leading" constant="25" id="Sgg-Us-ke1"/>
+                                        <constraint firstItem="A70-AL-fRa" firstAttribute="top" secondItem="t1b-az-gTT" secondAttribute="top" constant="15" id="d13-O3-i6y"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="iconCell" rowHeight="79" id="vw2-Rr-v3A" customClass="IconTVCell" customModule="KKOApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="79"/>
+                                        <rect key="frame" x="0.0" y="99.5" width="414" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vw2-Rr-v3A" id="NvF-Im-rDN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
@@ -64,7 +82,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Qv6-QI-opO" secondAttribute="bottom" id="CXY-Fn-Z1n"/>
                             <constraint firstItem="Qv6-QI-opO" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="S35-Qn-XRi"/>
-                            <constraint firstItem="Qv6-QI-opO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="q7x-Ex-UYC"/>
+                            <constraint firstItem="Qv6-QI-opO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="q7x-Ex-UYC"/>
                             <constraint firstItem="Qv6-QI-opO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="siC-YA-CPp"/>
                         </constraints>
                     </view>
