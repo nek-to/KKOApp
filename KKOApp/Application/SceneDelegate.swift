@@ -5,41 +5,23 @@
 //  Created by VironIT on 19.08.22.
 //
 import FirebaseAuth
+import LocalAuthentication
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
-//    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-//        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-//        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    //        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-    //        guard let _ = (scene as? UIWindowScene) else { return }
-    //    }
+    private let passwordVC = PasswordVC(nibName: "Password", bundle: nil)
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let winScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: winScene)
-        //            let isUserLoggedIn: Bool = UserDefault.bool(forKey: "isLoggedIn")
         if FirebaseAuth.Auth.auth().currentUser != nil {
             toMainTabBar()
         } else {
             toLogIn()
         }
-        //
-        //            if isUserLoggedIn {
-        //                let mainStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-        //                let tabBarVC = mainStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as! MainTabBarViewController
-        //                window!.rootViewController = tabBarVC
-        //                window!.makeKeyAndVisible()
-        //            } else {
-        //                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        //                let startVC = mainStoryboard.instantiateViewController(withIdentifier: "StartVC") as! StartViewController
-        //                window!.rootViewController = startVC
-        //                window!.makeKeyAndVisible()
-        //            }
+
     }
     
     private func toMainTabBar() {
@@ -73,17 +55,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This may occur due to temporary interruptions (ex. an incoming phone call).
     }
 
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
-    }
+//    func sceneWillEnterForeground(_ scene: UIScene) {
+//        passwordVC.modalPresentationStyle = .overFullScreen
+//        self.window?.rootViewController?.present(passwordVC, animated: true)
+//        authorization()
+//    }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+        func sceneDidEnterBackground(_ scene: UIScene) {
+            self.passwordVC.dismiss(animated: true)
+        }
     }
-
+    
+    private func authorization() {
+        let context = LAContext()
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authorized") { success, error in
+                if success {
+                    DispatchQueue.main.async {
+                        self.passwordVC.dismiss(animated: true)
+                    }
+                }
+            }
+        }
+    }
 
 }
 

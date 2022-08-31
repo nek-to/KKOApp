@@ -64,6 +64,8 @@
 		5398E68628B689B400DEB5BC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398E68528B689B400DEB5BC /* UIView.swift */; };
 		539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539BDBEB28B523100057BCA9 /* CoffeeItem.swift */; };
 		539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539BDBED28B524E30057BCA9 /* Coffee.plist */; };
+		539D736028C01EBA0034BA05 /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D735E28C01EBA0034BA05 /* PasswordVC.swift */; };
+		539D736128C01EBA0034BA05 /* Password.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539D735F28C01EBA0034BA05 /* Password.xib */; };
 		53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678028B721E9000A758C /* PreferenceItem.swift */; };
 		53C8678328B72249000A758C /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53C8678228B72249000A758C /* Preferences.plist */; };
 		53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678428B7230F000A758C /* PreferenceStorage.swift */; };
@@ -166,6 +168,8 @@
 		5398E68528B689B400DEB5BC /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		539BDBEB28B523100057BCA9 /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		539BDBED28B524E30057BCA9 /* Coffee.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffee.plist; sourceTree = "<group>"; };
+		539D735E28C01EBA0034BA05 /* PasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordVC.swift; sourceTree = "<group>"; };
+		539D735F28C01EBA0034BA05 /* Password.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Password.xib; sourceTree = "<group>"; };
 		53C8678028B721E9000A758C /* PreferenceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceItem.swift; sourceTree = "<group>"; };
 		53C8678228B72249000A758C /* Preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
 		53C8678428B7230F000A758C /* PreferenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceStorage.swift; sourceTree = "<group>"; };
@@ -366,6 +370,7 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				539D735D28C01EBA0034BA05 /* Password */,
 				532EF34C28BC705F00229A65 /* Language */,
 				532EF33928BC4AAF00229A65 /* Icon */,
 				53E8F19428B3F4380011D63F /* FollowUs */,
@@ -524,6 +529,15 @@
 				532EF35D28BC7C7500229A65 /* LocalManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		539D735D28C01EBA0034BA05 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				539D735E28C01EBA0034BA05 /* PasswordVC.swift */,
+				539D735F28C01EBA0034BA05 /* Password.xib */,
+			);
+			path = Password;
 			sourceTree = "<group>";
 		};
 		53C8677F28B721BF000A758C /* Preference */ = {
@@ -805,6 +819,7 @@
 				5394D35428BEF12200EFE968 /* GoogleService-Info.plist in Resources */,
 				0B0F785028B58B6D005D6638 /* News.plist in Resources */,
 				53E8F1BF28B4294B0011D63F /* coffee.json in Resources */,
+				539D736128C01EBA0034BA05 /* Password.xib in Resources */,
 				53E8F1BB28B4294B0011D63F /* ok.json in Resources */,
 				5395341928B838B500B76054 /* CardTVCell.xib in Resources */,
 				532EF32B28BC419500229A65 /* blueberry.png in Resources */,
@@ -903,6 +918,7 @@
 				53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */,
 				533E11F628B93A0B00CF5499 /* PurcaseVC.swift in Sources */,
 				0B0F784E28B58A84005D6638 /* NewsItem.swift in Sources */,
+				539D736028C01EBA0034BA05 /* PasswordVC.swift in Sources */,
 				53E8F19228B3EC550011D63F /* NewsTVCell.swift in Sources */,
 				53E8F17E28B3D8F00011D63F /* ProfileVC.swift in Sources */,
 				53E8F1AE28B426E20011D63F /* CouponStorage.swift in Sources */,
