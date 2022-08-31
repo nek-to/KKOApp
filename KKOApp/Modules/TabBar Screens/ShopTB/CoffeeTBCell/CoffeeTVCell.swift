@@ -21,7 +21,7 @@ class CoffeeTVCell: UITableViewCell {
         self.backgroundColor = .black
     }
     
-    func configure(_ coffee: RealmCoffeeItem) {
+    func configure(_ coffee: CoffeeItem) {
         titleLabel.text = coffee.name
         descritionLabel.text = coffee.description
         priceLabel.text = String("\(coffee.price)$")

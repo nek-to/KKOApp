@@ -18,16 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
-    
-    private func storeCoffeeInRealm(_ coffee: CoffeeItem) {
-        let item = RealmCoffeeItem()
-        item.name = coffee.name
-        item.descript = coffee.description
-        item.price = coffee.price
-        item.imageName = coffee.imageName
-        item.like = coffee.like
-        item.time = coffee.time
-    }
 
     // MARK: UISceneSession Lifecycle
 
