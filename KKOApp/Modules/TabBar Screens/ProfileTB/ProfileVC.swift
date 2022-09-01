@@ -14,9 +14,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var phone: UILabel!
-    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var address: UILabel!
     @IBOutlet weak var preferenceTableView: UITableView!
-    @IBOutlet weak var profilePicNameLabel: UILabel!
     
     private var preferences = PreferenceStorage.shared
     private var imageUrl = ""

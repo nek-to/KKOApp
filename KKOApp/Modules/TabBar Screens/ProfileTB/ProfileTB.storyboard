@@ -44,11 +44,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5S-yW-7Tt">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5S-yW-7Tt">
                                 <rect key="frame" x="30" y="450" width="354" height="20"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="y8G-E9-8rl" appends="YES" id="NAY-WO-a3u"/>
+                                </connections>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-lS-Rhn">
                                 <rect key="frame" x="0.0" y="490" width="414" height="313"/>
@@ -142,7 +146,7 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="email" destination="E5S-yW-7Tt" id="AAU-Vn-jfK"/>
+                        <outlet property="address" destination="E5S-yW-7Tt" id="CeR-j9-zmQ"/>
                         <outlet property="name" destination="ClD-Jk-ZGI" id="gIG-ak-HrV"/>
                         <outlet property="phone" destination="EC2-X6-PzP" id="n81-Rp-2FB"/>
                         <outlet property="preferenceTableView" destination="Ppy-lS-Rhn" id="EhQ-R9-DcI"/>
@@ -151,11 +155,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="LEE-d2-hGa">
+                <tapGestureRecognizer id="LEE-d2-hGa" userLabel="ChangeProfilePhoto">
                     <connections>
                         <action selector="changeProfilePic:" destination="Y6W-OH-hqX" id="Pw8-4M-pBQ"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="y8G-E9-8rl"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
         </scene>

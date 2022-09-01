@@ -4,6 +4,7 @@
 //
 //  Created by Kolya Gribok on 24.08.22.
 //
+import UserNotifications
 import RealmSwift
 import UIKit
 import SwiftUI
@@ -13,6 +14,7 @@ protocol CoffeeProtocol {
     var descript: String { get set }
     var price: Int { get set }
     var imageName: String { get set }
+    var time: Int { get set }
 }
 
 class BuyCoffeeVC: UIViewController, CoffeeProtocol {
@@ -34,7 +36,10 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     var descript: String = ""
     var price: Int = 0
     var imageName: String = ""
-    private var buyedCoffee = try! Realm()
+    var time: Int = 0
+    private var storage = try! Realm()
+    private var notification = UNUserNotificationCenter.current()
+
     
     
     override func viewDidLoad() {
@@ -114,8 +119,8 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         coffee.title = titleLabel.text!
         coffee.image = imageName
         coffee.showed = false
-        try? buyedCoffee.write {
-            buyedCoffee.add(coffee)
+        try? storage.write {
+            storage.add(coffee)
         }
     }
     
@@ -125,6 +130,22 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 self.buyButton.backgroundColor = #colorLiteral(red: 0.8207221627, green: 0.4692305923, blue: 0.257660836, alpha: 1)
             }
+        }
+    }
+    
+    private func sendNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Your coffee is ready"
+        content.body = "Your \(name) is waiting for you at Russiyanova 54"
+        content.sound = .default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(time), repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
+        center.add(request)
+        notification.add(request) { (error) in
+            print(error?.localizedDescription ?? "error")
         }
     }
     
@@ -150,5 +171,6 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     @IBAction private func buyCoffee(_ sender: UIButton) {
         saveBuyedCoffee()
         buttonPressed()
+        sendNotification()
     }
 }

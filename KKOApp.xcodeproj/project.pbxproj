@@ -68,6 +68,8 @@
 		53C8678328B72249000A758C /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53C8678228B72249000A758C /* Preferences.plist */; };
 		53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678428B7230F000A758C /* PreferenceStorage.swift */; };
 		53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678B28B7263F000A758C /* PreferenceTVCell.swift */; };
+		53D091BD28C03561006A0090 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D091BC28C03561006A0090 /* Address.storyboard */; };
+		53D091BF28C03570006A0090 /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D091BE28C03570006A0090 /* AddressVC.swift */; };
 		53D910D728B9570000C4044C /* Purcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D910D628B9570000C4044C /* Purcase.swift */; };
 		53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17228B3D6520011D63F /* MainTabBar.storyboard */; };
 		53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F17428B3D6940011D63F /* MainTabBarVC.swift */; };
@@ -170,6 +172,8 @@
 		53C8678228B72249000A758C /* Preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
 		53C8678428B7230F000A758C /* PreferenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceStorage.swift; sourceTree = "<group>"; };
 		53C8678B28B7263F000A758C /* PreferenceTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceTVCell.swift; sourceTree = "<group>"; };
+		53D091BC28C03561006A0090 /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
+		53D091BE28C03570006A0090 /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
 		53D910D628B9570000C4044C /* Purcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purcase.swift; sourceTree = "<group>"; };
 		53E8F17228B3D6520011D63F /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		53E8F17428B3D6940011D63F /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
@@ -366,6 +370,7 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				53D091BB28C03550006A0090 /* Address */,
 				532EF34C28BC705F00229A65 /* Language */,
 				532EF33928BC4AAF00229A65 /* Icon */,
 				53E8F19428B3F4380011D63F /* FollowUs */,
@@ -533,6 +538,15 @@
 				53C8678428B7230F000A758C /* PreferenceStorage.swift */,
 			);
 			path = Preference;
+			sourceTree = "<group>";
+		};
+		53D091BB28C03550006A0090 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				53D091BC28C03561006A0090 /* Address.storyboard */,
+				53D091BE28C03570006A0090 /* AddressVC.swift */,
+			);
+			path = Address;
 			sourceTree = "<group>";
 		};
 		53D910D528B956EC00C4044C /* Purcase */ = {
@@ -791,6 +805,7 @@
 				5395340D28B8038C00B76054 /* Coffeeshops.plist in Resources */,
 				53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */,
 				532EF34F28BC706D00229A65 /* Language.storyboard in Resources */,
+				53D091BD28C03561006A0090 /* Address.storyboard in Resources */,
 				53E8F1C028B4294B0011D63F /* buying.json in Resources */,
 				533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */,
 				53E8F18028B3D8FF0011D63F /* ProfileTB.storyboard in Resources */,
@@ -879,6 +894,7 @@
 				53E8F1A828B40E200011D63F /* NewsTableView.swift in Sources */,
 				53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */,
 				532EF33D28BC4AD700229A65 /* IconVC.swift in Sources */,
+				53D091BF28C03570006A0090 /* AddressVC.swift in Sources */,
 				53E8F1A028B3F87E0011D63F /* FollowUsCVCell.swift in Sources */,
 				5395342728B8457500B76054 /* CGFloat.swift in Sources */,
 				532EF35A28BC767700229A65 /* Bundle.swift in Sources */,
