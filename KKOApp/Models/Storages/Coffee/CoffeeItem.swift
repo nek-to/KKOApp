@@ -13,9 +13,9 @@ class CoffeeItem {
     var price: Int
     var imageName: String
     var like: Bool
-    var time: Int
+    var time: Double
     
-    init(name: String, description: String, price: Int, imageName: String, like: Bool, time: Int) {
+    init(name: String, description: String, price: Int, imageName: String, like: Bool, time: Double) {
         self.name = name
         self.description = description
         self.price = price

@@ -177,6 +177,7 @@ extension ProfileVC: UITableViewDataSource {
         let preference = preferences.elements[indexPath.row]
         preferenceCell.configureCell(preference)
         preferenceCell.selectionStyle = .none
+        preferenceCell.accessoryType = .disclosureIndicator
         return preferenceCell
     }
     

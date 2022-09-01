@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func realmSetup() {
-        let config = Realm.Configuration(schemaVersion: 15)
+        let config = Realm.Configuration(schemaVersion: 17)
         Realm.Configuration.defaultConfiguration = config
         let storage = try! Realm()
         try? storage.write {

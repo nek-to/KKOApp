@@ -26,7 +26,7 @@ class CoffeeStorage {
                                                price: $0["price"] as! Int,
                                                imageName: $0["image"]  as! String,
                                                like: $0["like"] as! Bool,
-                                               time: $0["time"] as! Int)
+                                               time: $0["time"] as! Double)
                 elements.append(coffee)
             }
         }

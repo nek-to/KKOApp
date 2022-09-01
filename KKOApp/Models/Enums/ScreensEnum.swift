@@ -22,9 +22,6 @@ enum Screens: String {
     case purcase = "PurcaseVC"
     case icon = "IconVC"
     case language = "LanguageVC"
-<<<<<<< HEAD
     case password = "PasswordVC"
-=======
     case address = "AddressVC"
->>>>>>> notify
 }

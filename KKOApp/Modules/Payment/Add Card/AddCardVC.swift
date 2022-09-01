@@ -78,12 +78,12 @@ class AddCardVC: UIViewController {
         cardStorage.beginWrite()
         cardStorage.add(card)
         try! cardStorage.commitWrite()
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadCards"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "reloadCards"), object: nil)
         self.dismiss(animated: true)
     }
     
     
-    @objc private func textChanged(sender: NSNotification) {
+    @objc private func textChanged(sender: Notification) {
         if numberTextField.hasText && numberTextField.text!.count == 19 &&
             dateTextField.hasText && dateTextField.text!.count == 5 &&
             cvcTextField.hasText && cvcTextField.text!.count == 3 &&

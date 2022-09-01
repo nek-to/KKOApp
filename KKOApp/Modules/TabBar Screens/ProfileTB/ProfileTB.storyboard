@@ -33,19 +33,19 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClD-Jk-ZGI">
-                                <rect key="frame" x="30" y="383.5" width="354" height="26.5"/>
+                                <rect key="frame" x="30" y="378.5" width="354" height="26.5"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC2-X6-PzP">
-                                <rect key="frame" x="30" y="420" width="354" height="16"/>
+                                <rect key="frame" x="30" y="410" width="354" height="16"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5S-yW-7Tt">
-                                <rect key="frame" x="30" y="446" width="354" height="20"/>
+                                <rect key="frame" x="30" y="431" width="354" height="20"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -55,7 +55,7 @@
                                 </connections>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-lS-Rhn">
-                                <rect key="frame" x="0.0" y="486" width="414" height="317"/>
+                                <rect key="frame" x="0.0" y="456" width="414" height="347"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="preferenceCell" rowHeight="70" id="oXg-HT-GPo" customClass="PreferenceTVCell" customModule="KKOApp" customModuleProvider="target">
@@ -96,7 +96,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9t-sO-Ytv">
-                                <rect key="frame" x="354" y="253.5" width="40" height="40"/>
+                                <rect key="frame" x="354" y="248.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="2do-di-D1r"/>
                                     <constraint firstAttribute="height" constant="40" id="QYm-Ak-hJi"/>
@@ -115,22 +115,22 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="E5S-yW-7Tt" firstAttribute="top" secondItem="EC2-X6-PzP" secondAttribute="bottom" constant="10" id="3uB-1V-nX0"/>
+                            <constraint firstItem="E5S-yW-7Tt" firstAttribute="top" secondItem="EC2-X6-PzP" secondAttribute="bottom" constant="5" id="3uB-1V-nX0"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Dpq-Qa-znl"/>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Dyp-hf-5lH"/>
                             <constraint firstItem="ClD-Jk-ZGI" firstAttribute="top" secondItem="z9t-sO-Ytv" secondAttribute="bottom" constant="90" id="Fuc-ID-Oab"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ppy-lS-Rhn" secondAttribute="bottom" constant="10" id="OVD-T4-nyR"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.35" id="T3a-3m-kjf"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UDc-t7-VcG"/>
-                            <constraint firstItem="EC2-X6-PzP" firstAttribute="top" secondItem="ClD-Jk-ZGI" secondAttribute="bottom" constant="10" id="VeS-K0-wpl"/>
+                            <constraint firstItem="EC2-X6-PzP" firstAttribute="top" secondItem="ClD-Jk-ZGI" secondAttribute="bottom" constant="5" id="VeS-K0-wpl"/>
                             <constraint firstItem="EC2-X6-PzP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Yo4-1m-z24"/>
-                            <constraint firstItem="Ppy-lS-Rhn" firstAttribute="top" secondItem="E5S-yW-7Tt" secondAttribute="bottom" constant="20" id="bX3-FA-qB3"/>
+                            <constraint firstItem="Ppy-lS-Rhn" firstAttribute="top" secondItem="E5S-yW-7Tt" secondAttribute="bottom" constant="5" id="bX3-FA-qB3"/>
                             <constraint firstItem="Ppy-lS-Rhn" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="eNi-o1-uFg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="z9t-sO-Ytv" secondAttribute="trailing" constant="20" id="eg4-A7-P2Q"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="ehW-oj-rhL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EC2-X6-PzP" secondAttribute="trailing" constant="30" id="erv-tZ-8lA"/>
                             <constraint firstItem="EC2-X6-PzP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="lGv-dc-Epe"/>
-                            <constraint firstItem="ClD-Jk-ZGI" firstAttribute="top" secondItem="Nwh-9p-Lbt" secondAttribute="bottom" constant="10" id="mHj-AT-Qnv"/>
+                            <constraint firstItem="ClD-Jk-ZGI" firstAttribute="top" secondItem="Nwh-9p-Lbt" secondAttribute="bottom" constant="5" id="mHj-AT-Qnv"/>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nUh-Bs-1uy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ClD-Jk-ZGI" secondAttribute="trailing" constant="30" id="nyO-AM-c2s"/>
                             <constraint firstItem="ClD-Jk-ZGI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="qzN-am-5GE"/>

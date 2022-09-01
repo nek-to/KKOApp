@@ -10,12 +10,13 @@ import UIKit
 class PurcaseVC: UIViewController {
     @IBOutlet weak var orderTableView: UITableView!
     
-    private var buyedCoffee = try! Realm()
+    private var storage = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
     }
+
     
     private func config() {
         // view controller
@@ -34,28 +35,36 @@ extension PurcaseVC: UITableViewDelegate {
 
 extension PurcaseVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        buyedCoffee.objects(Purcase.self).count
+        storage.objects(Purcase.self).count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let buyedCoffees = buyedCoffee.objects(Purcase.self)
+        let buyedCoffees = storage.objects(Purcase.self)
         let coffee = buyedCoffees[indexPath.row]
         let purcaseCell = tableView.dequeueReusableCell(withIdentifier: "purcaseCell") as! PurcaseTVCell
-        if !coffee.showed {
-            purcaseCell.animateBrewingCoffee()
-        } else {
-            purcaseCell.coffeeBrewed()
-        }
-        try! buyedCoffee.write{
-            coffee.showed = true
-        }
-       
+        brewingCoffee(coffee, purcaseCell)
+        saveBrewedCoffee(coffee)
         purcaseCell.configureCell(coffee)
         return purcaseCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         170
+    }
+    
+    private func saveBrewedCoffee(_ coffee: Purcase) {
+        try! storage.write{
+            coffee.showed = true
+        }
+    }
+    
+    private func brewingCoffee(_ coffee: Purcase, _ cell: PurcaseTVCell) {
+        if !coffee.showed {
+            cell.animateBrewingCoffee(coffee)
+        } else {
+            cell.coffeeBrewed()
+        }
     }
 }
 

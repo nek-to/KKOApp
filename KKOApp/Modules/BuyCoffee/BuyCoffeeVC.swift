@@ -14,7 +14,7 @@ protocol CoffeeProtocol {
     var descript: String { get set }
     var price: Int { get set }
     var imageName: String { get set }
-    var time: Int { get set }
+    var time: Double { get set }
 }
 
 class BuyCoffeeVC: UIViewController, CoffeeProtocol {
@@ -36,7 +36,7 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     var descript: String = ""
     var price: Int = 0
     var imageName: String = ""
-    var time: Int = 0
+    var time: Double = 0
     private var storage = try! Realm()
     private var notification = UNUserNotificationCenter.current()
 
@@ -89,6 +89,8 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         backCardImageView.layer.cornerRadius = 40
         // description view
         descriptionView.layer.cornerRadius = 20
+        
+        print("LOG: ",TimeInterval(time))
     }
     
     private func selection(_ sender: UIButton) {
@@ -108,11 +110,15 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         !imageName.isEmpty else { return }
         coffee.title = titleLabel.text!
         coffee.image = imageName
+        coffee.buyTiming = Date()
+        coffee.time = time
+        print(coffee.buyTiming)
         coffee.showed = false
         try? storage.write {
             storage.add(coffee)
         }
     }
+    
     
     private func buttonPressed() {
         if buyButton.isTouchInside {
@@ -133,14 +139,14 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         content.body = "Your \(name) is waiting for you at \(address)"
 
         content.sound = .default
-        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(time), repeats: false)
-        
         let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
         let center = UNUserNotificationCenter.current()
         center.add(request)
         notification.add(request)
     }
+    
+
     
     @IBAction private func chooseSize(_ sender: UIButton) {
         if sender.tag == 0 {

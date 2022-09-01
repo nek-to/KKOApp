@@ -17,10 +17,14 @@ class PurcaseTVCell: UITableViewCell {
     @IBOutlet weak var greenTickImageView: UIImageView!
     
     private var brewCoffee = AnimationView(name: "brewing-coffee")
+    private var buyTime = Date()
+    private let currentDate = Date()
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         config()
+        
     }
     
     private func config() {
@@ -45,16 +49,28 @@ class PurcaseTVCell: UITableViewCell {
                                                       targetSize: .init(width: 300, height: 300))
     }
     
-    func animateBrewingCoffee() {
+    func animateBrewingCoffee(_ coffee: Purcase) {
         brewCoffee.frame = CGRect(x: 0, y: 0, width: 110, height: 110)
         brewCoffee.center = lottieView.center
         brewCoffee.contentMode = .scaleAspectFit
         brewCoffee.loopMode = .playOnce
         lottieRoundView.addSubview(brewCoffee)
-        brewCoffee.play { complition in
-            self.lottieRoundView.layer.borderWidth = 6
-            self.lottieRoundView.layer.borderColor = .init(red: 0, green: 1, blue: 0, alpha: 0.4)
-            self.coffeeBrewed()
+        
+        let diffComponents = currentDate.timeIntervalSince(coffee.buyTiming)
+        let fullRange: Double = 175 / coffee.time
+        var currentFrame = fullRange * diffComponents
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
+            DispatchQueue.main.async {
+                currentFrame += fullRange
+                self?.brewCoffee.currentFrame = currentFrame
+                if currentFrame >= 175 {
+                    timer.invalidate()
+                    self?.lottieRoundView.layer.borderWidth = 6
+                    self?.lottieRoundView.layer.borderColor = .init(red: 0, green: 1, blue: 0, alpha: 0.4)
+                    self?.coffeeBrewed()
+                }
+            }
         }
+        brewCoffee.play(fromFrame: 0, toFrame: 175, loopMode: .none)
     }
 }
