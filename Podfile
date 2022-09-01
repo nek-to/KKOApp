@@ -5,7 +5,6 @@ target 'KKOApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod "Simple-KeychainSwift"
   pod 'lottie-ios'
   pod 'RealmSwift'
   pod 'Firebase/Core'

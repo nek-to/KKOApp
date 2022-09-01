@@ -5,7 +5,6 @@
 //  Created by VironIT on 19.08.22.
 //
 import FirebaseAuth
-import Simple_KeychainSwift
 import UIKit
 
 class LogInVC: UIViewController {
