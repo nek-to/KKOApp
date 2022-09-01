@@ -28,7 +28,7 @@
 		532EF35628BC742800229A65 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 532EF35428BC742800229A65 /* Localizable.strings */; };
 		532EF35C28BC769B00229A65 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35B28BC769B00229A65 /* Language.swift */; };
 		532EF35E28BC7C7500229A65 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35D28BC7C7500229A65 /* LocalManager.swift */; };
-		532EF36128BC84DB00229A65 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF36028BC84DB00229A65 /* ProfilePicture.swift */; };
+		532EF36128BC84DB00229A65 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF36028BC84DB00229A65 /* Profile.swift */; };
 		533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533E11F328B939F800CF5499 /* Purcase.storyboard */; };
 		533E11F628B93A0B00CF5499 /* PurcaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E11F528B93A0B00CF5499 /* PurcaseVC.swift */; };
 		533E11F828B9442800CF5499 /* brewing-coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 533E11F728B9442800CF5499 /* brewing-coffee.json */; };
@@ -132,7 +132,7 @@
 		532EF35728BC744000229A65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = KKOApp/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		532EF35B28BC769B00229A65 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		532EF35D28BC7C7500229A65 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
-		532EF36028BC84DB00229A65 /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		532EF36028BC84DB00229A65 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		533E11F328B939F800CF5499 /* Purcase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Purcase.storyboard; sourceTree = "<group>"; };
 		533E11F528B93A0B00CF5499 /* PurcaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurcaseVC.swift; sourceTree = "<group>"; };
 		533E11F728B9442800CF5499 /* brewing-coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "brewing-coffee.json"; sourceTree = "<group>"; };
@@ -283,12 +283,12 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
-		532EF35F28BC84BF00229A65 /* Profile Picture */ = {
+		532EF35F28BC84BF00229A65 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				532EF36028BC84DB00229A65 /* ProfilePicture.swift */,
+				532EF36028BC84DB00229A65 /* Profile.swift */,
 			);
-			path = "Profile Picture";
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		533E11F228B939E600CF5499 /* Purcase */ = {
@@ -352,7 +352,7 @@
 			children = (
 				53D091C628C03E27006A0090 /* UserDefaults */,
 				53D910D528B956EC00C4044C /* Purcase */,
-				532EF35F28BC84BF00229A65 /* Profile Picture */,
+				532EF35F28BC84BF00229A65 /* Profile */,
 				5395343428B8C10D00B76054 /* Profile Top Image */,
 				5395341A28B83E0100B76054 /* Credit Card */,
 				53E8F18B28B3E8D30011D63F /* Storages */,
@@ -950,7 +950,7 @@
 				533E11FC28B9447800CF5499 /* PurcaseTVCell.swift in Sources */,
 				534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */,
 				5395341C28B83E1700B76054 /* CreditCard.swift in Sources */,
-				532EF36128BC84DB00229A65 /* ProfilePicture.swift in Sources */,
+				532EF36128BC84DB00229A65 /* Profile.swift in Sources */,
 				532EF35C28BC769B00229A65 /* Language.swift in Sources */,
 				53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */,
 				532EF34628BC5B4E00229A65 /* CustomIconsStorage.swift in Sources */,

@@ -5,7 +5,7 @@
 //  Created by VironIT on 19.08.22.
 //
 import FirebaseAuth
-import Simple_KeychainSwift
+import RealmSwift
 import UIKit
 
 class SignUpVC: UIViewController {
@@ -19,6 +19,7 @@ class SignUpVC: UIViewController {
     @IBOutlet private weak var warningLabel: UILabel!
     @IBOutlet private weak var singupFormButtonConstraint: NSLayoutConstraint!
     
+    private var storage = try! Realm()
     private var passwordsIsCorrect = false
     private var fieldsAreFill = false
     
@@ -89,10 +90,14 @@ class SignUpVC: UIViewController {
     
     private func saveUserInDatabase() {
         if warningLabel.isHidden && passwordsIsCorrect {
-            Keychain.set(nameTextField.text, forKey: "username")
-            Keychain.set(phoneTextField.text, forKey: "phone")
-            Keychain.set(emailTextField.text, forKey: "email")
-            Keychain.set(passwordTextField.text, forKey: "password")
+            // realm
+            let user = Profile()
+            try? storage.write {
+                user.user = nameTextField.text
+                user.phone = phoneTextField.text
+                user.email = emailTextField.text
+                storage.add(user)
+            }
         } else {
             warningLabel.isHidden = false
         }
@@ -187,8 +192,7 @@ class SignUpVC: UIViewController {
         print(fieldsAreFill)
         print(passwordsIsCorrect)
         if fieldsAreFill && passwordsIsCorrect {
-//            saveUserInDatabase()
-            print("save")
+            saveUserInDatabase()
             saveUserInFirebase()
         }
     }

@@ -47,7 +47,9 @@ extension AddressVC:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UserSettings.coffeeshopAddress = address.elements[indexPath.row].address
-        closure?(UserSettings.coffeeshopAddress)
+        if let address = UserSettings.coffeeshopAddress, !address.isEmpty {
+            closure?(address)
+        }
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadAddress"), object: nil)
         self.dismiss(animated: true)
     }

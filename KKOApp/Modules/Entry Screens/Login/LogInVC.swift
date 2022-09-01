@@ -60,14 +60,6 @@ class LogInVC: UIViewController {
         }
     }
     
-    private func validateUser() {
-        if emailTextField.text == Keychain.value(forKey: "username") &&
-            passwordTextField.text == Keychain.value(forKey: "password") {
-            warningLabel.isHidden = false
-            warningLabel.textColor = .green
-        }
-    }
-    
     private func hideWarningLabel() {
         if !warningLabel.isHidden {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

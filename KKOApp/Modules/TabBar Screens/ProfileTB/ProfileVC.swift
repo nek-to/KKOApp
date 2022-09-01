@@ -45,13 +45,25 @@ class ProfileVC: UIViewController {
         topImageView.layer.cornerRadius = 30
         // top image
         setupTopImage()
-        // setup profile picture
-        setupProfPic()
+        // user setup
+        userSetup()
         // setup address
-        if !UserSettings.coffeeshopAddress.isEmpty {
-            address.text = UserSettings.coffeeshopAddress
-        } else {
+        if UserSettings.coffeeshopAddress == nil {
             address.text = "ulica Leonida Levina, 2"
+        } else {
+            address.text = UserSettings.coffeeshopAddress
+        }
+    }
+    
+    private func userSetup() {
+        if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            if let user = storage.object(ofType: Profile.self, forPrimaryKey: userEmail) {
+                name.text = user.user
+                phone.text = user.phone
+                if let image = user.image {
+                    profilePictureImageView.image = UIImage(data: image)
+                }
+            }
         }
     }
     
@@ -98,27 +110,21 @@ class ProfileVC: UIViewController {
     }
     
     private func deleteProfilePicture() {
-        try? storage.write {
-            storage.delete(storage.objects(ProfilePicture.self))
+        if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            try! storage.write {
+                storage.delete(storage.object(ofType: Profile.self, forPrimaryKey: userEmail)!)
+            }
         }
         profilePictureImageView.image = UIImage()
     }
     
-    private func setupProfPic() {
-        let image = storage.objects(ProfilePicture.self).first?.image
-        print(storage.objects(ProfilePicture.self))
-            if let image = image {
-                profilePictureImageView.image = UIImage(data: image)
-        }
-    }
-    
     private func saveProfPic(_ image: UIImage) {
         let data = Data(image.jpegData(compressionQuality: 0.5)!)
-        let profPic = ProfilePicture()
-        profPic.image = data
-        try! storage.write {
-            storage.delete(storage.objects(ProfilePicture.self))
-            storage.add(profPic)
+        if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            let profile = storage.object(ofType: Profile.self, forPrimaryKey: userEmail)
+            try! storage.write {
+                profile?.image = data
+            }
         }
     }
     
@@ -221,7 +227,6 @@ extension ProfileVC: UITableViewDataSource {
 extension ProfileVC: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-     //You will get cropped image here..
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
          {
              self.profilePictureImageView.image = image

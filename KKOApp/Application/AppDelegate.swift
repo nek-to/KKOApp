@@ -32,11 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func realmSetup() {
-        let config = Realm.Configuration(schemaVersion: 9)
+        let config = Realm.Configuration(schemaVersion: 15)
         Realm.Configuration.defaultConfiguration = config
-        let buyedCoffee = try! Realm()
-        try? buyedCoffee.write {
-            buyedCoffee.delete(buyedCoffee.objects(Purcase.self))
+        let storage = try! Realm()
+        try? storage.write {
+            storage.delete(storage.objects(Purcase.self))
         }
     }
     
