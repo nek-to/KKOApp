@@ -14,9 +14,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var phone: UILabel!
-    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var address: UILabel!
     @IBOutlet weak var preferenceTableView: UITableView!
-    @IBOutlet weak var profilePicNameLabel: UILabel!
     
     private var preferences = PreferenceStorage.shared
     private var imageUrl = ""
@@ -32,6 +31,10 @@ class ProfileVC: UIViewController {
         config()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadAddress), name: NSNotification.Name(rawValue: "reloadAddress"), object: nil)
+    }
     
     private func config() {
         // profile picture
@@ -42,8 +45,26 @@ class ProfileVC: UIViewController {
         topImageView.layer.cornerRadius = 30
         // top image
         setupTopImage()
-        // setup profile picture
-        setupProfPic()
+        // user setup
+        userSetup()
+        // setup address
+        if UserSettings.coffeeshopAddress == nil {
+            address.text = "ulica Leonida Levina, 2"
+        } else {
+            address.text = UserSettings.coffeeshopAddress
+        }
+    }
+    
+    private func userSetup() {
+        if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            if let user = storage.object(ofType: Profile.self, forPrimaryKey: userEmail) {
+                name.text = user.user
+                phone.text = user.phone
+                if let image = user.image {
+                    profilePictureImageView.image = UIImage(data: image)
+                }
+            }
+        }
     }
     
     private func setupTopImage() {
@@ -89,32 +110,36 @@ class ProfileVC: UIViewController {
     }
     
     private func deleteProfilePicture() {
-        try? storage.write {
-            storage.delete(storage.objects(ProfilePicture.self))
+        if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            try! storage.write {
+                storage.delete(storage.object(ofType: Profile.self, forPrimaryKey: userEmail)!)
+            }
         }
         profilePictureImageView.image = UIImage()
     }
     
-    private func setupProfPic() {
-        let image = storage.objects(ProfilePicture.self).first?.image
-        print(storage.objects(ProfilePicture.self))
-            if let image = image {
-                profilePictureImageView.image = UIImage(data: image)
+    private func saveProfPic(_ image: UIImage) {
+        let data = Data(image.jpegData(compressionQuality: 0.5)!)
+        if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            let profile = storage.object(ofType: Profile.self, forPrimaryKey: userEmail)
+            try! storage.write {
+                profile?.image = data
+            }
         }
     }
     
-    private func saveProfPic(_ image: UIImage) {
-        let data = Data(image.jpegData(compressionQuality: 0.5)!)
-        let profPic = ProfilePicture()
-        profPic.image = data
-        try! storage.write {
-            storage.delete(storage.objects(ProfilePicture.self))
-            storage.add(profPic)
-        }
+    @objc private func reloadAddress() {
+        address.text = UserSettings.coffeeshopAddress
     }
     
     @IBAction func changeProfilePic(_ sender: UITapGestureRecognizer) {
         chooseWayForProfileImageSetup()
+    }
+    
+    @IBAction func chooseAdress(_ sender: UITapGestureRecognizer) {
+        let storyboard = UIStoryboard(name: "Address", bundle: nil)
+        let toAddressCreen = storyboard.instantiateViewController(withIdentifier: Screens.address.rawValue)
+        self.present(toAddressCreen, animated: true)
     }
     
     @IBAction private func reloadFonImage() {
@@ -202,7 +227,6 @@ extension ProfileVC: UITableViewDataSource {
 extension ProfileVC: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-     //You will get cropped image here..
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
          {
              self.profilePictureImageView.image = image

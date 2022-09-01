@@ -11,13 +11,9 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let config = Realm.Configuration(schemaVersion: 9)
-        Realm.Configuration.defaultConfiguration = config
-        let buyedCoffee = try! Realm()
-        try? buyedCoffee.write {
-            buyedCoffee.delete(buyedCoffee.objects(Purcase.self))
-        }
-        FirebaseApp.configure()
+        realmSetup()
+        firebaseSetup()
+        notificationSetup()
         return true
     }
 
@@ -34,5 +30,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    private func realmSetup() {
+        let config = Realm.Configuration(schemaVersion: 15)
+        Realm.Configuration.defaultConfiguration = config
+        let storage = try! Realm()
+        try? storage.write {
+            storage.delete(storage.objects(Purcase.self))
+        }
+    }
+    
+    private func firebaseSetup() {
+        FirebaseApp.configure()
+
+    }
+    
+    private func notificationSetup() {
+        let notification = UNUserNotificationCenter.current()
+        notification.delegate = self
+        notification.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            guard granted else {return}
+            notification.getNotificationSettings{ (settings) in
+                guard settings.authorizationStatus == .authorized else {return}
+            }
+        }
+    }
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .sound])
+    }
+}

@@ -76,9 +76,9 @@ class ShopTableVC: UITableViewController {
         var toBuyCoffee = storyboard.instantiateViewController(withIdentifier: Screens.buyCoffee.rawValue) as! CoffeeProtocol
         toBuyCoffee.name = coffee.elements[indexPath.row].name
         toBuyCoffee.descript = coffee.elements[indexPath.row].description
-        toBuyCoffee.name = coffee.elements[indexPath.row].name
         toBuyCoffee.price = coffee.elements[indexPath.row].price
         toBuyCoffee.imageName = coffee.elements[indexPath.row].imageName
+        toBuyCoffee.time = coffee.elements[indexPath.row].time
         navigationController?.pushViewController(toBuyCoffee as! UIViewController, animated: true)
     }
     

@@ -26,10 +26,9 @@
 		532EF34F28BC706D00229A65 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532EF34E28BC706D00229A65 /* Language.storyboard */; };
 		532EF35128BC707A00229A65 /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35028BC707A00229A65 /* LanguageVC.swift */; };
 		532EF35628BC742800229A65 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 532EF35428BC742800229A65 /* Localizable.strings */; };
-		532EF35A28BC767700229A65 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35928BC767700229A65 /* Bundle.swift */; };
 		532EF35C28BC769B00229A65 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35B28BC769B00229A65 /* Language.swift */; };
 		532EF35E28BC7C7500229A65 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35D28BC7C7500229A65 /* LocalManager.swift */; };
-		532EF36128BC84DB00229A65 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF36028BC84DB00229A65 /* ProfilePicture.swift */; };
+		532EF36128BC84DB00229A65 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF36028BC84DB00229A65 /* Profile.swift */; };
 		533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533E11F328B939F800CF5499 /* Purcase.storyboard */; };
 		533E11F628B93A0B00CF5499 /* PurcaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E11F528B93A0B00CF5499 /* PurcaseVC.swift */; };
 		533E11F828B9442800CF5499 /* brewing-coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 533E11F728B9442800CF5499 /* brewing-coffee.json */; };
@@ -70,6 +69,11 @@
 		53C8678328B72249000A758C /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53C8678228B72249000A758C /* Preferences.plist */; };
 		53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678428B7230F000A758C /* PreferenceStorage.swift */; };
 		53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678B28B7263F000A758C /* PreferenceTVCell.swift */; };
+		53D091BD28C03561006A0090 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D091BC28C03561006A0090 /* Address.storyboard */; };
+		53D091BF28C03570006A0090 /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D091BE28C03570006A0090 /* AddressVC.swift */; };
+		53D091C128C03AB4006A0090 /* AddressTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D091C028C03AB4006A0090 /* AddressTVCell.swift */; };
+		53D091C828C03E41006A0090 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D091C728C03E41006A0090 /* UserSettings.swift */; };
+		53D091CB28C05FDF006A0090 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D091CA28C05FDF006A0090 /* UITextField.swift */; };
 		53D910D728B9570000C4044C /* Purcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D910D628B9570000C4044C /* Purcase.swift */; };
 		53E8F17328B3D6520011D63F /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F17228B3D6520011D63F /* MainTabBar.storyboard */; };
 		53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F17428B3D6940011D63F /* MainTabBarVC.swift */; };
@@ -128,10 +132,9 @@
 		532EF35328BC73C500229A65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		532EF35528BC742800229A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = KKOApp/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		532EF35728BC744000229A65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = KKOApp/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		532EF35928BC767700229A65 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		532EF35B28BC769B00229A65 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		532EF35D28BC7C7500229A65 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
-		532EF36028BC84DB00229A65 /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		532EF36028BC84DB00229A65 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		533E11F328B939F800CF5499 /* Purcase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Purcase.storyboard; sourceTree = "<group>"; };
 		533E11F528B93A0B00CF5499 /* PurcaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurcaseVC.swift; sourceTree = "<group>"; };
 		533E11F728B9442800CF5499 /* brewing-coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "brewing-coffee.json"; sourceTree = "<group>"; };
@@ -174,6 +177,11 @@
 		53C8678228B72249000A758C /* Preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
 		53C8678428B7230F000A758C /* PreferenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceStorage.swift; sourceTree = "<group>"; };
 		53C8678B28B7263F000A758C /* PreferenceTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceTVCell.swift; sourceTree = "<group>"; };
+		53D091BC28C03561006A0090 /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
+		53D091BE28C03570006A0090 /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
+		53D091C028C03AB4006A0090 /* AddressTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTVCell.swift; sourceTree = "<group>"; };
+		53D091C728C03E41006A0090 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		53D091CA28C05FDF006A0090 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		53D910D628B9570000C4044C /* Purcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purcase.swift; sourceTree = "<group>"; };
 		53E8F17228B3D6520011D63F /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		53E8F17428B3D6940011D63F /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
@@ -232,18 +240,6 @@
 			path = BuyCoffee;
 			sourceTree = "<group>";
 		};
-		0B0F784C28B58488005D6638 /* Shop */ = {
-			isa = PBXGroup;
-			children = (
-				53E8F1AD28B426E20011D63F /* CouponStorage.swift */,
-				53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */,
-				539BDBEB28B523100057BCA9 /* CoffeeItem.swift */,
-				5395340828B8036200B76054 /* CoffeeshopItem.swift */,
-				5395340A28B8037700B76054 /* CoffeeshopStorage.swift */,
-			);
-			path = Shop;
-			sourceTree = "<group>";
-		};
 		532EF32328BC3E3100229A65 /* ApplicationCustomizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,12 +287,12 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
-		532EF35F28BC84BF00229A65 /* Profile Picture */ = {
+		532EF35F28BC84BF00229A65 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				532EF36028BC84DB00229A65 /* ProfilePicture.swift */,
+				532EF36028BC84DB00229A65 /* Profile.swift */,
 			);
-			path = "Profile Picture";
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		533E11F228B939E600CF5499 /* Purcase */ = {
@@ -358,7 +354,9 @@
 		534DA9AA28AFDC3500626AA4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				532EF35F28BC84BF00229A65 /* Profile Picture */,
+				53D091C628C03E27006A0090 /* UserDefaults */,
+				53D910D528B956EC00C4044C /* Purcase */,
+				532EF35F28BC84BF00229A65 /* Profile */,
 				5395343428B8C10D00B76054 /* Profile Top Image */,
 				5395341A28B83E0100B76054 /* Credit Card */,
 				53E8F18B28B3E8D30011D63F /* Storages */,
@@ -549,6 +547,66 @@
 			path = Preference;
 			sourceTree = "<group>";
 		};
+		53D091BB28C03550006A0090 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				53D091BC28C03561006A0090 /* Address.storyboard */,
+				53D091BE28C03570006A0090 /* AddressVC.swift */,
+				53D091C028C03AB4006A0090 /* AddressTVCell.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		53D091C228C03D9C006A0090 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F1AD28B426E20011D63F /* CouponStorage.swift */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		53D091C328C03DA5006A0090 /* Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */,
+				539BDBEB28B523100057BCA9 /* CoffeeItem.swift */,
+			);
+			path = Coffee;
+			sourceTree = "<group>";
+		};
+		53D091C428C03DAA006A0090 /* Coffeeshop */ = {
+			isa = PBXGroup;
+			children = (
+				5395340828B8036200B76054 /* CoffeeshopItem.swift */,
+				5395340A28B8037700B76054 /* CoffeeshopStorage.swift */,
+			);
+			path = Coffeeshop;
+			sourceTree = "<group>";
+		};
+		53D091C528C03E11006A0090 /* FollowUs */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F19628B3F4830011D63F /* FollowUsStorage.swift */,
+			);
+			path = FollowUs;
+			sourceTree = "<group>";
+		};
+		53D091C628C03E27006A0090 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				53D091C728C03E41006A0090 /* UserSettings.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		53D091C928C05FC3006A0090 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				53D091CA28C05FDF006A0090 /* UITextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		53D910D528B956EC00C4044C /* Purcase */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +641,7 @@
 		53E8F17728B3D80B0011D63F /* ShopTB */ = {
 			isa = PBXGroup;
 			children = (
+				53D091BB28C03550006A0090 /* Address */,
 				53E8F1C328B443EF0011D63F /* CoffeeTBCell */,
 				53E8F1AF28B427640011D63F /* CouponsCVCell */,
 				53E8F18128B3D90F0011D63F /* ShopTB.storyboard */,
@@ -614,11 +673,11 @@
 		53E8F18728B3E8360011D63F /* Extencions */ = {
 			isa = PBXGroup;
 			children = (
+				53D091C928C05FC3006A0090 /* TextField */,
 				5395342528B8455E00B76054 /* CGFloat */,
 				5395342228B8452000B76054 /* UIColor */,
 				5398E68328B6899B00DEB5BC /* UIView */,
 				53E8F18828B3E8520011D63F /* UIImage */,
-				532EF35928BC767700229A65 /* Bundle.swift */,
 			);
 			path = Extencions;
 			sourceTree = "<group>";
@@ -634,10 +693,12 @@
 		53E8F18B28B3E8D30011D63F /* Storages */ = {
 			isa = PBXGroup;
 			children = (
+				53D091C528C03E11006A0090 /* FollowUs */,
 				532EF34228BC5AC700229A65 /* CustomIcon */,
-				53D910D528B956EC00C4044C /* Purcase */,
 				53C8677F28B721BF000A758C /* Preference */,
-				0B0F784C28B58488005D6638 /* Shop */,
+				53D091C428C03DAA006A0090 /* Coffeeshop */,
+				53D091C328C03DA5006A0090 /* Coffee */,
+				53D091C228C03D9C006A0090 /* Coupon */,
 				53E8F18C28B3E8E40011D63F /* News */,
 			);
 			path = Storages;
@@ -647,7 +708,6 @@
 			isa = PBXGroup;
 			children = (
 				53E8F18D28B3E8F70011D63F /* NewsStorage.swift */,
-				53E8F19628B3F4830011D63F /* FollowUsStorage.swift */,
 				0B0F784D28B58A84005D6638 /* NewsItem.swift */,
 			);
 			path = News;
@@ -805,6 +865,7 @@
 				5395340D28B8038C00B76054 /* Coffeeshops.plist in Resources */,
 				53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */,
 				532EF34F28BC706D00229A65 /* Language.storyboard in Resources */,
+				53D091BD28C03561006A0090 /* Address.storyboard in Resources */,
 				53E8F1C028B4294B0011D63F /* buying.json in Resources */,
 				533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */,
 				53E8F18028B3D8FF0011D63F /* ProfileTB.storyboard in Resources */,
@@ -894,9 +955,9 @@
 				53E8F1A828B40E200011D63F /* NewsTableView.swift in Sources */,
 				53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */,
 				532EF33D28BC4AD700229A65 /* IconVC.swift in Sources */,
+				53D091BF28C03570006A0090 /* AddressVC.swift in Sources */,
 				53E8F1A028B3F87E0011D63F /* FollowUsCVCell.swift in Sources */,
 				5395342728B8457500B76054 /* CGFloat.swift in Sources */,
-				532EF35A28BC767700229A65 /* Bundle.swift in Sources */,
 				53E8F19B28B3F4E60011D63F /* FollowUsVC.swift in Sources */,
 				53D910D728B9570000C4044C /* Purcase.swift in Sources */,
 				532EF33F28BC4ED500229A65 /* IconTVCell.swift in Sources */,
@@ -904,12 +965,14 @@
 				533E11FC28B9447800CF5499 /* PurcaseTVCell.swift in Sources */,
 				534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */,
 				5395341C28B83E1700B76054 /* CreditCard.swift in Sources */,
-				532EF36128BC84DB00229A65 /* ProfilePicture.swift in Sources */,
+				532EF36128BC84DB00229A65 /* Profile.swift in Sources */,
 				532EF35C28BC769B00229A65 /* Language.swift in Sources */,
 				53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */,
 				532EF34628BC5B4E00229A65 /* CustomIconsStorage.swift in Sources */,
 				5395342128B8439A00B76054 /* AddCardVC.swift in Sources */,
+				53D091C828C03E41006A0090 /* UserSettings.swift in Sources */,
 				5395340628B801B900B76054 /* PreferenceEnum.swift in Sources */,
+				53D091CB28C05FDF006A0090 /* UITextField.swift in Sources */,
 				53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
 				532EF33828BC443E00229A65 /* AppIconManager.swift in Sources */,
@@ -928,6 +991,7 @@
 				5395342428B8453200B76054 /* UIColor.swift in Sources */,
 				53E8F18E28B3E8F70011D63F /* NewsStorage.swift in Sources */,
 				534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */,
+				53D091C128C03AB4006A0090 /* AddressTVCell.swift in Sources */,
 				5395343628B8C13300B76054 /* TopImage.swift in Sources */,
 				53E8F1AA28B41CF90011D63F /* ShopTableVC.swift in Sources */,
 				0B07FFEA28B5A400001701BB /* BuyCoffeeVC.swift in Sources */,

@@ -35,9 +35,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NST-7B-KOw">
                                 <rect key="frame" x="20.5" y="708.5" width="373" height="45"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px5-yE-Roa">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px5-yE-Roa">
                                         <rect key="frame" x="0.0" y="0.0" width="117.5" height="45"/>
                                         <color key="backgroundColor" red="0.1239658702503551" green="0.1239658702503551" blue="0.1239658702503551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117.5" id="HW3-kl-2Xc"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="S">
                                             <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="22"/>
@@ -47,7 +50,7 @@
                                             <action selector="chooseSize:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aT8-vq-Vx6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd6-GH-0wn">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd6-GH-0wn">
                                         <rect key="frame" x="127.5" y="0.0" width="118" height="45"/>
                                         <color key="backgroundColor" white="0.089999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Button"/>
@@ -59,7 +62,7 @@
                                             <action selector="chooseSize:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8XI-0s-EId"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5P-qD-MkR">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5P-qD-MkR">
                                         <rect key="frame" x="255.5" y="0.0" width="117.5" height="45"/>
                                         <color key="backgroundColor" red="0.1239658703" green="0.1239658703" blue="0.1239658703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
@@ -73,6 +76,9 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cd6-GH-0wn" firstAttribute="centerX" secondItem="NST-7B-KOw" secondAttribute="centerX" id="8bb-35-KlR"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw3-VP-bcE">
                                 <rect key="frame" x="30" y="685" width="354" height="18.5"/>
@@ -140,7 +146,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.1235707179" green="0.1235707477" blue="0.1235707179" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="l2C-aI-GGi" firstAttribute="top" secondItem="QFq-5I-tRb" secondAttribute="top" constant="10" id="aug-CY-CB6"/>
                                     <constraint firstItem="l2C-aI-GGi" firstAttribute="leading" secondItem="QFq-5I-tRb" secondAttribute="leading" constant="10" id="um5-ub-PL5"/>

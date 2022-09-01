@@ -32,7 +32,7 @@ class PaymentVC: UIViewController {
         // card cell
         cardTableView.register(UINib(nibName: "CardTVCell", bundle: nil), forCellReuseIdentifier: "cardCell")
         // reloader
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadCardView), name: NSNotification.Name(rawValue: "reloader"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadCardView), name: NSNotification.Name(rawValue: "reloadCards"), object: nil)
         // view grabber
         paymentVC.delegate = self
         paymentVC.prefersGrabberVisible = true
