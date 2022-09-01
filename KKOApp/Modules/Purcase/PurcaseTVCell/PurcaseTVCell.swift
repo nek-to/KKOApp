@@ -57,11 +57,11 @@ class PurcaseTVCell: UITableViewCell {
         lottieRoundView.addSubview(brewCoffee)
         
         let diffComponents = currentDate.timeIntervalSince(coffee.buyTiming)
-        let fullRange: Double = 175 / coffee.time
-        var currentFrame = fullRange * diffComponents
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
+        let frame: Double = 175 / coffee.time
+        var currentFrame = frame * diffComponents
+        Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { [weak self] timer in
             DispatchQueue.main.async {
-                currentFrame += fullRange
+                currentFrame += frame / 50
                 self?.brewCoffee.currentFrame = currentFrame
                 if currentFrame >= 175 {
                     timer.invalidate()
