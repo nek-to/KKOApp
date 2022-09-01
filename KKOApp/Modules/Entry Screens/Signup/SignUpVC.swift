@@ -39,21 +39,25 @@ class SignUpVC: UIViewController {
     }
     
     private func launchSetup() {
-        nameTextField.layer.borderColor = UIColor.lightGray.cgColor
-        nameTextField.layer.cornerRadius = 7
-        phoneTextField.layer.borderColor = UIColor.lightGray.cgColor
-        phoneTextField.layer.cornerRadius = 7
-        emailTextField.layer.borderColor = UIColor.lightGray.cgColor
-        emailTextField.layer.cornerRadius = 7
-        passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        passwordTextField.layer.cornerRadius = 7
-        repeatePasswordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        repeatePasswordTextField.layer.cornerRadius = 7
-        
+        // name text field
+        nameTextField.regularStyle()
+        // phone text field
+        phoneTextField.regularStyle()
+        // email text field
+        emailTextField.regularStyle()
+        // passwprd text field
+        passwordTextField.passwordStyle()
+        // repeat password text field
+        repeatePasswordTextField.passwordStyle()
+        // wrning label
         warningLabel.isHidden = true
+        // sign up button
         signUpButton.layer.cornerRadius = signUpButton.frame.height/2
         signUpButton.alpha = 0.7
+        // fone view
         blureFone()
+        // text fields setup
+        textfieldSetup()
     }
     
     private func checkIfDoublePasswordCorrect() {
@@ -122,10 +126,40 @@ class SignUpVC: UIViewController {
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             guard let strongSelf = self else { return }
             guard error == nil else {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription as Any)
                 return strongSelf.signUpFaildAlert()
             }
             strongSelf.showSuccessAlert()
+        }
+    }
+    
+    private func textfieldSetup() {
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        phoneTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        repeatePasswordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+    }
+    
+    @objc private func textFieldDidChange() {
+        if let name = nameTextField.text, !name.isEmpty {
+            nameTextField.usernameValidation(name)
+        }
+        
+        if let phone = phoneTextField.text, !phone.isEmpty {
+            phoneTextField.phoneValidation(phone)
+        }
+        
+        if let email = emailTextField.text, !email.isEmpty {
+            emailTextField.emailValidation(email)
+        }
+        
+        if let password = passwordTextField.text, !password.isEmpty {
+            passwordTextField.passwordValidation(password)
+        }
+        
+        if let repeatPassword = repeatePasswordTextField.text, !repeatPassword.isEmpty {
+            repeatePasswordTextField.passwordValidation(repeatPassword)
         }
     }
     

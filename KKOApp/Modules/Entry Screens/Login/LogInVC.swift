@@ -40,24 +40,17 @@ class LogInVC: UIViewController {
     }
     
     private func launchSetup() {
-        emailTextField.layer.borderColor = UIColor.lightGray.cgColor
-        emailTextField.layer.borderWidth = 1
-        emailTextField.layer.cornerRadius = emailTextField.frame.height/2
-        emailTextField.leftViewMode = .always
-        emailTextField.rightViewMode = .always
-        emailTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 0))
-        emailTextField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 0))
-        passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        passwordTextField.layer.borderWidth = 1
-        passwordTextField.layer.cornerRadius = passwordTextField.frame.height/2
-        passwordTextField.leftViewMode = .always
-        passwordTextField.rightViewMode = .always
-        passwordTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 0))
-        passwordTextField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 0))
-        
+        // email text fied
+        emailTextField.regularStyle()
+        // password text fied
+        passwordTextField.passwordStyle()
+        // log in button
         logInButton.layer.cornerRadius = logInButton.frame.height/2
         logInButton.alpha = 0.7
+        // fone view
         blureFone()
+        // text fields check
+        textFieldsSetup()
     }
     
     private func checkIfFieldEmpty() {
@@ -95,7 +88,7 @@ class LogInVC: UIViewController {
         self.present(signUpScreen, animated: true)
     }
     
-    private func aythantificationInFirebase() {
+    private func authantificationInFirebase() {
         guard let email = emailTextField.text, !email.isEmpty,
               let password = passwordTextField.text, !password.isEmpty else {
             return
@@ -106,6 +99,20 @@ class LogInVC: UIViewController {
                 return strongSelf.toSignUp()
             }
             strongSelf.toMainTabBar()
+        }
+    }
+    
+    private func textFieldsSetup() {
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+    }
+    
+    @objc private func textFieldDidChange() {
+        if let email = emailTextField.text, !email.isEmpty {
+            emailTextField.emailValidation(email)
+        }
+        if let password = passwordTextField.text, !password.isEmpty {
+            passwordTextField.passwordValidation(password)
         }
     }
     
@@ -131,8 +138,7 @@ class LogInVC: UIViewController {
         hideWarningLabel()
         print(checkerIfFieldEmpty)
         if checkerIfFieldEmpty == false {
-            aythantificationInFirebase()
-            print("Auth")
+            authantificationInFirebase()
         }
     }
     

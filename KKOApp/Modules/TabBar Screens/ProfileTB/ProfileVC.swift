@@ -31,6 +31,10 @@ class ProfileVC: UIViewController {
         config()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadAddress), name: NSNotification.Name(rawValue: "reloadAddress"), object: nil)
+    }
     
     private func config() {
         // profile picture
@@ -43,6 +47,12 @@ class ProfileVC: UIViewController {
         setupTopImage()
         // setup profile picture
         setupProfPic()
+        // setup address
+        if !UserSettings.coffeeshopAddress.isEmpty {
+            address.text = UserSettings.coffeeshopAddress
+        } else {
+            address.text = "ulica Leonida Levina, 2"
+        }
     }
     
     private func setupTopImage() {
@@ -112,8 +122,18 @@ class ProfileVC: UIViewController {
         }
     }
     
+    @objc private func reloadAddress() {
+        address.text = UserSettings.coffeeshopAddress
+    }
+    
     @IBAction func changeProfilePic(_ sender: UITapGestureRecognizer) {
         chooseWayForProfileImageSetup()
+    }
+    
+    @IBAction func chooseAdress(_ sender: UITapGestureRecognizer) {
+        let storyboard = UIStoryboard(name: "Address", bundle: nil)
+        let toAddressCreen = storyboard.instantiateViewController(withIdentifier: Screens.address.rawValue)
+        self.present(toAddressCreen, animated: true)
     }
     
     @IBAction private func reloadFonImage() {

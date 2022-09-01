@@ -44,7 +44,6 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        blur()
         config()
         selection(sizeSButton)
         configure(title: name, descript: descript, price: price, image: imageName)
@@ -67,15 +66,6 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         if gesture.direction == .right {
             self.navigationController?.popViewController(animated: true)
        }
-    }
-    
-    private func blur() {
-        // card view blur
-        let blurCard = UIBlurEffect(style: .regular)
-        let effectCard = UIVisualEffectView(effect: blurCard)
-        effectCard.frame = cardView.bounds
-        cardView.layer.masksToBounds = true
-        cardView.addSubview(effectCard)
     }
     
     private func config() {
@@ -136,7 +126,12 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     private func sendNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Your coffee is ready"
-        content.body = "Your \(name) is waiting for you at Russiyanova 54"
+        guard let address = UserSettings.coffeeshopAddress else  { return }
+        guard !address.isEmpty else {
+            return content.body = "ulica Leonida Levina, 2"
+        }
+        content.body = "Your \(name) is waiting for you at \(address)"
+
         content.sound = .default
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(time), repeats: false)
@@ -144,9 +139,7 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
         let center = UNUserNotificationCenter.current()
         center.add(request)
-        notification.add(request) { (error) in
-            print(error?.localizedDescription ?? "error")
-        }
+        notification.add(request)
     }
     
     @IBAction private func chooseSize(_ sender: UIButton) {

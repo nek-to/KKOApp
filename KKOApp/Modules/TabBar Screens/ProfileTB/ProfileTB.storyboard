@@ -45,9 +45,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5S-yW-7Tt">
-                                <rect key="frame" x="30" y="450" width="354" height="20"/>
+                                <rect key="frame" x="30" y="450" width="354" height="16"/>
                                 <gestureRecognizers/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
@@ -55,7 +55,7 @@
                                 </connections>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-lS-Rhn">
-                                <rect key="frame" x="0.0" y="490" width="414" height="313"/>
+                                <rect key="frame" x="0.0" y="486" width="414" height="317"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="preferenceCell" rowHeight="70" id="oXg-HT-GPo" customClass="PreferenceTVCell" customModule="KKOApp" customModuleProvider="target">
@@ -160,7 +160,11 @@
                         <action selector="changeProfilePic:" destination="Y6W-OH-hqX" id="Pw8-4M-pBQ"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="y8G-E9-8rl"/>
+                <tapGestureRecognizer id="y8G-E9-8rl" userLabel="ChooseAddress">
+                    <connections>
+                        <action selector="chooseAdress:" destination="Y6W-OH-hqX" id="TGU-dO-dZL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
         </scene>

@@ -78,7 +78,7 @@ class AddCardVC: UIViewController {
         cardStorage.beginWrite()
         cardStorage.add(card)
         try! cardStorage.commitWrite()
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloader"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadCards"), object: nil)
         self.dismiss(animated: true)
     }
     
@@ -135,7 +135,7 @@ extension AddCardVC: UITextFieldDelegate {
         return true
     }
     
-    func formatDate(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    private func formatDate(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if textField == dateTextField {
             let replacementStringIsLegal = string.rangeOfCharacter(from: NSCharacterSet(charactersIn: "0123456789").inverted) == nil
             
@@ -177,7 +177,7 @@ extension AddCardVC: UITextFieldDelegate {
     }
     
     
-    func formatCardNumber(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    private func formatCardNumber(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if textField == numberTextField {
             let replacementStringIsLegal = string.rangeOfCharacter(from: NSCharacterSet(charactersIn: "0123456789").inverted) == nil
             

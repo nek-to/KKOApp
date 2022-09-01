@@ -6,7 +6,7 @@
 		<key>icon</key>
 		<string>movie</string>
 		<key>address</key>
-		<string>улица Богдана Хмельницкого, 2</string>
+		<string>ulica Bogdana Hmel&apos;nickogo, 2</string>
 		<key>name</key>
 		<string>KKO Movie</string>
 		<key>latitude</key>
@@ -18,7 +18,7 @@
 		<key>icon</key>
 		<string>series</string>
 		<key>address</key>
-		<string>улица Петра Глебки, 5</string>
+		<string>ulica Petra Glebki, 5</string>
 		<key>name</key>
 		<string>KKO Series</string>
 		<key>latitude</key>
@@ -30,7 +30,7 @@
 		<key>icon</key>
 		<string>main</string>
 		<key>address</key>
-		<string>улица Леонида Левина, 2</string>
+		<string>ulica Leonida Levina, 2</string>
 		<key>name</key>
 		<string>KKO Main</string>
 		<key>latitude</key>
