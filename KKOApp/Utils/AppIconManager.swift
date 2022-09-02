@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppIconManager {
+final class AppIconManager {
     let application = UIApplication.shared
     
     enum AppIcon: String {

@@ -100,9 +100,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="cBJ-Aq-rm7" appends="YES" id="Fi8-Yg-EFY"/>
-                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSf-1V-raS">
                                 <rect key="frame" x="308" y="69" width="96" height="37"/>
@@ -127,7 +124,7 @@
                                     <fontDescription key="titleFontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5te-7r-k0z"/>
+                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKZ-z8-wdL"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops something went wrong please try again" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhY-yr-Vcj">
@@ -164,7 +161,7 @@
                     <connections>
                         <outlet property="backgroundUmageView" destination="m9n-U9-tkZ" id="YxO-lL-diW"/>
                         <outlet property="emailTextField" destination="IWv-bo-ofN" id="rip-0v-fhw"/>
-                        <outlet property="logInButton" destination="y7Z-EX-jOH" id="sJ8-UH-SjZ"/>
+                        <outlet property="logInButton" destination="y7Z-EX-jOH" id="uSP-WV-V5f"/>
                         <outlet property="loginFieldsBottomConstraint" destination="BUG-OK-kNx" id="BVn-LP-TmO"/>
                         <outlet property="passwordRestoreLabel" destination="wRz-gG-KFZ" id="plR-zg-A73"/>
                         <outlet property="passwordTextField" destination="fyl-Fd-ei6" id="dP4-wg-AHk"/>
@@ -172,7 +169,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cBJ-Aq-rm7"/>
+                <tapGestureRecognizer id="cBJ-Aq-rm7" userLabel="Restore password">
+                    <connections>
+                        <action selector="restorePassword:" destination="BYZ-38-t0r" id="6ox-Ua-0UW"/>
+                        <outlet property="delegate" destination="wRz-gG-KFZ" id="FCV-B6-Xh2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="128.57142857142856"/>
         </scene>

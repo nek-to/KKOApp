@@ -21,7 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else {
             toLogIn()
         }
-
     }
     
     private func toMainTabBar() {

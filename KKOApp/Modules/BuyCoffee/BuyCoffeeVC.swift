@@ -59,7 +59,7 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         titleLabel.text = title
         descriptionLabel.text = descript
         priceLabel.text = "\(price).0"
-        coffeeImageView.image = UIImage().resizeImage(image: .init(named: image)!, targetSize: .init(width: 400, height: 400))
+        coffeeImageView.image = UIImage().resizeImage(image: .init(named: image) ?? UIImage(), targetSize: .init(width: 400, height: 400))
     }
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
