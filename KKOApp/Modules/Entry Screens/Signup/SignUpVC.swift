@@ -131,9 +131,9 @@ class SignUpVC: UIViewController {
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             guard let strongSelf = self else { return }
             guard error == nil else {
-                print(error?.localizedDescription as Any)
                 return strongSelf.signUpFaildAlert()
             }
+            Auth.auth().currentUser?.sendEmailVerification()
             strongSelf.showSuccessAlert()
         }
     }
@@ -189,8 +189,6 @@ class SignUpVC: UIViewController {
         checkIfAllFieldsAreFill()
         checkIfDoublePasswordCorrect()
         hideWarningLabel()
-        print(fieldsAreFill)
-        print(passwordsIsCorrect)
         if fieldsAreFill && passwordsIsCorrect {
             saveUserInDatabase()
             saveUserInFirebase()

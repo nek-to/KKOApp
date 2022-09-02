@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func firebaseSetup() {
         FirebaseApp.configure()
-
+        Analytics.setAnalyticsCollectionEnabled(false)
     }
     
     private func notificationSetup() {

@@ -25,7 +25,6 @@
 		532EF34628BC5B4E00229A65 /* CustomIconsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF34528BC5B4D00229A65 /* CustomIconsStorage.swift */; };
 		532EF34F28BC706D00229A65 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532EF34E28BC706D00229A65 /* Language.storyboard */; };
 		532EF35128BC707A00229A65 /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35028BC707A00229A65 /* LanguageVC.swift */; };
-		532EF35628BC742800229A65 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 532EF35428BC742800229A65 /* Localizable.strings */; };
 		532EF35C28BC769B00229A65 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35B28BC769B00229A65 /* Language.swift */; };
 		532EF35E28BC7C7500229A65 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35D28BC7C7500229A65 /* LocalManager.swift */; };
 		532EF36128BC84DB00229A65 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF36028BC84DB00229A65 /* Profile.swift */; };
@@ -128,10 +127,6 @@
 		532EF34528BC5B4D00229A65 /* CustomIconsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconsStorage.swift; sourceTree = "<group>"; };
 		532EF34E28BC706D00229A65 /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
 		532EF35028BC707A00229A65 /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
-		532EF35228BC73C500229A65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		532EF35328BC73C500229A65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		532EF35528BC742800229A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = KKOApp/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		532EF35728BC744000229A65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = KKOApp/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		532EF35B28BC769B00229A65 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		532EF35D28BC7C7500229A65 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
 		532EF36028BC84DB00229A65 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -317,7 +312,6 @@
 		534DA98A28AFD68400626AA4 = {
 			isa = PBXGroup;
 			children = (
-				532EF35428BC742800229A65 /* Localizable.strings */,
 				534DA99528AFD68400626AA4 /* KKOApp */,
 				534DA99428AFD68400626AA4 /* Products */,
 				9B9AE91E4CC75CCA0A9FEBD2 /* Pods */,
@@ -801,6 +795,7 @@
 				534DA99028AFD68400626AA4 /* Frameworks */,
 				534DA99128AFD68400626AA4 /* Resources */,
 				8C5B2D15B62D89529281E43D /* [CP] Embed Pods Frameworks */,
+				53D091CC28C11DC5006A0090 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -833,7 +828,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ru,
 			);
 			mainGroup = 534DA98A28AFD68400626AA4;
 			productRefGroup = 534DA99428AFD68400626AA4 /* Products */;
@@ -888,7 +882,6 @@
 				53E8F1BC28B4294B0011D63F /* buysomecoffee.json in Resources */,
 				532EF34128BC59CD00229A65 /* CustomIcons.plist in Resources */,
 				533E11F828B9442800CF5499 /* brewing-coffee.json in Resources */,
-				532EF35628BC742800229A65 /* Localizable.strings in Resources */,
 				534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */,
 				534DA99E28AFD68400626AA4 /* Main.storyboard in Resources */,
 			);
@@ -897,6 +890,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		53D091CC28C11DC5006A0090 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\ncp \"${SRCROOT}/KKOApp/Resources/GoogleService-Info${STAGE}.plist\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleService-Info.plist\"\n";
+		};
 		8C5B2D15B62D89529281E43D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1007,20 +1017,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		532EF35428BC742800229A65 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				532EF35528BC742800229A65 /* Base */,
-				532EF35728BC744000229A65 /* ru */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		534DA99C28AFD68400626AA4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				534DA99D28AFD68400626AA4 /* Base */,
-				532EF35328BC73C500229A65 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1029,7 +1029,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				534DA9A228AFD68600626AA4 /* Base */,
-				532EF35228BC73C500229A65 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

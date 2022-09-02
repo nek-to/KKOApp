@@ -127,7 +127,6 @@ class LogInVC: UIViewController {
     @IBAction private func logIn(_ sender: UIButton) {
         checkIfFieldEmpty()
         hideWarningLabel()
-        print(checkerIfFieldEmpty)
         if checkerIfFieldEmpty == false {
             authantificationInFirebase()
         }
@@ -138,4 +137,3 @@ class LogInVC: UIViewController {
     }
     
 }
-

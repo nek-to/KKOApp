@@ -98,48 +98,50 @@ extension MapVC: CLLocationManagerDelegate {
 
 extension MapVC: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
-        guard !(annotation is MKUserLocation) else {
+        guard !annotation.isKind(of: MKUserLocation.self) else {
             return nil
         }
-        switch annotation.title!! {
-        case "KKO Movie":
-            annotationView.markerTintColor = UIColor.orange
-            annotationView.glyphImage = UIImage(named: "movie")
-            annotationView.canShowCallout = true
-            annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        case "KKO Series":
-            annotationView.markerTintColor = UIColor.green
-            annotationView.glyphImage = UIImage(named: "series")
-            annotationView.canShowCallout = true
-            annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        case "KKO Main":
-            annotationView.markerTintColor = UIColor.magenta
-            annotationView.glyphImage = UIImage(named: "main")
-            annotationView.canShowCallout = true
-            annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        default:
-            annotationView.markerTintColor = UIColor.blue
-        }
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "myMarker")
+        
+            switch annotation.title!! {
+            case "KKO Movie":
+                annotationView.markerTintColor = UIColor.orange
+                annotationView.glyphImage = UIImage(named: "movie")
+                annotationView.canShowCallout = true
+                annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            case "KKO Series":
+                annotationView.markerTintColor = UIColor.green
+                annotationView.glyphImage = UIImage(named: "series")
+                annotationView.canShowCallout = true
+                annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            case "KKO Main":
+                annotationView.markerTintColor = UIColor.magenta
+                annotationView.glyphImage = UIImage(named: "main")
+                annotationView.canShowCallout = true
+                annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            default:
+                annotationView.markerTintColor = UIColor.blue
+            }
         return annotationView
     }
+    
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let coordinate = view.annotation?.coordinate else {
             return
         }
-        
+
         mapKit.removeOverlays(mapView.overlays)
-        
+
         let user = (locationManager.location?.coordinate)!
         let startPoint = MKPlacemark(coordinate: user)
         let endPoint = MKPlacemark(coordinate: coordinate)
-        
+
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: startPoint)
         request.destination = MKMapItem(placemark: endPoint)
         request.transportType = .any
-        
+
         let direction = MKDirections(request: request)
         direction.calculate { (responce, error) in
             guard let responce = responce else {

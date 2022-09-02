@@ -30,5 +30,11 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:78844472313:ios:8e0277cb778eceec386b28</string>
+    <key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+    <string>NO</string>
+    <key>FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED</key>
+    <string>YES</string>
+    <key>FirebaseScreenReportingEnabled</key>
+    <false/>
 </dict>
 </plist>

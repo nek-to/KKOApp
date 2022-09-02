@@ -89,8 +89,6 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         backCardImageView.layer.cornerRadius = 40
         // description view
         descriptionView.layer.cornerRadius = 20
-        
-        print("LOG: ",TimeInterval(time))
     }
     
     private func selection(_ sender: UIButton) {
@@ -112,7 +110,6 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         coffee.image = imageName
         coffee.buyTiming = Date()
         coffee.time = time
-        print(coffee.buyTiming)
         coffee.showed = false
         try? storage.write {
             storage.add(coffee)

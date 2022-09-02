@@ -12,6 +12,5 @@ enum Preferences: String {
     case payment = "Payment"
     case purcase = "Purcase"
     case icon = "Icon"
-    case language = "Language"
     case logout = "Logout"
 }

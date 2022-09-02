@@ -208,10 +208,6 @@ extension ProfileVC: UITableViewDataSource {
             let storyboard = UIStoryboard(name: "Icon", bundle: nil)
             let iconScreen = storyboard.instantiateViewController(withIdentifier: Screens.icon.rawValue)
             self.present(iconScreen, animated: true)
-        case Preferences.language.rawValue:
-            let storyboard = UIStoryboard(name: "Language", bundle: nil)
-            let languageScreen = storyboard.instantiateViewController(withIdentifier: Screens.language.rawValue)
-            self.present(languageScreen, animated: true)
         default:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let loginScreen = storyboard.instantiateViewController(withIdentifier: Screens.login.rawValue)

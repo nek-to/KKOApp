@@ -27,7 +27,6 @@ class PasswordVC: UIViewController {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authorized") { success, error in
                 if success {
                     DispatchQueue.main.async {
-                        print("some")
                         self.dismiss(animated: true)
                     }
                 }
