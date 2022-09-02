@@ -98,6 +98,9 @@ class LogInVC: UIViewController {
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
     }
     
+    private func restorePasswordAlert() {
+    }
+    
     @objc private func textFieldDidChange() {
         if let email = emailTextField.text, !email.isEmpty {
             emailTextField.emailValidation(email)
@@ -122,6 +125,10 @@ class LogInVC: UIViewController {
         } else {
             self.loginFieldsBottomConstraint.constant = ((endFrame?.size.height)! + 20)
         }
+    }
+    
+    @IBAction private func restorePassword(_ sender: UITapGestureRecognizer) {
+        Auth.auth().currentUser?.auth.sendPasswordReset(withEmail: <#T##String#>)
     }
     
     @IBAction private func logIn(_ sender: UIButton) {

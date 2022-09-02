@@ -23,8 +23,6 @@
 		532EF34128BC59CD00229A65 /* CustomIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 532EF34028BC59CD00229A65 /* CustomIcons.plist */; };
 		532EF34428BC5AE400229A65 /* CustomIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF34328BC5AE400229A65 /* CustomIcon.swift */; };
 		532EF34628BC5B4E00229A65 /* CustomIconsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF34528BC5B4D00229A65 /* CustomIconsStorage.swift */; };
-		532EF34F28BC706D00229A65 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532EF34E28BC706D00229A65 /* Language.storyboard */; };
-		532EF35128BC707A00229A65 /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35028BC707A00229A65 /* LanguageVC.swift */; };
 		532EF35C28BC769B00229A65 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35B28BC769B00229A65 /* Language.swift */; };
 		532EF35E28BC7C7500229A65 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35D28BC7C7500229A65 /* LocalManager.swift */; };
 		532EF36128BC84DB00229A65 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF36028BC84DB00229A65 /* Profile.swift */; };
@@ -125,8 +123,6 @@
 		532EF34028BC59CD00229A65 /* CustomIcons.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CustomIcons.plist; sourceTree = "<group>"; };
 		532EF34328BC5AE400229A65 /* CustomIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIcon.swift; sourceTree = "<group>"; };
 		532EF34528BC5B4D00229A65 /* CustomIconsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconsStorage.swift; sourceTree = "<group>"; };
-		532EF34E28BC706D00229A65 /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
-		532EF35028BC707A00229A65 /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
 		532EF35B28BC769B00229A65 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		532EF35D28BC7C7500229A65 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
 		532EF36028BC84DB00229A65 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -273,15 +269,6 @@
 			path = CustomIcon;
 			sourceTree = "<group>";
 		};
-		532EF34C28BC705F00229A65 /* Language */ = {
-			isa = PBXGroup;
-			children = (
-				532EF34E28BC706D00229A65 /* Language.storyboard */,
-				532EF35028BC707A00229A65 /* LanguageVC.swift */,
-			);
-			path = Language;
-			sourceTree = "<group>";
-		};
 		532EF35F28BC84BF00229A65 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				539D735D28C01EBA0034BA05 /* Password */,
-				532EF34C28BC705F00229A65 /* Language */,
 				532EF33928BC4AAF00229A65 /* Icon */,
 				53E8F19428B3F4380011D63F /* FollowUs */,
 				533E11F228B939E600CF5499 /* Purcase */,
@@ -858,7 +844,6 @@
 				534DA9A328AFD68600626AA4 /* LaunchScreen.storyboard in Resources */,
 				5395340D28B8038C00B76054 /* Coffeeshops.plist in Resources */,
 				53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */,
-				532EF34F28BC706D00229A65 /* Language.storyboard in Resources */,
 				53D091BD28C03561006A0090 /* Address.storyboard in Resources */,
 				53E8F1C028B4294B0011D63F /* buying.json in Resources */,
 				533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */,
@@ -961,7 +946,6 @@
 				53E8F18A28B3E86A0011D63F /* UIImage.swift in Sources */,
 				53E8F1B228B427A20011D63F /* CouponCVCell.swift in Sources */,
 				532EF34428BC5AE400229A65 /* CustomIcon.swift in Sources */,
-				532EF35128BC707A00229A65 /* LanguageVC.swift in Sources */,
 				53E8F1A828B40E200011D63F /* NewsTableView.swift in Sources */,
 				53E8F17528B3D6940011D63F /* MainTabBarVC.swift in Sources */,
 				532EF33D28BC4AD700229A65 /* IconVC.swift in Sources */,
