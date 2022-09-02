@@ -13,7 +13,7 @@ class PaymentVC: UIViewController {
     
 //    private var card: CreditCard?
     private var cards: Results<CreditCard>?
-    private lazy var cardStorage = try! Realm()
+    private lazy var storage = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ extension PaymentVC: UITableViewDelegate {
 
 extension PaymentVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cardStorage.objects(CreditCard.self).count
+        storage.objects(CreditCard.self).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,7 +63,7 @@ extension PaymentVC: UITableViewDataSource {
     }
     
     private func configCardCell(_ indexPath: IndexPath) -> UITableViewCell {
-        let cards = cardStorage.objects(CreditCard.self)
+        let cards = storage.objects(CreditCard.self)
         let card = cards[indexPath.row]
         let cardCell = cardTableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardTVCell
         cardCell.configureCell(card)
@@ -77,10 +77,10 @@ extension PaymentVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.cards = cardStorage.objects(CreditCard.self)
+            self.cards = storage.objects(CreditCard.self)
             if let card = cards?[indexPath.row] {
-                try? cardStorage.write {
-                    cardStorage.delete(card)
+                try? storage.write {
+                    storage.delete(card)
                 }
             }
             tableView.deleteRows(at: [indexPath], with: .fade)

@@ -4,7 +4,7 @@
 //
 //  Created by VironIT on 19.08.22.
 //
-import Firebase
+import FirebaseCore
 import RealmSwift
 import UIKit
 
@@ -32,17 +32,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func realmSetup() {
-        let config = Realm.Configuration(schemaVersion: 17)
+        let config = Realm.Configuration(schemaVersion: 18)
         Realm.Configuration.defaultConfiguration = config
         let storage = try! Realm()
+        let counter = storage.objects(Coffee.self).count
         try? storage.write {
             storage.delete(storage.objects(Purcase.self))
+        }
+        
+        if let path = Bundle.main.path(forResource: "Coffee", ofType: "plist") {
+            let arrayRoot = NSArray(contentsOfFile: path)
+
+            if arrayRoot?.count != counter {
+                LoaderManager().loadCoffeeInStorage()
+            }
         }
     }
     
     private func firebaseSetup() {
         FirebaseApp.configure()
-        Analytics.setAnalyticsCollectionEnabled(false)
     }
     
     private func notificationSetup() {

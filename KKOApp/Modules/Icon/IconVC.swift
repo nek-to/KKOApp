@@ -19,6 +19,8 @@ class IconVC: UIViewController {
         iconsTableView.dataSource = self
         iconVC.delegate = self
         iconVC.prefersGrabberVisible = true
+        iconVC.detents = [.medium()]
+
     }
 }
 
@@ -37,7 +39,7 @@ extension IconVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        80
+        60
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

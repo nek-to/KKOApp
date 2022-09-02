@@ -68,10 +68,11 @@ class ProfileVC: UIViewController {
     }
     
     private func setupTopImage() {
-            let image = storage.objects(TopImage.self).first?.image
-            if let image = image {
-                topImageView.image = UIImage(data: try! Data(contentsOf: URL(string: image) ?? URL(fileURLWithPath: "profile-back")))
+        guard let imageFromStore = storage.objects(TopImage.self).first?.image else { return }
+        guard let image = UIImage(data: try! Data(contentsOf: URL(string: imageFromStore)!)) else {
+            return loadFonImage()
         }
+        topImageView.image = image
     }
     
     private func chooseWayForProfileImageSetup() {
@@ -143,7 +144,11 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction private func reloadFonImage() {
-        UnsplashNetworkManager.getImageFromStock { url in
+        loadFonImage()
+    }
+    
+    private func loadFonImage() {
+        UnsplashNetworkManager.getImageFromStock { [unowned self] url in
             if let url = url {
                 self.imageUrl = url
                 self.saveTopImage(url: url)
@@ -187,7 +192,7 @@ extension ProfileVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        70
+        60
     }
     
     private func selectPreferenceOption(_ option: String) {

@@ -23,8 +23,6 @@
 		532EF34128BC59CD00229A65 /* CustomIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 532EF34028BC59CD00229A65 /* CustomIcons.plist */; };
 		532EF34428BC5AE400229A65 /* CustomIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF34328BC5AE400229A65 /* CustomIcon.swift */; };
 		532EF34628BC5B4E00229A65 /* CustomIconsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF34528BC5B4D00229A65 /* CustomIconsStorage.swift */; };
-		532EF35C28BC769B00229A65 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35B28BC769B00229A65 /* Language.swift */; };
-		532EF35E28BC7C7500229A65 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF35D28BC7C7500229A65 /* LocalManager.swift */; };
 		532EF36128BC84DB00229A65 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EF36028BC84DB00229A65 /* Profile.swift */; };
 		533E11F428B939F800CF5499 /* Purcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533E11F328B939F800CF5499 /* Purcase.storyboard */; };
 		533E11F628B93A0B00CF5499 /* PurcaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E11F528B93A0B00CF5499 /* PurcaseVC.swift */; };
@@ -57,11 +55,12 @@
 		5395342728B8457500B76054 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395342628B8457500B76054 /* CGFloat.swift */; };
 		5395342928B8508900B76054 /* UnsplashNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395342828B8508900B76054 /* UnsplashNetworkManager.swift */; };
 		5395343628B8C13300B76054 /* TopImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395343528B8C13300B76054 /* TopImage.swift */; };
+		5395BFE428C2042B006F3D79 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395BFE328C2042B006F3D79 /* Coffee.swift */; };
 		5398E68628B689B400DEB5BC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398E68528B689B400DEB5BC /* UIView.swift */; };
-		539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539BDBEB28B523100057BCA9 /* CoffeeItem.swift */; };
 		539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539BDBED28B524E30057BCA9 /* Coffee.plist */; };
 		539D736028C01EBA0034BA05 /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D735E28C01EBA0034BA05 /* PasswordVC.swift */; };
 		539D736128C01EBA0034BA05 /* Password.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539D735F28C01EBA0034BA05 /* Password.xib */; };
+		53BE673B28C268F60036D973 /* LoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BE673A28C268F60036D973 /* LoaderManager.swift */; };
 		53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678028B721E9000A758C /* PreferenceItem.swift */; };
 		53C8678328B72249000A758C /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53C8678228B72249000A758C /* Preferences.plist */; };
 		53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678428B7230F000A758C /* PreferenceStorage.swift */; };
@@ -100,7 +99,6 @@
 		53E8F1BE28B4294B0011D63F /* bean.json in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1B828B4294A0011D63F /* bean.json */; };
 		53E8F1BF28B4294B0011D63F /* coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1B928B4294A0011D63F /* coffee.json */; };
 		53E8F1C028B4294B0011D63F /* buying.json in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1BA28B4294B0011D63F /* buying.json */; };
-		53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */; };
 		53E8F1C628B444150011D63F /* CoffeeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F1C428B444150011D63F /* CoffeeTVCell.swift */; };
 		53E8F1C728B444150011D63F /* CoffeeTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53E8F1C528B444150011D63F /* CoffeeTVCell.xib */; };
 		8445CBE393B3D0D68537A8DB /* Pods_KKOApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EFC33B70C8060F4CD3A4FD /* Pods_KKOApp.framework */; };
@@ -123,8 +121,6 @@
 		532EF34028BC59CD00229A65 /* CustomIcons.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CustomIcons.plist; sourceTree = "<group>"; };
 		532EF34328BC5AE400229A65 /* CustomIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIcon.swift; sourceTree = "<group>"; };
 		532EF34528BC5B4D00229A65 /* CustomIconsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconsStorage.swift; sourceTree = "<group>"; };
-		532EF35B28BC769B00229A65 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		532EF35D28BC7C7500229A65 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
 		532EF36028BC84DB00229A65 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		533E11F328B939F800CF5499 /* Purcase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Purcase.storyboard; sourceTree = "<group>"; };
 		533E11F528B93A0B00CF5499 /* PurcaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurcaseVC.swift; sourceTree = "<group>"; };
@@ -159,11 +155,12 @@
 		5395342628B8457500B76054 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		5395342828B8508900B76054 /* UnsplashNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashNetworkManager.swift; sourceTree = "<group>"; };
 		5395343528B8C13300B76054 /* TopImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImage.swift; sourceTree = "<group>"; };
+		5395BFE328C2042B006F3D79 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		5398E68528B689B400DEB5BC /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		539BDBEB28B523100057BCA9 /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		539BDBED28B524E30057BCA9 /* Coffee.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffee.plist; sourceTree = "<group>"; };
 		539D735E28C01EBA0034BA05 /* PasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordVC.swift; sourceTree = "<group>"; };
 		539D735F28C01EBA0034BA05 /* Password.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Password.xib; sourceTree = "<group>"; };
+		53BE673A28C268F60036D973 /* LoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderManager.swift; sourceTree = "<group>"; };
 		53C8678028B721E9000A758C /* PreferenceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceItem.swift; sourceTree = "<group>"; };
 		53C8678228B72249000A758C /* Preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
 		53C8678428B7230F000A758C /* PreferenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceStorage.swift; sourceTree = "<group>"; };
@@ -202,7 +199,6 @@
 		53E8F1B828B4294A0011D63F /* bean.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bean.json; sourceTree = "<group>"; };
 		53E8F1B928B4294A0011D63F /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
 		53E8F1BA28B4294B0011D63F /* buying.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buying.json; sourceTree = "<group>"; };
-		53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeStorage.swift; sourceTree = "<group>"; };
 		53E8F1C428B444150011D63F /* CoffeeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTVCell.swift; sourceTree = "<group>"; };
 		53E8F1C528B444150011D63F /* CoffeeTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeTVCell.xib; sourceTree = "<group>"; };
 		A445D65BBCB058EACA51C3C7 /* Pods-KKOApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKOApp.release.xcconfig"; path = "Target Support Files/Pods-KKOApp/Pods-KKOApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -269,14 +265,6 @@
 			path = CustomIcon;
 			sourceTree = "<group>";
 		};
-		532EF35F28BC84BF00229A65 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				532EF36028BC84DB00229A65 /* Profile.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		533E11F228B939E600CF5499 /* Purcase */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,7 +309,6 @@
 				534DA9A428AFD68600626AA4 /* Info.plist */,
 				534DA9AF28AFDE7300626AA4 /* Application */,
 				53E8F18728B3E8360011D63F /* Extencions */,
-				534DA9A128AFD68600626AA4 /* LaunchScreen.storyboard */,
 				53E8F19C28B3F7520011D63F /* Layout */,
 				53E8F1B428B429200011D63F /* Lottie */,
 				534DA9AA28AFDC3500626AA4 /* Models */,
@@ -336,10 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				53D091C628C03E27006A0090 /* UserDefaults */,
-				53D910D528B956EC00C4044C /* Purcase */,
-				532EF35F28BC84BF00229A65 /* Profile */,
-				5395343428B8C10D00B76054 /* Profile Top Image */,
-				5395341A28B83E0100B76054 /* Credit Card */,
+				53D910D528B956EC00C4044C /* RealmModels */,
 				53E8F18B28B3E8D30011D63F /* Storages */,
 				53E8F18528B3E80D0011D63F /* Enums */,
 			);
@@ -349,6 +333,7 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				534DA9A128AFD68600626AA4 /* LaunchScreen.storyboard */,
 				539D735D28C01EBA0034BA05 /* Password */,
 				532EF33928BC4AAF00229A65 /* Icon */,
 				53E8F19428B3F4380011D63F /* FollowUs */,
@@ -450,14 +435,6 @@
 			path = CardTVCell;
 			sourceTree = "<group>";
 		};
-		5395341A28B83E0100B76054 /* Credit Card */ = {
-			isa = PBXGroup;
-			children = (
-				5395341B28B83E1700B76054 /* CreditCard.swift */,
-			);
-			path = "Credit Card";
-			sourceTree = "<group>";
-		};
 		5395341D28B8437500B76054 /* Add Card */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,14 +460,6 @@
 			path = CGFloat;
 			sourceTree = "<group>";
 		};
-		5395343428B8C10D00B76054 /* Profile Top Image */ = {
-			isa = PBXGroup;
-			children = (
-				5395343528B8C13300B76054 /* TopImage.swift */,
-			);
-			path = "Profile Top Image";
-			sourceTree = "<group>";
-		};
 		5398E68328B6899B00DEB5BC /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -503,8 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				532EF33728BC443E00229A65 /* AppIconManager.swift */,
-				532EF35B28BC769B00229A65 /* Language.swift */,
-				532EF35D28BC7C7500229A65 /* LocalManager.swift */,
+				53BE673A28C268F60036D973 /* LoaderManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -545,15 +513,6 @@
 			path = Coupon;
 			sourceTree = "<group>";
 		};
-		53D091C328C03DA5006A0090 /* Coffee */ = {
-			isa = PBXGroup;
-			children = (
-				53E8F1C128B43F4C0011D63F /* CoffeeStorage.swift */,
-				539BDBEB28B523100057BCA9 /* CoffeeItem.swift */,
-			);
-			path = Coffee;
-			sourceTree = "<group>";
-		};
 		53D091C428C03DAA006A0090 /* Coffeeshop */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,12 +546,16 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
-		53D910D528B956EC00C4044C /* Purcase */ = {
+		53D910D528B956EC00C4044C /* RealmModels */ = {
 			isa = PBXGroup;
 			children = (
+				5395343528B8C13300B76054 /* TopImage.swift */,
+				532EF36028BC84DB00229A65 /* Profile.swift */,
+				5395341B28B83E1700B76054 /* CreditCard.swift */,
 				53D910D628B9570000C4044C /* Purcase.swift */,
+				5395BFE328C2042B006F3D79 /* Coffee.swift */,
 			);
-			path = Purcase;
+			path = RealmModels;
 			sourceTree = "<group>";
 		};
 		53E8F17128B3D61C0011D63F /* TabBar Screens */ = {
@@ -677,7 +640,6 @@
 				532EF34228BC5AC700229A65 /* CustomIcon */,
 				53C8677F28B721BF000A758C /* Preference */,
 				53D091C428C03DAA006A0090 /* Coffeeshop */,
-				53D091C328C03DA5006A0090 /* Coffee */,
 				53D091C228C03D9C006A0090 /* Coupon */,
 				53E8F18C28B3E8E40011D63F /* News */,
 			);
@@ -781,7 +743,6 @@
 				534DA99028AFD68400626AA4 /* Frameworks */,
 				534DA99128AFD68400626AA4 /* Resources */,
 				8C5B2D15B62D89529281E43D /* [CP] Embed Pods Frameworks */,
-				53D091CC28C11DC5006A0090 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -875,23 +836,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		53D091CC28C11DC5006A0090 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\ncp \"${SRCROOT}/KKOApp/Resources/GoogleService-Info${STAGE}.plist\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleService-Info.plist\"\n";
-		};
 		8C5B2D15B62D89529281E43D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -940,7 +884,7 @@
 			files = (
 				5395340928B8036200B76054 /* CoffeeshopItem.swift in Sources */,
 				5398E68628B689B400DEB5BC /* UIView.swift in Sources */,
-				532EF35E28BC7C7500229A65 /* LocalManager.swift in Sources */,
+				5395BFE428C2042B006F3D79 /* Coffee.swift in Sources */,
 				534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */,
 				5395340B28B8037700B76054 /* CoffeeshopStorage.swift in Sources */,
 				53E8F18A28B3E86A0011D63F /* UIImage.swift in Sources */,
@@ -960,19 +904,18 @@
 				534DA99B28AFD68400626AA4 /* LogInVC.swift in Sources */,
 				5395341C28B83E1700B76054 /* CreditCard.swift in Sources */,
 				532EF36128BC84DB00229A65 /* Profile.swift in Sources */,
-				532EF35C28BC769B00229A65 /* Language.swift in Sources */,
 				53E8F1AC28B423340011D63F /* ShopTableView.swift in Sources */,
 				532EF34628BC5B4E00229A65 /* CustomIconsStorage.swift in Sources */,
 				5395342128B8439A00B76054 /* AddCardVC.swift in Sources */,
 				53D091C828C03E41006A0090 /* UserSettings.swift in Sources */,
 				5395340628B801B900B76054 /* PreferenceEnum.swift in Sources */,
 				53D091CB28C05FDF006A0090 /* UITextField.swift in Sources */,
-				53E8F1C228B43F4C0011D63F /* CoffeeStorage.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
 				532EF33828BC443E00229A65 /* AppIconManager.swift in Sources */,
 				53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */,
 				5395341428B82C5A00B76054 /* PaymentVC.swift in Sources */,
 				53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */,
+				53BE673B28C268F60036D973 /* LoaderManager.swift in Sources */,
 				533E11F628B93A0B00CF5499 /* PurcaseVC.swift in Sources */,
 				0B0F784E28B58A84005D6638 /* NewsItem.swift in Sources */,
 				539D736028C01EBA0034BA05 /* PasswordVC.swift in Sources */,
@@ -992,7 +935,6 @@
 				5395341828B838B500B76054 /* CardTVCell.swift in Sources */,
 				5395340428B7F7A000B76054 /* MapVC.swift in Sources */,
 				534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */,
-				539BDBEC28B523100057BCA9 /* CoffeeItem.swift in Sources */,
 				53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */,
 				534DA99928AFD68400626AA4 /* SceneDelegate.swift in Sources */,
 			);
@@ -1147,11 +1089,16 @@
 				DEVELOPMENT_TEAM = W7V846WLMV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KKOApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to use camera";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authorized for using our app";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow your location for our service";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow your location for our service";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to your library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1162,7 +1109,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1177,11 +1124,16 @@
 				DEVELOPMENT_TEAM = W7V846WLMV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KKOApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to use camera";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authorized for using our app";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow your location for our service";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow your location for our service";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to your library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1192,7 +1144,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

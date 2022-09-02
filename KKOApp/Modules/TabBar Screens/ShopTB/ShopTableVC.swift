@@ -15,8 +15,7 @@ class ShopTableVC: UITableViewController {
     @IBOutlet weak var lottieView: UIView!
     
     private var storage = try! Realm()
-    private var filteredCoffee = [CoffeeItem]()
-    private var coffee = CoffeeStorage.shared
+    private var filteredCoffee = [Coffee]()
     private var coupone = CouponeStorage.shared
     private let okey = AnimationView(name: "ok")
     private var animate = true
@@ -60,7 +59,7 @@ class ShopTableVC: UITableViewController {
         if isFiltering {
             return filteredCoffee.count
         }
-        return coffee.elements.count
+        return storage.objects(Coffee.self).count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,11 +73,13 @@ class ShopTableVC: UITableViewController {
     private func transferDataToBuyScreen(indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "BuyCoffee", bundle: nil)
         var toBuyCoffee = storyboard.instantiateViewController(withIdentifier: Screens.buyCoffee.rawValue) as! CoffeeProtocol
-        toBuyCoffee.name = coffee.elements[indexPath.row].name
-        toBuyCoffee.descript = coffee.elements[indexPath.row].description
-        toBuyCoffee.price = coffee.elements[indexPath.row].price
-        toBuyCoffee.imageName = coffee.elements[indexPath.row].imageName
-        toBuyCoffee.time = coffee.elements[indexPath.row].time
+        let coffees = storage.objects(Coffee.self)
+        let coffee = coffees[indexPath.row]
+        toBuyCoffee.name = coffee.name
+        toBuyCoffee.descript = coffee.descript
+        toBuyCoffee.price = coffee.price
+        toBuyCoffee.imageName = coffee.imageName
+        toBuyCoffee.time = coffee.time
         navigationController?.pushViewController(toBuyCoffee as! UIViewController, animated: true)
     }
     
@@ -90,10 +91,14 @@ class ShopTableVC: UITableViewController {
         let coffeeCell = tableView.dequeueReusableCell(withIdentifier: "coffeeCell") as! CoffeeTVCell
         if isFiltering {
             coffeeCell.configure(filteredCoffee[indexPath.row])
+            print("LOG: ", filteredCoffee[indexPath.row].like)
             coffeeCell.selectionStyle = .none
             return coffeeCell
         }
-        coffeeCell.configure(coffee.elements[indexPath.row])
+        let coffees = storage.objects(Coffee.self)
+        let coffee = coffees[indexPath.row]
+        coffeeCell.configure(coffee)
+        print("LOG: ", coffee)
         coffeeCell.selectionStyle = .none
         return coffeeCell
     }
@@ -149,7 +154,7 @@ extension ShopTableVC: UISearchBarDelegate {
     }
     
     private func filterContentForSearchText(_ searchText: String) {
-        filteredCoffee = coffee.elements.filter { (coffee: CoffeeItem) -> Bool in
+        filteredCoffee = storage.objects(Coffee.self).elements.filter { (coffee: Coffee) -> Bool in
             return coffee.name.lowercased().contains(searchText.lowercased())
         }
         tableView.reloadData()

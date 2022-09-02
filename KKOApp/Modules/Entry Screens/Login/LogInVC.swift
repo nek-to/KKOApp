@@ -15,6 +15,7 @@ class LogInVC: UIViewController {
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var passwordRestoreLabel: UILabel!
     @IBOutlet private weak var logInButton: UIButton!
+
     @IBOutlet private weak var loginFieldsBottomConstraint: NSLayoutConstraint!
     @IBOutlet private weak var warningLabel: UILabel!
     
@@ -99,6 +100,24 @@ class LogInVC: UIViewController {
     }
     
     private func restorePasswordAlert() {
+        let alert = UIAlertController(title: "Restore password", message: "Please enter your email", preferredStyle: .actionSheet)
+        alert.addTextField() { text in
+            text.placeholder = "Enter email"
+        }
+        alert.addAction(UIAlertAction(title: "Enter", style: .default, handler: { _ in
+            let email = alert.textFields?.first?.text
+            if let email = email {
+                Auth.auth().fetchSignInMethods(forEmail: email){ (providers, error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else  {
+                        Auth.auth().sendPasswordReset(withEmail: email)
+                    }
+                }
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        self.present(alert, animated: true)
     }
     
     @objc private func textFieldDidChange() {
@@ -128,7 +147,7 @@ class LogInVC: UIViewController {
     }
     
     @IBAction private func restorePassword(_ sender: UITapGestureRecognizer) {
-        Auth.auth().currentUser?.auth.sendPasswordReset(withEmail: <#T##String#>)
+        restorePasswordAlert()
     }
     
     @IBAction private func logIn(_ sender: UIButton) {

@@ -240,11 +240,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mail.fill" catalog="system" width="128" height="93"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="mail.fill" catalog="system" width="32" height="32"/>
+        <image name="pencil.circle" catalog="system" width="32" height="32"/>
+        <image name="pencil.circle.fill" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
+        <image name="phone.fill" catalog="system" width="32" height="32"/>
         <image name="singup" width="1441" height="1529"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
