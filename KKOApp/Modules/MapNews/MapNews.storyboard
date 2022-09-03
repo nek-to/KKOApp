@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map NewsVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MapNewsVC" id="Y6W-OH-hqX" customClass="MapNewsVC" customModule="KKOApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now you can find on wherever you are and lay a convenient route to the nearest coffee shop." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whQ-5Q-ZQe">
+                                <rect key="frame" x="20" y="64" width="374" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5vZ-Iv-jKD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapNews" translatesAutoresizingMaskIntoConstraints="NO" id="aIk-wK-Sg0">
+                                <rect key="frame" x="0.0" y="164" width="414" height="732"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="whQ-5Q-ZQe" secondAttribute="trailing" constant="20" id="4O2-dZ-3oc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aIk-wK-Sg0" secondAttribute="trailing" id="F4b-vk-dTQ"/>
+                            <constraint firstItem="whQ-5Q-ZQe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="e31-dM-buJ"/>
+                            <constraint firstItem="aIk-wK-Sg0" firstAttribute="top" secondItem="whQ-5Q-ZQe" secondAttribute="bottom" constant="20" id="hLB-2w-eN5"/>
+                            <constraint firstItem="whQ-5Q-ZQe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="nCl-Rw-wPd"/>
+                            <constraint firstItem="aIk-wK-Sg0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vcq-vd-Xuo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aIk-wK-Sg0" secondAttribute="bottom" constant="-34" id="xQT-X2-6pO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapImageView" destination="aIk-wK-Sg0" id="Jrp-b0-S41"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mapNews" width="397" height="619"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

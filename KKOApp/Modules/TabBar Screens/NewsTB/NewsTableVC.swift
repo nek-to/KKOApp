@@ -24,13 +24,25 @@ class NewsTableVC: UITableViewController {
     private func configuration() {
         foneImageView.layer.cornerRadius = 10
         
-        // registration of nib
+        // registration for nib
         tableView.register(UINib(nibName: "NewsTVCell", bundle: nil), forCellReuseIdentifier: "newsCell")
     }
     
     private func toFollowUsScreen() {
         let storyboard = UIStoryboard(name: "FollowUs", bundle: nil)
         let followUsScreen = storyboard.instantiateViewController(withIdentifier: Screens.followUs.rawValue)
+        present(followUsScreen, animated: true)
+    }
+    
+    private func toAnimationScreen() {
+        let storyboard = UIStoryboard(name: "AnimationNews", bundle: nil)
+        let followUsScreen = storyboard.instantiateViewController(withIdentifier: Screens.animation.rawValue)
+        present(followUsScreen, animated: true)
+    }
+    
+    private func toMapNewsScreen() {
+        let storyboard = UIStoryboard(name: "MapNews", bundle: nil)
+        let followUsScreen = storyboard.instantiateViewController(withIdentifier: Screens.mapNews.rawValue)
         present(followUsScreen, animated: true)
     }
     
@@ -51,10 +63,15 @@ class NewsTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = news.elements[indexPath.row].title
-        switch cell.lowercased() {
-        case "follow us":
+//        let cell = news.elements[indexPath.row].title
+//        switch cell.lowercased() {
+        switch indexPath.row {
+        case 0:
             toFollowUsScreen()
+        case 1:
+            toAnimationScreen()
+        case 3:
+            toMapNewsScreen()
         default:
             break
         }

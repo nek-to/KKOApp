@@ -91,14 +91,12 @@ class ShopTableVC: UITableViewController {
         let coffeeCell = tableView.dequeueReusableCell(withIdentifier: "coffeeCell") as! CoffeeTVCell
         if isFiltering {
             coffeeCell.configure(filteredCoffee[indexPath.row])
-            print("LOG: ", filteredCoffee[indexPath.row].like)
             coffeeCell.selectionStyle = .none
             return coffeeCell
         }
         let coffees = storage.objects(Coffee.self)
         let coffee = coffees[indexPath.row]
         coffeeCell.configure(coffee)
-        print("LOG: ", coffee)
         coffeeCell.selectionStyle = .none
         return coffeeCell
     }
