@@ -60,15 +60,13 @@ class PurcaseTVCell: UITableViewCell {
         let frame: Double = 175 / coffee.time
         var currentFrame = frame * diffComponents
         Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { [weak self] timer in
-            DispatchQueue.main.async {
-                currentFrame += frame / 50
-                self?.brewCoffee.currentFrame = currentFrame
-                if currentFrame >= 175 {
-                    timer.invalidate()
-                    self?.lottieRoundView.layer.borderWidth = 6
-                    self?.lottieRoundView.layer.borderColor = .init(red: 0, green: 1, blue: 0, alpha: 0.4)
-                    self?.coffeeBrewed()
-                }
+            currentFrame += frame / 50
+            self?.brewCoffee.currentFrame = currentFrame
+            if currentFrame >= 175 {
+                timer.invalidate()
+                self?.lottieRoundView.layer.borderWidth = 6
+                self?.lottieRoundView.layer.borderColor = .init(red: 0, green: 1, blue: 0, alpha: 0.4)
+                self?.coffeeBrewed()
             }
         }
         brewCoffee.play(fromFrame: 0, toFrame: 175, loopMode: .none)

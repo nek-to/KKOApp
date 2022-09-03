@@ -29,17 +29,9 @@ final class UnsplashNetworkManager {
 
 struct Root: Codable {
     var urls: URLS
-    
-    init(urls: URLS) {
-        self.urls = urls
-    }
 }
 
 struct URLS: Codable {
     var small: String
-    
-    init(small: String) {
-        self.small = small
-    }
 }
 
