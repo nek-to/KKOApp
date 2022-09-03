@@ -132,7 +132,7 @@ extension MapVC: MKMapViewDelegate {
         }
 
         mapKit.removeOverlays(mapView.overlays)
-
+        
         let user = (locationManager.location?.coordinate)!
         let startPoint = MKPlacemark(coordinate: user)
         let endPoint = MKPlacemark(coordinate: coordinate)
@@ -141,22 +141,26 @@ extension MapVC: MKMapViewDelegate {
         request.source = MKMapItem(placemark: startPoint)
         request.destination = MKMapItem(placemark: endPoint)
         request.transportType = .any
-
+        
         let direction = MKDirections(request: request)
         direction.calculate { (responce, error) in
             guard let responce = responce else {
                 return
             }
-            responce.routes.forEach {
-                self.mapKit.addOverlay($0.polyline)
-            }
+            guard let route = responce.routes.first else { return }
+            self.mapKit.addOverlay(route.polyline, level: .aboveRoads)
         }
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        let render = MKPolylineRenderer(overlay: overlay)
-        render.strokeColor = .blue
-        render.lineWidth = 4
+        var render = MKPolylineRenderer(overlay: overlay)
+        if let mapPolyline = overlay as? MKPolyline {
+            render = MKPolylineRenderer(polyline: mapPolyline)
+            render.strokeColor = .blue
+            render.lineWidth = 4.0
+        }
         return render
     }
 }
+
+

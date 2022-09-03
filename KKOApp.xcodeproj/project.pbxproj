@@ -61,6 +61,11 @@
 		539D736028C01EBA0034BA05 /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D735E28C01EBA0034BA05 /* PasswordVC.swift */; };
 		539D736128C01EBA0034BA05 /* Password.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539D735F28C01EBA0034BA05 /* Password.xib */; };
 		53BE673B28C268F60036D973 /* LoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BE673A28C268F60036D973 /* LoaderManager.swift */; };
+		53BE676228C2CFF40036D973 /* AnimationNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BE676128C2CFF40036D973 /* AnimationNews.storyboard */; };
+		53BE676428C2D0060036D973 /* AnimationNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BE676328C2D0060036D973 /* AnimationNewsVC.swift */; };
+		53BE676E28C2E6860036D973 /* MapNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BE676D28C2E6860036D973 /* MapNews.storyboard */; };
+		53BE677028C2E72D0036D973 /* MapNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BE676F28C2E72D0036D973 /* MapNewsVC.swift */; };
+		53BE677228C2F3050036D973 /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53BE677128C2F3040036D973 /* animation.gif */; };
 		53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678028B721E9000A758C /* PreferenceItem.swift */; };
 		53C8678328B72249000A758C /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53C8678228B72249000A758C /* Preferences.plist */; };
 		53C8678528B7230F000A758C /* PreferenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8678428B7230F000A758C /* PreferenceStorage.swift */; };
@@ -161,6 +166,11 @@
 		539D735E28C01EBA0034BA05 /* PasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordVC.swift; sourceTree = "<group>"; };
 		539D735F28C01EBA0034BA05 /* Password.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Password.xib; sourceTree = "<group>"; };
 		53BE673A28C268F60036D973 /* LoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderManager.swift; sourceTree = "<group>"; };
+		53BE676128C2CFF40036D973 /* AnimationNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimationNews.storyboard; sourceTree = "<group>"; };
+		53BE676328C2D0060036D973 /* AnimationNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationNewsVC.swift; sourceTree = "<group>"; };
+		53BE676D28C2E6860036D973 /* MapNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapNews.storyboard; sourceTree = "<group>"; };
+		53BE676F28C2E72D0036D973 /* MapNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNewsVC.swift; sourceTree = "<group>"; };
+		53BE677128C2F3040036D973 /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		53C8678028B721E9000A758C /* PreferenceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceItem.swift; sourceTree = "<group>"; };
 		53C8678228B72249000A758C /* Preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
 		53C8678428B7230F000A758C /* PreferenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceStorage.swift; sourceTree = "<group>"; };
@@ -333,6 +343,8 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				53BE676C28C2E6710036D973 /* MapNews */,
+				53BE676028C2CFDB0036D973 /* AnimationNews */,
 				534DA9A128AFD68600626AA4 /* LaunchScreen.storyboard */,
 				539D735D28C01EBA0034BA05 /* Password */,
 				532EF33928BC4AAF00229A65 /* Icon */,
@@ -484,6 +496,25 @@
 				539D735F28C01EBA0034BA05 /* Password.xib */,
 			);
 			path = Password;
+			sourceTree = "<group>";
+		};
+		53BE676028C2CFDB0036D973 /* AnimationNews */ = {
+			isa = PBXGroup;
+			children = (
+				53BE677128C2F3040036D973 /* animation.gif */,
+				53BE676128C2CFF40036D973 /* AnimationNews.storyboard */,
+				53BE676328C2D0060036D973 /* AnimationNewsVC.swift */,
+			);
+			path = AnimationNews;
+			sourceTree = "<group>";
+		};
+		53BE676C28C2E6710036D973 /* MapNews */ = {
+			isa = PBXGroup;
+			children = (
+				53BE676D28C2E6860036D973 /* MapNews.storyboard */,
+				53BE676F28C2E72D0036D973 /* MapNewsVC.swift */,
+			);
+			path = MapNews;
 			sourceTree = "<group>";
 		};
 		53C8677F28B721BF000A758C /* Preference */ = {
@@ -819,10 +850,13 @@
 				53E8F17A28B3D8440011D63F /* NewsTB.storyboard in Resources */,
 				5394D35428BEF12200EFE968 /* GoogleService-Info.plist in Resources */,
 				0B0F785028B58B6D005D6638 /* News.plist in Resources */,
+				53BE676228C2CFF40036D973 /* AnimationNews.storyboard in Resources */,
+				53BE676E28C2E6860036D973 /* MapNews.storyboard in Resources */,
 				53E8F1BF28B4294B0011D63F /* coffee.json in Resources */,
 				539D736128C01EBA0034BA05 /* Password.xib in Resources */,
 				53E8F1BB28B4294B0011D63F /* ok.json in Resources */,
 				5395341928B838B500B76054 /* CardTVCell.xib in Resources */,
+				53BE677228C2F3050036D973 /* animation.gif in Resources */,
 				532EF32B28BC419500229A65 /* blueberry.png in Resources */,
 				539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */,
 				53E8F1BC28B4294B0011D63F /* buysomecoffee.json in Resources */,
@@ -925,9 +959,11 @@
 				53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */,
 				5395342928B8508900B76054 /* UnsplashNetworkManager.swift in Sources */,
 				53E8F19728B3F4830011D63F /* FollowUsStorage.swift in Sources */,
+				53BE677028C2E72D0036D973 /* MapNewsVC.swift in Sources */,
 				5395342428B8453200B76054 /* UIColor.swift in Sources */,
 				53E8F18E28B3E8F70011D63F /* NewsStorage.swift in Sources */,
 				534DA99728AFD68400626AA4 /* AppDelegate.swift in Sources */,
+				53BE676428C2D0060036D973 /* AnimationNewsVC.swift in Sources */,
 				53D091C128C03AB4006A0090 /* AddressTVCell.swift in Sources */,
 				5395343628B8C13300B76054 /* TopImage.swift in Sources */,
 				53E8F1AA28B41CF90011D63F /* ShopTableVC.swift in Sources */,
