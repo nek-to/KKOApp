@@ -100,6 +100,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5pf-Jm-n8J" appends="YES" id="n2U-4B-kei"/>
+                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSf-1V-raS">
                                 <rect key="frame" x="308" y="69" width="96" height="37"/>
@@ -163,16 +166,14 @@
                         <outlet property="emailTextField" destination="IWv-bo-ofN" id="rip-0v-fhw"/>
                         <outlet property="logInButton" destination="y7Z-EX-jOH" id="uSP-WV-V5f"/>
                         <outlet property="loginFieldsBottomConstraint" destination="BUG-OK-kNx" id="BVn-LP-TmO"/>
-                        <outlet property="passwordRestoreLabel" destination="wRz-gG-KFZ" id="plR-zg-A73"/>
                         <outlet property="passwordTextField" destination="fyl-Fd-ei6" id="dP4-wg-AHk"/>
                         <outlet property="warningLabel" destination="PhY-yr-Vcj" id="xcD-eF-iN4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cBJ-Aq-rm7" userLabel="Restore password">
+                <tapGestureRecognizer id="5pf-Jm-n8J" userLabel="Restore password">
                     <connections>
-                        <action selector="restorePassword:" destination="BYZ-38-t0r" id="6ox-Ua-0UW"/>
-                        <outlet property="delegate" destination="wRz-gG-KFZ" id="FCV-B6-Xh2"/>
+                        <action selector="restorePassword:" destination="BYZ-38-t0r" id="qSh-Kw-O7j"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

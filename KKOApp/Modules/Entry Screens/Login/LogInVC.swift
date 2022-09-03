@@ -57,6 +57,9 @@ class LogInVC: UIViewController {
         if emailTextField.hasText && passwordTextField.hasText {
             warningLabel.isHidden = true
             checkerIfFieldEmpty = false
+        } else {
+            warningLabel.isHidden = false
+            hideWarningLabel()
         }
     }
     
@@ -100,7 +103,8 @@ class LogInVC: UIViewController {
     }
     
     private func restorePasswordAlert() {
-        let alert = UIAlertController(title: "Restore password", message: "Please enter your email", preferredStyle: .actionSheet)
+        print("LOG: ")
+        let alert = UIAlertController(title: "Restore password", message: "Please enter your email", preferredStyle: .alert)
         alert.addTextField() { text in
             text.placeholder = "Enter email"
         }

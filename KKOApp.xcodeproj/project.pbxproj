@@ -343,18 +343,18 @@
 		534DA9AB28AFDC3D00626AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				53BE676C28C2E6710036D973 /* MapNews */,
 				53BE676028C2CFDB0036D973 /* AnimationNews */,
-				534DA9A128AFD68600626AA4 /* LaunchScreen.storyboard */,
-				539D735D28C01EBA0034BA05 /* Password */,
-				532EF33928BC4AAF00229A65 /* Icon */,
-				53E8F19428B3F4380011D63F /* FollowUs */,
-				533E11F228B939E600CF5499 /* Purcase */,
-				5395341028B82C1F00B76054 /* Payment */,
-				5395340028B7F71D00B76054 /* MapLocation */,
 				0B07FFE628B5A2C1001701BB /* BuyCoffee */,
-				53E8F17128B3D61C0011D63F /* TabBar Screens */,
 				534DA9B128AFDF2100626AA4 /* Entry Screens */,
+				53E8F19428B3F4380011D63F /* FollowUs */,
+				532EF33928BC4AAF00229A65 /* Icon */,
+				534DA9A128AFD68600626AA4 /* LaunchScreen.storyboard */,
+				5395340028B7F71D00B76054 /* MapLocation */,
+				53BE676C28C2E6710036D973 /* MapNews */,
+				539D735D28C01EBA0034BA05 /* Password */,
+				5395341028B82C1F00B76054 /* Payment */,
+				533E11F228B939E600CF5499 /* Purcase */,
+				53E8F17128B3D61C0011D63F /* TabBar Screens */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
