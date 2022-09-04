@@ -22,7 +22,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIW-EE-uyg">
                                 <rect key="frame" x="20.5" y="407" width="373" height="305"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4iA-y8-teY">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4iA-y8-teY">
                                         <rect key="frame" x="9.5" y="5" width="354" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -37,7 +37,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1iC-dW-J5x">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+375" placeholder="Phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1iC-dW-J5x">
                                         <rect key="frame" x="9.5" y="70" width="354" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -52,7 +52,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUm-GL-2RS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUm-GL-2RS">
                                         <rect key="frame" x="9.5" y="200" width="354" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -67,7 +67,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Repeate password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7j-hi-Gcd">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeate password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7j-hi-Gcd">
                                         <rect key="frame" x="9.5" y="265" width="354" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -82,7 +82,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ao5-1Y-lvo">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ao5-1Y-lvo">
                                         <rect key="frame" x="9.5" y="135" width="354" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -175,7 +175,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEj-kG-e17">
-                                <rect key="frame" x="95" y="242" width="224" height="75"/>
+                                <rect key="frame" x="95" y="202" width="224" height="75"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -212,7 +212,7 @@
                             <constraint firstItem="zEj-kG-e17" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KBA-QX-6gK"/>
                             <constraint firstItem="WIW-EE-uyg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LsE-Q1-kCg"/>
                             <constraint firstItem="fCg-AZ-9kR" firstAttribute="top" secondItem="WIW-EE-uyg" secondAttribute="bottom" constant="15" id="Nag-NJ-obl"/>
-                            <constraint firstItem="WIW-EE-uyg" firstAttribute="top" secondItem="zEj-kG-e17" secondAttribute="bottom" constant="90" id="UOH-eY-AU8"/>
+                            <constraint firstItem="WIW-EE-uyg" firstAttribute="top" secondItem="zEj-kG-e17" secondAttribute="bottom" constant="130" id="UOH-eY-AU8"/>
                             <constraint firstItem="5cd-tN-fRa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Y6b-HN-aBD"/>
                             <constraint firstItem="5cd-tN-fRa" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="eio-UF-thp"/>
                             <constraint firstItem="rmP-ua-DmR" firstAttribute="width" secondItem="5cd-tN-fRa" secondAttribute="width" multiplier="0.5" id="ggx-zz-g8x"/>
@@ -240,11 +240,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mail.fill" catalog="system" width="32" height="32"/>
-        <image name="pencil.circle" catalog="system" width="32" height="32"/>
-        <image name="pencil.circle.fill" catalog="system" width="32" height="32"/>
-        <image name="person.fill" catalog="system" width="32" height="32"/>
-        <image name="phone.fill" catalog="system" width="32" height="32"/>
+        <image name="mail.fill" catalog="system" width="128" height="93"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="singup" width="1441" height="1529"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

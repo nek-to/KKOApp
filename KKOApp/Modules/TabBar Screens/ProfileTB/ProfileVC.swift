@@ -16,6 +16,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var preferenceTableView: UITableView!
+    @IBOutlet weak var protectionSwitch: UISwitch!
+    @IBOutlet weak var protectionStateImageView: UIImageView!
     
     private var preferences = PreferenceStorage.shared
     private var imageUrl = ""
@@ -28,6 +30,7 @@ class ProfileVC: UIViewController {
         preferenceTableView.delegate = self
         preferenceTableView.dataSource = self
         imagePicker.delegate = self
+        initProtectionImageState(protectionSwitch.isOn)
         config()
     }
 
@@ -47,11 +50,18 @@ class ProfileVC: UIViewController {
         setupTopImage()
         // user setup
         userSetup()
+        // protection switch
+        if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            if let switcher = storage.object(ofType: Profile.self, forPrimaryKey: userEmail) {
+                protectionSwitch.isOn = switcher.protectionState
+            }
+        }
         // setup address
-        if UserSettings.coffeeshopAddress == nil {
+        guard let coffeeShop = UserSettings.coffeeshopAddress else { return }
+        if coffeeShop.isEmpty {
             address.text = "ulica Leonida Levina, 2"
         } else {
-            address.text = UserSettings.coffeeshopAddress
+            address.text = coffeeShop
         }
     }
     
@@ -145,6 +155,24 @@ class ProfileVC: UIViewController {
     
     @IBAction private func reloadFonImage() {
         loadFonImage()
+    }
+    
+    @IBAction private func protectionSwitch(_ sender: UISwitch) {
+        if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            let profile = storage.object(ofType: Profile.self, forPrimaryKey: userEmail)
+            try! storage.write {
+                profile?.protectionState = protectionSwitch.isOn
+            }
+        }
+        initProtectionImageState(protectionSwitch.isOn)
+    }
+    
+    private func initProtectionImageState(_ state: Bool) {
+        if state == true {
+            protectionStateImageView.image = UIImage(named: "protect")
+        } else {
+            protectionStateImageView.image = UIImage(named: "delete")
+        }
     }
     
     private func loadFonImage() {

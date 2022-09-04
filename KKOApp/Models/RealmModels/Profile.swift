@@ -12,6 +12,7 @@ class Profile: Object {
     @objc dynamic var email: String?
     @objc dynamic var phone: String?
     @objc dynamic var image: Data?
+    @objc dynamic var protectionState = false
     
     override class func primaryKey() -> String? {
         return "email"

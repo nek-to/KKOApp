@@ -44,6 +44,7 @@ class SignUpVC: UIViewController {
         nameTextField.regularStyle()
         // phone text field
         phoneTextField.regularStyle()
+        phoneTextField.delegate = self
         // email text field
         emailTextField.regularStyle()
         // passwprd text field
@@ -63,8 +64,11 @@ class SignUpVC: UIViewController {
     
     private func checkIfDoublePasswordCorrect() {
         guard passwordTextField.hasText && repeatePasswordTextField.hasText else { return }
-        if passwordTextField.text == repeatePasswordTextField.text {
+        if passwordTextField.text!.contains(repeatePasswordTextField.text!) {
             passwordsIsCorrect = true
+        } else {
+            warningLabel.isHidden = false
+            hideWarningLabel()
         }
     }
     
@@ -109,6 +113,9 @@ class SignUpVC: UIViewController {
             self.toMainTabBar()
         })
         self.present(alert, animated: true)
+        DispatchQueue.main.async {
+            alert.dismiss(animated: true)
+        }
     }
     
     private func toMainTabBar() {
@@ -121,6 +128,9 @@ class SignUpVC: UIViewController {
         let alert = UIAlertController(title: "Sign up is faild", message: "Something goes wrong. Please check your data and try again", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .default))
         self.present(alert, animated: true)
+        DispatchQueue.main.async {
+            alert.dismiss(animated: true)
+        }
     }
     
     private func saveUserInFirebase() {
@@ -188,10 +198,19 @@ class SignUpVC: UIViewController {
     @IBAction private func signUp(_ sender: Any) {
         checkIfAllFieldsAreFill()
         checkIfDoublePasswordCorrect()
-        hideWarningLabel()
         if fieldsAreFill && passwordsIsCorrect {
             saveUserInDatabase()
             saveUserInFirebase()
         }
+    }
+}
+
+extension SignUpVC: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        if text.count < 4 {
+            return text ~= "+375"
+        }
+        return true
     }
 }

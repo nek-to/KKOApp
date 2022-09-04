@@ -109,25 +109,42 @@
                                     <action selector="reloadFonImage" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FNO-Ic-EWq"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-xh-yuj">
+                                <rect key="frame" x="325" y="333.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="protectionSwitch:" destination="Y6W-OH-hqX" eventType="valueChanged" id="vua-dw-CSW"/>
+                                </connections>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EGL-yl-sks">
+                                <rect key="frame" x="329" y="374.5" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="1Lu-va-trK"/>
+                                    <constraint firstAttribute="width" constant="45" id="uzf-0E-Z3P"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="top" secondItem="EC2-X6-PzP" secondAttribute="bottom" constant="5" id="3uB-1V-nX0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mZ3-xh-yuj" secondAttribute="trailing" constant="40" id="CXc-hG-a5D"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Dpq-Qa-znl"/>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Dyp-hf-5lH"/>
                             <constraint firstItem="ClD-Jk-ZGI" firstAttribute="top" secondItem="z9t-sO-Ytv" secondAttribute="bottom" constant="90" id="Fuc-ID-Oab"/>
+                            <constraint firstItem="mZ3-xh-yuj" firstAttribute="top" secondItem="RD8-2h-VVT" secondAttribute="bottom" constant="20" id="IVU-eW-deY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ppy-lS-Rhn" secondAttribute="bottom" constant="10" id="OVD-T4-nyR"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.35" id="T3a-3m-kjf"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UDc-t7-VcG"/>
                             <constraint firstItem="EC2-X6-PzP" firstAttribute="top" secondItem="ClD-Jk-ZGI" secondAttribute="bottom" constant="5" id="VeS-K0-wpl"/>
                             <constraint firstItem="EC2-X6-PzP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Yo4-1m-z24"/>
+                            <constraint firstItem="EGL-yl-sks" firstAttribute="top" secondItem="mZ3-xh-yuj" secondAttribute="bottom" constant="10" id="bIf-X0-UW8"/>
                             <constraint firstItem="Ppy-lS-Rhn" firstAttribute="top" secondItem="E5S-yW-7Tt" secondAttribute="bottom" constant="5" id="bX3-FA-qB3"/>
                             <constraint firstItem="Ppy-lS-Rhn" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="eNi-o1-uFg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="z9t-sO-Ytv" secondAttribute="trailing" constant="20" id="eg4-A7-P2Q"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="ehW-oj-rhL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EC2-X6-PzP" secondAttribute="trailing" constant="30" id="erv-tZ-8lA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EGL-yl-sks" secondAttribute="trailing" constant="40" id="fXg-pX-kPX"/>
                             <constraint firstItem="EC2-X6-PzP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="lGv-dc-Epe"/>
                             <constraint firstItem="ClD-Jk-ZGI" firstAttribute="top" secondItem="Nwh-9p-Lbt" secondAttribute="bottom" constant="5" id="mHj-AT-Qnv"/>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nUh-Bs-1uy"/>
@@ -145,11 +162,13 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="address" destination="E5S-yW-7Tt" id="CeR-j9-zmQ"/>
+                        <outlet property="address" destination="E5S-yW-7Tt" id="K5M-Nn-5hD"/>
                         <outlet property="name" destination="ClD-Jk-ZGI" id="gIG-ak-HrV"/>
                         <outlet property="phone" destination="EC2-X6-PzP" id="n81-Rp-2FB"/>
                         <outlet property="preferenceTableView" destination="Ppy-lS-Rhn" id="EhQ-R9-DcI"/>
                         <outlet property="profilePictureImageView" destination="Nwh-9p-Lbt" id="6DM-rM-dgY"/>
+                        <outlet property="protectionStateImageView" destination="EGL-yl-sks" id="OcH-mm-fGy"/>
+                        <outlet property="protectionSwitch" destination="mZ3-xh-yuj" id="T7W-8b-ELt"/>
                         <outlet property="topImageView" destination="RD8-2h-VVT" id="5wX-NE-A0I"/>
                     </connections>
                 </viewController>

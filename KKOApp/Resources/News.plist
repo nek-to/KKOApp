@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>id</key>
+		<integer>0</integer>
 		<key>title</key>
 		<string>Follow us</string>
 		<key>description</key>
@@ -13,6 +15,8 @@
 		<string>news1</string>
 	</dict>
 	<dict>
+		<key>id</key>
+		<integer>1</integer>
 		<key>title</key>
 		<string>Add animation to app</string>
 		<key>description</key>
@@ -23,6 +27,8 @@
 		<string>news2</string>
 	</dict>
 	<dict>
+		<key>id</key>
+		<integer>2</integer>
 		<key>title</key>
 		<string>Ptotection</string>
 		<key>description</key>
@@ -33,6 +39,8 @@
 		<string>news3</string>
 	</dict>
 	<dict>
+		<key>id</key>
+		<integer>3</integer>
 		<key>title</key>
 		<string>We are on Map!</string>
 		<key>description</key>
