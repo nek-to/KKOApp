@@ -24,7 +24,8 @@ class NewsStorage {
                 let news: NewsItem = .init(title: $0["title"] as! String,
                                            description: $0["description"] as! String,
                                            date: $0["date"] as! String,
-                                           image: $0["image"] as! String)
+                                           image: $0["image"] as! String,
+                                           id: $0["id"] as! UInt8)
                 elements.append(news)
             }
         }

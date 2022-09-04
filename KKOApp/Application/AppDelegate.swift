@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func realmSetup() {
-        let config = Realm.Configuration(schemaVersion: 18)
+        let config = Realm.Configuration(schemaVersion: 19)
         Realm.Configuration.defaultConfiguration = config
         let storage = try! Realm()
         let counter = storage.objects(Coffee.self).count

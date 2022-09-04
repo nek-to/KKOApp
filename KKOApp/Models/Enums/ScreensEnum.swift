@@ -26,4 +26,5 @@ enum Screens: String {
     case address = "AddressVC"
     case animation = "AnimationNewsVC"
     case mapNews = "MapNewsVC"
+    case protection = "ProtectionVC"
 }

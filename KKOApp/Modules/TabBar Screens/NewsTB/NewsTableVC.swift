@@ -7,6 +7,13 @@
 
 import UIKit
 
+enum Storyboards: String {
+    case follow = "FollowUs"
+    case animation = "AnimationNews"
+    case protection = "Protection"
+    case map = "MapNews"
+}
+
 class NewsTableVC: UITableViewController {
     @IBOutlet weak var foneImageView: UIImageView!
     
@@ -28,24 +35,6 @@ class NewsTableVC: UITableViewController {
         tableView.register(UINib(nibName: "NewsTVCell", bundle: nil), forCellReuseIdentifier: "newsCell")
     }
     
-    private func toFollowUsScreen() {
-        let storyboard = UIStoryboard(name: "FollowUs", bundle: nil)
-        let followUsScreen = storyboard.instantiateViewController(withIdentifier: Screens.followUs.rawValue)
-        present(followUsScreen, animated: true)
-    }
-    
-    private func toAnimationScreen() {
-        let storyboard = UIStoryboard(name: "AnimationNews", bundle: nil)
-        let followUsScreen = storyboard.instantiateViewController(withIdentifier: Screens.animation.rawValue)
-        present(followUsScreen, animated: true)
-    }
-    
-    private func toMapNewsScreen() {
-        let storyboard = UIStoryboard(name: "MapNews", bundle: nil)
-        let followUsScreen = storyboard.instantiateViewController(withIdentifier: Screens.mapNews.rawValue)
-        present(followUsScreen, animated: true)
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return news.elements.count
     }
@@ -63,18 +52,21 @@ class NewsTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = news.elements[indexPath.row].title
-//        switch cell.lowercased() {
-        switch indexPath.row {
+        let cell = news.elements[indexPath.row]
+        var screen = UIViewController()
+        switch cell.id {
         case 0:
-            toFollowUsScreen()
+            screen = UIStoryboard(name: Storyboards.follow.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.followUs.rawValue)
         case 1:
-            toAnimationScreen()
+            screen = UIStoryboard(name: Storyboards.animation.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.animation.rawValue)
+        case 2:
+            screen = UIStoryboard(name: Storyboards.protection.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.protection.rawValue)
         case 3:
-            toMapNewsScreen()
+            screen = UIStoryboard(name: Storyboards.map.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.mapNews.rawValue)
         default:
             break
         }
+        present(screen, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

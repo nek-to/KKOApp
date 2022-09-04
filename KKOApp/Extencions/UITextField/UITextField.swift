@@ -30,7 +30,6 @@ extension UITextField {
     
     func phoneValidation(_ phone: String) {
         let phoneRegEx = "^[+375]{4}+[0-9]{9}$"
-        
         let phonePred = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
         if phonePred.evaluate(with: phone) != true {
             self.layer.borderColor = UIColor.red.cgColor

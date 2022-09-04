@@ -159,6 +159,8 @@ class LogInVC: UIViewController {
         hideWarningLabel()
         if checkerIfFieldEmpty == false {
             authantificationInFirebase()
+        } else {
+            toSignUp()
         }
     }
     
