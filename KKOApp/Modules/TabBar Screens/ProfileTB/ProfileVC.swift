@@ -30,7 +30,6 @@ class ProfileVC: UIViewController {
         preferenceTableView.delegate = self
         preferenceTableView.dataSource = self
         imagePicker.delegate = self
-        initProtectionImageState(protectionSwitch.isOn)
         config()
     }
 
@@ -54,6 +53,7 @@ class ProfileVC: UIViewController {
         if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
             if let switcher = storage.object(ofType: Profile.self, forPrimaryKey: userEmail) {
                 protectionSwitch.isOn = switcher.protectionState
+                initProtectionImageState(switcher.protectionState)
             }
         }
         // setup address
