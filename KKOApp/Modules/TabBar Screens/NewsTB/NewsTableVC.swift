@@ -53,19 +53,27 @@ class NewsTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = news.elements[indexPath.row]
-        var screen = UIViewController()
+        
+        var storyboardType: Storyboards = .protection
+        var screenType: Screens = .protection
+        
         switch cell.id {
         case 0:
-            screen = UIStoryboard(name: Storyboards.follow.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.followUs.rawValue)
+            storyboardType = .follow
+            screenType = .followUs
         case 1:
-            screen = UIStoryboard(name: Storyboards.animation.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.animation.rawValue)
+            storyboardType = .animation
+            screenType = .animation
         case 2:
-            screen = UIStoryboard(name: Storyboards.protection.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.protection.rawValue)
+            storyboardType = .protection
+            screenType = .protection
         case 3:
-            screen = UIStoryboard(name: Storyboards.map.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.mapNews.rawValue)
+            storyboardType = .map
+            screenType = .mapNews
         default:
             break
         }
+        let screen = UIStoryboard(name: storyboardType.rawValue, bundle: nil).instantiateViewController(withIdentifier: screenType.rawValue)
         present(screen, animated: true)
     }
     

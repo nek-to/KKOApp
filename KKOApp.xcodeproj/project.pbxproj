@@ -37,6 +37,7 @@
 		534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534DA9B628AFEF5700626AA4 /* Signup.storyboard */; };
 		534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */; };
 		534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */; };
+		538331B428C777B50011D2CD /* WeatherNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538331B328C777B50011D2CD /* WeatherNetworkManager.swift */; };
 		5394D35428BEF12200EFE968 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5394D35328BEF12200EFE968 /* GoogleService-Info.plist */; };
 		5395340228B7F78A00B76054 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395340128B7F78A00B76054 /* Map.storyboard */; };
 		5395340428B7F7A000B76054 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340328B7F7A000B76054 /* MapVC.swift */; };
@@ -146,6 +147,7 @@
 		534DA9B628AFEF5700626AA4 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensEnum.swift; sourceTree = "<group>"; };
+		538331B328C777B50011D2CD /* WeatherNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkManager.swift; sourceTree = "<group>"; };
 		5394D35328BEF12200EFE968 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5395340128B7F78A00B76054 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		5395340328B7F7A000B76054 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				5395342828B8508900B76054 /* UnsplashNetworkManager.swift */,
+				538331B328C777B50011D2CD /* WeatherNetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -985,6 +988,7 @@
 				539D736028C01EBA0034BA05 /* PasswordVC.swift in Sources */,
 				53E8F19228B3EC550011D63F /* NewsTVCell.swift in Sources */,
 				53E8F17E28B3D8F00011D63F /* ProfileVC.swift in Sources */,
+				538331B428C777B50011D2CD /* WeatherNetworkManager.swift in Sources */,
 				53E8F1AE28B426E20011D63F /* CouponStorage.swift in Sources */,
 				53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */,
 				5395342928B8508900B76054 /* UnsplashNetworkManager.swift in Sources */,
