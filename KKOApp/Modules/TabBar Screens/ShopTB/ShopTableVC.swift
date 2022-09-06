@@ -51,7 +51,6 @@ class ShopTableVC: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -80,11 +79,12 @@ class ShopTableVC: UITableViewController {
         toBuyCoffee.price = coffee.price
         toBuyCoffee.imageName = coffee.imageName
         toBuyCoffee.time = coffee.time
+        navigationController?.tabBarController?.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(toBuyCoffee as! UIViewController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 160
     }
     
     private func returnConfigCell(for indexPath: IndexPath) -> UITableViewCell {

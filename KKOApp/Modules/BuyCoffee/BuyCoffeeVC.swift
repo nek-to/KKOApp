@@ -50,11 +50,11 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         self.view.addGestureRecognizer(swipeRight)
     }
-    
+
+
     private func configure(title: String, descript: String, price: Int, image: String) {
         titleLabel.text = title
         descriptionLabel.text = descript
