@@ -122,12 +122,31 @@
                                     <constraint firstAttribute="width" constant="45" id="uzf-0E-Z3P"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00y-cz-Ahg">
+                                <rect key="frame" x="40" y="333.5" width="80" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="HcF-dZ-30Y"/>
+                                    <constraint firstAttribute="width" constant="80" id="cXO-lz-fWB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hKG-xt-v20">
+                                <rect key="frame" x="40" y="374.5" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9Pb-Dr-STL"/>
+                                    <constraint firstAttribute="width" constant="45" id="TJg-0q-Psh"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="top" secondItem="EC2-X6-PzP" secondAttribute="bottom" constant="5" id="3uB-1V-nX0"/>
+                            <constraint firstItem="hKG-xt-v20" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="5kz-oi-MbK"/>
+                            <constraint firstItem="hKG-xt-v20" firstAttribute="top" secondItem="EGL-yl-sks" secondAttribute="top" id="A2W-Ld-dT2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mZ3-xh-yuj" secondAttribute="trailing" constant="40" id="CXc-hG-a5D"/>
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Dpq-Qa-znl"/>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Dyp-hf-5lH"/>
@@ -145,11 +164,13 @@
                             <constraint firstItem="RD8-2h-VVT" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="ehW-oj-rhL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EC2-X6-PzP" secondAttribute="trailing" constant="30" id="erv-tZ-8lA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EGL-yl-sks" secondAttribute="trailing" constant="40" id="fXg-pX-kPX"/>
+                            <constraint firstItem="00y-cz-Ahg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="jEJ-Fk-3ty"/>
                             <constraint firstItem="EC2-X6-PzP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="lGv-dc-Epe"/>
                             <constraint firstItem="ClD-Jk-ZGI" firstAttribute="top" secondItem="Nwh-9p-Lbt" secondAttribute="bottom" constant="5" id="mHj-AT-Qnv"/>
                             <constraint firstItem="E5S-yW-7Tt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nUh-Bs-1uy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ClD-Jk-ZGI" secondAttribute="trailing" constant="30" id="nyO-AM-c2s"/>
                             <constraint firstItem="ClD-Jk-ZGI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="qzN-am-5GE"/>
+                            <constraint firstItem="00y-cz-Ahg" firstAttribute="top" secondItem="RD8-2h-VVT" secondAttribute="bottom" constant="20" id="r0x-YP-esp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="E5S-yW-7Tt" secondAttribute="trailing" constant="30" id="roe-xE-ugs"/>
                             <constraint firstItem="Ppy-lS-Rhn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tLh-OF-Ul3"/>
                             <constraint firstItem="Nwh-9p-Lbt" firstAttribute="top" secondItem="RD8-2h-VVT" secondAttribute="bottom" constant="-60" id="umz-85-R0r"/>
@@ -170,6 +191,8 @@
                         <outlet property="protectionStateImageView" destination="EGL-yl-sks" id="OcH-mm-fGy"/>
                         <outlet property="protectionSwitch" destination="mZ3-xh-yuj" id="T7W-8b-ELt"/>
                         <outlet property="topImageView" destination="RD8-2h-VVT" id="5wX-NE-A0I"/>
+                        <outlet property="weatherIconImage" destination="hKG-xt-v20" id="y31-qS-S0M"/>
+                        <outlet property="weatherTemperatureLabel" destination="00y-cz-Ahg" id="V83-Ki-vxC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -4,7 +4,6 @@
 //
 //  Created by VironIT on 26.08.22.
 //
-import RealmSwift
 import UIKit
 
 final class UnsplashNetworkManager {
@@ -16,7 +15,7 @@ final class UnsplashNetworkManager {
             guard let data = data, error == nil else {
                 return
             }
-            let resData = try? JSONDecoder().decode(Root.self, from: data)
+            let resData = try? JSONDecoder().decode(UnsplashResponse.self, from: data)
             if let resData = resData {
                 DispatchQueue.main.async {
                 complition(resData.urls.small)
@@ -27,7 +26,7 @@ final class UnsplashNetworkManager {
     }
 }
 
-struct Root: Codable {
+struct UnsplashResponse: Codable {
     var urls: URLS
 }
 

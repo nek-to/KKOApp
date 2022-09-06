@@ -18,6 +18,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var preferenceTableView: UITableView!
     @IBOutlet weak var protectionSwitch: UISwitch!
     @IBOutlet weak var protectionStateImageView: UIImageView!
+    @IBOutlet weak var weatherTemperatureLabel: UILabel!
+    @IBOutlet weak var weatherIconImage: UIImageView!
     
     private var preferences = PreferenceStorage.shared
     private var imageUrl = ""
@@ -49,6 +51,8 @@ class ProfileVC: UIViewController {
         setupTopImage()
         // user setup
         userSetup()
+        // weather
+        getWeatherFromNetwork()
         // protection switch
         if let userEmail = FirebaseAuth.Auth.auth().currentUser?.email {
             if let switcher = storage.object(ofType: Profile.self, forPrimaryKey: userEmail) {
@@ -139,6 +143,17 @@ class ProfileVC: UIViewController {
         }
     }
     
+    private func getWeatherFromNetwork() {
+        WeatherNetworkManager.getWeather { [weak self] weather in
+            if let weather = weather {
+                let temp = String(weather.data.first?.temp ?? 0)
+                self?.weatherTemperatureLabel.text = "\(temp)°C"
+                guard let image = weather.data.first?.weather.icon else { return }
+                self?.weatherIconImage.image = UIImage(named: image)
+            }
+        }
+    }
+    
     @objc private func reloadAddress() {
         address.text = UserSettings.coffeeshopAddress
     }
@@ -168,20 +183,17 @@ class ProfileVC: UIViewController {
     }
     
     private func initProtectionImageState(_ state: Bool) {
-        if state == true {
-            protectionStateImageView.image = UIImage(named: "protect")
-        } else {
-            protectionStateImageView.image = UIImage(named: "delete")
-        }
+        let imageName = state ? "protect" : "delete"
+        protectionStateImageView.image = UIImage(named: imageName)
     }
     
     private func loadFonImage() {
-        UnsplashNetworkManager.getImageFromStock { [unowned self] url in
+        UnsplashNetworkManager.getImageFromStock { [weak self] url in
             if let url = url {
-                self.imageUrl = url
-                self.saveTopImage(url: url)
-                if let data = try? Data(contentsOf: URL(string: url )!) {
-                    self.topImageView.image = UIImage(data: data)
+                self?.imageUrl = url
+                self?.saveTopImage(url: url)
+                if let data = try? Data(contentsOf: URL(string: url)!) {
+                    self?.topImageView.image = UIImage(data: data)
                 }
             }
         }
@@ -267,5 +279,3 @@ extension ProfileVC: UIImagePickerControllerDelegate {
 
 extension ProfileVC: UINavigationControllerDelegate {
 }
-
-

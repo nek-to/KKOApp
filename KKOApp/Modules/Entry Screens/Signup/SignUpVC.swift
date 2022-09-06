@@ -139,12 +139,12 @@ class SignUpVC: UIViewController {
             return
         }
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
-            guard let strongSelf = self else { return }
+            guard let self = self else { return }
             guard error == nil else {
-                return strongSelf.signUpFaildAlert()
+                return self.signUpFaildAlert()
             }
             Auth.auth().currentUser?.sendEmailVerification()
-            strongSelf.showSuccessAlert()
+            self.showSuccessAlert()
         }
     }
     
