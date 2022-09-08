@@ -48,11 +48,13 @@ PODS:
   - Realm/Headers (10.28.6)
   - RealmSwift (10.28.6):
     - Realm (= 10.28.6)
+  - SwiftLint (0.49.1)
 
 DEPENDENCIES:
   - FirebaseAuth
   - lottie-ios
   - RealmSwift
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -68,6 +70,7 @@ SPEC REPOS:
     - PromisesObjC
     - Realm
     - RealmSwift
+    - SwiftLint
 
 SPEC CHECKSUMS:
   FirebaseAuth: 741918f1fa62ed23246a509279f91d42d79a713f
@@ -82,7 +85,8 @@ SPEC CHECKSUMS:
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   Realm: 9b12f16a14446d7d46a9e36225d0a0332a6ec739
   RealmSwift: 5927726fce21005f43b1fb57c832297a22031bfc
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
 
-PODFILE CHECKSUM: fa8a2600ff75a1f89f09815225e48076d21b9e60
+PODFILE CHECKSUM: 5be1113573440c80ef694b182fa675741783aee0
 
 COCOAPODS: 1.11.3
