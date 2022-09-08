@@ -8,5 +8,5 @@ target 'KKOApp' do
   pod 'lottie-ios'
   pod 'RealmSwift'
   pod 'FirebaseAuth'
-
+  pod 'SwiftLint'
 end

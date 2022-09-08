@@ -80,10 +80,10 @@ class ProfileVC: UIViewController {
     }
     
     private func setupTopImage() {
-        guard let imageFromStore = storage.objects(TopImage.self).first?.image else { return }
-        guard let image = UIImage(data: try! Data(contentsOf: URL(string: imageFromStore)!)) else {
+        guard let imageFromStore = storage.objects(TopImage.self).first?.image, !imageFromStore.isEmpty else {
             return loadFonImage()
         }
+        let image = UIImage(data: try! Data(contentsOf: URL(string: imageFromStore)!))
         topImageView.image = image
     }
     
