@@ -61,12 +61,10 @@ class ProfileVC: UIViewController {
             }
         }
         // setup address
-        guard let coffeeShop = UserSettings.coffeeshopAddress else { return }
-        if coffeeShop.isEmpty {
-            address.text = "ulica Leonida Levina, 2"
-        } else {
-            address.text = coffeeShop
+        guard let coffeeShop = UserSettings.coffeeshopAddress, !coffeeShop.isEmpty else {
+            return address.text = "ulica Leonida Levina, 2"
         }
+        address.text = coffeeShop
     }
     
     private func userSetup() {
