@@ -19,7 +19,7 @@ class PreferenceStorage {
                 }
         
         if let array = arrayRoot {
-            let arrayList:[NSDictionary] = array as! [NSDictionary]
+            let arrayList: [NSDictionary] = array as! [NSDictionary]
             arrayList.forEach {
                 let preference: PreferenceItem = .init(title: $0["title"] as! String,
                                                    icon: $0["icon"] as! String)

@@ -136,7 +136,7 @@ class SignUpVC: UIViewController {
               let password = passwordTextField.text, !password.isEmpty else {
             return
         }
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { [weak self] _, error in
             guard let self = self else { return }
             guard error == nil else {
                 return self.signUpFaildAlert()

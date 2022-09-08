@@ -54,7 +54,7 @@ extension PurcaseVC: UITableViewDataSource {
     }
     
     private func saveBrewedCoffee(_ coffee: Purcase) {
-        try! storage.write{
+        try! storage.write {
             coffee.showed = true
         }
     }

@@ -16,7 +16,7 @@ extension UIImage {
 
         // Figure out what our orientation is, and use that to form the rectangle
         var newSize: CGSize
-        if(widthRatio > heightRatio) {
+        if widthRatio > heightRatio {
             newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
         } else {
             newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
@@ -24,26 +24,26 @@ extension UIImage {
 
         // This is the rect that we've calculated out and this is what is actually used below
         let rect = CGRect(origin: .zero, size: newSize)
-
+        
         // Actually do the resizing to the rect using the ImageContext stuff
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
         image.draw(in: rect)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-
+        
         return newImage
     }
 }
 
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
+private func < <T: Comparable>(lhs: T?, rhs: T?) -> Bool {
+    switch (lhs, rhs) {
+    case let (l?, r?):
+        return l < r
+    case (nil, _?):
+        return true
+    default:
+        return false
+    }
 }
 
 
@@ -59,8 +59,8 @@ extension UIImage {
         return UIImage.animatedImageWithSource(source)
     }
     
-    public class func gifImageWithURL(_ gifUrl:String) -> UIImage? {
-        guard let bundleURL:URL = URL(string: gifUrl)
+    public class func gifImageWithURL(_ gifUrl: String) -> UIImage? {
+        guard let bundleURL: URL = URL(string: gifUrl)
             else {
                 print("image named \"\(gifUrl)\" doesn't exist")
                 return nil
@@ -146,7 +146,7 @@ extension UIImage {
         }
     }
     
-    class func gcdForArray(_ array: Array<Int>) -> Int {
+    class func gcdForArray(_ array: [Int]) -> Int {
         if array.isEmpty {
             return 1
         }

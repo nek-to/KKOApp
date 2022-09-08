@@ -18,7 +18,7 @@ class LoaderManager {
         }
         
         if let array = arrayRoot {
-            let arrayList:[NSDictionary] = array as! [NSDictionary]
+            let arrayList: [NSDictionary] = array as! [NSDictionary]
             arrayList.forEach {
                 let coffee = Coffee()
                 coffee.name = $0["title"] as! String

@@ -19,7 +19,7 @@ class CoffeeshopStorage {
                 }
         
         if let array = arrayRoot {
-            let arrayList:[NSDictionary] = array as! [NSDictionary]
+            let arrayList: [NSDictionary] = array as! [NSDictionary]
             arrayList.forEach {
                 let coffeeshop: CoffeeshopItem = .init(address: $0["address"] as! String,
                                                    name: $0["name"] as! String,

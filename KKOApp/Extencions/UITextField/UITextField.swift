@@ -12,7 +12,7 @@ extension UITextField {
     func emailValidation(_ email: String) {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         if emailPred.evaluate(with: email) != true {
             self.layer.borderColor = UIColor.red.cgColor
         } else {

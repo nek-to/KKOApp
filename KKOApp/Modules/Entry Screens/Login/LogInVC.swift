@@ -9,7 +9,7 @@ import UIKit
 
 class LogInVC: UIViewController {
     
-    //MARK: IBOutlets
+    // MARK: IBOutlets
     @IBOutlet private weak var backgroundUmageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -88,7 +88,7 @@ class LogInVC: UIViewController {
               let password = passwordTextField.text, !password.isEmpty else {
             return
         }
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] _, error in
             guard let self = self else { return }
             guard error == nil else {
                 return self.toSignUp()
@@ -105,16 +105,16 @@ class LogInVC: UIViewController {
     private func restorePasswordAlert() {
         print("LOG: ")
         let alert = UIAlertController(title: "Restore password", message: "Please enter your email", preferredStyle: .alert)
-        alert.addTextField() { text in
+        alert.addTextField(configurationHandler: { text in
             text.placeholder = "Enter email"
-        }
+        })
         alert.addAction(UIAlertAction(title: "Enter", style: .default, handler: { _ in
             let email = alert.textFields?.first?.text
             if let email = email {
-                Auth.auth().fetchSignInMethods(forEmail: email){ (providers, error) in
+                Auth.auth().fetchSignInMethods(forEmail: email) {(_, error) in
                     if let error = error {
                         print(error.localizedDescription)
-                    } else  {
+                    } else {
                         Auth.auth().sendPasswordReset(withEmail: email)
                     }
                 }

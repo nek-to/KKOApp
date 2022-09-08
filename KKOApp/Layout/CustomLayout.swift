@@ -35,15 +35,15 @@ class CustomLayout: UICollectionViewLayout {
     }
     
     override func prepare() {
-      // 1
-      guard
-        cache.isEmpty,
-        let collectionView = collectionView
+        // 1
+        guard
+            cache.isEmpty,
+            let collectionView = collectionView
         else {
-          return
-      }
-      // 2
-      let columnWidth = contentWidth / CGFloat(numberOfColumns)
+            return
+        }
+        // 2
+        let columnWidth = contentWidth / CGFloat(numberOfColumns)
         var xOffset: [CGFloat] = []
         for column in 0..<numberOfColumns {
             xOffset.append(CGFloat(column) * columnWidth)
@@ -80,39 +80,35 @@ class CustomLayout: UICollectionViewLayout {
             if numberOfColumns > 1 {
                 isColumnChanged = false
                 for index in (1..<numberOfColumns).reversed() {
-                  if yOffset[index] >= yOffset[index - 1] {
-                      column = index - 1
-                      isColumnChanged = true
-                  }
-                  else {
-                      break
-                  }
-              }
-              if isColumnChanged {
-                  continue
-              }
-          }
-          
-        column = column < (numberOfColumns - 1) ? (column + 1) : 0
-      }
+                    if yOffset[index] >= yOffset[index - 1] {
+                        column = index - 1
+                        isColumnChanged = true
+                    } else {
+                        break
+                    }
+                }
+                if isColumnChanged {
+                    continue
+                }
+            }
+            
+            column = column < (numberOfColumns - 1) ? (column + 1) : 0
+        }
     }
     
     override func layoutAttributesForElements(in rect: CGRect)
-        -> [UICollectionViewLayoutAttributes]? {
-      var visibleLayoutAttributes: [UICollectionViewLayoutAttributes] = []
-      
-      // Loop through the cache and look for items in the rect
-      for attributes in cache {
-        if attributes.frame.intersects(rect) {
-          visibleLayoutAttributes.append(attributes)
+    -> [UICollectionViewLayoutAttributes]? {
+        var visibleLayoutAttributes: [UICollectionViewLayoutAttributes] = []
+        
+        // Loop through the cache and look for items in the rect
+        for attributes in cache where attributes.frame.intersects(rect) {
+            visibleLayoutAttributes.append(attributes)
         }
-      }
-      return visibleLayoutAttributes
+        return visibleLayoutAttributes
     }
     
     override func layoutAttributesForItem(at indexPath: IndexPath)
-        -> UICollectionViewLayoutAttributes? {
-      return cache[indexPath.item]
+    -> UICollectionViewLayoutAttributes? {
+        return cache[indexPath.item]
     }
 }
-

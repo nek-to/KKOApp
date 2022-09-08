@@ -46,8 +46,7 @@ class CoffeeTVCell: UITableViewCell {
             try? storage.write {
                 coffee.like.toggle()
             }
-        }
-        else {
+        } else {
             likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
             try? storage.write {
                 coffee.like.toggle()
@@ -55,4 +54,3 @@ class CoffeeTVCell: UITableViewCell {
         }
     }
 }
-

@@ -16,7 +16,7 @@ final class WeatherNetworkManager {
         guard let url = URL(string: "https://api.weatherbit.io/v2.0/current?lat=\(latitude ?? 53.916902)&lon=\(longitude ?? 27.583229)&key=f0c5447dde504c928db84296d5aae097") else {
             return
         }
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
                 return
             }
@@ -43,5 +43,3 @@ struct Datum: Codable {
 struct Weather: Codable {
     var icon: String
 }
-
-

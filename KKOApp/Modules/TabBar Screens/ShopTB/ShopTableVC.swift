@@ -134,7 +134,7 @@ extension ShopTableVC: UICollectionViewDataSource {
         okey.contentMode = .scaleAspectFill
         okey.loopMode = .playOnce
         view.addSubview(okey)
-        okey.play { complited in
+        okey.play { _ in
             self.animate = false
         }
     }

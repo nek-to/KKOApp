@@ -89,8 +89,7 @@ class AddCardVC: UIViewController {
             cvcTextField.hasText && cvcTextField.text!.count == 3 &&
             nameTextfield.hasText && nameTextfield.text!.split(separator: " ").count == 2 {
             saveButton.isEnabled = true
-        }
-        else {
+        } else {
             saveButton.isEnabled = false
         }
     }
@@ -121,14 +120,13 @@ extension AddCardVC: UITextFieldDelegate {
             do {
                 let maxLength = 18
                 let regex = try NSRegularExpression(pattern: ".*[^A-Za-z ].*", options: [])
-                if regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) != nil {
+                if regex.firstMatch(in: string, options: [], range: NSRange(location: 0, length: string.count)) != nil {
                     return false
                 }
                 let currentString = (textField.text ?? "") as NSString
                 let newString = currentString.replacingCharacters(in: range, with: string)
                 return newString.count <= maxLength
-            }
-            catch {
+            } catch {
             }
             return true
         }

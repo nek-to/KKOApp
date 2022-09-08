@@ -10,9 +10,9 @@ import UIKit
 extension UIColor {
     static func random() -> UIColor {
         return UIColor(
-           red:   .random(),
+           red: .random(),
            green: .random(),
-           blue:  .random(),
+           blue: .random(),
            alpha: 1.0
         )
     }

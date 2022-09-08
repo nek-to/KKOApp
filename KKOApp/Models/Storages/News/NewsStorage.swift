@@ -19,7 +19,7 @@ class NewsStorage {
         }
         
         if let array = arrayRoot {
-            let arrayList:[NSDictionary] = array as! [NSDictionary]
+            let arrayList: [NSDictionary] = array as! [NSDictionary]
             arrayList.forEach {
                 let news: NewsItem = .init(title: $0["title"] as! String,
                                            description: $0["description"] as! String,

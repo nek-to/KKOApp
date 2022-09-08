@@ -19,7 +19,7 @@ class CustomIconsStorage {
                 }
         
         if let array = arrayRoot {
-            let arrayList:[NSDictionary] = array as! [NSDictionary]
+            let arrayList: [NSDictionary] = array as! [NSDictionary]
             arrayList.forEach {
                 let icons: CustomIcon = .init(title: $0["title"] as! String,
                                                    image: $0["image"] as! String)
