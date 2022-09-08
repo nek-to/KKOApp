@@ -17,7 +17,8 @@ class SignUpVC: UIViewController {
     @IBOutlet private weak var repeatePasswordTextField: UITextField!
     @IBOutlet private weak var signUpButton: UIButton!
     @IBOutlet private weak var warningLabel: UILabel!
-    @IBOutlet private weak var singupFormButtonConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var singupFormBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var signupLabelBottomConstraint: NSLayoutConstraint!
     
     private var storage = try! Realm()
     private var passwordsIsCorrect = false
@@ -186,9 +187,11 @@ class SignUpVC: UIViewController {
         let endFrameY = endFrame?.origin.y ?? 0.0
 
         if endFrameY >= UIScreen.main.bounds.size.height {
-            self.singupFormButtonConstraint.constant = 150
+            self.singupFormBottomConstraint.constant = 150
+            self.signupLabelBottomConstraint.constant = 70
         } else {
-            self.singupFormButtonConstraint.constant = ((endFrame?.size.height)!)
+            self.singupFormBottomConstraint.constant = ((endFrame?.size.height)!)
+            self.signupLabelBottomConstraint.constant = ((endFrame?.size.height)!)
         }
     }
     

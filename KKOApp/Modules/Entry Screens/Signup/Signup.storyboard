@@ -30,7 +30,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +45,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +60,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,7 +75,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,7 +90,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,7 +175,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEj-kG-e17">
-                                <rect key="frame" x="95" y="202" width="224" height="75"/>
+                                <rect key="frame" x="95" y="262" width="224" height="75"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -212,13 +212,13 @@
                             <constraint firstItem="zEj-kG-e17" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KBA-QX-6gK"/>
                             <constraint firstItem="WIW-EE-uyg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LsE-Q1-kCg"/>
                             <constraint firstItem="fCg-AZ-9kR" firstAttribute="top" secondItem="WIW-EE-uyg" secondAttribute="bottom" constant="15" id="Nag-NJ-obl"/>
-                            <constraint firstItem="WIW-EE-uyg" firstAttribute="top" secondItem="zEj-kG-e17" secondAttribute="bottom" constant="130" id="UOH-eY-AU8"/>
                             <constraint firstItem="5cd-tN-fRa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Y6b-HN-aBD"/>
                             <constraint firstItem="5cd-tN-fRa" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="eio-UF-thp"/>
                             <constraint firstItem="rmP-ua-DmR" firstAttribute="width" secondItem="5cd-tN-fRa" secondAttribute="width" multiplier="0.5" id="ggx-zz-g8x"/>
                             <constraint firstItem="WIW-EE-uyg" firstAttribute="width" secondItem="5cd-tN-fRa" secondAttribute="width" multiplier="0.9" id="ivP-Wj-Cc5"/>
                             <constraint firstItem="fCg-AZ-9kR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mkh-YL-b2N"/>
                             <constraint firstItem="rmP-ua-DmR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xcF-Cb-yMD"/>
+                            <constraint firstItem="WIW-EE-uyg" firstAttribute="top" secondItem="zEj-kG-e17" secondAttribute="bottom" constant="70" id="z1D-Lj-QOK"/>
                             <constraint firstAttribute="bottomMargin" secondItem="WIW-EE-uyg" secondAttribute="bottom" priority="999" constant="150" id="z7V-Bj-HnQ"/>
                         </constraints>
                     </view>
@@ -230,7 +230,8 @@
                         <outlet property="phoneTextField" destination="1iC-dW-J5x" id="TvI-kZ-g0f"/>
                         <outlet property="repeatePasswordTextField" destination="i7j-hi-Gcd" id="8qd-Tf-R72"/>
                         <outlet property="signUpButton" destination="rmP-ua-DmR" id="kXA-jH-wp4"/>
-                        <outlet property="singupFormButtonConstraint" destination="z7V-Bj-HnQ" id="hef-EJ-sgb"/>
+                        <outlet property="signupLabelBottomConstraint" destination="z1D-Lj-QOK" id="MhL-vi-Tpl"/>
+                        <outlet property="singupFormBottomConstraint" destination="z7V-Bj-HnQ" id="r3z-KM-tzG"/>
                         <outlet property="warningLabel" destination="fCg-AZ-9kR" id="khg-r4-uj5"/>
                     </connections>
                 </viewController>
