@@ -56,9 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func notificationSetup() {
         let notification = UNUserNotificationCenter.current()
         notification.delegate = self
-        notification.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+        notification.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, _) in
             guard granted else {return}
-            notification.getNotificationSettings{ (settings) in
+            notification.getNotificationSettings { (settings) in
                 guard settings.authorizationStatus == .authorized else {return}
             }
         }

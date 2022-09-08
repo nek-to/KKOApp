@@ -129,7 +129,9 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     private func sendNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Your coffee is ready"
-        guard let address = UserSettings.coffeeshopAddress else  { return }
+        guard let address = UserSettings.coffeeshopAddress else {
+            return
+        }
         guard !address.isEmpty else {
             return content.body = "ulica Leonida Levina, 2"
         }

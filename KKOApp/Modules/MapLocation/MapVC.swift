@@ -81,7 +81,7 @@ extension MapVC: CLLocationManagerDelegate {
             return
         }
         
-        if currentLocation == nil  {
+        if currentLocation == nil {
             zoomToLatestLocation(with: latestLocation.coordinate)
         }
         
@@ -143,7 +143,7 @@ extension MapVC: MKMapViewDelegate {
         request.transportType = .any
         
         let direction = MKDirections(request: request)
-        direction.calculate { (responce, error) in
+        direction.calculate { (responce, _) in
             guard let responce = responce else {
                 return
             }
@@ -162,5 +162,3 @@ extension MapVC: MKMapViewDelegate {
         return render
     }
 }
-
-

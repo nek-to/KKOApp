@@ -11,7 +11,7 @@ final class UnsplashNetworkManager {
         guard let url = URL(string: "https://api.unsplash.com/photos/random/?client_id=poKYChAaQN0zIOEjTDBlkSrbNLrdOaimHBZtboiyGaY") else {
             return
         }
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
                 return
             }
@@ -33,4 +33,3 @@ struct UnsplashResponse: Codable {
 struct URLS: Codable {
     var small: String
 }
-

@@ -103,13 +103,11 @@ class ProfileVC: UIViewController {
     }
     
     private func openCamera() {
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
-        {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
-        }
-        else {
+        } else {
             let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -265,10 +263,9 @@ extension ProfileVC: UITableViewDataSource {
 }
 
 extension ProfileVC: UIImagePickerControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true, completion: nil)
-        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
-         {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
              self.profilePictureImageView.image = image
              saveProfPic(image)
          }

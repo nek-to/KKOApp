@@ -32,7 +32,7 @@ class AddressVC: UIViewController {
 extension AddressVC: UITableViewDelegate {
 }
 
-extension AddressVC:UITableViewDataSource {
+extension AddressVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         address.elements.count
     }

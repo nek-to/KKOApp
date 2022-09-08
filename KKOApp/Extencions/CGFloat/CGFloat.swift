@@ -9,6 +9,6 @@ import UIKit
 
 extension CGFloat {
     static func random() -> CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+        return CGFloat.random(in: 1...10000) / CGFloat(UInt32.max)
     }
 }

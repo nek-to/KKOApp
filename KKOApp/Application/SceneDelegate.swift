@@ -74,7 +74,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func authorization() {
         let context = LAContext()
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authorized") { success, error in
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authorized") { success, _ in
                 if success {
                     DispatchQueue.main.async {
                         self.passwordVC.dismiss(animated: true)
@@ -84,4 +84,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
 }
-

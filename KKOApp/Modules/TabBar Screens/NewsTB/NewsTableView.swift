@@ -29,4 +29,3 @@ class NewsTableView: UITableView {
         header.clipsToBounds = offsetY <= 0
     }
 }
-
