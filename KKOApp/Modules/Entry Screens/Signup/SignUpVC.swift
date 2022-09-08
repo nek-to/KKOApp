@@ -109,13 +109,11 @@ class SignUpVC: UIViewController {
     
     private func showSuccessAlert() {
         let alert = UIAlertController(title: "Success", message: "Welcome to KKO coffee shop", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okey", style: .default) { _ in
-            self.toMainTabBar()
+        alert.addAction(UIAlertAction(title: "Okey", style: .default) { [weak self] _ in
+            self?.toMainTabBar()
+            alert.dismiss(animated: true)
         })
         self.present(alert, animated: true)
-        DispatchQueue.main.async {
-            alert.dismiss(animated: true)
-        }
     }
     
     private func toMainTabBar() {
@@ -126,11 +124,10 @@ class SignUpVC: UIViewController {
     
     private func signUpFaildAlert() {
         let alert = UIAlertController(title: "Sign up is faild", message: "Something goes wrong. Please check your data and try again", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Try again", style: .default))
-        self.present(alert, animated: true)
-        DispatchQueue.main.async {
+        alert.addAction(UIAlertAction(title: "Try again", style: .default) { _ in
             alert.dismiss(animated: true)
-        }
+        })
+        self.present(alert, animated: true)
     }
     
     private func saveUserInFirebase() {
