@@ -9,7 +9,6 @@ import UIKit
 
 final class CardTVCell: UITableViewCell {
     // MARK: - Outlets
-    @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var fonImageView: UIImageView!
     @IBOutlet private weak var numberLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
@@ -19,7 +18,6 @@ final class CardTVCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         fonImageView.layer.cornerRadius = 30
-        mainView.layer.cornerRadius = 30
     }
     
     // MARK: - Setup
