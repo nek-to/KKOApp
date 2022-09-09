@@ -7,17 +7,20 @@
 import RealmSwift
 import UIKit
 
-class AddCardVC: UIViewController {
-    @IBOutlet weak var fonImageView: UIImageView!
-    @IBOutlet weak var numberTextField: UITextField!
-    @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var cvcTextField: UITextField!
-    @IBOutlet weak var nameTextfield: UITextField!
-    @IBOutlet weak var saveButton: UIButton!
+final class AddCardVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var fonImageView: UIImageView!
+    @IBOutlet private weak var numberTextField: UITextField!
+    @IBOutlet private weak var dateTextField: UITextField!
+    @IBOutlet private weak var cvcTextField: UITextField!
+    @IBOutlet private weak var nameTextfield: UITextField!
+    @IBOutlet private weak var saveButton: UIButton!
     
+    // MARK: - Properties
     private var cardStorage = try! Realm()
     private var imageUrl: String?
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         addCardVC.delegate = self
@@ -46,10 +49,9 @@ class AddCardVC: UIViewController {
         cvcTextField.delegate = self
         // name text field
         nameTextfield.delegate = self
-        // reload notifier
-//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloader"), object: nil)
     }
     
+    // MARK: - Methods
     private func loadBackgroundImage() {
         UnsplashNetworkManager.getImageFromStock { url in
             if let url = url {
@@ -82,7 +84,7 @@ class AddCardVC: UIViewController {
         self.dismiss(animated: true)
     }
     
-    
+    // MARK: - Actions
     @objc private func textChanged(sender: Notification) {
         if numberTextField.hasText && numberTextField.text!.count == 19 &&
             dateTextField.hasText && dateTextField.text!.count == 5 &&
@@ -94,17 +96,20 @@ class AddCardVC: UIViewController {
         }
     }
     
-    @IBAction func save(_ sender: UIButton) {
+    @IBAction private func save(_ sender: UIButton) {
         saveCard()
     }
 }
 
+    // MARK: - Extensions
+    // MARK: UISheetPresentationControllerDelegate
 extension AddCardVC: UISheetPresentationControllerDelegate {
     private var addCardVC: UISheetPresentationController {
         presentationController as! UISheetPresentationController
     }
 }
 
+    // MARK: UITextFieldDelegate
 extension AddCardVC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == numberTextField {

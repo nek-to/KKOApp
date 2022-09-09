@@ -7,8 +7,9 @@
 
 import UIKit
 
-class MainTabBarVC: UITabBarController {
+final class MainTabBarVC: UITabBarController {
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

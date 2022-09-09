@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CouponeStorage {
+final class CouponeStorage {
     var couponsImage: [UIImage?]?
     
     static var shared = CouponeStorage()

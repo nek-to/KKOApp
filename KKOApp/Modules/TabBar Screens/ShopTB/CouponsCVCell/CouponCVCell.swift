@@ -7,12 +7,18 @@
 
 import UIKit
 
-class CouponCVCell: UICollectionViewCell {
-    @IBOutlet weak var couponImageView: UIImageView!
+final class CouponCVCell: UICollectionViewCell {
+    // MARK: - Outlets
+    @IBOutlet private weak var couponImageView: UIImageView!
     
+    // MARK: - Cell Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         couponImageView.layer.cornerRadius = 30
     }
-
+    
+    // MARK: - Setup
+    func configureCollectCell(_ coupon: CouponeStorage, _ index: IndexPath) {
+        couponImageView.image = coupon.couponsImage?[index.row]
+    }
 }

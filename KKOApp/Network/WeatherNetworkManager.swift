@@ -9,6 +9,7 @@ import UIKit
 import CoreLocation
 
 final class WeatherNetworkManager {
+    // MARK: - Network
     static func getWeather(complition: @escaping (WeatherResponse?) -> Void) {
         let locanionManager = CLLocationManager()
         let latitude = locanionManager.location?.coordinate.latitude
@@ -31,6 +32,7 @@ final class WeatherNetworkManager {
     }
 }
 
+    // MARK: - Struct
 struct WeatherResponse: Codable {
     var data: [Datum]
 }

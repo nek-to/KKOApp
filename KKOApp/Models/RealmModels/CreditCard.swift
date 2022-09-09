@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class CreditCard: Object {
+final class CreditCard: Object {
     @objc dynamic var number: String = ""
     @objc dynamic var name: String = ""
     @objc dynamic var date: String = ""

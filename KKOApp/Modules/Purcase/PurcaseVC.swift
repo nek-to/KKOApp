@@ -7,17 +7,20 @@
 import RealmSwift
 import UIKit
 
-class PurcaseVC: UIViewController {
-    @IBOutlet weak var orderTableView: UITableView!
+final class PurcaseVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var orderTableView: UITableView!
     
+    // MARK: - Properties
     private var storage = try! Realm()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
     }
 
-    
+    // MARK: - Setup
     private func config() {
         // view controller
         purcaseVC.delegate = self
@@ -30,9 +33,11 @@ class PurcaseVC: UIViewController {
     }
 }
 
+    // MARK: - Extensions
+    // MARK: UITableViewDelegate
 extension PurcaseVC: UITableViewDelegate {
 }
-
+    // MARK: UITableViewDataSource
 extension PurcaseVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         storage.objects(Purcase.self).count
@@ -68,6 +73,7 @@ extension PurcaseVC: UITableViewDataSource {
     }
 }
 
+    // MARK: UISheetPresentationControllerDelegate
 extension PurcaseVC: UISheetPresentationControllerDelegate {
     private var purcaseVC: UISheetPresentationController {
         presentationController as! UISheetPresentationController

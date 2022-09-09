@@ -7,9 +7,11 @@
 
 import UIKit
 
-class MapNewsVC: UIViewController {
-    @IBOutlet weak var mapImageView: UIImageView!
+final class MapNewsVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var mapImageView: UIImageView!
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         mapNewsVC.delegate = self
@@ -18,6 +20,7 @@ class MapNewsVC: UIViewController {
     }
 }
 
+    // MARK: - Extensions: UISheetPresentationControllerDelegate
 extension MapNewsVC: UISheetPresentationControllerDelegate {
     private var mapNewsVC: UISheetPresentationController {
         presentationController as! UISheetPresentationController

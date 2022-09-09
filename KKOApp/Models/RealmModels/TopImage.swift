@@ -7,6 +7,6 @@
 import RealmSwift
 import Foundation
 
-class TopImage: Object {
+final class TopImage: Object {
     @objc dynamic var image: String = ""
 }

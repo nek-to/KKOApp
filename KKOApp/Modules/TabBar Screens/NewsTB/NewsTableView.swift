@@ -7,10 +7,12 @@
 
 import UIKit
 
-class NewsTableView: UITableView {
-    var height: NSLayoutConstraint?
-    var bottom: NSLayoutConstraint?
+final class NewsTableView: UITableView {
+    // MARK: - Properties
+    private var height: NSLayoutConstraint?
+    private var bottom: NSLayoutConstraint?
     
+    // MARK: - Layout
     override func layoutSubviews() {
         super.layoutSubviews()
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FollowUsStorage {
+final class FollowUsStorage {
     var image: [UIImage?]?
     
     static var shared = FollowUsStorage()

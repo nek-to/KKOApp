@@ -8,7 +8,8 @@ import FirebaseAuth
 import RealmSwift
 import UIKit
 
-class SignUpVC: UIViewController {
+final class SignUpVC: UIViewController {
+    // MARK: - Outlets
     @IBOutlet private weak var backgroundUmageView: UIImageView!
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var phoneTextField: UITextField!
@@ -18,28 +19,23 @@ class SignUpVC: UIViewController {
     @IBOutlet private weak var signUpButton: UIButton!
     @IBOutlet private weak var warningLabel: UILabel!
     @IBOutlet private weak var singupFormBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var signupLabelBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var signupLabelBottomConstraint: NSLayoutConstraint!
     
+    // MARK: - Properties
     private var storage = try! Realm()
     private var passwordsIsCorrect = false
     private var fieldsAreFill = false
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         launchSetup()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
     }
-    
-    private func blureFone() {
-        let blure = UIBlurEffect(style: .systemUltraThinMaterialDark)
-        let effect = UIVisualEffectView(effect: blure)
-        effect.frame = backgroundUmageView.bounds
-        backgroundUmageView.addSubview(effect)
-    }
-    
+
+    // MARK: - Setup
     private func launchSetup() {
         // name text field
         nameTextField.regularStyle()
@@ -63,6 +59,22 @@ class SignUpVC: UIViewController {
         textfieldSetup()
     }
     
+    private func blureFone() {
+        let blure = UIBlurEffect(style: .systemUltraThinMaterialDark)
+        let effect = UIVisualEffectView(effect: blure)
+        effect.frame = backgroundUmageView.bounds
+        backgroundUmageView.addSubview(effect)
+    }
+    
+    private func textfieldSetup() {
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        phoneTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        repeatePasswordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+    }
+    
+    // MARK: - Methods
     private func checkIfDoublePasswordCorrect() {
         guard passwordTextField.hasText && repeatePasswordTextField.hasText else { return }
         if passwordTextField.text!.contains(repeatePasswordTextField.text!) {
@@ -93,6 +105,29 @@ class SignUpVC: UIViewController {
         }
     }
     
+    private func toMainTabBar() {
+        let tabBarScreen = UIStoryboard(name: Storyboards.mainTabBar.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.mainTabBar.rawValue)
+        self.present(tabBarScreen, animated: true)
+    }
+    
+    private func showSuccessAlert() {
+        let alert = UIAlertController(title: "Success", message: "Welcome to KKO coffee shop", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okey", style: .default) { [weak self] _ in
+            self?.toMainTabBar()
+            alert.dismiss(animated: true)
+        })
+        self.present(alert, animated: true)
+    }
+    
+    
+    private func signUpFaildAlert() {
+        let alert = UIAlertController(title: "Sign up is faild", message: "Something goes wrong. Please check your data and try again", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .default) { _ in
+            alert.dismiss(animated: true)
+        })
+        self.present(alert, animated: true)
+    }
+    
     private func saveUserInDatabase() {
         if warningLabel.isHidden && passwordsIsCorrect {
             // realm
@@ -107,30 +142,7 @@ class SignUpVC: UIViewController {
             warningLabel.isHidden = false
         }
     }
-    
-    private func showSuccessAlert() {
-        let alert = UIAlertController(title: "Success", message: "Welcome to KKO coffee shop", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okey", style: .default) { [weak self] _ in
-            self?.toMainTabBar()
-            alert.dismiss(animated: true)
-        })
-        self.present(alert, animated: true)
-    }
-    
-    private func toMainTabBar() {
-        let storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-        let tabBarScreen = storyboard.instantiateViewController(withIdentifier: Screens.mainTabBar.rawValue)
-        self.present(tabBarScreen, animated: true)
-    }
-    
-    private func signUpFaildAlert() {
-        let alert = UIAlertController(title: "Sign up is faild", message: "Something goes wrong. Please check your data and try again", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Try again", style: .default) { _ in
-            alert.dismiss(animated: true)
-        })
-        self.present(alert, animated: true)
-    }
-    
+
     private func saveUserInFirebase() {
         guard let email = emailTextField.text, !email.isEmpty,
               let password = passwordTextField.text, !password.isEmpty else {
@@ -146,14 +158,7 @@ class SignUpVC: UIViewController {
         }
     }
     
-    private func textfieldSetup() {
-        nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
-        phoneTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
-        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
-        repeatePasswordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
-    }
-    
+    // MARK: - Actions
     @objc private func textFieldDidChange() {
         if let name = nameTextField.text, !name.isEmpty {
             nameTextField.usernameValidation(name)
@@ -205,6 +210,7 @@ class SignUpVC: UIViewController {
     }
 }
 
+// MARK: - Extensions: UITextFieldDelegate
 extension SignUpVC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CoffeeshopStorage {
+final class CoffeeshopStorage {
     var elements: [CoffeeshopItem] = []
     
     static var shared = CoffeeshopStorage()

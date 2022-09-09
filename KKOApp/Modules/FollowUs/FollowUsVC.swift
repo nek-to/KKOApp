@@ -8,13 +8,15 @@
 import UIKit
 import Lottie
 
-class FollowUsVC: UIViewController {
-    @IBOutlet weak var photoCollectionView: UICollectionView!
-    @IBOutlet weak var foneImage: UIImageView!
+final class FollowUsVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var photoCollectionView: UICollectionView!
+    @IBOutlet private weak var foneImage: UIImageView!
     
-    
+    // MARK: - Properties
     private var followUs = FollowUsStorage.shared
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionViewLayout()
@@ -25,6 +27,7 @@ class FollowUsVC: UIViewController {
         photoCollectionView.delegate = self
     }
     
+    // MARK: - Setup
     private func setupCollectionViewLayout() {
         let customLayuot = CustomLayout()
         customLayuot.delegate = self
@@ -32,13 +35,16 @@ class FollowUsVC: UIViewController {
     }
     
 }
+
+    // MARK: - Extensions
+    // MARK: CustomLayoutDelegate
 extension FollowUsVC: CustomLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGSize {
         return followUs.image![indexPath.item]!.size
     }
 }
 
-
+    // MARK: UICollectionViewDataSource
 extension FollowUsVC: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,7 +53,7 @@ extension FollowUsVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "followCell", for: indexPath) as! FollowUsCVCell
-         cell.peopleImageView.image = followUs.image![indexPath.row]
+        cell.configureCell(followUs, indexPath)
         return cell
     }
     
@@ -63,5 +69,6 @@ extension FollowUsVC: UICollectionViewDataSource {
     }
 }
 
+    // MARK: UICollectionViewDelegate
 extension FollowUsVC: UICollectionViewDelegate {
 }

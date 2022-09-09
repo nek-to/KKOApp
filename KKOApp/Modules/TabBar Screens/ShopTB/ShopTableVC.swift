@@ -8,12 +8,14 @@ import Lottie
 import RealmSwift
 import UIKit
 
-class ShopTableVC: UITableViewController {
-    @IBOutlet weak var foneImageView: UIImageView!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var couponsCollectionView: UICollectionView!
-    @IBOutlet weak var lottieView: UIView!
+final class ShopTableVC: UITableViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var foneImageView: UIImageView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var couponsCollectionView: UICollectionView!
+    @IBOutlet private weak var lottieView: UIView!
     
+    // MARK: - Properties
     private var storage = try! Realm()
     private var filteredCoffee = [Coffee]()
     private var coupone = CouponeStorage.shared
@@ -27,14 +29,23 @@ class ShopTableVC: UITableViewController {
         return searchBar.isFirstResponder && !searchBarIsEmpty
     }
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+//        searchBar.endEditing(true)
         searchBar.delegate = self
         couponsCollectionView.delegate = self
         couponsCollectionView.dataSource = self
         config()
+        self.tableView.keyboardDismissMode = .onDrag
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    // MARK: - Setup
     private func config() {
         // lottie view
         lottieView.isHidden = true
@@ -49,11 +60,7 @@ class ShopTableVC: UITableViewController {
         tableView.register(UINib(nibName: "CoffeeTVCell", bundle: nil), forCellReuseIdentifier: "coffeeCell")        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
+    // MARK: - Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return filteredCoffee.count
@@ -70,8 +77,7 @@ class ShopTableVC: UITableViewController {
     }
     
     private func transferDataToBuyScreen(indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "BuyCoffee", bundle: nil)
-        var toBuyCoffee = storyboard.instantiateViewController(withIdentifier: Screens.buyCoffee.rawValue) as! CoffeeProtocol
+        var toBuyCoffee = UIStoryboard(name: Storyboards.buyCoffee.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.buyCoffee.rawValue) as! CoffeeProtocol
         let coffees = storage.objects(Coffee.self)
         let coffee = coffees[indexPath.row]
         toBuyCoffee.name = coffee.name
@@ -79,7 +85,6 @@ class ShopTableVC: UITableViewController {
         toBuyCoffee.price = coffee.price
         toBuyCoffee.imageName = coffee.imageName
         toBuyCoffee.time = coffee.time
-        navigationController?.tabBarController?.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(toBuyCoffee as! UIViewController, animated: true)
     }
     
@@ -102,19 +107,20 @@ class ShopTableVC: UITableViewController {
     }
 }
 
+    // MARK: - Extensions
+    // MARK: UICollectionViewDelegate
 extension ShopTableVC: UICollectionViewDelegate {
 }
 
+    // MARK: UICollectionViewDataSource
 extension ShopTableVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return coupone.couponsImage!.count
     }
     
-    internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let couponCell = collectionView.dequeueReusableCell(withReuseIdentifier: "couponCell", for: indexPath) as! CouponCVCell
-
-        couponCell.couponImageView.image = coupone.couponsImage![indexPath.row]
-
+        couponCell.configureCollectCell(coupone, indexPath)
         return couponCell
     }
     
@@ -140,12 +146,14 @@ extension ShopTableVC: UICollectionViewDataSource {
     }
 }
 
+    // MARK: UICollectionViewDelegateFlowLayout
 extension ShopTableVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 300, height: 128)
     }
 }
 
+    // MARK: UISearchBarDelegate
 extension ShopTableVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterContentForSearchText(searchBar.text!)
@@ -156,5 +164,9 @@ extension ShopTableVC: UISearchBarDelegate {
             return coffee.name.lowercased().contains(searchText.lowercased())
         }
         tableView.reloadData()
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

@@ -7,6 +7,7 @@
 import UIKit
 
 final class UnsplashNetworkManager {
+    // MARK: - Network
     static func getImageFromStock(complition: @escaping (String?) -> Void) {
         guard let url = URL(string: "https://api.unsplash.com/photos/random/?client_id=poKYChAaQN0zIOEjTDBlkSrbNLrdOaimHBZtboiyGaY") else {
             return
@@ -26,6 +27,7 @@ final class UnsplashNetworkManager {
     }
 }
 
+    // MARK: - Struct
 struct UnsplashResponse: Codable {
     var urls: URLS
 }

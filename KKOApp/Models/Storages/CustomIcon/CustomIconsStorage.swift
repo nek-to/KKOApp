@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomIconsStorage {
+final class CustomIconsStorage {
     var elements: [CustomIcon] = []
     
     static var shared = CustomIconsStorage()

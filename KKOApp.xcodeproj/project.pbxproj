@@ -34,14 +34,15 @@
 		534DA99E28AFD68400626AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534DA99C28AFD68400626AA4 /* Main.storyboard */; };
 		534DA9A028AFD68600626AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534DA99F28AFD68600626AA4 /* Assets.xcassets */; };
 		534DA9A328AFD68600626AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534DA9A128AFD68600626AA4 /* LaunchScreen.storyboard */; };
-		534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534DA9B628AFEF5700626AA4 /* Signup.storyboard */; };
+		534DA9B728AFEF5700626AA4 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534DA9B628AFEF5700626AA4 /* SignUp.storyboard */; };
 		534DA9B928AFEF6C00626AA4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */; };
-		534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */; };
+		534DA9BB28AFF02B00626AA4 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534DA9BA28AFF02B00626AA4 /* Screens.swift */; };
 		538331B428C777B50011D2CD /* WeatherNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538331B328C777B50011D2CD /* WeatherNetworkManager.swift */; };
+		5393A6E728CB8C98009320F6 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393A6E628CB8C98009320F6 /* Storyboards.swift */; };
 		5394D35428BEF12200EFE968 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5394D35328BEF12200EFE968 /* GoogleService-Info.plist */; };
 		5395340228B7F78A00B76054 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395340128B7F78A00B76054 /* Map.storyboard */; };
 		5395340428B7F7A000B76054 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340328B7F7A000B76054 /* MapVC.swift */; };
-		5395340628B801B900B76054 /* PreferenceEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340528B801B900B76054 /* PreferenceEnum.swift */; };
+		5395340628B801B900B76054 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340528B801B900B76054 /* Preferences.swift */; };
 		5395340928B8036200B76054 /* CoffeeshopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340828B8036200B76054 /* CoffeeshopItem.swift */; };
 		5395340B28B8037700B76054 /* CoffeeshopStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340A28B8037700B76054 /* CoffeeshopStorage.swift */; };
 		5395340D28B8038C00B76054 /* Coffeeshops.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5395340C28B8038C00B76054 /* Coffeeshops.plist */; };
@@ -144,14 +145,15 @@
 		534DA99F28AFD68600626AA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		534DA9A228AFD68600626AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		534DA9A428AFD68600626AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		534DA9B628AFEF5700626AA4 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
+		534DA9B628AFEF5700626AA4 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensEnum.swift; sourceTree = "<group>"; };
+		534DA9BA28AFF02B00626AA4 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
 		538331B328C777B50011D2CD /* WeatherNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkManager.swift; sourceTree = "<group>"; };
+		5393A6E628CB8C98009320F6 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		5394D35328BEF12200EFE968 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5395340128B7F78A00B76054 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		5395340328B7F7A000B76054 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		5395340528B801B900B76054 /* PreferenceEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceEnum.swift; sourceTree = "<group>"; };
+		5395340528B801B900B76054 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		5395340828B8036200B76054 /* CoffeeshopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopItem.swift; sourceTree = "<group>"; };
 		5395340A28B8037700B76054 /* CoffeeshopStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopStorage.swift; sourceTree = "<group>"; };
 		5395340C28B8038C00B76054 /* Coffeeshops.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Coffeeshops.plist; sourceTree = "<group>"; };
@@ -424,7 +426,7 @@
 		534DA9B528AFEF2C00626AA4 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				534DA9B628AFEF5700626AA4 /* Signup.storyboard */,
+				534DA9B628AFEF5700626AA4 /* SignUp.storyboard */,
 				534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */,
 			);
 			path = Signup;
@@ -644,7 +646,6 @@
 		53E8F17728B3D80B0011D63F /* ShopTB */ = {
 			isa = PBXGroup;
 			children = (
-				53D091BB28C03550006A0090 /* Address */,
 				53E8F1C328B443EF0011D63F /* CoffeeTBCell */,
 				53E8F1AF28B427640011D63F /* CouponsCVCell */,
 				53E8F18128B3D90F0011D63F /* ShopTB.storyboard */,
@@ -657,6 +658,7 @@
 		53E8F17828B3D8130011D63F /* ProfileTB */ = {
 			isa = PBXGroup;
 			children = (
+				53D091BB28C03550006A0090 /* Address */,
 				53E8F17F28B3D8FF0011D63F /* ProfileTB.storyboard */,
 				53C8678B28B7263F000A758C /* PreferenceTVCell.swift */,
 				53E8F17D28B3D8F00011D63F /* ProfileVC.swift */,
@@ -667,8 +669,9 @@
 		53E8F18528B3E80D0011D63F /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				534DA9BA28AFF02B00626AA4 /* ScreensEnum.swift */,
-				5395340528B801B900B76054 /* PreferenceEnum.swift */,
+				534DA9BA28AFF02B00626AA4 /* Screens.swift */,
+				5395340528B801B900B76054 /* Preferences.swift */,
+				5393A6E628CB8C98009320F6 /* Storyboards.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -896,7 +899,7 @@
 				53E8F1BC28B4294B0011D63F /* buysomecoffee.json in Resources */,
 				532EF34128BC59CD00229A65 /* CustomIcons.plist in Resources */,
 				533E11F828B9442800CF5499 /* brewing-coffee.json in Resources */,
-				534DA9B728AFEF5700626AA4 /* Signup.storyboard in Resources */,
+				534DA9B728AFEF5700626AA4 /* SignUp.storyboard in Resources */,
 				534DA99E28AFD68400626AA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -970,7 +973,7 @@
 				5395340928B8036200B76054 /* CoffeeshopItem.swift in Sources */,
 				5398E68628B689B400DEB5BC /* UIView.swift in Sources */,
 				5395BFE428C2042B006F3D79 /* Coffee.swift in Sources */,
-				534DA9BB28AFF02B00626AA4 /* ScreensEnum.swift in Sources */,
+				534DA9BB28AFF02B00626AA4 /* Screens.swift in Sources */,
 				5395340B28B8037700B76054 /* CoffeeshopStorage.swift in Sources */,
 				53E8F18A28B3E86A0011D63F /* UIImage.swift in Sources */,
 				53E8F1B228B427A20011D63F /* CouponCVCell.swift in Sources */,
@@ -993,7 +996,7 @@
 				532EF34628BC5B4E00229A65 /* CustomIconsStorage.swift in Sources */,
 				5395342128B8439A00B76054 /* AddCardVC.swift in Sources */,
 				53D091C828C03E41006A0090 /* UserSettings.swift in Sources */,
-				5395340628B801B900B76054 /* PreferenceEnum.swift in Sources */,
+				5395340628B801B900B76054 /* Preferences.swift in Sources */,
 				53D091CB28C05FDF006A0090 /* UITextField.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
 				532EF33828BC443E00229A65 /* AppIconManager.swift in Sources */,
@@ -1009,6 +1012,7 @@
 				538331B428C777B50011D2CD /* WeatherNetworkManager.swift in Sources */,
 				53E8F1AE28B426E20011D63F /* CouponStorage.swift in Sources */,
 				53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */,
+				5393A6E728CB8C98009320F6 /* Storyboards.swift in Sources */,
 				5395342928B8508900B76054 /* UnsplashNetworkManager.swift in Sources */,
 				53E8F19728B3F4830011D63F /* FollowUsStorage.swift in Sources */,
 				53BE677028C2E72D0036D973 /* MapNewsVC.swift in Sources */,

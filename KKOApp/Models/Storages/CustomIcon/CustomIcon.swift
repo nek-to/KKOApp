@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomIcon {
+final class CustomIcon {
     var title: String
     var image: String
     

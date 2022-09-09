@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NewsItem {
+final class NewsItem {
     var id: UInt8
     var title: String
     var description: String

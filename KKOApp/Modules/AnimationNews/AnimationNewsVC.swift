@@ -7,9 +7,11 @@
 
 import UIKit
 
-class AnimationNewsVC: UIViewController {
-    @IBOutlet weak var animationImageView: UIImageView!
-        
+final class AnimationNewsVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var animationImageView: UIImageView!
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         animationNewsVC.delegate = self
@@ -17,6 +19,7 @@ class AnimationNewsVC: UIViewController {
         startConfig()
     }
     
+    // MARK: - Setup
     private func startConfig() {
         // add gif image
         let gifImage = UIImage.gifImageWithName("animation")
@@ -25,6 +28,7 @@ class AnimationNewsVC: UIViewController {
     }
 }
 
+    // MARK: - Extensions: UISheetPresentationControllerDelegate
 extension AnimationNewsVC: UISheetPresentationControllerDelegate {
     private var animationNewsVC: UISheetPresentationController {
         presentationController as! UISheetPresentationController
