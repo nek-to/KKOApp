@@ -7,19 +7,20 @@
 
 import UIKit
 
-class NewsTVCell: UITableViewCell {
-
-    @IBOutlet weak var imageImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+final class NewsTVCell: UITableViewCell {
+    // MARK: - Outlets
+    @IBOutlet private weak var imageImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
     
+    // MARK: - Cell Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         imageImageView.layer.cornerRadius = 30
     }
     
+    // MARK: - Setup
     func configure(_ news: NewsItem) {
         titleLabel.text = news.title
         descriptionLabel.text = news.description
@@ -31,5 +32,4 @@ class NewsTVCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }

@@ -21,7 +21,6 @@ enum Screens: String {
     case addCard = "AddCardVC"
     case purcase = "PurcaseVC"
     case icon = "IconVC"
-    case language = "LanguageVC"
     case password = "PasswordVC"
     case address = "AddressVC"
     case animation = "AnimationNewsVC"

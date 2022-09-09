@@ -7,16 +7,16 @@
 
 import UIKit
 
-class ShopTableView: UITableView {
-    @IBOutlet weak var height: NSLayoutConstraint!
+final class ShopTableView: UITableView {
+    // MARK: - Outlets
+    @IBOutlet private weak var height: NSLayoutConstraint!
     
+    // MARK: - Layout
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         guard let header = tableHeaderView else {
             return
         }
-        
         let offsetY = -contentOffset.y
         height?.constant = max(header.bounds.height, header.bounds.height + offsetY)
     }

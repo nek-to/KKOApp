@@ -7,14 +7,17 @@
 import MapKit
 import UIKit
 
-class MapVC: UIViewController {
-    @IBOutlet weak var mapKit: MKMapView!
-    @IBOutlet weak var rectView: UIView!
+final class MapVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var mapKit: MKMapView!
+    @IBOutlet private weak var rectView: UIView!
     
+    // MARK: - Properties
     private let locationManager = CLLocationManager()
     private var currentLocation: CLLocationCoordinate2D?
     private var coffeeshops = CoffeeshopStorage.shared
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         mapKit.delegate = self
@@ -23,16 +26,18 @@ class MapVC: UIViewController {
         config()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        self.view.addGestureRecognizer(swipeDown)
+    }
+    
+    // MARK: - Setup
     private func config() {
         // rect view
         rectView.layer.cornerRadius = rectView.frame.height/2
         rectView.alpha = 0.6
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        self.view.addGestureRecognizer(swipeDown)
     }
     
     private func configureLocationService() {
@@ -46,6 +51,7 @@ class MapVC: UIViewController {
         }
     }
     
+    // MARK: - Methods
     private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
         let region = MKCoordinateRegion.init(center: coordinate, latitudinalMeters: 3000, longitudinalMeters: 3000)
         mapKit.setRegion(region, animated: true)
@@ -68,13 +74,16 @@ class MapVC: UIViewController {
         mapKit.addAnnotations(coffeeshopsLocations)
     }
     
-    @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
+    // MARK: - Actions
+    @objc private func handleGesture(gesture: UISwipeGestureRecognizer) {
         if gesture.direction == .down {
             self.navigationController?.popViewController(animated: true)
        }
     }
 }
 
+    // MARK: - Extensions
+    // MARK: CLLocationManagerDelegate
 extension MapVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let latestLocation = locations.first else {
@@ -96,6 +105,7 @@ extension MapVC: CLLocationManagerDelegate {
     }
 }
 
+    // MARK: MKMapViewDelegate
 extension MapVC: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard !annotation.isKind(of: MKUserLocation.self) else {

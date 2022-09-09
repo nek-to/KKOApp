@@ -7,34 +7,30 @@
 
 import UIKit
 
-enum Storyboards: String {
-    case follow = "FollowUs"
-    case animation = "AnimationNews"
-    case protection = "Protection"
-    case map = "MapNews"
-}
-
-class NewsTableVC: UITableViewController {
-    @IBOutlet weak var foneImageView: UIImageView!
+final class NewsTableVC: UITableViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var foneImageView: UIImageView!
     
+    // MARK: - Properties
     private var news = NewsStorage.shared
     private var height: CGFloat = 230
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        
-        configuration()
+        configure()
     }
     
-    private func configuration() {
+    // MARK: - Setup
+    private func configure() {
         foneImageView.layer.cornerRadius = 10
-        
         // registration for nib
         tableView.register(UINib(nibName: "NewsTVCell", bundle: nil), forCellReuseIdentifier: "newsCell")
     }
     
+    // MARK: - Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return news.elements.count
     }
@@ -59,7 +55,7 @@ class NewsTableVC: UITableViewController {
         
         switch cell.id {
         case 0:
-            storyboardType = .follow
+            storyboardType = .followUs
             screenType = .followUs
         case 1:
             storyboardType = .animation
@@ -68,7 +64,7 @@ class NewsTableVC: UITableViewController {
             storyboardType = .protection
             screenType = .protection
         case 3:
-            storyboardType = .map
+            storyboardType = .mapNews
             screenType = .mapNews
         default:
             break

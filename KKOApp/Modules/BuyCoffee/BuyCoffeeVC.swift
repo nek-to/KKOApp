@@ -9,6 +9,7 @@ import RealmSwift
 import UIKit
 import SwiftUI
 
+    // MARK: - Protocol
 protocol CoffeeProtocol {
     var name: String { get set }
     var descript: String { get set }
@@ -17,31 +18,35 @@ protocol CoffeeProtocol {
     var time: Double { get set }
 }
 
-class BuyCoffeeVC: UIViewController, CoffeeProtocol {
-    @IBOutlet weak var coffeeImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var sizeSButton: UIButton!
-    @IBOutlet weak var sizeMButton: UIButton!
-    @IBOutlet weak var sizeLButton: UIButton!
-    @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var buyButton: UIButton!
-    @IBOutlet weak var buttonsStack: UIStackView!
-    @IBOutlet weak var backCardImageView: UIImageView!
-    @IBOutlet weak var descriptionView: UIView!
+final class BuyCoffeeVC: UIViewController, CoffeeProtocol {
+    // MARK: - Outlets
+    @IBOutlet private weak var coffeeImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var sizeSButton: UIButton!
+    @IBOutlet private weak var sizeMButton: UIButton!
+    @IBOutlet private weak var sizeLButton: UIButton!
+    @IBOutlet private weak var cardView: UIView!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var buyButton: UIButton!
+    @IBOutlet private weak var buttonsStack: UIStackView!
+    @IBOutlet private weak var backCardImageView: UIImageView!
+    @IBOutlet private weak var descriptionView: UIView!
     
+    // MARK: - Properties
+    // protocol properties
     var name: String = ""
     var descript: String = ""
     var price: Int = 0
     var imageName: String = ""
     var time: Double = 0
+    // entier properties
     private var storage = try! Realm()
     private var notification = UNUserNotificationCenter.current()
 
     
-    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
@@ -50,22 +55,17 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         self.view.addGestureRecognizer(swipeRight)
     }
 
-
+    // MARK: - Setup
     private func configure(title: String, descript: String, price: Int, image: String) {
         titleLabel.text = title
         descriptionLabel.text = descript
         priceLabel.text = "\(price).0"
         coffeeImageView.image = UIImage().resizeImage(image: .init(named: image) ?? UIImage(), targetSize: .init(width: 400, height: 400))
-    }
-    
-    @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
-        if gesture.direction == .right {
-            self.navigationController?.popViewController(animated: true)
-       }
     }
     
     private func config() {
@@ -89,6 +89,16 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         backCardImageView.layer.cornerRadius = 40
         // description view
         descriptionView.layer.cornerRadius = 20
+    }
+    
+    // MARK: - Methods
+    private func buttonPressed() {
+        if buyButton.isTouchInside {
+            buyButton.backgroundColor = #colorLiteral(red: 0.5821276091, green: 0.3368276301, blue: 0.185697452, alpha: 1)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.buyButton.backgroundColor = #colorLiteral(red: 0.8207221627, green: 0.4692305923, blue: 0.257660836, alpha: 1)
+            }
+        }
     }
     
     private func selection(_ sender: UIButton) {
@@ -116,16 +126,6 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         }
     }
     
-    
-    private func buttonPressed() {
-        if buyButton.isTouchInside {
-            buyButton.backgroundColor = #colorLiteral(red: 0.5821276091, green: 0.3368276301, blue: 0.185697452, alpha: 1)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.buyButton.backgroundColor = #colorLiteral(red: 0.8207221627, green: 0.4692305923, blue: 0.257660836, alpha: 1)
-            }
-        }
-    }
-    
     private func sendNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Your coffee is ready"
@@ -145,7 +145,12 @@ class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         notification.add(request)
     }
     
-
+    // MARK: - Actions
+    @objc private func handleGesture(gesture: UISwipeGestureRecognizer) {
+        if gesture.direction == .right {
+            self.navigationController?.popViewController(animated: true)
+       }
+    }
     
     @IBAction private func chooseSize(_ sender: UIButton) {
         if sender.tag == 0 {

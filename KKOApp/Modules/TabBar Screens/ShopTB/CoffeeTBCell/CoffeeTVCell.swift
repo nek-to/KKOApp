@@ -7,23 +7,25 @@
 import RealmSwift
 import UIKit
 
-
-class CoffeeTVCell: UITableViewCell {
-    @IBOutlet weak var coffeeImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descritionLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var likeButton: UIButton!
+final class CoffeeTVCell: UITableViewCell {
+    // MARK: - Outlets
+    @IBOutlet private weak var coffeeImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descritionLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var likeButton: UIButton!
     
+    // MARK: - Properties
     private var storage = try! Realm()
     
+    // MARK: - Cell Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         coffeeImage.layer.cornerRadius = 20
         self.backgroundColor = .black
     }
 
-    
+    // MARK: - Setup
     func configure(_ coffee: Coffee) {
         titleLabel.text = coffee.name
         descritionLabel.text = coffee.descript
@@ -37,7 +39,8 @@ class CoffeeTVCell: UITableViewCell {
         }
     }
     
-    @IBAction func likeCoffee(_ sender: UIButton) {
+    // MARK: - Actions
+    @IBAction private func likeCoffee(_ sender: UIButton) {
         guard let title = titleLabel.text else { return }
         guard let coffee = storage.object(ofType: Coffee.self, forPrimaryKey: title) else { return }
         

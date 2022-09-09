@@ -7,7 +7,7 @@
 import RealmSwift
 import Foundation
 
-class Purcase: Object {
+final class Purcase: Object {
     @objc dynamic var title: String = ""
     @objc dynamic var image: String = ""
     @objc dynamic var time: Double = 0

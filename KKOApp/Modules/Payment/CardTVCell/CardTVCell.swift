@@ -7,19 +7,22 @@
 
 import UIKit
 
-class CardTVCell: UITableViewCell {
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var fonImageView: UIImageView!
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+final class CardTVCell: UITableViewCell {
+    // MARK: - Outlets
+    @IBOutlet private weak var mainView: UIView!
+    @IBOutlet private weak var fonImageView: UIImageView!
+    @IBOutlet private weak var numberLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
     
+    // MARK: - Cell Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         fonImageView.layer.cornerRadius = 30
         mainView.layer.cornerRadius = 30
     }
     
+    // MARK: - Setup
     func configureCell(_ card: CreditCard) {
         fonImageView.image = UIImage(data: try! Data(contentsOf: URL(string: card.fonImage)!))
         numberLabel.text = card.number

@@ -7,39 +7,32 @@
 import FirebaseAuth
 import UIKit
 
-class LogInVC: UIViewController {
-    
-    // MARK: IBOutlets
+final class LogInVC: UIViewController {
+    // MARK: - IBOutlets
     @IBOutlet private weak var backgroundUmageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var passwordRestoreLabel: UILabel!
     @IBOutlet private weak var logInButton: UIButton!
-
     @IBOutlet private weak var loginFieldsBottomConstraint: NSLayoutConstraint!
     @IBOutlet private weak var warningLabel: UILabel!
     
+    // MARK: - Properties
     private var checkerIfFieldEmpty = true
     private var isSuccess = false
     
-    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        launchSetup()
+        config()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
     }
-
-    private func blureFone() {
-        let blure = UIBlurEffect(style: .dark)
-        let effect = UIVisualEffectView(effect: blure)
-        effect.frame = backgroundUmageView.bounds
-        backgroundUmageView.addSubview(effect)
-    }
     
-    private func launchSetup() {
+    // MARK: - Setup
+    private func config() {
         // email text fied
         emailTextField.regularStyle()
         // password text fied
@@ -51,6 +44,19 @@ class LogInVC: UIViewController {
         blureFone()
         // text fields check
         textFieldsSetup()
+    }
+    
+    private func textFieldsSetup() {
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+    }
+    
+    // MARK: - Methods
+    private func blureFone() {
+        let blure = UIBlurEffect(style: .dark)
+        let effect = UIVisualEffectView(effect: blure)
+        effect.frame = backgroundUmageView.bounds
+        backgroundUmageView.addSubview(effect)
     }
     
     private func checkIfFieldEmpty() {
@@ -72,14 +78,12 @@ class LogInVC: UIViewController {
     }
     
     private func toMainTabBar() {
-        let storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-        let tabBarScreen = storyboard.instantiateViewController(withIdentifier: Screens.mainTabBar.rawValue)
+        let tabBarScreen = UIStoryboard(name: Storyboards.mainTabBar.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.mainTabBar.rawValue)
         self.present(tabBarScreen, animated: true)
     }
     
     private func toSignUp() {
-        let storyboard = UIStoryboard(name: "Signup", bundle: nil)
-        let signUpScreen = storyboard.instantiateViewController(withIdentifier: Screens.signup.rawValue)
+        let signUpScreen = UIStoryboard(name: Storyboards.signup.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.signup.rawValue)
         self.present(signUpScreen, animated: true)
     }
     
@@ -95,11 +99,6 @@ class LogInVC: UIViewController {
             }
             self.toMainTabBar()
         }
-    }
-    
-    private func textFieldsSetup() {
-        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
     }
     
     private func restorePasswordAlert() {
@@ -124,6 +123,7 @@ class LogInVC: UIViewController {
         self.present(alert, animated: true)
     }
     
+    // MARK: - Actions
     @objc private func textFieldDidChange() {
         if let email = emailTextField.text, !email.isEmpty {
             emailTextField.emailValidation(email)
@@ -167,5 +167,4 @@ class LogInVC: UIViewController {
     @IBAction private func moveToSignUpScreen(_ sender: UIButton) {
         toSignUp()
     }
-    
 }

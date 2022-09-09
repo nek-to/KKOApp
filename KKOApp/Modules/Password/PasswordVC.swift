@@ -8,19 +8,16 @@
 import UIKit
 import LocalAuthentication
 
-class PasswordVC: UIViewController {
-    
+final class PasswordVC: UIViewController {
+    // MARK: - Outlets
     @IBOutlet private weak var passwordImageView: UIImageView!
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
      super.viewDidLoad()
     }
     
-    
-    @IBAction func aouthorization(_ sender: UITapGestureRecognizer) {
-        authorization()
-    }
-    
+    // MARK: - Methods
     private func authorization() {
         let context = LAContext()
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
@@ -32,5 +29,10 @@ class PasswordVC: UIViewController {
                 }
             }
         }
+    }
+    
+    // MARK: - Actions
+    @IBAction private func aouthorization(_ sender: UITapGestureRecognizer) {
+        authorization()
     }
 }

@@ -8,25 +8,28 @@ import Lottie
 import RealmSwift
 import UIKit
 
-class PurcaseTVCell: UITableViewCell {
-    @IBOutlet weak var coffeeImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var lottieBackView: UIView!
-    @IBOutlet weak var lottieRoundView: UIView!
-    @IBOutlet weak var lottieView: UIView!
-    @IBOutlet weak var greenTickImageView: UIImageView!
+final class PurcaseTVCell: UITableViewCell {
+    // MARK: - Outlets
+    @IBOutlet private weak var coffeeImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var lottieBackView: UIView!
+    @IBOutlet private weak var lottieRoundView: UIView!
+    @IBOutlet private weak var lottieView: UIView!
+    @IBOutlet private weak var greenTickImageView: UIImageView!
     
+    // MARK: - Properties
     private var brewCoffee = AnimationView(name: "brewing-coffee")
     private var buyTime = Date()
     private let currentDate = Date()
 
-    
+    // MARK: - Cell Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         config()
         
     }
     
+    // MARK: - Setup
     private func config() {
         // image
         coffeeImageView.layer.cornerRadius = 30
@@ -38,15 +41,16 @@ class PurcaseTVCell: UITableViewCell {
         lottieView.backgroundColor = .clear
     }
     
-    func coffeeBrewed() {
-        brewCoffee.isHidden = true
-        greenTickImageView.isHidden = false
-    }
-    
     func configureCell(_ coffee: Purcase) {
         titleLabel.text = coffee.title
         coffeeImageView.image = UIImage().resizeImage(image: .init(named: coffee.image)!,
                                                       targetSize: .init(width: 300, height: 300))
+    }
+    
+    // MARK: - Methods
+    func coffeeBrewed() {
+        brewCoffee.isHidden = true
+        greenTickImageView.isHidden = false
     }
     
     func animateBrewingCoffee(_ coffee: Purcase) {

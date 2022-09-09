@@ -30,20 +30,19 @@ We are waiting for you again in our coffee shop!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgi-pc-XWm">
-                                <rect key="frame" x="32" y="294" width="350" height="400"/>
+                                <rect key="frame" x="45" y="264" width="324" height="398"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="k5o-qi-zVM"/>
-                                    <constraint firstAttribute="width" constant="350" id="uBs-sy-k8S"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Bgi-pc-XWm" secondAttribute="trailing" constant="45" id="03E-0a-2On"/>
                             <constraint firstItem="OjB-fy-dSI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="81f-Su-Uyu"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OjB-fy-dSI" secondAttribute="trailing" constant="20" id="Tp9-sH-vmA"/>
-                            <constraint firstItem="Bgi-pc-XWm" firstAttribute="top" secondItem="OjB-fy-dSI" secondAttribute="bottom" constant="50" id="fJV-wE-K4R"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Bgi-pc-XWm" secondAttribute="bottom" constant="200" id="aO0-bN-hkR"/>
+                            <constraint firstItem="Bgi-pc-XWm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="fF4-gh-Ih7"/>
+                            <constraint firstItem="Bgi-pc-XWm" firstAttribute="top" secondItem="OjB-fy-dSI" secondAttribute="bottom" constant="20" id="fJV-wE-K4R"/>
                             <constraint firstItem="OjB-fy-dSI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="thS-Mf-jhN"/>
                             <constraint firstItem="Bgi-pc-XWm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="yWa-gG-KUT"/>
                         </constraints>

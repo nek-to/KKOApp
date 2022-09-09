@@ -7,14 +7,16 @@
 import RealmSwift
 import UIKit
 
-class PaymentVC: UIViewController {
-    @IBOutlet weak var cardTableView: UITableView!
-    @IBOutlet weak var addCardButton: UIButton!
+final class PaymentVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var cardTableView: UITableView!
+    @IBOutlet private weak var addCardButton: UIButton!
     
-//    private var card: CreditCard?
+    // MARK: - Properties
     private var cards: Results<CreditCard>?
     private lazy var storage = try! Realm()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         cardTableView.dataSource = self
@@ -22,7 +24,7 @@ class PaymentVC: UIViewController {
         config()
     }
     
-    
+    // MARK: - Setup
     private func config() {
         // add card button
         addCardButton.layer.borderWidth = 3
@@ -34,15 +36,17 @@ class PaymentVC: UIViewController {
         // reloader
         NotificationCenter.default.addObserver(self, selector: #selector(reloadCardView), name: Notification.Name(rawValue: "reloadCards"), object: nil)
         // view grabber
+        
         paymentVC.delegate = self
         paymentVC.prefersGrabberVisible = true
     }
     
+    // MARK: - Actions
     @objc private func reloadCardView() {
         self.cardTableView.reloadData()
     }
     
-    @IBAction func toAddCardScreen(_ sender: UIButton) {
+    @IBAction private func toAddCardScreen(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "AddCard", bundle: nil)
         let addCardScreen = storyboard.instantiateViewController(withIdentifier: Screens.addCard.rawValue)
         present(addCardScreen, animated: true)
@@ -50,9 +54,12 @@ class PaymentVC: UIViewController {
     
 }
 
+    // MARK: - Extensions
+    // MARK: UITableViewDelegate
 extension PaymentVC: UITableViewDelegate {
 }
 
+    // MARK: UITableViewDataSource
 extension PaymentVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         storage.objects(CreditCard.self).count
@@ -88,6 +95,7 @@ extension PaymentVC: UITableViewDataSource {
     }
 }
 
+    // MARK: UISheetPresentationControllerDelegate
 extension PaymentVC: UISheetPresentationControllerDelegate {
     private var paymentVC: UISheetPresentationController {
         presentationController as! UISheetPresentationController

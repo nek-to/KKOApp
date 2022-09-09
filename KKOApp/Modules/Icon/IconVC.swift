@@ -7,12 +7,15 @@
 
 import UIKit
 
-class IconVC: UIViewController {
-    @IBOutlet weak var iconsTableView: UITableView!
+final class IconVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var iconsTableView: UITableView!
     
+    // MARK: - Properties
     private var iconsStorage = CustomIconsStorage.shared
     private var iconManager = AppIconManager()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         iconsTableView.delegate = self
@@ -24,9 +27,12 @@ class IconVC: UIViewController {
     }
 }
 
+    // MARK: - Extensions
+    // MARK: UITableViewDelegate
 extension IconVC: UITableViewDelegate {
 }
 
+    // MARK: UITableViewDataSource
 extension IconVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         iconsStorage.elements.count
@@ -62,6 +68,7 @@ extension IconVC: UITableViewDataSource {
     }
 }
 
+    // MARK: UISheetPresentationControllerDelegate
 extension IconVC: UISheetPresentationControllerDelegate {
     private var iconVC: UISheetPresentationController {
         presentationController as! UISheetPresentationController

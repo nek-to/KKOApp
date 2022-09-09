@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsStorage {
+final class NewsStorage {
     var elements = [NewsItem]()
     
     static var shared = NewsStorage()

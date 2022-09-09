@@ -7,7 +7,7 @@
 import Foundation
 import RealmSwift
 
-class Coffee: Object {
+final class Coffee: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var descript: String = ""
     @objc dynamic var price: Int = 0

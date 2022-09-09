@@ -7,21 +7,24 @@
 import Lottie
 import UIKit
 
-class ProtectionVC: UIViewController {
-    @IBOutlet weak var lottieView: UIView!
+final class ProtectionVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var lottieView: UIView!
     
+    // MARK: - Properties
     private let protection = AnimationView(name: "fingerprint")
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         animateLottie()
     }
-    
+
+    // MARK: - Methods
     private func animateLottie() {
-        protection.frame = lottieView.bounds
-//        protection.center = lottieView.center
+        protection.frame = CGRect(x: 0, y: 0, width: 300, height: 400)
         protection.contentMode = .center
-        protection.animationSpeed = 0.7
+        protection.animationSpeed = 0.6
         protection.loopMode = .loop
         lottieView.addSubview(protection)
         protection.play()

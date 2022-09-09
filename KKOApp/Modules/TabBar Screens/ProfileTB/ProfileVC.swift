@@ -9,24 +9,26 @@ import RealmSwift
 import UIKit
 import SwiftUI
 
-class ProfileVC: UIViewController {
-    @IBOutlet weak var topImageView: UIImageView!
-    @IBOutlet weak var profilePictureImageView: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var phone: UILabel!
-    @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var preferenceTableView: UITableView!
-    @IBOutlet weak var protectionSwitch: UISwitch!
-    @IBOutlet weak var protectionStateImageView: UIImageView!
-    @IBOutlet weak var weatherTemperatureLabel: UILabel!
-    @IBOutlet weak var weatherIconImage: UIImageView!
+final class ProfileVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var topImageView: UIImageView!
+    @IBOutlet private weak var profilePictureImageView: UIImageView!
+    @IBOutlet private weak var name: UILabel!
+    @IBOutlet private weak var phone: UILabel!
+    @IBOutlet private weak var address: UILabel!
+    @IBOutlet private weak var preferenceTableView: UITableView!
+    @IBOutlet private weak var protectionSwitch: UISwitch!
+    @IBOutlet private weak var protectionStateImageView: UIImageView!
+    @IBOutlet private weak var weatherTemperatureLabel: UILabel!
+    @IBOutlet private weak var weatherIconImage: UIImageView!
     
+    // MARK: - Properties
     private var preferences = PreferenceStorage.shared
     private var imageUrl = ""
     private var storage = try! Realm()
     private var imagePicker = UIImagePickerController()
 
-    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         preferenceTableView.delegate = self
@@ -40,6 +42,7 @@ class ProfileVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(reloadAddress), name: NSNotification.Name(rawValue: "reloadAddress"), object: nil)
     }
     
+    // MARK: - Setup
     private func config() {
         // profile picture
         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.height/2
@@ -85,6 +88,33 @@ class ProfileVC: UIViewController {
         }
         let image = UIImage(data: try! Data(contentsOf: URL(string: imageFromStore)!))
         topImageView.image = image
+    }
+    
+    // MARK: - Methods
+    private func loadFonImage() {
+        UnsplashNetworkManager.getImageFromStock { [weak self] url in
+            if let url = url {
+                self?.imageUrl = url
+                self?.saveTopImage(url: url)
+                if let data = try? Data(contentsOf: URL(string: url)!) {
+                    self?.topImageView.image = UIImage(data: data)
+                }
+            }
+        }
+    }
+    
+    private func saveTopImage(url: String) {
+        let topImage = TopImage()
+        try? storage.write {
+            storage.delete(storage.objects(TopImage.self))
+            topImage.image = imageUrl
+            storage.add(topImage)
+        }
+    }
+    
+    private func initProtectionImageState(_ state: Bool) {
+        let imageName = state ? "protect" : "delete"
+        protectionStateImageView.image = UIImage(named: imageName)
     }
     
     private func chooseWayForProfileImageSetup() {
@@ -150,15 +180,16 @@ class ProfileVC: UIViewController {
         }
     }
     
+    // MARK: - Actions
     @objc private func reloadAddress() {
         address.text = UserSettings.coffeeshopAddress
     }
     
-    @IBAction func changeProfilePic(_ sender: UITapGestureRecognizer) {
+    @IBAction private func changeProfilePic(_ sender: UITapGestureRecognizer) {
         chooseWayForProfileImageSetup()
     }
     
-    @IBAction func chooseAdress(_ sender: UITapGestureRecognizer) {
+    @IBAction private func chooseAdress(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Address", bundle: nil)
         let toAddressCreen = storyboard.instantiateViewController(withIdentifier: Screens.address.rawValue)
         self.present(toAddressCreen, animated: true)
@@ -177,37 +208,14 @@ class ProfileVC: UIViewController {
         }
         initProtectionImageState(protectionSwitch.isOn)
     }
-    
-    private func initProtectionImageState(_ state: Bool) {
-        let imageName = state ? "protect" : "delete"
-        protectionStateImageView.image = UIImage(named: imageName)
-    }
-    
-    private func loadFonImage() {
-        UnsplashNetworkManager.getImageFromStock { [weak self] url in
-            if let url = url {
-                self?.imageUrl = url
-                self?.saveTopImage(url: url)
-                if let data = try? Data(contentsOf: URL(string: url)!) {
-                    self?.topImageView.image = UIImage(data: data)
-                }
-            }
-        }
-    }
-    
-    private func saveTopImage(url: String) {
-        let topImage = TopImage()
-        try? storage.write {
-            storage.delete(storage.objects(TopImage.self))
-            topImage.image = imageUrl
-            storage.add(topImage)
-        }
-    }
 }
 
+    // MARK: - Extensions
+    // MARK: UITableViewDelegate
 extension ProfileVC: UITableViewDelegate {
 }
 
+    // MARK: UITableViewDataSource
 extension ProfileVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         preferences.elements.count
@@ -262,6 +270,7 @@ extension ProfileVC: UITableViewDataSource {
     }
 }
 
+    // MARK: UIImagePickerControllerDelegate
 extension ProfileVC: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true, completion: nil)
@@ -272,5 +281,6 @@ extension ProfileVC: UIImagePickerControllerDelegate {
     }
 }
 
+    // MARK: UINavigationControllerDelegate
 extension ProfileVC: UINavigationControllerDelegate {
 }

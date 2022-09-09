@@ -7,17 +7,20 @@
 import UIKit
 import RealmSwift
 
-class AddressVC: UIViewController {
-    @IBOutlet weak var addressTableView: UITableView!
+final class AddressVC: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var addressTableView: UITableView!
     
+    // MARK: - Properties
     private let address = CoffeeshopStorage.shared
-    var closure: ((String) -> Void)?
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
     }
     
+    // MARK: - Setup
     private func config() {
         // view setup
         addressVC.delegate = self
@@ -29,9 +32,12 @@ class AddressVC: UIViewController {
     }
 }
 
+    // MARK: - Extensions
+    // MARK: UISheetPresentationControllerDelegate
 extension AddressVC: UITableViewDelegate {
 }
 
+    // MARK: UISheetPresentationControllerDelegate
 extension AddressVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         address.elements.count
@@ -47,23 +53,18 @@ extension AddressVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UserSettings.coffeeshopAddress = address.elements[indexPath.row].address
-        if let address = UserSettings.coffeeshopAddress, !address.isEmpty {
-            closure?(address)
-        }
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadAddress"), object: nil)
         self.dismiss(animated: true)
     }
     
     private func addressCellConfig(_ indexPath: IndexPath) -> UITableViewCell {
         let addressCell = addressTableView.dequeueReusableCell(withIdentifier: "addressCell") as! AddressTVCell
-        addressCell.nameLabel.text = address.elements[indexPath.row].name
-        addressCell.addressLabel.text = address.elements[indexPath.row].address
-        addressCell.iconImageView.image = UIImage(named: address.elements[indexPath.row].icon)
-        addressCell.selectionStyle = .none
+        addressCell.configureCell(address, indexPath)
         return addressCell
     }
 }
 
+    // MARK: UISheetPresentationControllerDelegate
 extension AddressVC: UISheetPresentationControllerDelegate {
     private var addressVC: UISheetPresentationController {
         presentationController as! UISheetPresentationController

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PreferenceStorage {
+final class PreferenceStorage {
     var elements: [PreferenceItem] = []
     
     static var shared = PreferenceStorage()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PreferenceItem {
+final class PreferenceItem {
     var title: String
     var icon: String
     

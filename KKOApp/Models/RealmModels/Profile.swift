@@ -7,7 +7,7 @@
 import RealmSwift
 import Foundation
 
-class Profile: Object {
+final class Profile: Object {
     @objc dynamic var user: String?
     @objc dynamic var email: String?
     @objc dynamic var phone: String?

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CoffeeshopItem {
+final class CoffeeshopItem {
     var address: String
     var name: String
     var latitude: Double
