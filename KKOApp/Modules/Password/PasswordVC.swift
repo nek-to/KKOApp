@@ -23,8 +23,8 @@ final class PasswordVC: UIViewController {
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authorized") { success, _ in
                 if success {
-                    DispatchQueue.main.async {
-                        self.dismiss(animated: true)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.dismiss(animated: true)
                     }
                 }
             }

@@ -71,8 +71,8 @@ final class LogInVC: UIViewController {
     
     private func hideWarningLabel() {
         if !warningLabel.isHidden {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.warningLabel.isHidden = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+                self?.warningLabel.isHidden = true
             }
         }
     }
@@ -102,7 +102,6 @@ final class LogInVC: UIViewController {
     }
     
     private func restorePasswordAlert() {
-        print("LOG: ")
         let alert = UIAlertController(title: "Restore password", message: "Please enter your email", preferredStyle: .alert)
         alert.addTextField(configurationHandler: { text in
             text.placeholder = "Enter email"

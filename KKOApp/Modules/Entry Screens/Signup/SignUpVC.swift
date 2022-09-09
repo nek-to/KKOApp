@@ -31,7 +31,6 @@ final class SignUpVC: UIViewController {
         super.viewDidLoad()
         launchSetup()
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
     }
 
@@ -99,8 +98,8 @@ final class SignUpVC: UIViewController {
     
     private func hideWarningLabel() {
         if !warningLabel.isHidden {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.warningLabel.isHidden = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+                self?.warningLabel.isHidden = true
             }
         }
     }

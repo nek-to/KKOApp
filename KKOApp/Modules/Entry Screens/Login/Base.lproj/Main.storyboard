@@ -166,6 +166,7 @@
                         <outlet property="emailTextField" destination="IWv-bo-ofN" id="rip-0v-fhw"/>
                         <outlet property="logInButton" destination="y7Z-EX-jOH" id="uSP-WV-V5f"/>
                         <outlet property="loginFieldsBottomConstraint" destination="BUG-OK-kNx" id="BVn-LP-TmO"/>
+                        <outlet property="passwordRestoreLabel" destination="wRz-gG-KFZ" id="JvZ-Ka-TGm"/>
                         <outlet property="passwordTextField" destination="fyl-Fd-ei6" id="dP4-wg-AHk"/>
                         <outlet property="warningLabel" destination="PhY-yr-Vcj" id="xcD-eF-iN4"/>
                     </connections>
