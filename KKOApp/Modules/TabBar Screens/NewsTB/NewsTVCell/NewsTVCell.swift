@@ -28,8 +28,4 @@ final class NewsTVCell: UITableViewCell {
         imageImageView.image = UIImage().resizeImage(image: .init(named: news.image)!,
                                                      targetSize: .init(width: 300, height: 300))
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }

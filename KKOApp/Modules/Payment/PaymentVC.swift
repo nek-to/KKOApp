@@ -47,8 +47,7 @@ final class PaymentVC: UIViewController {
     }
     
     @IBAction private func toAddCardScreen(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "AddCard", bundle: nil)
-        let addCardScreen = storyboard.instantiateViewController(withIdentifier: Screens.addCard.rawValue)
+        let addCardScreen = UIStoryboard(name: Storyboards.addCard.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.addCard.rawValue)
         present(addCardScreen, animated: true)
     }
     

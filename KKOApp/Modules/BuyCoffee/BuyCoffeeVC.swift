@@ -135,8 +135,8 @@ final class BuyCoffeeVC: UIViewController, CoffeeProtocol {
         guard !address.isEmpty else {
             return content.body = "ulica Leonida Levina, 2"
         }
+        
         content.body = "Your \(name) is waiting for you at \(address)"
-
         content.sound = .default
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(time), repeats: false)
         let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)

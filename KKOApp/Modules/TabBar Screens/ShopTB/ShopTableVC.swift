@@ -16,9 +16,9 @@ final class ShopTableVC: UITableViewController {
     @IBOutlet private weak var lottieView: UIView!
     
     // MARK: - Properties
-    private var storage = try! Realm()
+    private let storage = try! Realm()
     private var filteredCoffee = [Coffee]()
-    private var coupone = CouponeStorage.shared
+    private let coupone = CouponeStorage.shared
     private let okey = AnimationView(name: "ok")
     private var animate = true
     private var searchBarIsEmpty: Bool {

@@ -327,7 +327,6 @@
 		534DA99528AFD68400626AA4 /* KKOApp */ = {
 			isa = PBXGroup;
 			children = (
-				5398E68728B69D6D00DEB5BC /* Utils */,
 				534DA9A428AFD68600626AA4 /* Info.plist */,
 				534DA9AF28AFDE7300626AA4 /* Application */,
 				53E8F18728B3E8360011D63F /* Extencions */,
@@ -337,6 +336,7 @@
 				534DA9AB28AFDC3D00626AA4 /* Modules */,
 				534DA9AC28AFDC8500626AA4 /* Network */,
 				534DA9AE28AFDCA200626AA4 /* Resources */,
+				5398E68728B69D6D00DEB5BC /* Utils */,
 			);
 			path = KKOApp;
 			sourceTree = "<group>";

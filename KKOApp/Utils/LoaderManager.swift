@@ -7,7 +7,7 @@
 import RealmSwift
 import Foundation
 
-class LoaderManager {
+final class LoaderManager {
     private let storage = try! Realm()
 
     
@@ -30,9 +30,7 @@ class LoaderManager {
                 try? storage.write {
                     storage.add(coffee)
                 }
-                }
+            }
         }
-        let c = storage.objects(Coffee.self).count
-        print("LOG2: ", c)
     }
 }

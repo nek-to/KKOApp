@@ -119,14 +119,14 @@ final class ProfileVC: UIViewController {
     
     private func chooseWayForProfileImageSetup() {
         let alert = UIAlertController(title: "Setup profile picture", message: "What need to be user", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Use photo library", style: .default) {_ in
-            self.openLibrary()
+        alert.addAction(UIAlertAction(title: "Use photo library", style: .default) {[weak self] _ in
+            self?.openLibrary()
         })
-        alert.addAction(UIAlertAction(title: "Use camera", style: .default) { _ in
-            self.openCamera()
+        alert.addAction(UIAlertAction(title: "Use camera", style: .default) { [weak self] _ in
+            self?.openCamera()
         })
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { _ in
-            self.deleteProfilePicture()
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+            self?.deleteProfilePicture()
         })
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         self.present(alert, animated: true)
@@ -138,7 +138,7 @@ final class ProfileVC: UIViewController {
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         } else {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+            let alert  = UIAlertController(title: "Warning", message: "You have no permission to use camera", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
@@ -190,8 +190,7 @@ final class ProfileVC: UIViewController {
     }
     
     @IBAction private func chooseAdress(_ sender: UITapGestureRecognizer) {
-        let storyboard = UIStoryboard(name: "Address", bundle: nil)
-        let toAddressCreen = storyboard.instantiateViewController(withIdentifier: Screens.address.rawValue)
+        let toAddressCreen = UIStoryboard(name: Storyboards.address.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.address.rawValue)
         self.present(toAddressCreen, animated: true)
     }
     
@@ -240,33 +239,30 @@ extension ProfileVC: UITableViewDataSource {
     }
     
     private func selectPreferenceOption(_ option: String) {
+        var storyboard: Storyboards = .map
+        var screen: Screens = .map
         switch option {
         case Preferences.location.rawValue:
-            let storyboard = UIStoryboard(name: "Map", bundle: nil)
-            let mapScreen = storyboard.instantiateViewController(withIdentifier: Screens.map.rawValue)
-            self.present(mapScreen, animated: true)
+            storyboard = .map
+            screen = .map
         case Preferences.payment.rawValue:
-            let storyboard = UIStoryboard(name: "Payment", bundle: nil)
-            let paymentScreen = storyboard.instantiateViewController(withIdentifier: Screens.payment.rawValue)
-            self.present(paymentScreen, animated: true)
+            storyboard = .payment
+            screen = .payment
         case Preferences.purcase.rawValue:
-            let storyboard = UIStoryboard(name: "Purcase", bundle: nil)
-            let purcaseScreen = storyboard.instantiateViewController(withIdentifier: Screens.purcase.rawValue)
-            self.present(purcaseScreen, animated: true)
+            storyboard = .purcase
+            screen = .purcase
         case Preferences.icon.rawValue:
-            let storyboard = UIStoryboard(name: "Icon", bundle: nil)
-            let iconScreen = storyboard.instantiateViewController(withIdentifier: Screens.icon.rawValue)
-            self.present(iconScreen, animated: true)
+            storyboard = .icon
+            screen = .icon
+        case Preferences.logout.rawValue:
+            storyboard = .login
+            screen = .login
+            try? FirebaseAuth.Auth.auth().signOut()
         default:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let loginScreen = storyboard.instantiateViewController(withIdentifier: Screens.login.rawValue)
-            do {
-                try FirebaseAuth.Auth.auth().signOut()
-            } catch {
-            }
-            self.present(loginScreen, animated: true)
-            
+            break
         }
+        let toScreen = UIStoryboard(name: storyboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: screen.rawValue)
+        present(toScreen, animated: true)
     }
 }
 
