@@ -18,6 +18,6 @@ final class FollowUsStorage {
         }
 
         self.image = self.image?
-            .compactMap { $0?.resizeImage(image: $0!, targetSize: .init(width: 300, height: 300)) }
+            .compactMap { $0?.resizeImage(image: $0!, targetSize: .init(width: 200, height: 200)) }
         }
 }
