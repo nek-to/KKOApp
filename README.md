@@ -1,2 +1,2 @@
-![Nik's GitHub stats](https://github-readme-stats.vercel.app/apinek-to=anuraghazra&hide=contribs,prs)
+![Nik's GitHub stats](https://github-readme-stats.vercel.app/api?username=nek-to&hide=contribs,prs)
 # KKOApp
