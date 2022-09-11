@@ -1,37 +1,37 @@
 # KKOApp
 
-Это приложение разработано в рамках обучения языку программирования **Swift**.
+This app was developed as part of the **Swift** programming language training.
   
-**KKOApp** представляет собой приложение для кофейни, предоставляющее возможность: узнать о проводимых акциях и новостях кофейни, ознакомления с ассортиментом кофейни, заказ понравившейся позиции, использования купонов, доступа к профилю аккаунта, где есть возможность: *узнать ближайшее местоположение кофейни на карте и проложить к ней маршрут, привязать карту для онлайн оплаты, узнать статус приготовления заказанной позиции, персонализировать иконку приложения и внешний вид профиля, узнать текущие сведения о погоде для помощи в выборе кофе, возможность активации защиты Face ID/ Touch ID для защиты персональных данных.*
+**KKOApp** is an application for the coffee shop which provides the possibility to: find out about current promotions and news of the coffee shop, get acquainted with the range of coffee shops, order an item you like, use coupons, access your account profile, where you can: *know the nearest location of the coffee shop on the map and navigate there, link your card for online payment, know the cooking status of the ordered item, customize the application icon and profile appearance, know the current weather information to help select coffee, the ability to activate Face ID/ Touch ID protection to protect personal data.*
 
-## Подготовка
+## Getting Started
 
-Ниже представлена пошаговая инструкция подготовки и запуска приложения на симмуляторе или телефоне.
+Here are step-by-step instructions for preparing and running the application on your simulator or phone.
 
-### Потребуется
+### Prerequisites
 
-Перечень оборудования и программ
+What things you need to install the software and how to install them
 
 ```
-- Устройство с MacOS
+- MacOS device
 - Xcode
-- iPhone с версией 15.5 и выше или запуск в симмуляторе на устройстве MacOS
+- iPhone version 15.5 or later or running in the simulator on a MacOS device
 ```
 
-### Установка
+### Installing
 
-Инструкция по установке
+A step by step series of examples that tell you how to get a development end running
 
 ```
-1. Скачать zip файл или командой git clone получить копию ветки main на свой ПК
-2. Открыть терминал в папке или с помощью команды cd *перетащить папку с программой* в терминале снавигироваться на папку с проектом
-3. Ввести команду pod install
-4. После успешной установки Pod файлов запустить файл KKOApp.xcworkspace
-5. Запустить программу на симмуляторе или iPhone
+1. Download the zip file or use the git clone command to get a copy of the main branch on your PC
+2. open a terminal in the folder or use the command cd *drag program folder* in the terminal to navigate to the folder with the project
+3. Enter the pod install command
+4. After the Pod files are successfully installed, run the file KKOApp.xcworkspace
+5. Run the program on the simulator or iPhone
 ```
 
-## Скриншоты
-Ниже представлены скриншоты графического интерфейса приложения
+## Screenshots
+Below are screenshots of the graphical interface of the application
 
 <p align="center">
   <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.36.34.png" width="200" >
@@ -45,18 +45,20 @@
 </p>
 
 
-## Используемые технологии
+## Technologies used
 
-* UIKit - Использование UI элементов
-* Сocoa Touch Class - Библиотека абстрактных представлений
-* GitHub - Контроль версий
-* [WeatherBit](https://www.weatherbit.io/api) - Open api погоды
-* [Upslash](https://unsplash.com/developers) - Open api стоковых картинок и фотографий
-* [Lottie-iOS](https://github.com/airbnb/lottie-ios) - Воспроизведение JSON анимаций
-* [Realm](https://github.com/realm/realm-swift) - Локальное хранилище данных
-* [Firebase](https://firebase.google.com/docs/auth/ios/start) - Аутентификация аккаунтов
-* [SwiftLint](https://github.com/realm/SwiftLint)  - Инструмент для соблюдения стиля и соглашений Swift 
+* MVC - arcitecture pattern
+* Singleton - design pattern
+* UIKit - use UI library
+* Сocoa Touch Class - library of abstract representations
+* GitHub - version control
+* [WeatherBit](https://www.weatherbit.io/api) - weather open api
+* [Upslash](https://unsplash.com/developers) - stock images open api
+* [Lottie-iOS](https://github.com/airbnb/lottie-ios) - playing JSON animations
+* [Realm](https://github.com/realm/realm-swift) - local data base
+* [Firebase](https://firebase.google.com/docs/auth/ios/start) - account auth
+* [SwiftLint](https://github.com/realm/SwiftLint)  - swift style and convention tool 
 
-## Автор
+## Author
 
-* **Nik Gribok** - [Nek-to](https://github.com/nek-to) - автор дизайна и кода
+* **Nik Gribok** - [Nek-to](https://github.com/nek-to) - design and code author
