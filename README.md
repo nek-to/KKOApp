@@ -1,8 +1,8 @@
 # KKOApp
 
-  Это приложение разработано в рамках обучения языку программирования Swift.
+Это приложение разработано в рамках обучения языку программирования **Swift**.
   
-  KKOApp представляет собой приложение для кофейни, предоставляющее возможность: узнать о проводимых акциях и новостях кофейни, ознакомления с ассортиментом кофейни, заказ понравившейся позиции, использования купонов, доступа к профилю аккаунта, где есть возможность узнать ближайшее местоположение кофейни на карте и проложить к ней маршрут, привязать карту для онлайн оплаты, узнать статус приготовления заказанной позиции, персонализировать иконку приложения и внешний вид профиля, узнать текущие сведения о погоде для помощи в выборе кофе, возможность активации защиты Face ID/ Touch ID для защиты персональных данных. 
+**KKOApp** представляет собой приложение для кофейни, предоставляющее возможность: узнать о проводимых акциях и новостях кофейни, ознакомления с ассортиментом кофейни, заказ понравившейся позиции, использования купонов, доступа к профилю аккаунта, где есть возможность: *узнать ближайшее местоположение кофейни на карте и проложить к ней маршрут, привязать карту для онлайн оплаты, узнать статус приготовления заказанной позиции, персонализировать иконку приложения и внешний вид профиля, узнать текущие сведения о погоде для помощи в выборе кофе, возможность активации защиты Face ID/ Touch ID для защиты персональных данных.*
 
 ## Подготовка
 
@@ -31,8 +31,20 @@
 ```
 
 ## Скриншоты
-![image1](https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.36.34.png)
-![image1]((https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.36.39.png)
+Ниже представлены скриншоты графического интерфейса приложения
+
+<p align="center">
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.36.34.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.36.39.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.19.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.28.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.42.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.48.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.38.15.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.40.23.png" width="200" >
+</p>
+
+
 ## Используемые технологии
 
 * UIKit - Использование UI элементов
