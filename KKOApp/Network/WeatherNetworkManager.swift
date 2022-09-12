@@ -4,6 +4,10 @@
 //
 //  Created by VironIT on 6.09.22.
 //
+<<<<<<< HEAD
+=======
+
+>>>>>>> final
 import UIKit
 import CoreLocation
 

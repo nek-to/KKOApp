@@ -5,7 +5,10 @@ disabled_rules:
 - identifier_name
 - force_cast
 - force_try
+<<<<<<< HEAD
 - comma
+=======
+>>>>>>> final
 
 
 opt_in_rules:
