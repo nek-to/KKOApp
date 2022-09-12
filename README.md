@@ -36,11 +36,11 @@ Below are screenshots of the graphical interface of the application
 <p align="center">
   <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.36.34.png" width="200" >
   <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.36.39.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.19.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.38.15.png" width="200" >
   <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.28.png" width="200" >
   <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.40.23.png" width="200" >
   <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.48.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.38.15.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.19.png" width="200" >
   <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.40.23.png" width="200" >
 </p>
 
