@@ -2,11 +2,11 @@
 
 This app was developed as part of the **Swift** programming language training.
   
-**KKOApp** is an application for the coffee shop which provides the possibility to: find out about current promotions and news of the coffee shop, get acquainted with the range of coffee shops, order an item you like, use coupons, access your account profile, where you can: *know the nearest location of the coffee shop on the map and navigate there, link your card for online payment, know the cooking status of the ordered item, customize the application icon and profile appearance, know the current weather information to help select coffee, the ability to activate Face ID / Touch ID protection to protect personal data.*
+**KKOApp** is an application for the coffee shop which provides the possibility to: *find out about current promotions and news of the coffee shop, get acquainted with the range of coffee shops, order an item you like, use coupons, access your account profile, where you can know the nearest location of the coffee shop on the map and navigate there, link your card for online payment, know the cooking status of the ordered item, customize the application icon and profile appearance, know the current weather information to help select coffee, the ability to activate Face ID / Touch ID protection to protect personal data.*
 
 ## Getting Started
 
-Here are step-by-step instructions for preparing and running the application on your simulator or phone.
+Here are step-by-step instructions for preparing and running the application on your simulator or iPhone.
 
 ### Prerequisites
 
