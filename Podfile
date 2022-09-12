@@ -4,17 +4,14 @@
 target 'KKOApp' do
   use_frameworks!
 
-<<<<<<< Updated upstream
   pod 'lottie-ios', '3.4.3'
   pod 'RealmSwift', '10.29.0'
   pod 'FirebaseAuth', '9.5.0'
   pod 'SwiftLint', '0.49.1'
-=======
   pod 'lottie-ios'
   pod 'RealmSwift'
   pod 'FirebaseAuth'
   pod 'SwiftLint'
->>>>>>> Stashed changes
 
   target 'KKOWidgetExtension' do
    pod 'RealmSwift', '10.29.0'
