@@ -34,14 +34,14 @@ A step by step series of examples that tell you how to get a development end run
 Below are screenshots of the graphical interface of the application
 
 <p align="center">
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.36.34.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.36.39.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.38.15.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.28.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.40.23.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.48.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.37.19.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-09-11%20at%2016.40.23.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot1.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot2.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot3.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot4.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot5.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot6.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot7.png" width="200" >
+  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot8.png" width="200" >
 </p>
 
 
@@ -52,6 +52,8 @@ Below are screenshots of the graphical interface of the application
 * UIKit - use UI library
 * Сocoa Touch Class - library of abstract representations
 * GitHub - version control
+* WidgetKit - for making widget
+* SwiftUI - layout widget views
 * [WeatherBit](https://www.weatherbit.io/api) - weather open api
 * [Upslash](https://unsplash.com/developers) - stock images open api
 * [Lottie-iOS](https://github.com/airbnb/lottie-ios) - playing JSON animations
