@@ -43,6 +43,7 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - PromisesObjC (2.1.1)
+<<<<<<< Updated upstream
   - Realm (10.29.0):
     - Realm/Headers (= 10.29.0)
   - Realm/Headers (10.29.0)
@@ -55,6 +56,20 @@ DEPENDENCIES:
   - lottie-ios (= 3.4.3)
   - RealmSwift (= 10.29.0)
   - SwiftLint (= 0.49.1)
+=======
+  - Realm (10.28.7):
+    - Realm/Headers (= 10.28.7)
+  - Realm/Headers (10.28.7)
+  - RealmSwift (10.28.7):
+    - Realm (= 10.28.7)
+  - SwiftLint (0.49.1)
+
+DEPENDENCIES:
+  - FirebaseAuth
+  - lottie-ios
+  - RealmSwift
+  - SwiftLint
+>>>>>>> Stashed changes
 
 SPEC REPOS:
   trunk:
@@ -83,10 +98,18 @@ SPEC CHECKSUMS:
   lottie-ios: 9ae750cdc7820fecbd3c2f0cfc493038208fcdc4
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+<<<<<<< Updated upstream
   Realm: 5596770daeff1ad76c8eb10d5947dc10472da779
   RealmSwift: 35d8d318b7e5a8dbc7096c2a243184e4d19abcc0
   SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
 
 PODFILE CHECKSUM: ad99ac4f602dbb40a8fb3e0ea9b2a3a1407f1bb1
+=======
+  Realm: d1d5ad078b9c1d22f99f7f7f2e692b548b518f24
+  RealmSwift: 7c38e0acca7d3df9cc60d79c073ef68245351d0e
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
+
+PODFILE CHECKSUM: 50e6dc691184d689d366ace2d66babb9b4ea50ec
+>>>>>>> Stashed changes
 
 COCOAPODS: 1.11.3

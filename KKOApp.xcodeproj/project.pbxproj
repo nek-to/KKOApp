@@ -143,7 +143,11 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		538FDD6728CE540300110B56 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
+<<<<<<< Updated upstream
 			buildActionMask = 2147483647;
+=======
+			buildActionMask = 12;
+>>>>>>> Stashed changes
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
@@ -891,8 +895,13 @@
 				534DA99028AFD68400626AA4 /* Frameworks */,
 				534DA99128AFD68400626AA4 /* Resources */,
 				8C5B2D15B62D89529281E43D /* [CP] Embed Pods Frameworks */,
+<<<<<<< Updated upstream
 				53322A9428CA88660057FC95 /* ShellScript */,
 				538FDD6728CE540300110B56 /* Embed App Extensions */,
+=======
+				538CD75928C7D82F0019409F /* Embed App Extensions */,
+				53322A9328CA60160057FC95 /* ShellScript */,
+>>>>>>> Stashed changes
 			);
 			buildRules = (
 			);
@@ -1023,7 +1032,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+<<<<<<< Updated upstream
 		53322A9428CA88660057FC95 /* ShellScript */ = {
+=======
+		53322A9328CA60160057FC95 /* ShellScript */ = {
+>>>>>>> Stashed changes
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

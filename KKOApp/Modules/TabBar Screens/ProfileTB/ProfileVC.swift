@@ -64,8 +64,18 @@ final class ProfileVC: UIViewController {
             }
         }
         // setup address
+<<<<<<< Updated upstream
         guard let coffeeShop = UserSettings.coffeeshopAddress, !coffeeShop.isEmpty else {
             return address.text = "ulica Leonida Levina, 2"
+=======
+        guard let coffeeShop = UserSettings.coffeeshopAddress else { return }
+        if coffeeShop.isEmpty {
+            address.text = "ulica Leonida Levina, 2"
+            print("LOG: some")
+        } else {
+            address.text = coffeeShop
+            print("LOG: address")
+>>>>>>> Stashed changes
         }
         address.text = coffeeShop
     }
@@ -133,12 +143,20 @@ final class ProfileVC: UIViewController {
     }
     
     private func openCamera() {
+<<<<<<< Updated upstream
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+=======
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera)) {
+>>>>>>> Stashed changes
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         } else {
+<<<<<<< Updated upstream
             let alert  = UIAlertController(title: "Warning", message: "You have no permission to use camera", preferredStyle: .alert)
+=======
+            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+>>>>>>> Stashed changes
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
