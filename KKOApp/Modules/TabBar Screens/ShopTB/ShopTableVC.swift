@@ -73,7 +73,23 @@ final class ShopTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        transferDataToBuyScreen(indexPath: indexPath)
+        if isFiltering {
+            transferFilteredDataToBuyScreen(indexPath: indexPath)
+        } else {
+            transferDataToBuyScreen(indexPath: indexPath)
+        }
+    }
+    
+    private func transferFilteredDataToBuyScreen(indexPath: IndexPath) {
+        var toBuyCoffee = UIStoryboard(name: Storyboards.buyCoffee.rawValue, bundle: nil).instantiateViewController(withIdentifier: Screens.buyCoffee.rawValue) as! CoffeeProtocol
+        let coffees = filteredCoffee
+        let coffee = coffees[indexPath.row]
+        toBuyCoffee.name = coffee.name
+        toBuyCoffee.descript = coffee.descript
+        toBuyCoffee.price = coffee.price
+        toBuyCoffee.imageName = coffee.imageName
+        toBuyCoffee.time = coffee.time
+        navigationController?.pushViewController(toBuyCoffee as! UIViewController, animated: true)
     }
     
     private func transferDataToBuyScreen(indexPath: IndexPath) {
