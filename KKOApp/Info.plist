@@ -4,13 +4,10 @@
 <dict>
 	<key>NSWidgetWantsLocation</key>
 	<true/>
-<<<<<<< HEAD
 	<key>CFBundleIdentifier</key>
 	<string></string>
-=======
 	<key>NSLocationUsageDescription</key>
 	<string>Please allow your location for our service</string>
->>>>>>> final
 	<key>NSCameraUsageDescription</key>
 	<string>Please allow to use camera</string>
 	<key>CFBundleIcons</key>

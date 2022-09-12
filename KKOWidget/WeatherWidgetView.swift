@@ -29,11 +29,7 @@ struct WeatherWidgetView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .padding(.top, 5.0)
-<<<<<<< HEAD
-                        .frame(height: 35.0)
-=======
                         .frame(width: 100, height: 35.0)
->>>>>>> final
                     Image(uiImage: UIImage(named: entry.weather.icon!)! )
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -57,14 +53,9 @@ struct WeatherWidgetView: View {
                             Text(entry.weather.coffeeName!)
                                 .font(.body)
                                 .foregroundColor(.white)
-<<<<<<< HEAD
-                                .lineLimit(3)
-                                .frame(width: 100, height: 40, alignment: .center)
-=======
                                 .multilineTextAlignment(.center)
                                 .lineLimit(3)
                                 .frame(width: 100, height: 70, alignment: .center)
->>>>>>> final
                         }
                         .padding(.bottom, 30.0)
                     }

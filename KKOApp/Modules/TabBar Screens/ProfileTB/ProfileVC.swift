@@ -64,23 +64,8 @@ final class ProfileVC: UIViewController {
             }
         }
         // setup address
-<<<<<<< HEAD
-<<<<<<< Updated upstream
         guard let coffeeShop = UserSettings.coffeeshopAddress, !coffeeShop.isEmpty else {
             return address.text = "ulica Leonida Levina, 2"
-=======
-        guard let coffeeShop = UserSettings.coffeeshopAddress else { return }
-        if coffeeShop.isEmpty {
-            address.text = "ulica Leonida Levina, 2"
-            print("LOG: some")
-        } else {
-            address.text = coffeeShop
-            print("LOG: address")
->>>>>>> Stashed changes
-=======
-        guard let coffeeShop = UserSettings.coffeeshopAddress, !coffeeShop.isEmpty else {
-            return address.text = "ulica Leonida Levina, 2"
->>>>>>> final
         }
         address.text = coffeeShop
     }
@@ -148,28 +133,12 @@ final class ProfileVC: UIViewController {
     }
     
     private func openCamera() {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
-=======
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera)) {
->>>>>>> Stashed changes
-=======
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
->>>>>>> final
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         } else {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
             let alert  = UIAlertController(title: "Warning", message: "You have no permission to use camera", preferredStyle: .alert)
-=======
-            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
->>>>>>> Stashed changes
-=======
-            let alert  = UIAlertController(title: "Warning", message: "You have no permission to use camera", preferredStyle: .alert)
->>>>>>> final
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
