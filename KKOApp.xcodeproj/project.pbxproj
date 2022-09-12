@@ -40,6 +40,16 @@
 		538331B428C777B50011D2CD /* WeatherNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538331B328C777B50011D2CD /* WeatherNetworkManager.swift */; };
 		5393A6E728CB8C98009320F6 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393A6E628CB8C98009320F6 /* Storyboards.swift */; };
 		5394D35428BEF12200EFE968 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5394D35328BEF12200EFE968 /* GoogleService-Info.plist */; };
+		5394F3D528CF02CF00E7E005 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5394F3D428CF02CF00E7E005 /* WidgetKit.framework */; };
+		5394F3D728CF02CF00E7E005 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5394F3D628CF02CF00E7E005 /* SwiftUI.framework */; };
+		5394F3E028CF02D100E7E005 /* KKOWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5394F3D328CF02CF00E7E005 /* KKOWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5394F3EC28CF033E00E7E005 /* KKOWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5394F3E528CF033B00E7E005 /* KKOWidget.swift */; };
+		5394F3ED28CF033E00E7E005 /* WeatherWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5394F3E628CF033B00E7E005 /* WeatherWidgetView.swift */; };
+		5394F3EE28CF033E00E7E005 /* WeatherEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5394F3E728CF033B00E7E005 /* WeatherEntry.swift */; };
+		5394F3EF28CF033E00E7E005 /* WidgetWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5394F3E828CF033B00E7E005 /* WidgetWeather.swift */; };
+		5394F3F028CF033E00E7E005 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5394F3E928CF033B00E7E005 /* Info.plist */; };
+		5394F3F128CF033E00E7E005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5394F3EA28CF033D00E7E005 /* Assets.xcassets */; };
+		5394F3F228CF033E00E7E005 /* WeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5394F3EB28CF033E00E7E005 /* WeatherProvider.swift */; };
 		5395340228B7F78A00B76054 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395340128B7F78A00B76054 /* Map.storyboard */; };
 		5395340428B7F7A000B76054 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340328B7F7A000B76054 /* MapVC.swift */; };
 		5395340628B801B900B76054 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395340528B801B900B76054 /* Preferences.swift */; };
@@ -115,6 +125,30 @@
 		8445CBE393B3D0D68537A8DB /* Pods_KKOApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EFC33B70C8060F4CD3A4FD /* Pods_KKOApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5394F3DE28CF02D100E7E005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 534DA98B28AFD68400626AA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5394F3D228CF02CF00E7E005;
+			remoteInfo = KKOWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5394F3E128CF02D100E7E005 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5394F3E028CF02D100E7E005 /* KKOWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B07FFE728B5A318001701BB /* BuyCoffee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuyCoffee.storyboard; sourceTree = "<group>"; };
 		0B07FFE928B5A400001701BB /* BuyCoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoffeeVC.swift; sourceTree = "<group>"; };
@@ -151,6 +185,16 @@
 		538331B328C777B50011D2CD /* WeatherNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkManager.swift; sourceTree = "<group>"; };
 		5393A6E628CB8C98009320F6 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		5394D35328BEF12200EFE968 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5394F3D328CF02CF00E7E005 /* KKOWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KKOWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5394F3D428CF02CF00E7E005 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5394F3D628CF02CF00E7E005 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5394F3E528CF033B00E7E005 /* KKOWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKOWidget.swift; sourceTree = "<group>"; };
+		5394F3E628CF033B00E7E005 /* WeatherWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherWidgetView.swift; sourceTree = "<group>"; };
+		5394F3E728CF033B00E7E005 /* WeatherEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherEntry.swift; sourceTree = "<group>"; };
+		5394F3E828CF033B00E7E005 /* WidgetWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetWeather.swift; sourceTree = "<group>"; };
+		5394F3E928CF033B00E7E005 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5394F3EA28CF033D00E7E005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5394F3EB28CF033E00E7E005 /* WeatherProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherProvider.swift; sourceTree = "<group>"; };
 		5395340128B7F78A00B76054 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		5395340328B7F7A000B76054 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		5395340528B801B900B76054 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -237,6 +281,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5394F3D028CF02CF00E7E005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5394F3D728CF02CF00E7E005 /* SwiftUI.framework in Frameworks */,
+				5394F3D528CF02CF00E7E005 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -310,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				534DA99528AFD68400626AA4 /* KKOApp */,
+				5394F3D828CF02CF00E7E005 /* KKOWidget */,
 				534DA99428AFD68400626AA4 /* Products */,
 				9B9AE91E4CC75CCA0A9FEBD2 /* Pods */,
 				CB512878012C64A65C3FD0B9 /* Frameworks */,
@@ -320,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				534DA99328AFD68400626AA4 /* KKOApp.app */,
+				5394F3D328CF02CF00E7E005 /* KKOWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -430,6 +485,20 @@
 				534DA9B828AFEF6C00626AA4 /* SignUpVC.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		5394F3D828CF02CF00E7E005 /* KKOWidget */ = {
+			isa = PBXGroup;
+			children = (
+				5394F3EA28CF033D00E7E005 /* Assets.xcassets */,
+				5394F3E928CF033B00E7E005 /* Info.plist */,
+				5394F3E528CF033B00E7E005 /* KKOWidget.swift */,
+				5394F3E728CF033B00E7E005 /* WeatherEntry.swift */,
+				5394F3EB28CF033E00E7E005 /* WeatherProvider.swift */,
+				5394F3E628CF033B00E7E005 /* WeatherWidgetView.swift */,
+				5394F3E828CF033B00E7E005 /* WidgetWeather.swift */,
+			);
+			path = KKOWidget;
 			sourceTree = "<group>";
 		};
 		5395340028B7F71D00B76054 /* MapLocation */ = {
@@ -792,6 +861,8 @@
 			isa = PBXGroup;
 			children = (
 				F0EFC33B70C8060F4CD3A4FD /* Pods_KKOApp.framework */,
+				5394F3D428CF02CF00E7E005 /* WidgetKit.framework */,
+				5394F3D628CF02CF00E7E005 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -809,15 +880,34 @@
 				534DA99128AFD68400626AA4 /* Resources */,
 				8C5B2D15B62D89529281E43D /* [CP] Embed Pods Frameworks */,
 				53322A9428CA88660057FC95 /* ShellScript */,
+				5394F3E128CF02D100E7E005 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5394F3DF28CF02D100E7E005 /* PBXTargetDependency */,
 			);
 			name = KKOApp;
 			productName = KKOApp;
 			productReference = 534DA99328AFD68400626AA4 /* KKOApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5394F3D228CF02CF00E7E005 /* KKOWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5394F3E428CF02D100E7E005 /* Build configuration list for PBXNativeTarget "KKOWidgetExtension" */;
+			buildPhases = (
+				5394F3CF28CF02CF00E7E005 /* Sources */,
+				5394F3D028CF02CF00E7E005 /* Frameworks */,
+				5394F3D128CF02CF00E7E005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKOWidgetExtension;
+			productName = KKOWidgetExtension;
+			productReference = 5394F3D328CF02CF00E7E005 /* KKOWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -830,6 +920,9 @@
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					534DA99228AFD68400626AA4 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					5394F3D228CF02CF00E7E005 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
@@ -848,6 +941,7 @@
 			projectRoot = "";
 			targets = (
 				534DA99228AFD68400626AA4 /* KKOApp */,
+				5394F3D228CF02CF00E7E005 /* KKOWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -861,6 +955,7 @@
 				5395341F28B8438900B76054 /* AddCard.storyboard in Resources */,
 				0B07FFE828B5A318001701BB /* BuyCoffee.storyboard in Resources */,
 				532EF33028BC41B900229A65 /* cozy.png in Resources */,
+				5394F3F128CF033E00E7E005 /* Assets.xcassets in Resources */,
 				53E8F1BD28B4294B0011D63F /* buycoffee.json in Resources */,
 				532EF32728BC415400229A65 /* golden.png in Resources */,
 				5395340228B7F78A00B76054 /* Map.storyboard in Resources */,
@@ -895,12 +990,20 @@
 				539EEC0728C4D94400807E2F /* Protection.storyboard in Resources */,
 				539EEC0428C4D35400807E2F /* fingerprint.json in Resources */,
 				532EF32B28BC419500229A65 /* blueberry.png in Resources */,
+				5394F3F028CF033E00E7E005 /* Info.plist in Resources */,
 				539BDBEE28B524E30057BCA9 /* Coffee.plist in Resources */,
 				53E8F1BC28B4294B0011D63F /* buysomecoffee.json in Resources */,
 				532EF34128BC59CD00229A65 /* CustomIcons.plist in Resources */,
 				533E11F828B9442800CF5499 /* brewing-coffee.json in Resources */,
 				534DA9B728AFEF5700626AA4 /* SignUp.storyboard in Resources */,
 				534DA99E28AFD68400626AA4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5394F3D128CF02CF00E7E005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,8 +1086,10 @@
 				532EF33D28BC4AD700229A65 /* IconVC.swift in Sources */,
 				53D091BF28C03570006A0090 /* AddressVC.swift in Sources */,
 				53E8F1A028B3F87E0011D63F /* FollowUsCVCell.swift in Sources */,
+				5394F3F228CF033E00E7E005 /* WeatherProvider.swift in Sources */,
 				5395342728B8457500B76054 /* CGFloat.swift in Sources */,
 				53E8F19B28B3F4E60011D63F /* FollowUsVC.swift in Sources */,
+				5394F3EE28CF033E00E7E005 /* WeatherEntry.swift in Sources */,
 				53D910D728B9570000C4044C /* Purcase.swift in Sources */,
 				532EF33F28BC4ED500229A65 /* IconTVCell.swift in Sources */,
 				53E8F1C628B444150011D63F /* CoffeeTVCell.swift in Sources */,
@@ -999,8 +1104,10 @@
 				5395340628B801B900B76054 /* Preferences.swift in Sources */,
 				53D091CB28C05FDF006A0090 /* UITextField.swift in Sources */,
 				53E8F19E28B3F76C0011D63F /* CustomLayout.swift in Sources */,
+				5394F3ED28CF033E00E7E005 /* WeatherWidgetView.swift in Sources */,
 				532EF33828BC443E00229A65 /* AppIconManager.swift in Sources */,
 				53C8678128B721E9000A758C /* PreferenceItem.swift in Sources */,
+				5394F3EC28CF033E00E7E005 /* KKOWidget.swift in Sources */,
 				5395341428B82C5A00B76054 /* PaymentVC.swift in Sources */,
 				53E8F1A628B40AD20011D63F /* NewsTableVC.swift in Sources */,
 				53BE673B28C268F60036D973 /* LoaderManager.swift in Sources */,
@@ -1012,6 +1119,7 @@
 				538331B428C777B50011D2CD /* WeatherNetworkManager.swift in Sources */,
 				53E8F1AE28B426E20011D63F /* CouponStorage.swift in Sources */,
 				53C8678C28B7263F000A758C /* PreferenceTVCell.swift in Sources */,
+				5394F3EF28CF033E00E7E005 /* WidgetWeather.swift in Sources */,
 				5393A6E728CB8C98009320F6 /* Storyboards.swift in Sources */,
 				5395342928B8508900B76054 /* UnsplashNetworkManager.swift in Sources */,
 				53E8F19728B3F4830011D63F /* FollowUsStorage.swift in Sources */,
@@ -1034,7 +1142,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5394F3CF28CF02CF00E7E005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5394F3DF28CF02D100E7E005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5394F3D228CF02CF00E7E005 /* KKOWidgetExtension */;
+			targetProxy = 5394F3DE28CF02D100E7E005 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		534DA99C28AFD68400626AA4 /* Main.storyboard */ = {
@@ -1242,6 +1365,60 @@
 			};
 			name = Release;
 		};
+		5394F3E228CF02D100E7E005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7V846WLMV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KKOWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KKOWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.n.gribok.KKOApp.KKOWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5394F3E328CF02D100E7E005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7V846WLMV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KKOWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KKOWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.n.gribok.KKOApp.KKOWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1259,6 +1436,15 @@
 			buildConfigurations = (
 				534DA9A828AFD68600626AA4 /* Debug */,
 				534DA9A928AFD68600626AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5394F3E428CF02D100E7E005 /* Build configuration list for PBXNativeTarget "KKOWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5394F3E228CF02D100E7E005 /* Debug */,
+				5394F3E328CF02D100E7E005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
